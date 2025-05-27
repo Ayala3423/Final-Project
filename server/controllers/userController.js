@@ -1,12 +1,13 @@
 const userBL = require('../bl/userBL');
 const {generateToken} = require('../utils/utils');
+
 const userController = {
+
     async signup(req, res) {
         try {
             const user = await userBL.signup(req.body);
-            console.log(`User created: ${JSON.stringify(user)}`);
-            
-            res.status(200).json(user);
+            const token = generateToken({id: user.id});
+            res.status(200).json({ user, token });
         } catch (error) {
             res.status(400).json({ error: error.message });
         }
@@ -17,7 +18,7 @@ const userController = {
             const { username, password } = req.body;
             const user = await userBL.login(username, password);
             if (user) {
-                const token = generateToken(user.id);
+                const token = generateToken({id: user.id});
                 res.status(200).json({ user, token });
             } else {
                 res.status(401).json({ error: 'Invalid credentials' });

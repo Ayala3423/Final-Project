@@ -6,7 +6,7 @@ const userService = {
   async findByUsernameOrEmail(identifier) {
     return await User.findOne({
       where: {
-        [Op.or]: [{ username: identifier }]
+        username: identifier 
       }
     });
   },
@@ -33,9 +33,7 @@ const userService = {
     return await User.findAll();
   },
 
-  async createPassword(userId, hash) {
-    console.log(`Creating password for userId: ${userId}, hash: ${hash}`);
-    
+  async createPassword(userId, hash) {    
     return await Passwords.create({ userId, hash });
   },
 
