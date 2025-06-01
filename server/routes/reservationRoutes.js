@@ -11,7 +11,7 @@ router.route('/:id')
     .delete(reservationController.deleteReservation);
 
 router.route('/')
+    .post(reservationController.createReservation)
     .all(reservationController.getAllReservations)
-    .post(reservationController.createReservation);
-
+    ;
 module.exports = router;

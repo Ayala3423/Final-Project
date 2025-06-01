@@ -3,6 +3,8 @@ const jwt = require('jsonwebtoken');
 
 async function getCoordinatesFromAddress(address) {
   try {
+    console.log('Fetching coordinates for address:', address);
+    
     const response = await axios.get('https://nominatim.openstreetmap.org/search', {
       params: {
         q: address,

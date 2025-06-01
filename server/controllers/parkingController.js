@@ -28,6 +28,16 @@ const parkingController = {
         }
     },
 
+
+    async searchParkings(req, res) {
+        try {
+            const result = await parkingBL.searchParkings(req.query);
+            res.json(result);
+        } catch (error) {
+            console.error(error);
+            res.status(500).json({ message: 'Error searching parkings' });
+        }
+    },
     async deleteParking(req, res) {
         try {
             const result = await parkingBL.deleteParking(req.params.id);
@@ -58,10 +68,10 @@ const parkingController = {
     async createParking(req, res) {
         try {
             console.log('Creating parking with data:', req.body);
-            
+
             const parking = await parkingBL.createParking(req.body);
             console.log('Creating parking with data:', req.body);
-            
+
             if (parking) {
                 res.status(200).json(parking);
             } else {

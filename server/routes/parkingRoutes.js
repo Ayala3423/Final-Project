@@ -4,11 +4,11 @@ const parkingController = require('../controllers/parkingController');
 const { verifyToken } = require('../middleware/authMiddleware');
 
 router.use(verifyToken);
-
+router.get('/search', parkingController.searchParkings);
 router.route('/:id')
     .get(parkingController.getParkingById)
     .put(parkingController.updateParking)
-    .delete(parkingController.deleteParking);
+    .delete(parkingController.deleteParking)
 console.log('Parking routes loaded');
 
 router.route('/')
