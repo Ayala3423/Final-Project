@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import Search from './Search'; // Assuming Search component is in the same directory
 
 function Home() {
     const navigate = useNavigate();
@@ -22,6 +23,7 @@ function Home() {
             <button onClick={handleRegister}>
                 Register
             </button>
+            <Search onSearch={(filters) => console.log(filters)} />
         </div>
     );
 }
