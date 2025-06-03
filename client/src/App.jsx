@@ -1,14 +1,16 @@
-import { useState } from 'react'
-import './App.css'
-import Navigation from './components/navigation.jsx'
+import { BrowserRouter } from 'react-router-dom';
+import AppRouter from './routes/AppRouter';
+import { AuthProvider } from './context/AuthContext';
+import './App.css';
 
 function App() {
-
   return (
-    <>
-      <Navigation/>
-    </>
-  )
+    <AuthProvider>
+      <BrowserRouter>
+        <AppRouter />
+      </BrowserRouter>
+    </AuthProvider>
+  );
 }
 
-export default App
+export default App;

@@ -1,4 +1,3 @@
-// bl/reservationBL.js
 const genericService = require('../services/genericService');
 const reservationBL = {
     
@@ -20,13 +19,13 @@ const reservationBL = {
     },
 
     async createReservation(data) {
-        // אפשר להוסיף ולידציות בסיסיות כאן
         return await genericService.create(data);
     },
 
     async getAllReservations() {
         return await genericService.getAll();
     }
+    
 };
 
 module.exports = reservationBL;

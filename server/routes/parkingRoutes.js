@@ -14,6 +14,6 @@ console.log('Parking routes loaded');
 router.route('/')
   
     .post(parkingController.createParking)
-      .all(parkingController.getParkingsByParams);
+      .all(parkingController.getAllParking);
 
 module.exports = router;

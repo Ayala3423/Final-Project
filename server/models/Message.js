@@ -31,7 +31,7 @@ const Message = sequelize.define('Message', {
   },
   conversationId: {
     type: DataTypes.INTEGER,
-    allowNull: true // אם רוצים למיין שיחות
+    allowNull: true 
   }
 }, {
   tableName: 'Messages',

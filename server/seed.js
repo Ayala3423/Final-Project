@@ -10,7 +10,7 @@ async function seed() {
 
     console.log('🔄 Creating users...');
     const users = [];
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 100; i++) {
       const role = i % 3 === 0 ? 'admin' : i % 2 === 0 ? 'owner' : 'renter';
       const user = await User.create({
         name: faker.person.fullName(),

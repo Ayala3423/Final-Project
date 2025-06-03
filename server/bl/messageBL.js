@@ -1,5 +1,3 @@
-// bl/messageBL.js
-
 const genericService = require('../dal/genericService');
 
 const messageBL = {
@@ -10,7 +8,6 @@ const messageBL = {
     },
 
     async createMessage(data) {
-        // אפשר להוסיף ולידציה פשוטה פה לפי הצורך
         return await genericService.create(data);
     },
 

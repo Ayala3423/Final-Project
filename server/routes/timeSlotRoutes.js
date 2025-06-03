@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { timeSlotController } = require('../controllers/timeSlotController');
+const  timeSlotController  = require('../controllers/timeSlotController');
 const { verifyToken } = require('../middleware/authMiddleware');
 
 router.use(verifyToken);

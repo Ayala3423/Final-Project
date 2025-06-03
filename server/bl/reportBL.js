@@ -1,5 +1,3 @@
-// bl/reportBL.js
-
 const genericService = require('../services/genericService');
 
 const reportBL = {
@@ -10,13 +8,13 @@ const reportBL = {
     },
 
     async createReport(data) {
-        // ניתן להוסיף ולידציה בסיסית כאן
         return await genericService.create(data);
     },
 
     async getAllReports() {
         return await genericService.getAll();
     }
+    
 };
 
 module.exports = reportBL;

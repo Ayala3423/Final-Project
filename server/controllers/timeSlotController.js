@@ -1,5 +1,7 @@
 const timeSlotBl = require('../bl/timeSlotBL');
+
 const timeSlotController = {
+
     async getTimeSlotById(req, res) {
         try {
             const timeSlot = await timeSlotBl.getTimeSlotById(req.params.id);
@@ -25,7 +27,9 @@ const timeSlotController = {
 
     async getAllTimeSlots(req, res) {
         try {
-            const timeSlots = await timeSlotBl.getAllTimeSlots();
+            console.log(req.params+" user detailes ");
+            
+            const timeSlots = await timeSlotBl.getAllTimeSlots(req.params);
             res.status(200).json(timeSlots);
         } catch (error) {
             console.error('Error fetching time slots:', error);
@@ -48,6 +52,7 @@ const timeSlotController = {
 
         };
     },
+
     async deleteTimeSlot(req, res) {
         try {
             const result = await timeSlotBl.deleteTimeSlot(req.params.id);
@@ -60,5 +65,7 @@ const timeSlotController = {
             res.status(500).json({ message: 'Internal server error' });
         }
     }
+
 };
+
 module.exports = timeSlotController;    

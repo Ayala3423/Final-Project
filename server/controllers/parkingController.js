@@ -1,3 +1,4 @@
+const { Json } = require('sequelize/lib/utils');
 const parkingBL = require('../bl/parkingBL');
 
 const parkingController = {
@@ -15,6 +16,19 @@ const parkingController = {
         }
     },
 
+    async getAllParking(req,res){
+        try {
+            console.log(req.user.role+" user detailes "+req.user.id+ " "+JSON.stringify(req.user));
+            
+            const parkings = await parkingBL.getAllParkings(req.user);
+            res.status(200).json(parkings);
+        } catch (error) {
+            console.error('Error fetching parkings:', error);
+            res.status(500).json({ message: 'Internal server error' });
+        }
+    
+    },
+
     async updateParking(req, res) {
         try {
             const parking = await parkingBL.updateParking(req.params.id, req.body);
@@ -28,7 +42,6 @@ const parkingController = {
         }
     },
 
-
     async searchParkings(req, res) {
         try {
             const result = await parkingBL.searchParkings(req.query);
@@ -38,6 +51,7 @@ const parkingController = {
             res.status(500).json({ message: 'Error searching parkings' });
         }
     },
+    
     async deleteParking(req, res) {
         try {
             const result = await parkingBL.deleteParking(req.params.id);

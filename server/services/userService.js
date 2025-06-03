@@ -3,6 +3,7 @@ const  Passwords  = require('../models/Passwords');
 const { Op } = require('sequelize');
 
 const userService = {
+
   async findByUsernameOrEmail(identifier) {
     return await User.findOne({
       where: {
@@ -44,6 +45,7 @@ const userService = {
   async deletePassword(userId) {
     return await Passwords.destroy({ where: { userId } });
   }
+  
 };
 
 module.exports = userService;

@@ -2,6 +2,7 @@ const bcrypt = require('bcrypt');
 const userService = require('../services/userService');
 
 const userBL = {
+
     async signup(data) {
         const { username, email, password, ...rest } = data;
 
@@ -61,6 +62,7 @@ const userBL = {
     async getAllUsers() {
         return await userService.findAllUsers();
     }
+    
 };
 
 module.exports = userBL;

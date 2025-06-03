@@ -60,9 +60,7 @@ const reservationController = {
             res.status(500).json({ message: 'Internal server error' });
         }
     }
-};                                                                                          
 
+}; 
 
-
-
-module.exports = { reservationController }; // Export the controller for use in routes  
+module.exports = reservationController;  

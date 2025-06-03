@@ -6,7 +6,7 @@ const userController = {
     async signup(req, res) {
         try {
             const user = await userBL.signup(req.body);
-            const token = generateToken({id: user.id});
+            const token = generateToken({id: user.id, role: user.role});
             res.status(200).json({ user, token });
         } catch (error) {
             res.status(400).json({ error: error.message });
@@ -18,7 +18,7 @@ const userController = {
             const { username, password } = req.body;
             const user = await userBL.login(username, password);
             if (user) {
-                const token = generateToken({id: user.id});
+                const token = generateToken({id: user.id, role: user.role});
                 res.status(200).json({ user, token });
             } else {
                 res.status(401).json({ error: 'Invalid credentials' });

@@ -1,4 +1,3 @@
-// models/Parking.js
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/sequelize');
 
@@ -12,10 +11,10 @@ const Parking = sequelize.define('Parking', {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
-            model: 'Users', // שם הטבלה (כפי שנקבע ב־User.js)
+            model: 'Users', 
             key: 'id'
         },
-        onDelete: 'CASCADE' // אם משתמש נמחק - גם החניות שלו יימחקו
+        onDelete: 'CASCADE'
     }
     ,
     latitude: {

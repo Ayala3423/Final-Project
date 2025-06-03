@@ -1,9 +1,10 @@
 const genericService = {
+
     async getById(model, id) {
         const Model = require(`../models/${model}`);
         return await Model.findByPk(id);
-    }
-    ,
+    },
+
     async update(model, id, data) {
         const Model = require(`../models/${model}`);
         const instance = await Model.findByPk(id);
@@ -36,18 +37,19 @@ const genericService = {
             options.include = associations;
         }
         return await Model.findAll(options);
-    }
-    , async getByForeignKey(model, foreignKey, value) {
+    }, 
+
+    async getByForeignKey(model, foreignKey, value) {
         const Model = require(`../models/${model}`);
         const where = {};
         where[foreignKey] = value;
         return await Model.findAll({ where });
     },
+
     async getAll(model) {
         const Model = require(`../models/${model}`);
         return await Model.findAll();
     }
-
 
 };
 

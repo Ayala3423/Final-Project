@@ -1,4 +1,3 @@
-// models/Report.js
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/sequelize');
 
@@ -49,7 +48,7 @@ const Report = sequelize.define('Report', {
   }
 }, {
   tableName: 'Reports',
-  timestamps: true // כדי לדעת מתי הדיווח נוצר
+  timestamps: true 
 });
 
 module.exports = Report;

@@ -1,7 +1,7 @@
 const messageBL = require('../bl/messageBL');
 
-
 const messageController = { 
+
     async getMessageById(req, res) {
         try {
             const message = await messageBL.getMessageById(req.params.id);
@@ -34,5 +34,7 @@ const messageController = {
             res.status(500).json({ message: 'Internal server error' });
         }
     }
+    
 };
+
 module.exports = messageController;

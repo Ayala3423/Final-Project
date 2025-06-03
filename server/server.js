@@ -1,7 +1,7 @@
 const express = require('express');
 const dotenv = require('dotenv');
-const sequelize = require('./config/sequelize'); // זה חייב להחזיר את האובייקט
-require('./models/index'); // טוען את המודל כדי לסנכרן אותו
+const sequelize = require('./config/sequelize'); 
+require('./models/index'); 
 const cors = require('cors');
 dotenv.config();
 

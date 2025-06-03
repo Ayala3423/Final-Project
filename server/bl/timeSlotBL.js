@@ -1,6 +1,7 @@
 const genericService = require('../services/genericService');
 
 const timeSlotBL = {
+
     async getTimeSlotById(id) {
         return await genericService.getById('TimeSlot', id);
     },
@@ -9,10 +10,8 @@ const timeSlotBL = {
         return await genericService.create('TimeSlot', data);
     },
 
-    async getAllTimeSlots() {
-        console.log('Fetching all time slots');
-        
-        return await genericService.getAll('TimeSlot');
+    async getAllTimeSlots(params) {
+        return await genericService.getByForeignKey('TimeSlot',"parkingId",params.parkingId);
     },
 
     async updateTimeSlot(id, data) {
@@ -22,6 +21,7 @@ const timeSlotBL = {
     async deleteTimeSlot(id) {
         return await genericService.remove('TimeSlot', id);
     }
+    
 };
 
 module.exports = timeSlotBL;

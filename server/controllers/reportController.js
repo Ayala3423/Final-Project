@@ -1,8 +1,7 @@
 const reportBL = require('../bl/reportBL');
 
+const reportController = {   
 
-
-const reportController = {      
     async getReportById(req, res) {
         try {
             const report = await reportBL.getReportById(req.params.id);
@@ -35,6 +34,7 @@ const reportController = {
             res.status(500).json({ message: 'Internal server error' });
         }
     }
+    
 };          
 
 module.exports = reportController;  
