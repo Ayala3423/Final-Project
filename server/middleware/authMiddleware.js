@@ -9,7 +9,7 @@ const verifyToken = (req, res, next) => {
 
   try {
     const decoded = jwt.verify(token, JWT_SECRET);
-    console.log("auth"+JSON.stringify(decoded));
+    console.log("1234567543456"+JSON.stringify(decoded));
     
     req.user = decoded;
     next();

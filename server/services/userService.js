@@ -30,9 +30,14 @@ const userService = {
     return await User.destroy({ where: { id } });
   },
 
-  async findAllUsers() {
-    return await User.findAll();
-  },
+ async findAllUsers() {
+  return await User.findAll({
+    where: {
+      role: ['renter', 'owner']
+    }
+  });
+},
+
 
   async createPassword(userId, hash) {    
     return await Passwords.create({ userId, hash });
@@ -45,7 +50,7 @@ const userService = {
   async deletePassword(userId) {
     return await Passwords.destroy({ where: { userId } });
   }
-  
+
 };
 
 module.exports = userService;

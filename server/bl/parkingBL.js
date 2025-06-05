@@ -55,16 +55,16 @@ const parkingBL = {
     //TODO: ask mrs. if we need 2 api.
     async searchParkings(query) {
         const {
-            lat
-            , lng,
-            radius = 1000,
+            lat,
+            lng,
+            radius = 10000,
             type = 'temporary',
             minPrice = 0,
             maxPrice = 100000000000,
             startTime = new Date(),
             hours = 2
         } = query;
-
+        console.log("searchParkings called with query:", query);
         if (!lat || !lng) throw new Error('Missing coordinates');
 
         const startDateTime = new Date(startTime);

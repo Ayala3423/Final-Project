@@ -60,8 +60,8 @@ async function seed() {
           date,
           dayOfWeek,
           recurrence,
-          startTime: '08:00',
-          endTime: '12:00',
+          startTime: '17:00',
+          endTime: '22:00',
           isRented: faker.datatype.boolean(),
           price: faker.number.float({ min: 10, max: 40, precision: 0.5 })
         });

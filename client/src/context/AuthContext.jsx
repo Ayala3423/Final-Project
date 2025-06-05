@@ -1,6 +1,7 @@
 import React, { createContext, useState, useEffect } from 'react';
 import { login, signup } from '../services/userService';
 import { useNavigate } from 'react-router-dom';
+import Cookies from "js-cookie";
 export const AuthContext = createContext();
 
 // Provider שנותן גישה לסטטוס של המשתמש
@@ -27,6 +28,7 @@ export const AuthProvider = ({ children }) => {
 
       localStorage.setItem('user', JSON.stringify(response.user));
       console.log('Login successful3:', response);
+      Cookies.set('token', response.token, { expires: 7 }); // שמירת הטוקן בעוגייה ל-7 ימים
 
       navigate(`/${response.user.role}/dashboard`); // ניתוב לעמוד הבית או לעמוד המתאים לפי התפקיד
     }, (error) => {
@@ -41,6 +43,8 @@ export const AuthProvider = ({ children }) => {
       console.log('Signup successful:', response);
       setUser(userData);
       localStorage.setItem('user', JSON.stringify(userData));
+      Cookies.set('token', response.token, { expires: 7 }); // שמירת הטוקן בעוגייה ל-7 ימים
+
       navigate(`/${response.user.role}/dashboard`); // ניתוב לעמוד הבית או לעמוד המתאים לפי התפקיד
     }, (error) => {
       console.error('Signup failed:', error);
