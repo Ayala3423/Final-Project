@@ -1,26 +1,30 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Home from '../Home';
+import { apiService } from '../../services/genericService';
+import ParkingList from '../../components/Parking/ParkingList';
 
 function ParkingManagement() {
 
     const navigate = useNavigate();
+    const [parkings, setParkings] = useState([]);
+    const [error, setError] = useState(null);
 
-    const handleOwnerDashboard = () => {
-        navigate('/owner/dashboard');
-    };
-
-    const handleRenterDashboard = () => {
-        navigate('/renter/dashboard');
-    };
+    useEffect(() => {
+        // You can add any initialization logic here if needed
+        console.log("Parking Management Component Mounted");
+        apiService.getAll('parking', (response) => {
+            console.log("Fetched Parkings:", response);
+            setParkings(response);
+        }, (error) => {
+            console.error("Error fetching parkings:", error.message);
+        }); 
+    }, []);
 
     return (
         <div>
             <h1>Parking Management</h1>
-            <button onClick={handleOwnerDashboard}>Go to Owner Dashboard</button>
-            <button onClick={handleRenterDashboard}>Go to Renter Dashboard</button>
-            <Home/>
+            <ParkingList parkings={parkings} />
         </div>
     );
 }   

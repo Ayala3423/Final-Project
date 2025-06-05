@@ -61,6 +61,10 @@ const userBL = {
 
     async getAllUsers() {
         return await userService.findAllUsers();
+    },
+    
+    async getUsersByParams(params) {
+        return await userService.findUsersByParams(params);
     }
     
 };

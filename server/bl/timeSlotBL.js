@@ -20,7 +20,11 @@ const timeSlotBL = {
 
     async deleteTimeSlot(id) {
         return await genericService.remove('TimeSlot', id);
-    }
+    },
+
+    async getTimeSlotsByParkingId(parkingId) {
+        return await genericService.getByForeignKey('TimeSlot', 'parkingId', parkingId);
+    },
     
 };
 

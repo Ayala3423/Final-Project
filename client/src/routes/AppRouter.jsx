@@ -44,31 +44,17 @@ function AppRouter() {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
 
-      {/* רוטות Admin */}
       <Route
-        path="/admin/dashboard"
+        path="/admin"
         element={
           <PrivateRoute allowedRoles={['admin']}>
             <AdminDashboard />
           </PrivateRoute>
         }
-      />
-      <Route
-        path="/admin/parking-management"
-        element={
-          <PrivateRoute allowedRoles={['admin']}>
-            <ParkingManagement />
-          </PrivateRoute>
-        }
-      />
-      <Route
-        path="/admin/users-management"
-        element={
-          <PrivateRoute allowedRoles={['admin']}>
-            <UsersManagement />
-          </PrivateRoute>
-        }
-      />
+      >
+       <Route path=":userType" element={<UsersManagement />} />
+        <Route path="parking-management" element={<ParkingManagement />} />
+      </Route>
 
       {/* רוטות Owner */}
       <Route

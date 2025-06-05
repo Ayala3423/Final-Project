@@ -1,5 +1,5 @@
-const  User  = require('../models/User');
-const  Passwords  = require('../models/Passwords');
+const User = require('../models/User');
+const Passwords = require('../models/Passwords');
 const { Op } = require('sequelize');
 
 const userService = {
@@ -7,7 +7,7 @@ const userService = {
   async findByUsernameOrEmail(identifier) {
     return await User.findOne({
       where: {
-        username: identifier 
+        username: identifier
       }
     });
   },
@@ -30,16 +30,30 @@ const userService = {
     return await User.destroy({ where: { id } });
   },
 
- async findAllUsers() {
-  return await User.findAll({
-    where: {
-      role: ['renter', 'owner']
+  async findAllUsers() {
+    return await User.findAll({
+      where: {
+        role: ['renter', 'owner']
+      }
+    });
+  },
+
+  async findUsersByParams(params) {
+    const where = {};
+    if (params.username) {
+      where.username = { [Op.like]: `%${params.username}%` };
     }
-  });
-},
+    if (params.email) {
+      where.email = { [Op.like]: `%${params.email}%` };
+    }
+    if (params.role) {
+      where.role = params.role;
+    }
+    return await User.findAll({ where });
+  },
 
 
-  async createPassword(userId, hash) {    
+  async createPassword(userId, hash) {
     return await Passwords.create({ userId, hash });
   },
 

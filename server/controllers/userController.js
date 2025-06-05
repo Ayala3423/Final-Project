@@ -74,6 +74,16 @@ const userController = {
         } catch (error) {
             res.status(400).json({ error: error.message });
         }
+    },
+
+    async getUsersByParams(req, res) {
+        try {
+            const params = req.query; // Assuming you want to filter by query parameters
+            const users = await userBL.getUsersByParams(params);
+            res.status(200).json(users);
+        } catch (error) {
+            res.status(400).json({ error: error.message });
+        }
     }
 
 };

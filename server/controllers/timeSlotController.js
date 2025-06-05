@@ -64,6 +64,22 @@ const timeSlotController = {
             console.error('Error deleting time slot:', error);
             res.status(500).json({ message: 'Internal server error' });
         }
+    },
+
+    async getTimeSlotsByParkingId(req, res) {
+        try {
+            const parkingId = req.query.parkingId;
+            console.log(`Fetching time slots for parking ID: ${parkingId}`);
+            
+            const timeSlots = await timeSlotBl.getTimeSlotsByParkingId(parkingId);
+            if (!timeSlots || timeSlots.length === 0) {
+                return res.status(404).json({ message: 'No time slots found for this parking' });
+            }
+            res.status(200).json(timeSlots);
+        } catch (error) {
+            console.error('Error fetching time slots by parking ID:', error);
+            res.status(500).json({ message: 'Internal server error' });
+        }
     }
 
 };

@@ -11,6 +11,7 @@ router.route('/:id')
     .delete(timeSlotController.deleteTimeSlot);
 
 router.route('/')
+    .get(timeSlotController.getTimeSlotsByParkingId)
     .post(timeSlotController.createTimeSlot)
     .all(timeSlotController.getAllTimeSlots)
     ;

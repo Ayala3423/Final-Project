@@ -21,6 +21,7 @@ async function request(url, params = {}, method = 'GET', body = null, onSuccess,
                 Authorization: `Bearer ${token}`,
                 'Content-Type': 'application/json',
             },
+            params
         };
 
         if (method !== 'GET' && method !== 'DELETE' && body) {

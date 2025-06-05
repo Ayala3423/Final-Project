@@ -7,19 +7,8 @@ function MapView({ center, parkings }) {
     const mapInstance = useRef(null);
 
     useEffect(() => {
-        const loadGoogleMaps = () => {
-            if (!window.google) {
-                const script = document.createElement('script');
-                script.src = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}`;
-                script.async = true;
-                script.onload = () => initMap(center);
-                document.head.appendChild(script);
-            } else {
-                initMap(center);
-            }
-        };
-
-        const initMap = (center) => {
+        // פונקציית callback תוגדר ב-window כדי ש-Google Maps יוכל לקרוא לה
+        window.initMap = () => {
             mapInstance.current = new window.google.maps.Map(mapRef.current, {
                 center,
                 zoom: 14
@@ -43,7 +32,21 @@ function MapView({ center, parkings }) {
             });
         };
 
-        loadGoogleMaps();
+        // בדוק אם כבר נטען
+        if (!window.google || !window.google.maps) {
+            const script = document.createElement('script');
+            script.src = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}&callback=initMap`;
+            script.async = true;
+            script.defer = true;
+            document.head.appendChild(script);
+        } else {
+            window.initMap();
+        }
+
+        // ניקוי (אופציונלי)
+        return () => {
+            delete window.initMap;
+        };
     }, [center, parkings]);
 
     return (

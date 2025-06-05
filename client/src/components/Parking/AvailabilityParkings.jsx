@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import ParkingList from './ParkingList';
 import MapView from '../Ui/MapView';
 import { apiService } from '../../services/genericService';

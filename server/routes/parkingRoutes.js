@@ -13,8 +13,8 @@ router.route('/:id')
 console.log('Parking routes loaded');
 
 router.route('/')
-  
+    .get(parkingController.getParkingsByParams)
     .post(parkingController.createParking)
-      .all(parkingController.getAllParking);
+    .all(parkingController.getAllParking);
 
 module.exports = router;

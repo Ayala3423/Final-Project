@@ -18,8 +18,6 @@ function Dashboard() {
     return (
         <div>
             <h1>Owner Dashboard</h1>
-            <button onClick={handleOwnerDashboard}>Go to Owner Dashboard</button>
-            <button onClick={handleRenterDashboard}>Go to Renter Dashboard</button>
             <Home/>
         </div>
     );

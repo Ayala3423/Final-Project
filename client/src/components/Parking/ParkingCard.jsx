@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { apiService } from '../../services/genericService';
+import '../../styles/parkingCard.css';
+
 function ParkingCard({ parking, currentUserId, onClose }) {
     const [isEditing, setIsEditing] = useState(false);
     const [formData, setFormData] = useState({
@@ -7,8 +9,18 @@ function ParkingCard({ parking, currentUserId, onClose }) {
         description: parking.description,
         imageUrl: parking.imageUrl
     });
+    const [timeSlots, setTimeSlots] = useState([]);
 
     const isOwner = parking.ownerId === currentUserId;
+
+    useEffect(() => {
+        apiService.getByValue('timeSlot', { parkingId: parking.id }, (response) => {
+            console.log("Fetched Time Slots for Parking:", response);
+            setTimeSlots(response);
+        }, (error) => {
+            console.error("Error fetching time slots:", error);
+        });
+    }, [parking.id]);
 
     const handleChange = (e) => {
         setFormData(prev => ({
@@ -20,10 +32,11 @@ function ParkingCard({ parking, currentUserId, onClose }) {
     const handleSave = async () => {
         try {
             console.log("Saving parking data:", formData);
-            apiService.update('parking',parking.id, formData,()=>{
-                            setIsEditing(false);
-            } );
-            setIsEditing(false);
+            apiService.update('parking', parking.id, formData, () => {
+                setIsEditing(false);
+            }, (error) => {
+                console.error("Error updating parking:", error);
+            });
         } catch (error) {
             console.error("Failed to update parking", error);
         }
@@ -33,11 +46,12 @@ function ParkingCard({ parking, currentUserId, onClose }) {
         if (!window.confirm("Are you sure you want to delete this parking?")) return;
 
         try {
-            await fetch(`/api/parkings/${parking.id}`, {
-                method: 'DELETE'
-                
+            apiService.remove('parking', parking.id, () => {
+                console.log("Parking deleted successfully");
+                onClose();
+            }, (error) => {
+                console.error("Error deleting parking:", error);
             });
-            onClose(); // סגור את החלונית לאחר מחיקה
         } catch (error) {
             console.error("Failed to delete parking", error);
         }
@@ -86,6 +100,25 @@ function ParkingCard({ parking, currentUserId, onClose }) {
                     )}
                 </>
             )}
+            {timeSlots.length > 0 && (
+                <div className="time-slots-section" style={{ marginTop: '1.5rem' }}>
+                    <h4>זמני חניה:</h4>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
+                        {timeSlots.map((slot, index) => (
+                            <div key={index} style={{
+                                border: '1px solid #ccc',
+                                borderRadius: '8px',
+                                padding: '0.5rem',
+                                backgroundColor: '#f9f9f9',
+                            }}>
+                                <p><strong>התחלה:</strong> {new Date(slot.startTime).toLocaleString()}</p>
+                                <p><strong>סיום:</strong> {new Date(slot.endTime).toLocaleString()}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            )}
+
         </div>
     );
 }

@@ -69,8 +69,8 @@ const parkingController = {
 
     async getParkingsByParams(req, res) {
         try {
-            console.log('Fetching parkings with params:', req.params);
-            const parkings = await parkingBL.getParkingsByParams(req.params);
+            console.log('Fetching parkings with params:', req.query);
+            const parkings = await parkingBL.getParkingsByParams(req.query);
             if (parkings) {
                 res.status(200).json(parkings);
             } else {

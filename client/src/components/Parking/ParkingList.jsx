@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ParkingCard from './ParkingCard';
-import Modal from '../Ui/Modal'; // נניח שיש קומפוננטת Modal פשוטה
+import Modal from '../Ui/Modal';
 
 function ParkingList({ parkings, currentUserId }) {
     const [selectedParking, setSelectedParking] = useState(null);

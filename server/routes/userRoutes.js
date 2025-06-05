@@ -17,6 +17,8 @@ router.route('/:id')
     .get(userController.getUserById)
     .put(userController.updateUser)
     .delete(userController.deleteUser);
-router.route('/').all(userController.getAllUsers);
+router.route('/')
+    .get(userController.getUsersByParams) // Assuming you want to get user by ID
+    .all(userController.getAllUsers);
 
 module.exports = router;
