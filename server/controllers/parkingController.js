@@ -31,6 +31,7 @@ const parkingController = {
 
     async updateParking(req, res) {
         try {
+            console.log('Updating parking with ID:', req.params.id);
             const parking = await parkingBL.updateParking(req.params.id, req.body);
             if (parking) {
                 res.status(200).json(parking);
@@ -44,6 +45,7 @@ const parkingController = {
 
     async searchParkings(req, res) {
         try {
+            console.log('Searching parkings with query:', req.query);
             const result = await parkingBL.searchParkings(req.query);
             res.json(result);
         } catch (error) {
@@ -51,7 +53,7 @@ const parkingController = {
             res.status(500).json({ message: 'Error searching parkings' });
         }
     },
-    
+
     async deleteParking(req, res) {
         try {
             const result = await parkingBL.deleteParking(req.params.id);

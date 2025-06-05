@@ -21,7 +21,6 @@ async function request(url, params = {}, method = 'GET', body = null, onSuccess,
                 Authorization: `Bearer ${token}`,
                 'Content-Type': 'application/json',
             },
-            params,
         };
 
         if (method !== 'GET' && method !== 'DELETE' && body) {
@@ -65,7 +64,7 @@ export const apiService = {
         request(table, {}, 'POST', body, onSuccess, onError),
 
     update: (table, id, data, onSuccess, onError) =>
-        request(`${table}/${id}`, {}, 'PUT', data, onSuccess, onError),
+        request(`${table}/${id}`,{}, 'PUT', data, onSuccess, onError),
 
     patch: (table, id, data, onSuccess, onError) =>
         request(`${table}/${id}`, {}, 'PATCH', data, onSuccess, onError),

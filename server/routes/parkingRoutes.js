@@ -5,6 +5,7 @@ const { verifyToken } = require('../middleware/authMiddleware');
 
 router.use(verifyToken);
 router.get('/search', parkingController.searchParkings);
+console.log('Parking search route loaded');
 router.route('/:id')
     .get(parkingController.getParkingById)
     .put(parkingController.updateParking)
