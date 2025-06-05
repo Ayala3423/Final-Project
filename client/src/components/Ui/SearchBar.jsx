@@ -3,13 +3,14 @@ import { FaSearch } from "react-icons/fa";
 import "../../styles/search.css";
 import { apiService } from "../../services/genericService";
 
-const SearchBar = ({ onSearch }) => {
+const SearchBar = ({ onSearch, currentLocation }) => {
     const [minPrice, setMinPrice] = useState("");
     const [maxPrice, setMaxPrice] = useState("");
     const [parkingType, setParkingType] = useState("");
-    const [location, setLocation] = useState("");
+    const [locationText, setLocationText] = useState("");
     const [useCurrentLocation, setUseCurrentLocation] = useState(true);
     const [currentTime, setCurrentTime] = useState("");
+    const [coords, setCoords] = useState({ lat: null, lng: null });
 
     useEffect(() => {
         const now = new Date();
@@ -21,41 +22,70 @@ const SearchBar = ({ onSearch }) => {
     }, []);
 
     useEffect(() => {
-        if (useCurrentLocation && navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(
-                async (position) => {
-                    const lat = position.coords.latitude;
-                    const lon = position.coords.longitude;
-
-                    try {
-                        const res = await fetch(
-                            `https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lon}&format=json`
-                        );
-                        const data = await res.json();
-                        setLocation(data.display_name || `${lat.toFixed(5)}, ${lon.toFixed(5)}`);
-                    } catch (err) {
-                        setLocation(`${lat.toFixed(5)}, ${lon.toFixed(5)}`);
-                    }
-                },
-                () => setLocation("Location access denied")
-            );
+        if (useCurrentLocation && currentLocation?.lat && currentLocation?.lng) {
+            setCoords(currentLocation);
+            // אפשר להוסיף גם הצגה טקסטואלית אם רוצים
+            setLocationText(`${currentLocation.lat.toFixed(5)}, ${currentLocation.lng.toFixed(5)}`);
         }
-    }, [useCurrentLocation]);
+    }, [useCurrentLocation, currentLocation]);
 
-    const handleSubmit = (e) => {
+    const geocodeLocation = async (address) => {
+        const res = await fetch(
+            `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(address)}&format=json&limit=1`
+        );
+        const data = await res.json();
+        if (data.length > 0) {
+            return {
+                lat: parseFloat(data[0].lat),
+                lng: parseFloat(data[0].lon),
+            };
+        } else {
+            throw new Error("כתובת לא נמצאה");
+        }
+    };
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
-        apiService.getSearch('parking', {
-            minPrice: parseFloat(minPrice) || 0,
-            maxPrice: parseFloat(maxPrice) || Infinity,
-            type: parkingType,
-            lat: useCurrentLocation ? undefined : location.split(",")[0],
-            lng: useCurrentLocation ? undefined : location.split(",")[1],
-            startTime: new Date().toISOString(),
-            hours: 2, // Default to 2 hours for search
-            radius: 1000 // Default radius in meters
-        }, (response) => { console.log(response); onSearch(response) }, (error) => console.error(error.message));
+        let lat, lng;
 
+        if (useCurrentLocation) {
+            if (!currentLocation?.lat || !currentLocation?.lng) {
+                console.error("No current location provided");
+                return;
+            }
+            lat = currentLocation.lat;
+            lng = currentLocation.lng;
+        } else {
+            try {
+                const geo = await geocodeLocation(locationText);
+                console.log("geocoded location:", geo);
+                
+                lat = geo.lat;
+                lng = geo.lng;
+            } catch (error) {
+                console.error("שגיאה בהמרת מיקום:", error.message);
+                return;
+            }
+        }
+        console.log(parkingType+"parking type");
+        const params = {
+            minPrice: parseFloat(minPrice) || 0,
+            maxPrice: parseFloat(maxPrice) || 1000,
+            type: "temporary", // או "fixed" אם זה מה שנבחר
+            lat,
+            lng,
+            startTime: new Date().toISOString(),
+            hours: 2,
+            radius: 10
+        };
+
+        apiService.getSearch(
+            'parking',
+            params,
+            (response) => { console.log(response+"response of search"); onSearch(response); },
+            (error) => console.error(error.message)
+        );
     };
 
     return (
@@ -74,14 +104,13 @@ const SearchBar = ({ onSearch }) => {
                     value={maxPrice}
                     onChange={(e) => setMaxPrice(e.target.value)}
                 />
-
                 <select
                     value={parkingType}
                     onChange={(e) => setParkingType(e.target.value)}
                 >
-                    <option value="">Select Type</option>
-                    <option value="fixed">Permanent</option>
                     <option value="temporary">Temporary</option>
+                    <option value="fixed">Permanent</option>
+                    
                 </select>
 
                 <label className="text-sm text-gray-700">
@@ -96,15 +125,15 @@ const SearchBar = ({ onSearch }) => {
                 {!useCurrentLocation && (
                     <input
                         type="text"
-                        placeholder="Enter location"
-                        value={location}
-                        onChange={(e) => setLocation(e.target.value)}
+                        placeholder="Enter address"
+                        value={locationText}
+                        onChange={(e) => setLocationText(e.target.value)}
                     />
                 )}
 
-                {useCurrentLocation && location && (
+                {useCurrentLocation && locationText && (
                     <div className="text-sm text-gray-700">
-                        📍 Location: {location}
+                        📍 Location: {locationText}
                     </div>
                 )}
 

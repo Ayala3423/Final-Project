@@ -143,7 +143,9 @@ function Home() {
 
 useEffect(() => {
     navigator.geolocation.getCurrentPosition(
-        pos => setCurrentLocation({ lat: pos.coords.latitude, lng: pos.coords.longitude }),
+        pos => {setCurrentLocation({ lat: pos.coords.latitude, lng: pos.coords.longitude })
+        console.log("Current Location:", pos.coords.latitude, pos.coords.longitude);}
+        ,
         err => {
             console.error("שגיאה באיתור מיקום:", err.message);
             setCurrentLocation({ lat: 32.0853, lng: 34.7818 }); // ברירת מחדל תל אביב
@@ -157,7 +159,7 @@ useEffect(() => {
             <h1>Welcome to the Parking Management System</h1>
             <button onClick={() => navigate('/login')}>Login</button>
             <button onClick={() => navigate('/register')}>Register</button>
-            <SearchBar onSearch={setSearchResults} />
+            <SearchBar onSearch={setSearchResults} currentLocation={currentLocation}/>
             {currentLocation && (
                 <AvailabilityParkings
                     currentLocation={currentLocation}
