@@ -1,34 +1,29 @@
 
 
 
-import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useState,useContext } from 'react';
+import { useNavigate  } from 'react-router-dom';
+import { apiService } from '../../services/genericService';
+import {AuthContext} from '../../context/AuthContext';
+
 
 function MyReservations() {
     const navigate = useNavigate();
     const [reservations, setReservations] = useState([]);
+    const { user } = useContext(AuthContext);
 
     useEffect(() => {
-        // Fetch reservations from the server
-        fetch('/api/renter/reservations')
-            .then(response => response.json())
-            .then(data => setReservations(data))
-            .catch(error => console.error('Error fetching reservations:', error));
+        apiService.getByValue('reservation', { "renterId": user.id }, (response) => {
+            console.log("Fetched Reservations:", response);
+            setReservations(response);
+        }, (error) => {
+            console.error("Error fetching reservations:", error.message);
+        });
     }, []);
-
-    const handleOwnerDashboard = () => {
-        navigate('/owner/dashboard');
-    };
-
-    const handleRenterDashboard = () => {
-        navigate('/renter/dashboard');
-    };
 
     return (
         <div>
             <h1>My Reservations</h1>
-            <button onClick={handleOwnerDashboard}>Go to Owner Dashboard</button>
-            <button onClick={handleRenterDashboard}>Go to Renter Dashboard</button>
             <ul>
                 {reservations.map(reservation => (
                     <li key={reservation.id}>{reservation.details}</li>

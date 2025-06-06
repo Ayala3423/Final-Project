@@ -19,6 +19,8 @@ const genericService = {
 
     async getByParams(model, params) {
         const Model = require(`../models/${model}`);
+        console.log("2    :", params);
+        
         return await Model.findAll({ where: params });
     },
 

@@ -59,6 +59,17 @@ const reservationController = {
             console.error('Error fetching reservations:', error);
             res.status(500).json({ message: 'Internal server error' });
         }
+    },
+
+    async getReservationsByValue(req, res) {
+        try {
+            const filter = req.query; // Assuming filter criteria are passed as query parameters
+            const reservations = await reservationBL.getReservationsByValue(filter);
+            res.status(200).json(reservations);
+        } catch (error) {
+            console.error('Error fetching reservations by value:', error);
+            res.status(500).json({ message: 'Internal server error' });
+        }
     }
 
 }; 

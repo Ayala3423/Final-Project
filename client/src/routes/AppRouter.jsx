@@ -52,7 +52,7 @@ function AppRouter() {
           </PrivateRoute>
         }
       >
-       <Route path=":userType" element={<UsersManagement />} />
+        <Route path=":userType" element={<UsersManagement />} />
         <Route path="parking-management" element={<ParkingManagement />} />
       </Route>
 
@@ -82,31 +82,18 @@ function AppRouter() {
         }
       />
 
-      {/* רוטות Renter */}
       <Route
-        path="/renter/dashboard"
+        path="/renter"
         element={
           <PrivateRoute allowedRoles={['renter']}>
             <RenterDashboard />
           </PrivateRoute>
         }
-      />
-      <Route
-        path="/renter/my-reservations"
-        element={
-          <PrivateRoute allowedRoles={['renter']}>
-            <MyReservations />
-          </PrivateRoute>
-        }
-      />
-      <Route
-        path="/renter/payment"
-        element={
-          <PrivateRoute allowedRoles={['renter']}>
-            <Payment />
-          </PrivateRoute>
-        }
-      />
+      >
+        <Route path=":userType" element={<UsersManagement />} />
+        <Route path="my-reservations" element={<MyReservations />} />
+      </Route>
+
     </Routes>
   );
 }

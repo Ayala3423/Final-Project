@@ -24,6 +24,13 @@ const reservationBL = {
 
     async getAllReservations() {
         return await genericService.getAll();
+    },
+
+    async getReservationsByValue(value) {
+        if (!value) return [];
+        console.log("Fetching reservations with value:", value);
+        
+        return await genericService.getByParams('reservation', value);
     }
     
 };
