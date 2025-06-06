@@ -1,26 +1,31 @@
-
-
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../context/AuthContext'; // עדכני לפי הנתיב שלך
+import UserParkings from '../../components/User/UserParkings'; // עדכני לנתיב שלך
 
 function MyParkings() {
-    const navigate = useNavigate();
+  const { user, loading } = useContext(AuthContext);
+  const [parsedUser, setParsedUser] = useState(null);
+  const navigate = useNavigate();
 
-    const handleOwnerDashboard = () => {
-        navigate('/owner/dashboard');
-    };
+  useEffect(() => {
+    if (!loading) {
+      if (!user) {
+        navigate('/login');
+      } else {
+        // במידה וה-user ב-localStorage הוא מחרוזת
+        const parsed = typeof user === 'string' ? JSON.parse(user) : user;
+        setParsedUser(parsed);
+      }
+    }
+  }, [user, loading, navigate]);
 
-    const handleRenterDashboard = () => {
-        navigate('/renter/dashboard');
-    };
+  if (loading || !parsedUser) {
+    return <div>טוען נתונים...</div>;
+  }
 
-    return (
-        <div>
-            <h1>My Parkings</h1>
-            <button onClick={handleOwnerDashboard}>Go to Owner Dashboard</button>
-            <button onClick={handleRenterDashboard}>Go to Renter Dashboard</button>
-        </div>
-    );
+  return <UserParkings ownerId={parsedUser.id} />;
 }
 
 export default MyParkings;
+// MyParkings.jsx

@@ -31,9 +31,9 @@ const parkingBL = {
     },
 
     async createParking(data) {
-        // const { latitude, longitude } = await getCoordinatesFromAddress(data.address);
-        // data.latitude = latitude;
-        // data.longitude = longitude;
+        const { latitude, longitude } = await getCoordinatesFromAddress(data.address);
+        data.latitude = latitude;
+        data.longitude = longitude;
 
         return await genericService.create('Parking', data);
     },
@@ -57,7 +57,7 @@ const parkingBL = {
         const {
             lat,
             lng,
-            radius = 10000,
+            radius = 1000,
             type = 'temporary',
             minPrice = 0,
             maxPrice = 100000000000,

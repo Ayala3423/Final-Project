@@ -4,13 +4,17 @@ import "../../styles/search.css";
 import { apiService } from "../../services/genericService";
 
 const SearchBar = ({ onSearch, currentLocation }) => {
-    const [minPrice, setMinPrice] = useState("");
-    const [maxPrice, setMaxPrice] = useState("");
-    const [parkingType, setParkingType] = useState("");
+    const [minPrice, setMinPrice] = useState(0);
+    const [maxPrice, setMaxPrice] = useState(100);
+    const [parkingType, setParkingType] = useState("temporary");
     const [locationText, setLocationText] = useState("");
     const [useCurrentLocation, setUseCurrentLocation] = useState(true);
     const [currentTime, setCurrentTime] = useState("");
     const [coords, setCoords] = useState({ lat: null, lng: null });
+
+    const [radius, setRadius] = useState(10); // רדיוס
+    const [startTime, setStartTime] = useState(""); // שעת התחלה
+    const [duration, setDuration] = useState(2); // משך בשעות
 
     useEffect(() => {
         const now = new Date();
@@ -24,7 +28,6 @@ const SearchBar = ({ onSearch, currentLocation }) => {
     useEffect(() => {
         if (useCurrentLocation && currentLocation?.lat && currentLocation?.lng) {
             setCoords(currentLocation);
-            // אפשר להוסיף גם הצגה טקסטואלית אם רוצים
             setLocationText(`${currentLocation.lat.toFixed(5)}, ${currentLocation.lng.toFixed(5)}`);
         }
     }, [useCurrentLocation, currentLocation]);
@@ -59,8 +62,6 @@ const SearchBar = ({ onSearch, currentLocation }) => {
         } else {
             try {
                 const geo = await geocodeLocation(locationText);
-                console.log("geocoded location:", geo);
-                
                 lat = geo.lat;
                 lng = geo.lng;
             } catch (error) {
@@ -68,22 +69,25 @@ const SearchBar = ({ onSearch, currentLocation }) => {
                 return;
             }
         }
-        console.log(parkingType+"parking type");
+
         const params = {
-            minPrice: parseFloat(minPrice) || 0,
-            maxPrice: parseFloat(maxPrice) || 1000,
-            type: "temporary", // או "fixed" אם זה מה שנבחר
+            minPrice,
+            maxPrice,
+            type: parkingType,
             lat,
             lng,
-            startTime: new Date().toISOString(),
-            hours: 2,
-            radius: 10
+            startTime: startTime || new Date().toISOString(),
+            hours: duration,
+            radius
         };
-
+        console.log("Search parameters:", params);
         apiService.getSearch(
             'parking',
             params,
-            (response) => { console.log(response+"response of search"); onSearch(response); },
+            (response) => { onSearch(response); 
+                console.log("Search results:", response);
+                // setCoords({ lat, lng }); // Update coords for map center
+            },
             (error) => console.error(error.message)
         );
     };
@@ -92,25 +96,46 @@ const SearchBar = ({ onSearch, currentLocation }) => {
         <div className="search-container">
             <h2 className="search-title">🔍 Search for Parking</h2>
             <form onSubmit={handleSubmit} className="search-form">
-                <input
-                    type="number"
-                    placeholder="Min Price"
-                    value={minPrice}
-                    onChange={(e) => setMinPrice(e.target.value)}
-                />
-                <input
-                    type="number"
-                    placeholder="Max Price"
-                    value={maxPrice}
-                    onChange={(e) => setMaxPrice(e.target.value)}
-                />
+
+                <div className="price-slider-container">
+                    <label>💰 Price Range:</label>
+                    <div className="range-group">
+                        <input
+                            type="range"
+                            min="0"
+                            max="500"
+                            value={minPrice}
+                            onChange={(e) => setMinPrice(Number(e.target.value))}
+                        />
+                        <input
+                            type="range"
+                            min="0"
+                            max="500"
+                            value={maxPrice}
+                            onChange={(e) => setMaxPrice(Number(e.target.value))}
+                        />
+                    </div>
+                    <div className="price-inputs">
+                        <input
+                            type="number"
+                            value={minPrice}
+                            onChange={(e) => setMinPrice(Number(e.target.value))}
+                        />
+                        <span> - </span>
+                        <input
+                            type="number"
+                            value={maxPrice}
+                            onChange={(e) => setMaxPrice(Number(e.target.value))}
+                        />
+                    </div>
+                </div>
+
                 <select
                     value={parkingType}
                     onChange={(e) => setParkingType(e.target.value)}
                 >
                     <option value="temporary">Temporary</option>
                     <option value="fixed">Permanent</option>
-                    
                 </select>
 
                 <label className="text-sm text-gray-700">
@@ -137,7 +162,30 @@ const SearchBar = ({ onSearch, currentLocation }) => {
                     </div>
                 )}
 
-                <div className="text-sm text-gray-600">🕓 Time: {currentTime}</div>
+                {/* רדיוס חיפוש */}
+                <input
+                    type="number"
+                    placeholder="Search radius (km)"
+                    value={radius}
+                    onChange={(e) => setRadius(Number(e.target.value))}
+                />
+
+                {/* שעת התחלה */}
+                <input
+                    type="datetime-local"
+                    value={startTime}
+                    onChange={(e) => setStartTime(e.target.value)}
+                />
+
+                {/* משך זמן */}
+                <input
+                    type="number"
+                    placeholder="Duration (hours)"
+                    value={duration}
+                    onChange={(e) => setDuration(Number(e.target.value))}
+                />
+
+                <div className="text-sm text-gray-600">🕓 Current time: {currentTime}</div>
 
                 <button type="submit" className="search-button">
                     <FaSearch /> Search

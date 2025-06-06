@@ -21,6 +21,7 @@ import MyParkings from '../pages/Owner/MyParkings';
 import RenterDashboard from '../pages/Renter/Dashboard';
 import MyReservations from '../pages/Renter/MyReservations';
 import Payment from '../pages/Renter/Payment';
+import UserParkings from '../components/User/UserParkings.jsx';
 
 // רוטה פרטית - רק למשתמשים מחוברים
 const PrivateRoute = ({ children, allowedRoles }) => {
@@ -52,35 +53,24 @@ function AppRouter() {
           </PrivateRoute>
         }
       >
-       <Route path=":userType" element={<UsersManagement />} />
+        <Route path=":userType" element={<UsersManagement />} />
         <Route path="parking-management" element={<ParkingManagement />} />
       </Route>
 
-      {/* רוטות Owner */}
       <Route
-        path="/owner/dashboard"
+        path="/owner"
         element={
           <PrivateRoute allowedRoles={['owner']}>
             <OwnerDashboard />
           </PrivateRoute>
         }
-      />
-      <Route
-        path="/owner/add-parking"
-        element={
-          <PrivateRoute allowedRoles={['owner']}>
-            <AddParking />
-          </PrivateRoute>
-        }
-      />
-      <Route
-        path="/owner/my-parkings"
-        element={
-          <PrivateRoute allowedRoles={['owner']}>
-            <MyParkings />
-          </PrivateRoute>
-        }
-      />
+      >
+        <Route path="add-parking" element={<AddParking />} />
+        <Route path="resevetion" element={<MyReservations />} />
+        <Route path="my-parking" element={<MyParkings />} />
+      </Route>
+
+
 
       {/* רוטות Renter */}
       <Route
