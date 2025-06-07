@@ -1,100 +1,234 @@
 /* Home.css */
 
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f7f7;
+    direction: rtl;
+}
+
 .home-container {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  direction: rtl;
-  text-align: right;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+    background: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0078ff;
+    text-decoration: none;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-btn {
+    padding: 8px 16px;
+    background-color: #0078ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background-color: #005fd1;
 }
 
 /* Hero Section */
 .hero-section {
-  position: relative;
-  height: 80vh;
-  background-image: url('/assets/parking-bg.jpg'); /* החליפי לשם הקובץ שלך */
-  background-size: cover;
-  background-position: center;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-overlay {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+    background: url('/images/bg.jpg') no-repeat center center/cover;
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: white;
+    text-align: center;
 }
 
 .hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 800px;
-  padding: 2rem;
-}
-
-.hero-header {
-  margin-bottom: 2rem;
+    backdrop-filter: brightness(0.7);
+    padding: 30px;
 }
 
 .hero-title {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
+    font-size: 36px;
+    margin-bottom: 10px;
 }
 
 .hero-subtitle {
-  font-size: 1.2rem;
+    font-size: 18px;
+    margin-bottom: 30px;
 }
 
-.hero-search {
-  margin-bottom: 2rem;
-}
-
-/* Auth Buttons */
-.auth-buttons {
-  display: flex;
-  gap: 1rem;
-}
-
-.auth-btn {
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.login-btn {
-  background-color: #ffffff;
-  color: #333;
-}
-
-.register-btn {
-  background-color: #007bff;
-  color: white;
-}
-
-.auth-btn:hover {
-  opacity: 0.9;
-}
-
-/* Main Content (e.g. map or list of parkings) */
-.main-content {
-  padding: 3rem 1rem;
-  background-color: #f9f9f9;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .hero-title {
-    font-size: 2rem;
-  }
-
-  .auth-buttons {
+.search-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    align-items: flex-start;
-  }
+}
+
+.search-container {
+    background-color: white;
+    border-radius: 30px;
+    padding: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 900px;
+    width: 90%;
+}
+
+.category-buttons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+    gap: 8px;
+}
+
+.category-btn {
+    flex: 1;
+    padding: 8px 12px;
+    border: none;
+    background-color: #f1f1f1;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.category-btn.active,
+.category-btn:hover {
+    background-color: #0078ff;
+    color: white;
+}
+
+.loading {
+    padding: 15px;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Features */
+.features-section {
+    background-color: #fff;
+    padding: 40px 5%;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.feature-card {
+    background: #fafafa;
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.feature-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.feature-description {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Parking Section */
+.parking-section {
+    padding: 40px 5%;
+    background-color: #eef3f7;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.section-subtitle {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* Footer */
+.footer {
+    margin-top: auto;
+    background: #222;
+    color: #ccc;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.footer-text {
+    font-size: 14px;
+}
+
+.scroll-down-arrow {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    color: white;
+    opacity: 0.8;
+    animation: bounce 2s infinite;
+    z-index: 10;
+}
+
+.scroll-down-arrow:hover {
+    opacity: 1;
+}
+
+/* אנימציית קפיצה פשוטה */
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(10px);
+    }
+}
+
+.parking-section {
+    background-color: white;
+    padding: 60px 40px;
+    min-height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
 }

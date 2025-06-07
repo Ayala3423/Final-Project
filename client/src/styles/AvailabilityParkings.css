@@ -1,0 +1,49 @@
+.availability-container {
+    display: flex;
+    height: calc(100vh - 80px);
+    /* גובה מותאם (אפשר לשנות לפי כותרת/ניווט) */
+    gap: 30px;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    background-color: #f5f7fa;
+    font-family: 'Arial', sans-serif;
+}
+
+/* רשימת החניות - תופסת כ-40% מהרוחב */
+.parking-list-wrapper {
+    flex: 0 0 40%;
+    overflow-y: auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgb(0 0 0 / 0.1);
+    padding: 25px;
+}
+
+/* המפה תופסת את שאר המקום */
+.map-view-wrapper {
+    flex: 1;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 14px rgb(0 0 0 / 0.1);
+}
+
+/* ריספונסיביות למובייל */
+@media (max-width: 900px) {
+    .availability-container {
+        flex-direction: column;
+        height: auto;
+        padding: 15px 20px;
+    }
+
+    .parking-list-wrapper {
+        flex: none;
+        width: 100%;
+        max-height: 350px;
+        margin-bottom: 20px;
+    }
+
+    .map-view-wrapper>* {
+        width: 100%;
+        height: 100%;
+    }
+}

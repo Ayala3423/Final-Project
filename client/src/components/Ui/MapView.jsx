@@ -7,7 +7,6 @@ function MapView({ center, parkings }) {
     const mapInstance = useRef(null);
 
     useEffect(() => {
-        // פונקציית callback תוגדר ב-window כדי ש-Google Maps יוכל לקרוא לה
         window.initMap = () => {
             mapInstance.current = new window.google.maps.Map(mapRef.current, {
                 center,
@@ -32,7 +31,6 @@ function MapView({ center, parkings }) {
             });
         };
 
-        // בדוק אם כבר נטען
         if (!window.google || !window.google.maps) {
             const script = document.createElement('script');
             script.src = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}&callback=initMap`;
@@ -43,14 +41,13 @@ function MapView({ center, parkings }) {
             window.initMap();
         }
 
-        // ניקוי (אופציונלי)
         return () => {
             delete window.initMap;
         };
     }, [center, parkings]);
 
     return (
-        <div ref={mapRef} style={{ width: '100%', height: '400px', marginTop: '30px' }} />
+        <div ref={mapRef} style={{ width: '100%', height: '100vh' }} />
     );
 }
 

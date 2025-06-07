@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 import ParkingList from './ParkingList';
 import MapView from '../Ui/MapView';
 import { apiService } from '../../services/genericService';
+import '../../styles/AvailabilityParkings.css';
 
 function AvailabilityParkings({ currentLocation, setSearchResults, searchResults }) {
-
     useEffect(() => {
         if (!searchResults || searchResults.length === 0) {
             apiService.getSearch('parking', currentLocation, (response) => {
@@ -15,9 +15,13 @@ function AvailabilityParkings({ currentLocation, setSearchResults, searchResults
     }, [currentLocation]);
 
     return (
-        <div>
-            <ParkingList parkings={searchResults} />
-            <MapView center={currentLocation} parkings={searchResults} />
+        <div className="availability-container">
+            <div className="parking-list-wrapper">
+                <ParkingList parkings={searchResults} />
+            </div>
+            <div className="map-view-wrapper">
+                <MapView center={currentLocation} parkings={searchResults} />
+            </div>
         </div>
     );
 }

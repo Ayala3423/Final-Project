@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate, Outlet } from 'react-router-dom';
+import { HiMenuAlt3 } from 'react-icons/hi';
 import '../../styles/Dashboard.css';
 
 function AdminDashboard() {
@@ -8,7 +9,7 @@ function AdminDashboard() {
 
     const toggleMenu = () => setMenuOpen(!menuOpen);
 
-    const handleClick = (item, path) => {
+    const handleClick = (path) => {
         setMenuOpen(false);
         navigate(path);
     };
@@ -21,14 +22,17 @@ function AdminDashboard() {
 
             <div className="admin-body">
                 <nav className="sidebar">
-                    <button onClick={toggleMenu}>☰ תפריט</button>
+                    <button className="menu-toggle" onClick={toggleMenu}>
+                        <HiMenuAlt3 size={24} />
+                    </button>
+
                     {menuOpen && (
                         <div className="dropdown-menu">
-                            <button onClick={() => handleClick('משכירים', '/admin/owner')}>משכירים</button>
-                            <button onClick={() => handleClick('שוכרים', '/admin/renter')}>שוכרים</button>
-                            <button onClick={() => handleClick('חניות', '/admin/parking-management')}>חניות</button>
-                            <button onClick={() => handleClick('הזמנות', '/admin/orders')}>הזמנות</button>
-                            <button onClick={() => handleClick('יציאה', '/')}>יציאה</button>   
+                            <button onClick={() => handleClick('/admin/owner')}>owners</button>
+                            <button onClick={() => handleClick('/admin/renter')}>renters</button>
+                            <button onClick={() => handleClick('/admin/parking-management')}>parkings</button>
+                            <button onClick={() => handleClick('/admin/orders')}>orders</button>
+                            <button onClick={() => handleClick('/')}>logout</button>   
                         </div>
                     )}
                 </nav>

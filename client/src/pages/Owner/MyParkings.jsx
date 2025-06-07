@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { AuthContext } from '../../context/AuthContext'; // עדכני לפי הנתיב שלך
-import UserParkings from '../../components/User/UserParkings'; // עדכני לנתיב שלך
+import { AuthContext } from '../../context/AuthContext'; 
+import UserParkings from '../../components/User/UserParkings'; 
 
 function MyParkings() {
   const { user, loading } = useContext(AuthContext);
@@ -13,7 +13,6 @@ function MyParkings() {
       if (!user) {
         navigate('/login');
       } else {
-        // במידה וה-user ב-localStorage הוא מחרוזת
         const parsed = typeof user === 'string' ? JSON.parse(user) : user;
         setParsedUser(parsed);
       }
@@ -28,4 +27,3 @@ function MyParkings() {
 }
 
 export default MyParkings;
-// MyParkings.jsx

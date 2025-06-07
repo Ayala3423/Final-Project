@@ -10,7 +10,7 @@ function UserParkings({ownerId}) {
     const [error, setError] = useState(null);
 
     useEffect(() => {
-        console.log("Parking Management Component Mounted"+ownerId);
+        console.log("Parking Management Component Mounted" + ownerId);
         apiService.getByValue('parking', { "ownerId": ownerId }, (response) => {
             console.log("Fetched Parkings:", response);
             setParkings(response);

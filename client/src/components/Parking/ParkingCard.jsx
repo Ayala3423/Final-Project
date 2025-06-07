@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { apiService } from '../../services/genericService';
-import '../../styles/parkingCard.css';
+import '../../styles/ParkingCard.css';
 
 function ParkingCard({ parking, currentUserId, onClose }) {
     const [isEditing, setIsEditing] = useState(false);
