@@ -29,7 +29,7 @@ function Dashboard() {
                     {menuOpen && (
                         <div className="dropdown-menu">
                             <button onClick={() => handleClick('הזמנות שלי', '/renter/my-reservations')}>הזמנות שלי</button>
-                            <button onClick={() => handleClick('יצירת הזמנה', '/renter/renter')}>יצירת הזמנה</button>
+                            <button onClick={() => handleClick('יצירת הזמנה', '/renter/add-reservation')}>יצירת הזמנה</button>
                             <button onClick={() => handleClick('יציאה', '/')}>יציאה</button>
                         </div>
                     )}

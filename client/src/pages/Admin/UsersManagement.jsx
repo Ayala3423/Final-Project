@@ -1,11 +1,11 @@
 
 import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import Home from '../Home';
 import { useState, useEffect } from 'react';
 import { apiService } from '../../services/genericService';
 import UserParkings from '../../components/User/UserParkings';
 import Modal from '../../components/Ui/Modal';
+import '../../styles/usersManagement.css'; // Assuming you have a CSS file for styling
 
 function UsersManagement() {
     const { userType } = useParams();
@@ -32,17 +32,24 @@ function UsersManagement() {
     };
 
     return (
-        <div>
-            <h1>Users Management</h1>
-            <ul>
+        <div className="users-management">
+            <h1 className="title">ניהול משתמשים</h1>
+            <ul className="user-grid">
                 {users.map(user => (
-                    <li key={user.id}>
-                        {user.name} - {user.email}
-                        {userType=='owner' && <button onClick={() => handleOpenModal(user)}>ראה חניות</button>}
+                    <li key={user.id} className="user-card">
+                        <div className="user-info">
+                            <span className="user-name">{user.name}</span>
+                            <span className="user-email">{user.email}</span>
+                        </div>
+                        {userType === 'owner' && (
+                            <button className="view-parking-btn" onClick={() => handleOpenModal(user)}>
+                                ראה חניות
+                            </button>
+                        )}
                     </li>
                 ))}
-
             </ul>
+
 
             {selectedUser && (
                 <Modal onClose={handleCloseModal}>
@@ -50,8 +57,8 @@ function UsersManagement() {
                     <UserParkings ownerId={selectedUser.id} />
                 </Modal>
             )}
-
         </div>
+
     );
 }
 

@@ -23,6 +23,7 @@ import MyReservations from '../pages/Renter/MyReservations';
 import Payment from '../pages/Renter/Payment';
 import UserParkings from '../components/User/UserParkings.jsx';
 import RentBro from '../pages/RentBro.jsx';
+import AddReservation from '../pages/Renter/AddReservation.jsx';
 
 // רוטה פרטית - רק למשתמשים מחוברים
 const PrivateRoute = ({ children, allowedRoles }) => {
@@ -88,6 +89,7 @@ function AppRouter() {
         >
           <Route path=":userType" element={<UsersManagement />} />
           <Route path="my-reservations" element={<MyReservations />} />
+          <Route path="add-reservation" element={<AddReservation />} />
         </Route>
       </Routes>
 

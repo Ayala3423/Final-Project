@@ -7,7 +7,9 @@ function MapView({ center, parkings }) {
     const mapInstance = useRef(null);
 
     useEffect(() => {
-        window.initMap = () => {
+        const initializeMap = () => {
+            if (!mapRef.current || mapInstance.current) return;
+
             mapInstance.current = new window.google.maps.Map(mapRef.current, {
                 center,
                 zoom: 14
@@ -31,18 +33,24 @@ function MapView({ center, parkings }) {
             });
         };
 
-        if (!window.google || !window.google.maps) {
-            const script = document.createElement('script');
-            script.src = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}&callback=initMap`;
-            script.async = true;
-            script.defer = true;
-            document.head.appendChild(script);
+        if (window.google && window.google.maps) {
+            initializeMap();
         } else {
-            window.initMap();
+            const existingScript = document.querySelector(`script[src*="maps.googleapis.com"]`);
+            if (!existingScript) {
+                const script = document.createElement('script');
+                script.src = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}`;
+                script.async = true;
+                script.defer = true;
+                script.onload = initializeMap;
+                document.head.appendChild(script);
+            } else {
+                existingScript.addEventListener('load', initializeMap);
+            }
         }
 
         return () => {
-            delete window.initMap;
+            mapInstance.current = null;
         };
     }, [center, parkings]);
 
