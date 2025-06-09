@@ -5,6 +5,7 @@ import { apiService } from '../../services/genericService';
 import '../../styles/AvailabilityParkings.css';
 
 function AvailabilityParkings({ currentLocation, setSearchResults, searchResults }) {
+    
     useEffect(() => {
         if (!searchResults || searchResults.length === 0) {
             apiService.getSearch('parking', currentLocation, (response) => {

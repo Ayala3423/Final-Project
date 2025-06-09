@@ -50,7 +50,7 @@ function AppRouter() {
   return (
     <>
       {/* מציגים את הדף הקודם אם backgroundLocation קיים */}
-    <Routes location={state?.backgroundLocation || location}>
+      <Routes location={state?.backgroundLocation || location}>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
@@ -85,25 +85,33 @@ function AppRouter() {
           path="/renter"
           element={
             <PrivateRoute allowedRoles={['renter']}>
-              
+
               <RenterDashboard />
             </PrivateRoute>
           }
         >
-          <Route path="reservation" element={<Reservation />} />
           <Route path=":userType" element={<UsersManagement />} />
           <Route path="my-reservations" element={<MyReservations />} />
           <Route path="add-reservation" element={<AddReservation />} />
         </Route>
+
+        <Route
+          path="/reservation"
+          element={
+            <PrivateRoute allowedRoles={['renter']}>
+              <Reservation />
+            </PrivateRoute>
+          }
+        />
+
       </Routes>
 
       {state?.backgroundLocation && (
-      <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-
-      </Routes>
-    )}
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+        </Routes>
+      )}
     </>
   );
 }
