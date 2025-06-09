@@ -1,0 +1,45 @@
+.parking-timeslots {
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 16px;
+    margin-bottom: 2rem;
+}
+
+.timeslots-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.timeslots-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(1fr, 1fr));
+    gap: 1rem;
+}
+
+.timeslot-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.timeslot-card:hover {
+    transform: translateY(-4px);
+}
+
+.time-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.label {
+    font-weight: bold;
+    color: #444;
+}
+
+.value {
+    color: #222;
+}

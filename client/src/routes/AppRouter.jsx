@@ -1,31 +1,25 @@
 import React, { useContext } from 'react';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext.jsx';
+import MessagesPage from '../pages/MessagesPage.jsx';
 
 // עמודים כלליים
-import Home from '../pages/Home';
-import Login from '../pages/LoginModal.jsx';
-import Register from '../pages/RegisterModal.jsx';
+import Home from '../pages/Home.jsx';
+import Login from '../pages/Login.jsx';
+import Register from '../pages/Register.jsx';
 
 // Admin
-import AdminDashboard from '../pages/Admin/Dashboard';
-import ParkingManagement from '../pages/Admin/ParkingManagement';
-import UsersManagement from '../pages/Admin/UsersManagement';
+import AdminDashboard from '../pages/AdminDashboard';
 
 // Owner
-import OwnerDashboard from '../pages/Owner/Dashboard';
-import AddParking from '../pages/Owner/AddParking';
-import MyParkings from '../pages/Owner/MyParkings';
+import OwnerDashboard from '../pages/OwnerDashboard';
 
 // Renter
-import RenterDashboard from '../pages/Renter/Dashboard';
-import MyReservations from '../pages/Renter/MyReservations';
-import Payment from '../pages/Renter/Payment';
-import UserParkings from '../components/User/UserParkings.jsx';
-import RentBro from '../pages/RentBro.jsx';
-import AddReservation from '../pages/Renter/AddReservation.jsx';
+import RenterDashboard from '../pages/RenterDashboard'
 
-import Reservation from '../components/Parking/Reservation.jsx';
+import Reservation from '../pages/Reservation.jsx';
+import ParkingPage from '../pages/ParkingPage.jsx';
+
 // רוטה פרטית - רק למשתמשים מחוברים
 const PrivateRoute = ({ children, allowedRoles }) => {
 
@@ -63,8 +57,6 @@ function AppRouter() {
             </PrivateRoute>
           }
         >
-          <Route path=":userType" element={<UsersManagement />} />
-          <Route path="parking-management" element={<ParkingManagement />} />
         </Route>
 
         <Route
@@ -75,9 +67,6 @@ function AppRouter() {
             </PrivateRoute>
           }
         >
-          <Route path="add-parking" element={<AddParking />} />
-          <Route path="resevetion" element={<MyReservations />} />
-          <Route path="my-parking" element={<MyParkings />} />
 
         </Route>
 
@@ -85,14 +74,10 @@ function AppRouter() {
           path="/renter"
           element={
             <PrivateRoute allowedRoles={['renter']}>
-
               <RenterDashboard />
             </PrivateRoute>
           }
         >
-          <Route path=":userType" element={<UsersManagement />} />
-          <Route path="my-reservations" element={<MyReservations />} />
-          <Route path="add-reservation" element={<AddReservation />} />
         </Route>
 
         <Route
@@ -101,6 +86,22 @@ function AppRouter() {
             <PrivateRoute allowedRoles={['renter']}>
               <Reservation />
             </PrivateRoute>
+          }
+        />
+
+        <Route
+          path="/messages"
+          element={
+            <PrivateRoute allowedRoles={['admin', 'owner', 'renter']}>
+              <MessagesPage />
+            </PrivateRoute>
+          }
+        />
+
+        <Route
+          path="/parking/:parkingId"
+          element={
+            <ParkingPage />
           }
         />
 
@@ -118,5 +119,3 @@ function AppRouter() {
 
 
 export default AppRouter;
-
-

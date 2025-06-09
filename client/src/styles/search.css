@@ -22,7 +22,7 @@
 
 .search-form {
   display: flex;
-  flex-wrap: wrap; /* יאפשר ירידת שדות לשורה הבאה במידת הצורך */
+  flex-wrap: wrap; 
   gap: 20px;
   align-items: center;
   justify-content: space-between;
@@ -106,7 +106,7 @@ input[type="range"]::-moz-range-thumb {
 .search-form input[type="number"],
 .search-form input[type="datetime-local"],
 .search-form select {
-  flex: 1 1 160px; /* גמיש: ייקח מקום זמין אך לא פחות מ-160px */
+  flex: 1 1 160px; 
   min-width: 120px;
   max-width: 100%;
   padding: 10px 14px;
@@ -162,7 +162,7 @@ input[type="range"]::-moz-range-thumb {
 
 @media (max-width: 768px) {
   .search-form {
-    flex-wrap: wrap; /* במובייל עדיין ירד לשורה */
+    flex-wrap: wrap; 
   }
 
   .search-button {
