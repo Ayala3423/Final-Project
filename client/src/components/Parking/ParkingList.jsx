@@ -58,9 +58,7 @@ function ParkingList({ parkings, currentUserId }) {
                                 <div className="parking-spots">Available spots: {spot.availableSpots}</div>
                             )}
                         </div>
-                        <button className='order-button' ocClick={() => handleOrder(spot.id)}>
-                            Order Now
-                        </button>
+
                     </li>
                 ))}
             </ul>

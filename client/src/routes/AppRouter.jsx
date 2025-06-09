@@ -25,6 +25,7 @@ import UserParkings from '../components/User/UserParkings.jsx';
 import RentBro from '../pages/RentBro.jsx';
 import AddReservation from '../pages/Renter/AddReservation.jsx';
 
+import Reservation from '../components/Parking/Reservation.jsx';
 // רוטה פרטית - רק למשתמשים מחוברים
 const PrivateRoute = ({ children, allowedRoles }) => {
 
@@ -77,16 +78,19 @@ function AppRouter() {
           <Route path="add-parking" element={<AddParking />} />
           <Route path="resevetion" element={<MyReservations />} />
           <Route path="my-parking" element={<MyParkings />} />
+
         </Route>
 
         <Route
           path="/renter"
           element={
             <PrivateRoute allowedRoles={['renter']}>
+              
               <RenterDashboard />
             </PrivateRoute>
           }
         >
+          <Route path="reservation" element={<Reservation />} />
           <Route path=":userType" element={<UsersManagement />} />
           <Route path="my-reservations" element={<MyReservations />} />
           <Route path="add-reservation" element={<AddReservation />} />
@@ -97,6 +101,7 @@ function AppRouter() {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+
       </Routes>
     )}
     </>
@@ -107,64 +112,3 @@ function AppRouter() {
 export default AppRouter;
 
 
-// import React, { useContext } from 'react';
-// import { Routes, Route, Navigate } from 'react-router-dom';
-// import { AuthContext } from '../context/AuthContext.jsx';
-
-// // עמודים כלליים
-// import Home from '../pages/Home';
-// import Login from '../pages/Login';
-// import Register from '../pages/Register';
-
-// // רוטה פרטית - רק למשתמשים מחוברים
-// const PrivateRoute = ({ children, allowedRoles }) => {
-//   const { user, loading } = useContext(AuthContext);
-
-//   if (loading) return <div>Loading...</div>;
-
-//   if (!user) return <Navigate to="/login" />;
-//   if (allowedRoles && !allowedRoles.includes(user.role)) {
-//     return <Navigate to="/" />;
-//   }
-
-//   return children;
-// };
-
-// function AppRouter() {
-//   return (
-//     <Routes>
-//       {/* רוטות פתוחות */}
-//       <Route path="/" element={<Home />} />
-//       <Route path="/user/login" element={<Login />} />
-//       <Route path="/register" element={<Register />} />
-
-//       {/* רוטות Admin */}
-// //       <Route
-// //         path="/admin/dashboard"
-// //         element={
-// //           <PrivateRoute allowedRoles={['admin']}>
-// //             <AdminDashboard />
-// //           </PrivateRoute>
-// //         }
-// //       />
-// //       <Route
-// //         path="/admin/parking-management"
-// //         element={
-// //           <PrivateRoute allowedRoles={['admin']}>
-// //             <ParkingManagement />
-// //           </PrivateRoute>
-// //         }
-// //       />
-// //       <Route
-// //         path="/admin/users-management"
-// //         element={
-// //           <PrivateRoute allowedRoles={['admin']}>
-// //             <UsersManagement />
-// //           </PrivateRoute>
-// //         }
-// //       />
-//     </Routes>
-//   );
-// }
-
-// export default AppRouter;

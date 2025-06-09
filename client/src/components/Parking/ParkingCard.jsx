@@ -1,16 +1,22 @@
-import React, { useEffect, useState } from 'react';
+import React, { use, useEffect, useState } from 'react';
 import { apiService } from '../../services/genericService';
+import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../context/AuthContext';
 import '../../styles/ParkingCard.css';
+import Modal from '../Ui/Modal';
+import {useContext} from 'react';
 
 function ParkingCard({ parking, currentUserId, onClose }) {
     const [isEditing, setIsEditing] = useState(false);
+    const navigate = useNavigate();
+    const { user } = useContext(AuthContext);
     const [formData, setFormData] = useState({
         address: parking.address,
         description: parking.description,
         imageUrl: parking.imageUrl
     });
     const [timeSlots, setTimeSlots] = useState([]);
-
+    const [orderModal, setOrderModal] = useState(false);
     const isOwner = parking.ownerId === currentUserId;
 
     useEffect(() => {
@@ -21,7 +27,9 @@ function ParkingCard({ parking, currentUserId, onClose }) {
             console.error("Error fetching time slots:", error);
         });
     }, [parking.id]);
-
+    const handleClose = () => {
+        setOrderModal(false);
+    };
     const handleChange = (e) => {
         setFormData(prev => ({
             ...prev,
@@ -56,7 +64,24 @@ function ParkingCard({ parking, currentUserId, onClose }) {
             console.error("Failed to delete parking", error);
         }
     };
-
+    const handleOrder = (parkingId) => {
+        if (!user) {
+            navigate('/login');
+            alert('Please log in to order a parking spot.');
+            return;
+        }
+        else {
+            console.log(`Ordering parking spot with ID: ${parkingId}`);
+                navigate('/renter/reservation', {
+                    state: {
+                        parking,
+                        timeSlots
+                    }
+                });
+            }
+            }
+        
+    
     return (
         <div className="parking-card">
             <h3>Parking Details</h3>
@@ -116,9 +141,13 @@ function ParkingCard({ parking, currentUserId, onClose }) {
                             </div>
                         ))}
                     </div>
+
                 </div>
             )}
-
+            <button className='order-button' ocClick={() => handleOrder(spot.id)}>
+                Order Now
+            </button>
+        
         </div>
     );
 }
