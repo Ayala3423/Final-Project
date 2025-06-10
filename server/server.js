@@ -17,15 +17,15 @@ app.use("/reservation", require("./routes/reservationRoutes"));
 app.use("/report", require("./routes/reportRoutes"));
 // app.use("/message", require("./routes/messageRoutes"));
 
-sequelize.sync({ force: false }) // אם אתה רוצה לאפס את הטבלאות, שנה ל-true
+sequelize.sync({ force: false }) 
   .then(() => {
-    console.log('🔗 DB connected and synced');
+    console.log('DB connected and synced');
     
     const PORT = process.env.PORT || 3000;
     app.listen(PORT, () => {
-      console.log(`🚀 Server listening on port ${PORT}`);
+      console.log(`Server listening on port ${PORT}`);
     });
   })
   .catch(err => {
-    console.error('❌ DB sync failed:', err);
+    console.error('DB sync failed:', err);
   });

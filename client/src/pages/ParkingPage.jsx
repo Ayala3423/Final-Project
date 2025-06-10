@@ -16,7 +16,10 @@ function ParkingPage() {
     const [timeSlots, setTimeSlots] = useState([]);
     const [reports, setReports] = useState([]);
     const [canReview, setCanReview] = useState(false);
-
+    const [showReviewForm, setShowReviewForm] = useState(false);
+    const [reviewRating, setReviewRating] = useState(0);
+    const [hoverRating, setHoverRating] = useState(0);
+    const [reviewDescription, setReviewDescription] = useState('');
 
     useEffect(() => {
         if (parking?.id) {
@@ -35,6 +38,32 @@ function ParkingPage() {
             );
         }
     }, [parking?.id]);
+
+    const handleSubmitReview = () => {
+        if (reviewRating === 0) {
+            alert('אנא בחר דירוג');
+            return;
+        }
+
+        const reviewData = {
+            parkingId: parking.id,
+            userId: user.id,
+            rating: reviewRating,
+            description: reviewDescription,
+        };
+
+        apiService.create('report', reviewData, (response) => {
+            console.log("Review submitted:", response);
+            setReports(prev => [...prev, response]);
+            setCanReview(false);
+            setShowReviewForm(false);
+            setReviewRating(0);
+            setReviewDescription('');
+        }, (error) => {
+            console.error("Error submitting review:", error);
+            alert('אירעה שגיאה בעת שליחת הביקורת');
+        });
+    };
 
     useEffect(() => {
         if (parking?.id && user?.id) {
@@ -134,18 +163,45 @@ function ParkingPage() {
                 )}
 
             </div>
-            {canReview && (
-                <button
-                    className="add-review-button"
-                    onClick={() => {
-                        // כאן תפתח טופס להוספת תגובה
-                        console.log('פתח טופס תגובה');
-                    }}
-                >
-                    הוסף תגובה
-                </button>
-            )}
+           
 
+            {canReview && (
+                <div className="review-form-wrapper">
+                    {!showReviewForm ? (
+                        <button
+                            className="add-review-button"
+                            onClick={() => setShowReviewForm(true)}
+                        >
+                            הוסף תגובה
+                        </button>
+                    ) : (
+                        <div className="review-form">
+                            <h4>הוספת ביקורת</h4>
+                            <div className="rating-stars">
+                                {Array.from({ length: 5 }, (_, i) => i + 1).map((star) => (
+                                    <FaStar
+                                        key={star}
+                                        className="star"
+                                        color={star <= (hoverRating || reviewRating) ? '#ffc107' : '#e4e5e9'}
+                                        onClick={() => setReviewRating(star)}
+                                        onMouseEnter={() => setHoverRating(star)}
+                                        onMouseLeave={() => setHoverRating(0)}
+                                    />
+                                ))}
+                            </div>
+                            <textarea
+                                className="review-textarea"
+                                placeholder="כתוב כאן את התגובה שלך (לא חובה)"
+                                value={reviewDescription}
+                                onChange={(e) => setReviewDescription(e.target.value)}
+                            />
+                            <button className="submit-review-button" onClick={handleSubmitReview}>
+                                שלח ביקורת
+                            </button>
+                        </div>
+                    )}
+                </div>
+            )}
 
             <button
                 className="booking-button"
