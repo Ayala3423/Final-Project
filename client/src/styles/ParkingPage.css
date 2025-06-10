@@ -158,3 +158,64 @@
         font-size: 20px;
     }
 }
+.parking-reviews {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.review-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.add-review-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-review-button:hover {
+    background-color: #f57c00;
+}
+
+
+.review-card {
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    transition: box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.star-icon {
+    font-size: 1.5rem;
+    margin-right: 5px;
+}
+
+.review-rating {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.review-description {
+    font-size: 1rem;
+    color: #333;
+}

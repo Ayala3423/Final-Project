@@ -147,7 +147,8 @@ const parkingBL = {
             type: slot.type,
             timeSlotId: slot.id,
             startTime: slot.startTime,
-            endTime: slot.endTime
+            endTime: slot.endTime, 
+            ownerId: slot.Parking.ownerId,
         }));
     }
 

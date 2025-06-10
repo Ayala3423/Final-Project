@@ -20,6 +20,7 @@ html, body, #root {
     background-attachment: fixed;
     color: white;
     overflow: hidden;
+    z-index: 56789;
 }
 
 .admin-header {
@@ -37,23 +38,26 @@ html, body, #root {
     flex: 1;
     display: flex;
     overflow: hidden;
+    z-index: 12123;
 }
 
 .sidebar {
     width: 220px;
-    background-color: rgba(255, 255, 255, 0.1);
+    position: fixed;
+    background-color: rgba(17, 14, 14, 0.1);
     backdrop-filter: blur(10px);
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 15px;
     transition: all 0.3s ease;
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    /* border-right: 1px solid rgba(0, 0, 0, 0.2); */
+    z-index: 3666666666;
 }
 
 .sidebar button {
     background: rgba(255, 255, 255, 0.15);
-    color: white;
+    color: rgb(0, 0, 0);
     border: 1px solid rgba(255, 255, 255, 0.3);
     padding: 10px 16px;
     border-radius: 20px;
@@ -89,7 +93,7 @@ html, body, #root {
     .sidebar {
         width: 100%;
         border-right: none;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        border-bottom: 1px solid rgba(63, 30, 30, 0.2);
     }
 
     .admin-body {
@@ -109,7 +113,7 @@ html, body, #root {
 .menu-toggle {
     background: none;
     border: none;
-    color: white;
+    color: rgb(71, 8, 8);
     cursor: pointer;
     padding: 8px;
     transition: transform 0.2s ease;

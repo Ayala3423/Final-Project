@@ -1,7 +1,7 @@
 import axios from "axios";
 import Cookies from "js-cookie";
 
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 
 let getToken = () => Cookies.get('token');
 
@@ -54,6 +54,9 @@ export const apiService = {
 
     getSearch: (table, params, onSuccess, onError) =>
         request(`${table}/search`, params, 'GET', null, onSuccess, onError),
+
+    getCheck: (table, params, onSuccess, onError) =>
+        request(`${table}/check`, params, 'GET', null, onSuccess, onError),
 
     getById: (table, onSuccess, onError) =>
         request(`${table}`, {}, 'GET', null, onSuccess, onError),

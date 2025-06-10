@@ -19,7 +19,7 @@ const reservationBL = {
     },
 
     async createReservation(data) {
-        return await genericService.create(data);
+        return await genericService.create('reservation', data);
     },
 
     async getAllReservations() {

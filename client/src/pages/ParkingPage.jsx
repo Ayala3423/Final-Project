@@ -14,6 +14,9 @@ function ParkingPage() {
     const parking = location.state?.parking;
     const { user } = useContext(AuthContext);
     const [timeSlots, setTimeSlots] = useState([]);
+    const [reports, setReports] = useState([]);
+    const [canReview, setCanReview] = useState(false);
+
 
     useEffect(() => {
         if (parking?.id) {
@@ -23,8 +26,37 @@ function ParkingPage() {
             }, (error) => {
                 console.error("Error fetching time slots:", error);
             });
+            apiService.getByValue('report', { parkingId: parking.id }, (response) => {
+                console.log("Parking reports fetched:", response);
+                setReports(response);
+            }, (error) => {
+                console.error("Error fetching parking reports:", error);
+            }
+            );
         }
     }, [parking?.id]);
+
+    useEffect(() => {
+        if (parking?.id && user?.id) {
+
+            // מניעת ביקורת עצמית
+            if (user.id === parking.ownerId) {
+                setCanReview(false);
+                return;
+            }
+
+            apiService.getCheck('report', { parkingId: parking.id, userId: user.id }, (response) => {
+                console.log("Check if user can review:", response.canReport.canReport);
+                setCanReview(response.canReport.canReport); // אם אין ביקורת, אפשר להוסיף
+            }, (error) => {
+                console.error("Error checking if user can review:", error);
+                setCanReview(false); // אם יש שגיאה, נניח שלא ניתן להוסיף ביקורת
+            }
+            );
+
+        }
+    }, [parking?.id, user?.id]);
+
 
     if (!parking) {
         return <div className="loading">טוען...</div>;
@@ -85,16 +117,35 @@ function ParkingPage() {
 
             <div className="parking-reviews">
                 <h3>ביקורות</h3>
-                {parking.reviews && parking.reviews.length > 0 ? (
-                    <ul className="review-list">
-                        {parking.reviews.map((review, idx) => (
-                            <li key={idx}>{review}</li>
+                {reports.length > 0 ? (
+                    <div className="review-list">
+                        {reports.map((report, idx) => (
+                            <div key={idx} className="review-card">
+                                <div className="review-header">
+                                    <FaStar className="star-icon" color="#ffc107" />
+                                    <span className="review-rating">{report.rating}</span>
+                                </div>
+                                <p className="review-description">{report.description || 'אין תוכן לביקורת'}</p>
+                            </div>
                         ))}
-                    </ul>
+                    </div>
                 ) : (
                     <p>אין ביקורות עדיין.</p>
                 )}
+
             </div>
+            {canReview && (
+                <button
+                    className="add-review-button"
+                    onClick={() => {
+                        // כאן תפתח טופס להוספת תגובה
+                        console.log('פתח טופס תגובה');
+                    }}
+                >
+                    הוסף תגובה
+                </button>
+            )}
+
 
             <button
                 className="booking-button"

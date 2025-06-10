@@ -1,97 +1,49 @@
-// addParkingsToDB.js
-const axios = require('axios');
-const { Parking } = require('./models/Parking'); // התאימי את הנתיב למודל שלך
-const { getCoordinatesFromAddress, haversineDistance } = require('./utils/utils');
-const addresses = [
-  " בן יהודה 10, תל אביב",
-  "שדרות רוטשילד 5, תל אביב",
-  "רחוב יפו 50, ירושלים",
-  "כיכר ספרא, ירושלים",
-  "רחוב נמל 8, חיפה",
-  "מרכז מסחרי סי מול, חיפה",
-  "כיכר העצמאות, ראשון לציון",
-  "רחוב הרצל 14, פתח תקווה",
-  "כיכר דניה, רמת גן",
-  "רחוב הירקון 22, תל אביב",
-  "רחוב המלך ג'ורג' 30, ירושלים",
-  "כיכר אתרים, ירושלים",
-  "רחוב הצבי 3, חיפה",
-  "רחוב הרצל 25, באר שבע",
-  "שדרות בן גוריון 7, נתניה",
-  "כיכר המדינה, תל אביב",
-  "רחוב רוטשילד 40, ראשון לציון",
-  "רחוב השומר 2, חיפה",
-  "רחוב קפלן 8, תל אביב",
-  "מרכז קניות עזריאלי, תל אביב",
-  "רחוב כצנלסון 12, תל אביב",
-  "רחוב מנחם בגין 17, ירושלים",
-  "כיכר ציון, ירושלים",
-  "רחוב הירדן 5, חיפה",
-  "רחוב המסגר 20, תל אביב",
-  "כיכר רבין, תל אביב",
-  "רחוב המלך דוד 15, ירושלים",
-  "רחוב העצמאות 6, באר שבע",
-  "שדרות הנשיא 4, תל אביב",
-  "רחוב אלנבי 7, תל אביב",
-  "רחוב יקותיאל 10, חיפה",
-  "רחוב קינג ג'ורג' 14, תל אביב",
-  "כיכר רבין, ראשון לציון",
-  "רחוב הסולל 18, רעננה",
-  "רחוב הרצל 3, אשדוד",
-  "כיכר השעון, צפת",
-  "רחוב משה דיין 12, אשקלון",
-  "רחוב יהודה הלוי 6, נתניה",
-  "רחוב המלאכה 5, חולון",
-  "רחוב יצחק שדה 10, ראשון לציון",
-  "רחוב שפרינצק 8, ירושלים",
-  "רחוב הרצל 22, חיפה",
-  "רחוב העצמאות 9, נתניה",
-  "שדרות רוטשילד 21, תל אביב",
-  "רחוב יוסף נבו 3, פתח תקווה",
-  "כיכר הבימה, תל אביב",
-  "רחוב ההסתדרות 11, חולון"
-];
+const { faker } = require('@faker-js/faker');
+const sequelize = require('./config/sequelize');
+const User = require('./models/User');
+const Parking = require('./models/Parking');
+const Report = require('./models/Report');
 
-
-
-// פונקציה להוספת חניה למסד
-async function addParking(address) {
+async function seedReports() {
   try {
-    const coords = await getCoordinatesFromAddress(address);
+    await sequelize.sync();
 
-    // בודק אם כבר קיימת חניה עם הכתובת הזו (אפשר לשנות לשדות אחרים)
-    const existing = await Parking.findOne({ where: { address } });
-    if (existing) {
-      console.log(`Parking already exists for address: ${address}`);
-      return;
+    console.log('🔍 Fetching users and parkings...');
+    const users = await User.findAll();
+    const parkings = await Parking.findAll();
+
+    if (users.length < 2 || parkings.length === 0) {
+      console.log('❌ Need at least 2 users and 1 parking to create reports.');
+      process.exit(1);
     }
 
-    // הוספת חניה חדשה
-    await Parking.create({
-      address,
-      latitude: coords.latitude,
-      longitude: coords.longitude,
-      ownerId: 1, // <<== שימי פה את ה-ID של משתמש קיים
-      description: "חניה ציבורית באזור מרכזי",
-      imageUrl: null // או הכניסי כתובת תמונה אם יש
-    });
+    console.log('📝 Creating reports...');
+    for (let i = 0; i < 50; i++) {
+      let reporter = faker.helpers.arrayElement(users);
+      let reportedUser = faker.helpers.arrayElement(users);
 
-    console.log(`Added parking at: ${address}`);
+      // למנוע מצב של דיווח עצמי
+      while (reporter.id === reportedUser.id) {
+        reportedUser = faker.helpers.arrayElement(users);
+      }
+
+      const parking = faker.helpers.arrayElement(parkings);
+
+      await Report.create({
+        reporterId: reporter.id,
+        reportedUserId: reportedUser.id,
+        parkingId: parking.id,
+        rating: faker.number.float({ min: 0, max: 5, precision: 0.5 }),
+        description: faker.lorem.sentence()
+      });
+    }
+
+    console.log('✅ Done seeding reports!');
+    process.exit(0);
   } catch (error) {
-    console.error(`Failed to add parking for address: ${address}`, error.message);
+    console.error('❌ Error seeding reports:', error);
+    process.exit(1);
   }
 }
 
-async function main() {
-  for (const address of addresses) {
-    await addParking(address);
-  }
-  console.log('Finished adding all parkings.');
-}
-
-// להריץ רק אם קובץ זה הוא הקובץ הראשי
-if (require.main === module) {
-  main();
-}
-
-module.exports = { addParking, getCoordinatesFromAddress };
+seedReports();

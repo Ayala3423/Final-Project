@@ -14,7 +14,7 @@ console.log('Parking routes loadedhiiiiiiiiiiiiiiiii');
 app.use("/user", require("./routes/userRoutes"));
 app.use("/timeSlot", require("./routes/timeSlotRoutes"));
 app.use("/reservation", require("./routes/reservationRoutes"));
-// app.use("/report", require("./routes/reportRoutes"));
+app.use("/report", require("./routes/reportRoutes"));
 // app.use("/message", require("./routes/messageRoutes"));
 
 sequelize.sync({ force: false }) // אם אתה רוצה לאפס את הטבלאות, שנה ל-true

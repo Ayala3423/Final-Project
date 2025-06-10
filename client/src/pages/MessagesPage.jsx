@@ -1,100 +1,91 @@
-import React, { useEffect, useState, useContext } from 'react';
-import { AuthContext } from '../context/AuthContext';
-import { apiService } from '../services/genericService';
-import '../styles/MessagesPage.css';
+import React, { useState, useEffect } from 'react';
+import '../styles/MessagesPage.css'; // Assuming you have a CSS file for styling
 
-function MessagesPage() {
-    const { user } = useContext(AuthContext);
-    const [conversations, setConversations] = useState([]);
-    const [selectedConversation, setSelectedConversation] = useState(null);
-    const [messageInput, setMessageInput] = useState('');
-    const [status, setStatus] = useState(null);
+export default function MessagesPage({ userId }) {
+  const [conversations, setConversations] = useState([]);
+  const [selectedChatId, setSelectedChatId] = useState(null);
+  const [messages, setMessages] = useState([]);
+  const [newMsg, setNewMsg] = useState('');
+    console.log("messages page userId:", userId);
+    
+  useEffect(() => {
+    // טען את כל השיחות של המשתמש
+    // fetch(`/api/conversations?userId=${userId}`)
+    //   .then(res => res.json())
+    //   .then(data => {
+    //     setConversations(data);
+    //     if (data.length > 0) setSelectedChatId(data[0].chatId);
+    //   });
+  }, [userId]);
 
-    useEffect(() => {
-        if (user) {
-            apiService.getByValue('conversations', { userId: user.id }, (response) => {
-                setConversations(response);
-            }, (error) => {
-                console.error("שגיאה בטעינת שיחות", error);
-            });
-        }
-    }, [user]);
+  useEffect(() => {
+    if (!selectedChatId) return;
+    // טען את ההודעות של שיחה נבחרת
+    // fetch(`/api/messages?chatId=${selectedChatId}`)
+    //   .then(res => res.json())
+    //   .then(setMessages);
+  }, [selectedChatId]);
 
-    const handleConversationClick = (conv) => {
-        setSelectedConversation(conv);
-        setStatus(null);
+  const handleSend = async () => {
+    if (!newMsg.trim()) return;
+    const messageObj = {
+      chatId: selectedChatId,
+      senderId: userId,
+      text: newMsg,
+      timestamp: new Date().toISOString(),
     };
 
-    const handleSendMessage = () => {
-        if (!messageInput.trim()) return;
+    const res = await fetch('/api/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(messageObj),
+    });
+    const saved = await res.json();
+    setMessages([...messages, saved]);
+    setNewMsg('');
+  };
 
-        const newMessage = {
-            senderId: user.id,
-            receiverId: selectedConversation.otherUserId,
-            message: messageInput,
-            timestamp: new Date().toISOString()
-        };
+  return (
+    <div className="chat-box">
+      <div className="chat-sidebar">
+        <h3>שיחות</h3>
+        <ul>
+          {conversations.map(conv => (
+            <li
+              key={conv.chatId}
+              className={conv.chatId === selectedChatId ? 'active' : ''}
+              onClick={() => setSelectedChatId(conv.chatId)}
+            >
+              {conv.participantName}
+            </li>
+          ))}
+        </ul>
+      </div>
 
-        apiService.create('message', newMessage, () => {
-            setSelectedConversation({
-                ...selectedConversation,
-                messages: [...selectedConversation.messages, newMessage]
-            });
-            setMessageInput('');
-        }, () => {
-            setStatus("שגיאה בשליחת הודעה");
-        });
-    };
-
-    return (
-        <div className="messages-page">
-            <div className="conversation-list">
-                <h2>השיחות שלי</h2>
-                <ul>
-                    {conversations.map((conv, idx) => (
-                        <li
-                            key={idx}
-                            onClick={() => handleConversationClick(conv)}
-                            className={selectedConversation === conv ? 'active' : ''}
-                        >
-                            <strong>{conv.otherUserName}</strong><br />
-                            <span>{conv.lastMessage}</span>
-                        </li>
-                    ))}
-                </ul>
+      <div className="chat-content">
+        <div className="chat-messages">
+          {messages.map((msg, idx) => (
+            <div
+              key={idx}
+              className={`chat-bubble ${msg.senderId === userId ? 'sent' : 'received'}`}
+            >
+              {msg.text}
             </div>
-
-            <div className="chat-window">
-                {selectedConversation ? (
-                    <>
-                        <div className="chat-header">
-                            <h3>שיחה עם {selectedConversation.otherUserName}</h3>
-                        </div>
-                        <div className="chat-messages">
-                            {selectedConversation.messages.map((msg, idx) => (
-                                <div key={idx} className={`chat-message ${msg.senderId === user.id ? 'self' : 'other'}`}>
-                                    <span>{msg.message}</span>
-                                </div>
-                            ))}
-                        </div>
-                        <div className="chat-input">
-                            <input
-                                type="text"
-                                placeholder="כתוב הודעה..."
-                                value={messageInput}
-                                onChange={(e) => setMessageInput(e.target.value)}
-                                onKeyDown={(e) => e.key === 'Enter' && handleSendMessage()}
-                            />
-                            <button onClick={handleSendMessage}>שלח</button>
-                        </div>
-                        {status && <div className="status">{status}</div>}
-                    </>
-                ) : (
-                    <div className="empty-chat">בחר שיחה כדי להתחיל</div>
-                )}
-            </div>
+          ))}
         </div>
-    );
-}
 
-export default MessagesPage;
+        {selectedChatId && (
+          <div className="chat-input">
+            <input
+              type="text"
+              value={newMsg}
+              onChange={(e) => setNewMsg(e.target.value)}
+              placeholder="כתוב הודעה..."
+            />
+            <button onClick={handleSend}>שלח</button>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}

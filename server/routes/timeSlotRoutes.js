@@ -3,6 +3,9 @@ const router = express.Router();
 const  timeSlotController  = require('../controllers/timeSlotController');
 const { verifyToken } = require('../middleware/authMiddleware');
 
+router.route('/')
+    .get(timeSlotController.getTimeSlotsByParkingId)
+
 router.use(verifyToken);
 
 router.route('/:id')
@@ -11,7 +14,6 @@ router.route('/:id')
     .delete(timeSlotController.deleteTimeSlot);
 
 router.route('/')
-    .get(timeSlotController.getTimeSlotsByParkingId)
     .post(timeSlotController.createTimeSlot)
     .all(timeSlotController.getAllTimeSlots)
     ;

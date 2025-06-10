@@ -6,7 +6,7 @@ import '../styles/AvailabilityParkings.css';
 import SearchBar from '../components/SearchBar';
 
 function AvailabilityParkings({ currentLocation }) {
-    const [searchResults, setSearchResults] = useState([]);
+    const [searchResults, setSearchResults] = useState();
 
     useEffect(() => {
         console.log("Current Location:", currentLocation);

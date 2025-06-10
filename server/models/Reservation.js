@@ -25,6 +25,15 @@ const Reservation = sequelize.define('Reservation', {
     },
     onDelete: 'CASCADE'
   },
+  parkingId: { // הוספתי את העמודה
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    references: {
+      model: 'Parkings',
+      key: 'id'
+    },
+    onDelete: 'CASCADE'
+  },
   timeSlotId: {
     type: DataTypes.INTEGER,
     allowNull: false,

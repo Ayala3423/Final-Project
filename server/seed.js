@@ -44,29 +44,43 @@ async function seed() {
       }
     }
 
-    console.log('⏰ Creating time slots...');
-    for (const parking of parkings) {
-      const timeSlotCount = faker.number.int({ min: 2, max: 5 });
-      for (let i = 0; i < timeSlotCount; i++) {
-        const isFixed = faker.datatype.boolean();
-        const type = isFixed ? 'fixed' : 'temporary';
-        const date = !isFixed ? faker.date.soon({ days: 10 }).toISOString().slice(0, 10) : null;
-        const dayOfWeek = isFixed ? faker.helpers.arrayElement(['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']) : null;
-        const recurrence = isFixed ? faker.helpers.arrayElement(['weekly', 'daily', 'monthly']) : 'none';
+   console.log('⏰ Creating time slots...');
+for (const parking of parkings) {
+  const timeSlotCount = faker.number.int({ min: 2, max: 5 });
+  for (let i = 0; i < timeSlotCount; i++) {
+    const isFixed = faker.datatype.boolean();
+    const type = isFixed ? 'fixed' : 'temporary';
 
-        await TimeSlot.create({
-          parkingId: parking.id,
-          type,
-          date,
-          dayOfWeek,
-          recurrence,
-          startTime: '17:00',
-          endTime: '22:00',
-          isRented: faker.datatype.boolean(),
-          price: faker.number.float({ min: 10, max: 40, precision: 0.5 })
-        });
-      }
-    }
+    // יצירת תאריך מהיום והלאה
+    const date = !isFixed ? new Date().toISOString().slice(0, 10) : null;
+
+    // לקבוע שזה יומי כדי שיופיע בכל יום
+    const dayOfWeek = isFixed ? faker.helpers.arrayElement(['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']) : null;
+    const recurrence = isFixed ? 'daily' : 'none';
+
+    // יצירת טווח שעות שכולל את הזמן הנוכחי
+    const now = new Date();
+    const currentHour = now.getHours();
+    const startHour = currentHour - 1 >= 0 ? currentHour - 1 : 0;
+    const endHour = currentHour + 3 <= 23 ? currentHour + 3 : 23;
+
+    const startTime = `${startHour.toString().padStart(2, '0')}:00`;
+    const endTime = `${endHour.toString().padStart(2, '0')}:00`;
+
+    await TimeSlot.create({
+      parkingId: parking.id,
+      type,
+      date,
+      dayOfWeek,
+      recurrence,
+      startTime,
+      endTime,
+      isRented: false, // ניצור חניות פנויות
+      price: faker.number.float({ min: 10, max: 40, precision: 0.5 })
+    });
+  }
+}
+
 
     console.log('✅ Done seeding with faker!');
     process.exit(0);

@@ -3,7 +3,11 @@ const router = express.Router();
 const parkingController = require('../controllers/parkingController');
 const { verifyToken } = require('../middleware/authMiddleware');
 
+router.route('/')
+    .get(parkingController.getParkingsByParams)
+
 router.get('/search', parkingController.searchParkings);
+
 router.use(verifyToken);
 
 console.log('Parking search route loaded');
@@ -14,7 +18,6 @@ router.route('/:id')
 console.log('Parking routes loaded');
 
 router.route('/')
-    .get(parkingController.getParkingsByParams)
     .post(parkingController.createParking)
     .all(parkingController.getAllParking);
 

@@ -21,16 +21,19 @@ function MapView({ center, parkings }) {
                 title: 'Your Location'
             });
 
-            parkings.forEach(spot => {
-                new window.google.maps.Marker({
-                    position: { lat: spot.lat, lng: spot.lng },
-                    map: mapInstance.current,
-                    title: spot.name,
-                    icon: {
-                        url: 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png'
-                    }
+            if (Array.isArray(parkings)) {
+                parkings.forEach(spot => {
+                    new window.google.maps.Marker({
+                        position: { lat: spot.lat, lng: spot.lng },
+                        map: mapInstance.current,
+                        title: spot.name,
+                        icon: {
+                            url: 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png'
+                        }
+                    });
                 });
-            });
+            }
+
         };
 
         if (window.google && window.google.maps) {
