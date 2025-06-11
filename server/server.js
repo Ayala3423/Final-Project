@@ -15,7 +15,7 @@ app.use("/user", require("./routes/userRoutes"));
 app.use("/timeSlot", require("./routes/timeSlotRoutes"));
 app.use("/reservation", require("./routes/reservationRoutes"));
 app.use("/report", require("./routes/reportRoutes"));
-// app.use("/message", require("./routes/messageRoutes"));
+app.use("/message", require("./routes/messageRoutes"));
 
 sequelize.sync({ force: false }) 
   .then(() => {

@@ -5,32 +5,28 @@ import { AuthContext } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import { apiService } from '../services/genericService';
 
-function ParkingList({ parkings }) {
+function ParkingList({ parkings, onHover }) {
     const navigate = useNavigate();
     const { user } = useContext(AuthContext);
 
     const handleClick = (parking) => {
-
         navigate(`/parking/${parking.id}`, { state: { parking } });
     };
 
-    function handleOrder(parking) {
+    const handleOrder = (parking) => {
         if (!user) {
             alert('Please log in to order a parking spot.');
             return;
         }
         apiService.getByValue('timeSlot', { parkingId: parking.id }, (response) => {
-            console.log("Parking details fetched:", response);
             navigate('/reservation', {
                 state: { parking: parking, timeSlots: response }
             });
         }, (error) => {
             console.error("Error fetching parking details:", error);
-        }
-        );
+        });
+    };
 
-
-    }
     return (
         <section className="parking-section">
             <h3 className="parking-list-title">Available Parkings:</h3>
@@ -40,6 +36,8 @@ function ParkingList({ parkings }) {
                         key={idx}
                         className="parking-item"
                         tabIndex={0}
+                        onMouseEnter={() => onHover(spot.id)}
+                        onMouseLeave={() => onHover(null)}
                         onKeyDown={(e) => { if (e.key === 'Enter') handleClick(spot); }}
                     >
                         <img
@@ -47,8 +45,7 @@ function ParkingList({ parkings }) {
                             alt={`Parking at ${spot.address}`}
                             className="parking-image"
                         />
-                        <div className="parking-info" onClick={() => handleClick(spot)}
-                        >
+                        <div className="parking-info" onClick={() => handleClick(spot)}>
                             <div className="parking-address">{spot.address}</div>
                             <div className="parking-description">{spot.description}</div>
                             {spot.price && <div className="parking-price">Price: ₪{spot.price}</div>}
@@ -56,13 +53,13 @@ function ParkingList({ parkings }) {
                                 <div className="parking-spots">Available spots: {spot.availableSpots}</div>
                             )}
                         </div>
-                        <button onClick={() => { handleOrder(spot) }} >order me</button>
+                        <button onClick={() => handleOrder(spot)}>order me</button>
                     </li>
                 ))}
             </ul>
-
         </section>
     );
 }
+
 
 export default ParkingList;

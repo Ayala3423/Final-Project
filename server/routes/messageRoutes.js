@@ -11,7 +11,8 @@ router.route('/:id')
     .delete(messageController.deleteMessage);
 
 router.route('/')
-    .all(messageController.getAllMessages)
-    .post(messageController.createMessage);
+    .get(messageController.getMessagesByUserId)
+    .post(messageController.createMessage)
+    .all(messageController.getAllMessages);
 
 module.exports = router;

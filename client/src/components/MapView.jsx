@@ -2,9 +2,10 @@ import React, { useEffect, useRef } from 'react';
 
 const API_KEY = 'AIzaSyCcteuv39cQV0oEpPLjoXCJfN_D7f_yNTs';
 
-function MapView({ center, parkings }) {
+function MapView({ center, parkings, hoveredParkingId }) {
     const mapRef = useRef(null);
     const mapInstance = useRef(null);
+    const markersRef = useRef({}); // חדש: שמירת המרקרים לפי ID
 
     useEffect(() => {
         const initializeMap = () => {
@@ -23,7 +24,7 @@ function MapView({ center, parkings }) {
 
             if (Array.isArray(parkings)) {
                 parkings.forEach(spot => {
-                    new window.google.maps.Marker({
+                    const marker = new window.google.maps.Marker({
                         position: { lat: spot.lat, lng: spot.lng },
                         map: mapInstance.current,
                         title: spot.name,
@@ -31,9 +32,9 @@ function MapView({ center, parkings }) {
                             url: 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png'
                         }
                     });
+                    markersRef.current[spot.id] = marker;
                 });
             }
-
         };
 
         if (window.google && window.google.maps) {
@@ -53,13 +54,30 @@ function MapView({ center, parkings }) {
         }
 
         return () => {
+            markersRef.current = {};
             mapInstance.current = null;
         };
     }, [center, parkings]);
+
+    // הדגשת מרקר בריחוף
+    useEffect(() => {
+        Object.values(markersRef.current).forEach(marker => {
+            marker.setIcon({
+                url: 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png'
+            });
+        });
+
+        if (hoveredParkingId && markersRef.current[hoveredParkingId]) {
+            markersRef.current[hoveredParkingId].setIcon({
+                url: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png'
+            });
+        }
+    }, [hoveredParkingId]);
 
     return (
         <div ref={mapRef} style={{ width: '100%', height: '100vh' }} />
     );
 }
+
 
 export default MapView;

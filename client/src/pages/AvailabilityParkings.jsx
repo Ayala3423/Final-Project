@@ -7,6 +7,7 @@ import SearchBar from '../components/SearchBar';
 
 function AvailabilityParkings({ currentLocation }) {
     const [searchResults, setSearchResults] = useState();
+    const [hoveredParkingId, setHoveredParkingId] = useState(null); // חדש
 
     useEffect(() => {
         console.log("Current Location:", currentLocation);
@@ -24,12 +25,18 @@ function AvailabilityParkings({ currentLocation }) {
                 <SearchBar onSearch={setSearchResults} currentLocation={currentLocation} />
             </div>
             <div className="parking-list-wrapper">
-                <ParkingList parkings={searchResults} />
+                <ParkingList
+                    parkings={searchResults}
+                    onHover={setHoveredParkingId} // חדש
+                />
             </div>
             <div className="map-view-wrapper">
-                <MapView center={currentLocation} parkings={searchResults} />
+                <MapView
+                    center={currentLocation}
+                    parkings={searchResults}
+                    hoveredParkingId={hoveredParkingId} // חדש
+                />
             </div>
-
         </div>
     );
 }
