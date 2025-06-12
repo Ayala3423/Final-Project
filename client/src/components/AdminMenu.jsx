@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState,useContext } from 'react';
 import { useNavigate, Outlet } from 'react-router-dom';
 import { HiMenuAlt3 } from 'react-icons/hi';
+import { AuthContext } from '../context/AuthContext';
 
 function AdminMenu() {
     const [menuOpen, setMenuOpen] = useState(false);
     const navigate = useNavigate();
+    const { logout } = useContext(AuthContext);
 
     const toggleMenu = () => setMenuOpen(!menuOpen);
 
@@ -28,7 +30,7 @@ function AdminMenu() {
                         <button onClick={() => handleClick('/admin/parking-management')}>parkings</button>
                         <button onClick={() => handleClick('/admin/orders')}>orders</button>
                         <button onClick={() => handleClick('/messages')}>Messages</button>
-                        <button onClick={() => handleClick('/')}>logout</button>
+                            <button onClick={() => logout()}>יציאה</button>   
                     </div>
                 )}
             </nav>
