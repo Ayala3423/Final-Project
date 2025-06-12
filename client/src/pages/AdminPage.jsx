@@ -11,8 +11,11 @@ function AdminDashboard() {
             <header className="admin-header">
                 <h1>Admin Dashboard</h1>
             </header>
+            <main className="admin-content">
+                {/* Outlet מייצג את המקום בו טעונים תתי העמודים */}
+                <Outlet />
+            </main>
 
-           
         </div>
     );
 }

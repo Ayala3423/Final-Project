@@ -5,7 +5,7 @@ import { AuthContext } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import { apiService } from '../services/genericService';
 
-function ParkingList({ parkings, onHover }) {
+function ParkingList({ parkings, onHover = () => {} }) {
     const navigate = useNavigate();
     const { user } = useContext(AuthContext);
 
@@ -53,7 +53,7 @@ function ParkingList({ parkings, onHover }) {
                                 <div className="parking-spots">Available spots: {spot.availableSpots}</div>
                             )}
                         </div>
-                        <button onClick={() => handleOrder(spot)}>order me</button>
+                        {user?.role=='renter'&&<button onClick={() => handleOrder(spot)}>order me</button>}
                     </li>
                 ))}
             </ul>

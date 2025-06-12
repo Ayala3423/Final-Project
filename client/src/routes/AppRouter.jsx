@@ -14,13 +14,16 @@ import AdminDashboard from '../pages/AdminPage.jsx';
 
 // Owner
 import OwnerDashboard from '../pages/OwnerPage.jsx';
-
+import MyParkings from '../pages/MyParkings.jsx';
+import ReservationsList from '../pages/ReservationsList.jsx';
+import AddParking from '../pages/AddParking.jsx';
 // Renter
 import RenterDashboard from '../pages/RenterPage.jsx'
 
 import Reservation from '../pages/Reservation.jsx';
 import ParkingPage from '../pages/ParkingPage.jsx';
 import MessagesPage from '../pages/MessagesPage.jsx';
+import UsersList from '../pages/UsersList.jsx';
 
 // רוטה פרטית - רק למשתמשים מחוברים
 const PrivateRoute = ({ children, allowedRoles }) => {
@@ -61,6 +64,9 @@ function AppRouter() {
               </PrivateRoute>
             }
           >
+            <Route path=":role" element={<UsersList/>} />
+            <Route path="parking-management" element={<div>עמוד ניהול חניות</div>} />
+            <Route path="orders" element={<div>עמוד ניהול הזמנות</div>} />
           </Route>
 
           <Route
@@ -70,8 +76,11 @@ function AppRouter() {
                 <OwnerDashboard />
               </PrivateRoute>
             }
-          >
 
+          >
+            <Route path="my-parkings" element={<MyParkings />} />
+            <Route path="reservations" element={<ReservationsList />} />
+            <Route path="add-parking" element={<AddParking />} />
           </Route>
 
           <Route
@@ -82,6 +91,8 @@ function AppRouter() {
               </PrivateRoute>
             }
           >
+            <Route path="reservations" element={<ReservationsList />} />
+
           </Route>
 
           <Route

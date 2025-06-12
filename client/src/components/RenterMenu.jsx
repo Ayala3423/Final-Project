@@ -25,8 +25,7 @@ function RenterMenu() {
                 {menuOpen && (
                     <div className="dropdown-menu">
                         <button onClick={() => handleClick('/')}>🏠</button>
-                        <button onClick={() => handleClick('/renter/my-reservations')}>הזמנות שלי</button>
-                        <button onClick={() => handleClick('/renter/add-reservation')}>יצירת הזמנה</button>
+                        <button onClick={() => handleClick('/renter/reservations')}>הזמנות שלי</button>
                         <button onClick={() => handleClick('/messages')}>Messages</button>
                         <button onClick={() => logout()}>יציאה</button>
                     </div>
