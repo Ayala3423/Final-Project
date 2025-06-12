@@ -1,12 +1,12 @@
 import axios from 'axios';
 
-const API_URL = "http://localhost:3000/user";
+const API_URL = import.meta.env.VITE_API_URL;
 
 const registerAuth = async (endpoint, body, onSuccess, onError) => {
   try {
     console.log("user: ", body.username, body.password);
 
-    const { data } = await axios.post(`${API_URL}/${endpoint}`, body);
+    const { data } = await axios.post(`${API_URL}/user/${endpoint}`, body);
 
     if (onSuccess) onSuccess(data);
     return data;

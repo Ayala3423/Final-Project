@@ -1,5 +1,5 @@
 const genericService = require('../services/genericService');
-const {Op}=require('sequelize')
+const { Op } = require('sequelize')
 const { getCoordinatesFromAddress, haversineDistance } = require('../utils/utils');
 
 function isToday(date) {
@@ -26,8 +26,8 @@ const parkingBL = {
         return await genericService.delete('Parking', id);
     },
 
-    async getParkingsByParams(params) {
-        return await genericService.getByParams('Parking', params);
+    async getParkingsByParams(filters, pagination) {
+        return await genericService.getByParams('Parking', filters, pagination);
     },
 
     async createParking(data) {
@@ -104,7 +104,7 @@ const parkingBL = {
         if (type === 'temporary' && isToday(startDateTime)) {
             allowedTypes.push('fixed');
         }
-                console.log("3");
+        console.log("3");
 
         conditions.type = { [Op.in]: allowedTypes };
 
@@ -130,9 +130,9 @@ const parkingBL = {
         }
 
         conditions[Op.or] = orConditions;
-        console.log("5"+JSON.stringify(conditions));
+        console.log("5" + JSON.stringify(conditions));
 
-        const slots = await genericService.getAdvanced('TimeSlot', conditions,['Parking']);
+        const slots = await genericService.getAdvanced('TimeSlot', conditions, ['Parking']);
         console.log("6");
 
         return slots.map(slot => ({
@@ -147,7 +147,7 @@ const parkingBL = {
             type: slot.type,
             timeSlotId: slot.id,
             startTime: slot.startTime,
-            endTime: slot.endTime, 
+            endTime: slot.endTime,
             ownerId: slot.Parking.ownerId,
         }));
     }

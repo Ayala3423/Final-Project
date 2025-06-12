@@ -6,6 +6,13 @@ html, body, #root {
     
 }
 
+#H1{
+    font-size: 2rem;
+    color: #eeebeb;
+    text-align: center;
+    margin-top: 3%;
+}
+
 .admin-layout {
     height: 100vh;
     width: 100vw;
@@ -42,10 +49,12 @@ html, body, #root {
 }
 
 .sidebar {
+    margin-top: 2%;
     width: 220px;
+    margin-left: 80%;
     position: fixed;
-    background-color: rgba(17, 14, 14, 0.1);
-    backdrop-filter: blur(10px);
+    /* background-color: rgba(17, 14, 14, 0.1); */
+    /* backdrop-filter: blur(10px); */
     padding: 20px;
     display: flex;
     flex-direction: column;

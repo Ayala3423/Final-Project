@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import { Routes, Route, Navigate, useLocation, useParams } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext.jsx';
 import MainLayout from '../components/MainLayout';
 
@@ -24,6 +24,7 @@ import Reservation from '../pages/Reservation.jsx';
 import ParkingPage from '../pages/ParkingPage.jsx';
 import MessagesPage from '../pages/MessagesPage.jsx';
 import UsersList from '../pages/UsersList.jsx';
+import ParkingList from '../components/ParkingList.jsx';
 
 // רוטה פרטית - רק למשתמשים מחוברים
 const PrivateRoute = ({ children, allowedRoles }) => {
@@ -64,9 +65,9 @@ function AppRouter() {
               </PrivateRoute>
             }
           >
-            <Route path=":role" element={<UsersList/>} />
-            <Route path="parking-management" element={<div>עמוד ניהול חניות</div>} />
-            <Route path="orders" element={<div>עמוד ניהול הזמנות</div>} />
+            <Route path=":role" element={<UsersList />} />
+            <Route path="parking-management" element={<ParkingList />} />
+            <Route path="orders" element={<ReservationsList />} />
           </Route>
 
           <Route
@@ -95,14 +96,7 @@ function AppRouter() {
 
           </Route>
 
-          <Route
-            path="/reservation"
-            element={
-              <PrivateRoute allowedRoles={['renter']}>
-                <Reservation />
-              </PrivateRoute>
-            }
-          />
+
 
           <Route
             path="/messages"
@@ -118,8 +112,12 @@ function AppRouter() {
             element={
               <ParkingPage />
             }
-          />
+          >
+            <Route path="reservation" element={<Reservation />} />
+
+          </Route>
         </Route>
+
       </Routes>
 
       {state?.backgroundLocation && (

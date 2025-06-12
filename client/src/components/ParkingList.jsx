@@ -1,13 +1,55 @@
-import React, { useState, useContext } from 'react';
-import Modal from './Modal';
+import React, { useContext, useEffect, useState } from 'react';
 import '../styles/ParkingList.css';
 import { AuthContext } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import { apiService } from '../services/genericService';
+import { use } from 'react';
 
-function ParkingList({ parkings, onHover = () => {} }) {
+function ParkingList({ parkings = [], onHover = () => { } }) {
+    console.log("Parkings received in ParkingList:", parkings);
+
+    const [localParkings, setLocalParkings] = useState(parkings);
+    const [page, setPage] = useState(1);
+    const [hasMore, setHasMore] = useState(true);
+    const [loading, setLoading] = useState(false);
+
     const navigate = useNavigate();
     const { user } = useContext(AuthContext);
+
+    useEffect(() => {
+        if (Array.isArray(parkings) && parkings.length > 0) {
+            setLocalParkings(parkings);
+            setHasMore(false); // לא נטען מהשרת אם יש חניות ב-props
+        } else {
+            setHasMore(true); // כן נטען מהשרת אם אין חניות ב-props
+            setPage(1); // נתחיל טעינה מדף ראשון
+            setLocalParkings([]); // איפוס לרשימה מקומית
+        }
+    }, [parkings]);
+
+    useEffect(() => {
+        if (hasMore && parkings.length === 0) {
+            fetchParkings(page);
+        }
+    }, [page, hasMore]);
+
+    const fetchParkings = (page) => {
+        if (loading || !hasMore) return;
+
+        setLoading(true);
+        apiService.getByValue('parking', { page, limit: 10 }, (response) => {
+            if (response.length < 10) setHasMore(false);
+            setLocalParkings(prev => [...prev, ...response]);
+            setLoading(false);
+        }, (error) => {
+            console.error("Error:", error);
+            setLoading(false);
+        });
+    };
+
+    const handleLoadMore = () => {
+        setPage(prev => prev + 1);
+    };
 
     const handleClick = (parking) => {
         navigate(`/parking/${parking.id}`, { state: { parking } });
@@ -31,7 +73,7 @@ function ParkingList({ parkings, onHover = () => {} }) {
         <section className="parking-section">
             <h3 className="parking-list-title">Available Parkings:</h3>
             <ul className="parking-list">
-                {Array.isArray(parkings) && parkings.map((spot, idx) => (
+                {Array.isArray(localParkings) && localParkings.map((spot, idx) => (
                     <li
                         key={idx}
                         className="parking-item"
@@ -53,13 +95,22 @@ function ParkingList({ parkings, onHover = () => {} }) {
                                 <div className="parking-spots">Available spots: {spot.availableSpots}</div>
                             )}
                         </div>
-                        {user?.role=='renter'&&<button onClick={() => handleOrder(spot)}>order me</button>}
+                        {user?.role === 'renter' && (
+                            <button onClick={() => handleOrder(spot)}>order me</button>
+                        )}
                     </li>
                 ))}
             </ul>
+
+            {hasMore && (
+                <div className="load-more-container">
+                    <button onClick={handleLoadMore} disabled={loading} className="load-more-button">
+                        {loading ? "Loading..." : "Load More"}
+                    </button>
+                </div>
+            )}
         </section>
     );
 }
-
 
 export default ParkingList;

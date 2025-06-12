@@ -12,7 +12,7 @@
 .users-table {
     width: 100%;
     border-collapse: collapse;
-    background: white;
+    background: rgb(160, 160, 160);
     box-shadow: 0 0 10px rgba(0,0,0,0.05);
 }
 
@@ -24,7 +24,7 @@
 }
 
 .users-table th {
-    background-color: #f0f0f0;
+    background-color: #e6e3e3;
 }
 
 .users-table button {

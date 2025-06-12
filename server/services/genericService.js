@@ -19,12 +19,20 @@ const genericService = {
 
     async getByParams(model, params) {
         const Model = require(`../models/${model}`);
-        console.log("2    :", params);
-        
-        return await Model.findAll({ where: params });
+
+        const { page = 1, limit = 10, ...filters } = params;
+        const offset = (page - 1) * limit;
+
+        return await Model.findAll({
+            where: filters,
+            limit: parseInt(limit),
+            offset: parseInt(offset)
+        });
     },
 
     async create(model, data) {
+        console.log(`Creating new ${model} with data:`, data);
+        
         const Model = require(`../models/${model}`);
         return await Model.create(data);
     },
@@ -39,7 +47,7 @@ const genericService = {
             options.include = associations;
         }
         return await Model.findAll(options);
-    }, 
+    },
 
     async getByForeignKey(model, foreignKey, value) {
         const Model = require(`../models/${model}`);

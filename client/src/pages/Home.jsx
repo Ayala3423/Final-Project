@@ -37,7 +37,7 @@ function Home() {
     return (
         <div className="rentbro-container">
             <div className="hero-image-section">
-                <Header />
+                {/* <Header /> */}
 
                 <div className="main-content">
                     <h1 className="main-title">Welcome to the Parking Management System</h1>

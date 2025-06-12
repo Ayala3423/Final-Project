@@ -12,9 +12,9 @@ const SearchBar = ({ onSearch, currentLocation }) => {
     const [currentTime, setCurrentTime] = useState("");
     const [coords, setCoords] = useState({ lat: null, lng: null });
 
-    const [radius, setRadius] = useState(10); // רדיוס
-    const [startTime, setStartTime] = useState(""); // שעת התחלה
-    const [duration, setDuration] = useState(2); // משך בשעות
+    const [radius, setRadius] = useState(10); 
+    const [startTime, setStartTime] = useState(""); 
+    const [duration, setDuration] = useState(2); 
 
     useEffect(() => {
         const now = new Date();

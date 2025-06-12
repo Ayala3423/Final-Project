@@ -6,18 +6,28 @@ import '../styles/ReservationsList.css';
 function ReservationsList() {
     const { user } = useContext(AuthContext);
     const [reservations, setReservations] = useState([]);
-    const [loading, setLoading] = useState(true);
+    const [page, setPage] = useState(1);
+    const [hasMore, setHasMore] = useState(true);
+    const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
     useEffect(() => {
         if (!user) return;
 
+        fetchReservations(page);
+    }, [user, page]);
+
+    const fetchReservations = (pageNum) => {
+        if (loading || !hasMore) return;
+
+        setLoading(true);
         const userOrder = user.role === 'owner' ? 'ownerId' : 'renterId';
-        console.log("Fetching reservations for user:", user.id, "with order:", userOrder);
-        
-        apiService.getByValue('reservation', { [userOrder]: user.id },
+        apiService.getByValue(
+            'reservation',
+            { [userOrder]: user.id, page: pageNum, limit: 10 },
             (data) => {
-                setReservations(data);
+                if (data.length < 10) setHasMore(false);
+                setReservations(prev => [...prev, ...data]);
                 setLoading(false);
             },
             (err) => {
@@ -26,34 +36,42 @@ function ReservationsList() {
                 setLoading(false);
             }
         );
-    }, [user]);
+    };
+
+    const handleLoadMore = () => {
+        setPage(prev => prev + 1);
+    };
 
     if (!user) return <p>Please log in to view reservations.</p>;
-    if (loading) return <p>Loading reservations...</p>;
     if (error) return <p>{error}</p>;
 
     return (
         <section className="reservations-section">
             <h3 className="reservations-title">Your Reservations</h3>
-            {reservations.length === 0 ? (
-                <p>No reservations found.</p>
-            ) : (
-                <ul className="reservations-list">
-                    {reservations.map((res, idx) => (
-                        <li key={idx} className="reservation-item">
-                            <div><strong>Parking Address:</strong> {res.parkingAddress}</div>
-                            <div><strong>Start Time:</strong> {new Date(res.startTime).toLocaleString()}</div>
-                            <div><strong>End Time:</strong> {new Date(res.endTime).toLocaleString()}</div>
-                            {user.role === 'owner' && (
-                                <div><strong>Renter:</strong> {res.renterName}</div>
-                            )}
-                            {user.role === 'renter' && (
-                                <div><strong>Owner:</strong> {res.ownerName}</div>
-                            )}
-                            <div><strong>Status:</strong> {res.status}</div>
-                        </li>
-                    ))}
-                </ul>
+            {reservations.length === 0 && !loading && <p>No reservations found.</p>}
+            <ul className="reservations-list">
+                {reservations.map((res, idx) => (
+                    <li key={idx} className="reservation-item">
+                        <div><strong>Parking Address:</strong> {res.parkingAddress}</div>
+                        <div><strong>Start Time:</strong> {new Date(res.startTime).toLocaleString()}</div>
+                        <div><strong>End Time:</strong> {new Date(res.endTime).toLocaleString()}</div>
+                        {user.role === 'owner' && (
+                            <div><strong>Renter:</strong> {res.renterName}</div>
+                        )}
+                        {user.role === 'renter' && (
+                            <div><strong>Owner:</strong> {res.ownerName}</div>
+                        )}
+                        <div><strong>Status:</strong> {res.status}</div>
+                    </li>
+                ))}
+            </ul>
+
+            {hasMore && (
+                <div className="load-more-container">
+                    <button onClick={handleLoadMore} disabled={loading} className="load-more-button">
+                        {loading ? "Loading..." : "Load More"}
+                    </button>
+                </div>
             )}
         </section>
     );

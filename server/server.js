@@ -17,7 +17,7 @@ app.use("/reservation", require("./routes/reservationRoutes"));
 app.use("/report", require("./routes/reportRoutes"));
 app.use("/message", require("./routes/messageRoutes"));
 
-sequelize.sync({ force: false }) 
+sequelize.sync({ alter: true }) 
   .then(() => {
     console.log('DB connected and synced');
     

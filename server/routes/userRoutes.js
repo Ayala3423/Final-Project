@@ -9,7 +9,6 @@ router.route('/signup')
 
 router.route('/login')
     .post(userController.login);
-console.log('ImHERE2');
 
 router.use(verifyToken);
 
@@ -18,7 +17,7 @@ router.route('/:id')
     .put(userController.updateUser)
     .delete(userController.deleteUser);
 router.route('/')
-    .get(userController.getUsersByParams) // Assuming you want to get user by ID
+    .get(userController.getUsersByParams) 
     .all(userController.getAllUsers);
 
 module.exports = router;

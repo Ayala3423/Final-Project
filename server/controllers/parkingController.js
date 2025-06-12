@@ -16,17 +16,17 @@ const parkingController = {
         }
     },
 
-    async getAllParking(req,res){
+    async getAllParking(req, res) {
         try {
-            console.log(req.user.role+" user detailes "+req.user.id+ " "+JSON.stringify(req.user));
-            
+            console.log(req.user.role + " user detailes " + req.user.id + " " + JSON.stringify(req.user));
+
             const parkings = await parkingBL.getAllParkings(req.user);
             res.status(200).json(parkings);
         } catch (error) {
             console.error('Error fetching parkings:', error);
             res.status(500).json({ message: 'Internal server error' });
         }
-    
+
     },
 
     async updateParking(req, res) {
@@ -69,17 +69,25 @@ const parkingController = {
 
     async getParkingsByParams(req, res) {
         try {
-            console.log('Fetching parkings with params:', req.query);
-            const parkings = await parkingBL.getParkingsByParams(req.query);
+            const { limit, offset, ...filters } = req.query;
+
+            console.log('Fetching parkings with filters:', filters, 'limit:', limit, 'offset:', offset);
+
+            const parkings = await parkingBL.getParkingsByParams(filters, {
+                limit: parseInt(limit),
+                offset: parseInt(offset)
+            });
+
             if (parkings) {
                 res.status(200).json(parkings);
             } else {
-                res.status(404).json({ error: 'Parkings not found' });
+                res.status(404).json({ error: 'No parkings found' });
             }
         } catch (error) {
             res.status(400).json({ error: error.message });
         }
     },
+
 
     async createParking(req, res) {
         try {

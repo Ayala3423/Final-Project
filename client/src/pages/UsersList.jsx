@@ -2,13 +2,16 @@ import React, { useEffect, useState, useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import { apiService } from '../services/genericService';
 import '../styles/UsersList.css';
+import { useParams } from 'react-router-dom';
 
 function UsersList() {
     const { user } = useContext(AuthContext);
     const [users, setUsers] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-
+    const { role } = useParams();
+    console.log("Role from params:", role);
+    
     useEffect(() => {
         if (!user || user.role !== 'admin') {
             setError('Only admins can view the user list');
@@ -17,10 +20,10 @@ function UsersList() {
         }
 
         fetchUsers();
-    }, [user]);
+    }, [user, role]);
 
     const fetchUsers = () => {
-        apiService.getByValue('user', {},
+        apiService.getByValue('user', { 'role': role },
             (data) => {
                 setUsers(data);
                 setLoading(false);
@@ -35,7 +38,7 @@ function UsersList() {
 
     const handleDelete = (userId) => {
         if (window.confirm("Are you sure you want to delete this user?")) {
-            apiService.delete('user', userId,
+            apiService.remove('user', userId,
                 () => {
                     setUsers(users.filter(u => u.id !== userId));
                 },

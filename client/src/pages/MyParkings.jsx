@@ -30,11 +30,10 @@ function MyParkings() {
   }
 
   return <>
-  <div>hiiiiiiiiiiiiiiiiiiiiiiii</div>
-  <ParkingList parkings={myParkings}
+    <ParkingList parkings={myParkings}
 
-  />;
-  </> 
+    />;
+  </>
 }
 
 export default MyParkings;

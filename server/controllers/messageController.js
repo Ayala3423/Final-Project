@@ -17,6 +17,8 @@ const messageController = {
 
     async createMessage(req, res) {
         try {
+            console.log('Creating message with data:', req.body);
+            
             const newMessage = await messageBL.createMessage(req.body);
             res.status(201).json(newMessage);
         } catch (error) {
@@ -34,16 +36,7 @@ const messageController = {
             res.status(500).json({ message: 'Internal server error' });
         }
     }, 
-    async getMessagesByUserId(req, res) {
-        try {
-            const userId = req.user.id; // Assuming user ID is stored in req.user
-            const messages = await messageBL.getMessagesByUserId(userId);
-            res.status(200).json(messages);
-        } catch (error) {
-            console.error('Error fetching user messages:', error);
-            res.status(500).json({ message: 'Internal server error' });
-        }
-    },
+    
     async updateMessage(req, res) {
         try {
             const message = await messageBL.getMessageById(req.params.id);
@@ -57,6 +50,7 @@ const messageController = {
             res.status(500).json({ message: 'Internal server error' });
         }
     },
+
     async deleteMessage(req, res) {
         try {
             const message = await messageBL.getMessageById(req.params.id);
@@ -69,8 +63,35 @@ const messageController = {
             console.error('Error deleting message:', error);
             res.status(500).json({ message: 'Internal server error' });
         }
-    }
+    },
+
+    async getMessagesBySenderId(req, res) {
+        try {
+            const senderId = req.query.senderId;
+            if (!senderId) {
+                return res.status(400).json({ message: 'Sender ID is required' });
+            }
+            const messages = await messageBL.getMessagesById(senderId);
+            res.status(200).json(messages);
+        } catch (error) {
+            console.error('Error fetching messages by sender ID:', error);
+            res.status(500).json({ message: 'Internal server error' });
+        }
+    },
     
+    async getMessagesByConversationId(req, res) {
+        try {
+            const conversationId = req.query.conversationId;
+            if (!conversationId) {
+                return res.status(400).json({ message: 'Conversation ID is required' });
+            }
+            const messages = await messageBL.getMessagesByConversationId(conversationId);
+            res.status(200).json(messages);
+        } catch (error) {
+            console.error('Error fetching messages by conversation ID:', error);
+            res.status(500).json({ message: 'Internal server error' });
+        }
+    }
 };
 
 module.exports = messageController;

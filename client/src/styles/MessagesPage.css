@@ -28,7 +28,7 @@
   margin-bottom: 8px;
   cursor: pointer;
   background-color: #fff;
-  transition: background 0.2s;
+  transition: background-color 0.2s;
 }
 
 .chat-sidebar li:hover {

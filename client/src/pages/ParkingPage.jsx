@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useContext } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, Outlet } from 'react-router-dom';
 import { FaStar, FaPhone, FaPaperPlane, FaCommentDots, FaClipboardList } from 'react-icons/fa';
 import '../styles/ParkingPage.css';
 import Header from '../components/Header';
@@ -68,7 +68,6 @@ function ParkingPage() {
     useEffect(() => {
         if (parking?.id && user?.id) {
 
-            // מניעת ביקורת עצמית
             if (user.id === parking.ownerId) {
                 setCanReview(false);
                 return;
@@ -76,10 +75,10 @@ function ParkingPage() {
 
             apiService.getCheck('report', { parkingId: parking.id, userId: user.id }, (response) => {
                 console.log("Check if user can review:", response.canReport.canReport);
-                setCanReview(response.canReport.canReport); // אם אין ביקורת, אפשר להוסיף
+                setCanReview(response.canReport.canReport);
             }, (error) => {
                 console.error("Error checking if user can review:", error);
-                setCanReview(false); // אם יש שגיאה, נניח שלא ניתן להוסיף ביקורת
+                setCanReview(false);
             }
             );
 
@@ -98,7 +97,7 @@ function ParkingPage() {
             return;
         }
 
-        navigate("/reservation", {
+        navigate('reservation', {
             state: {
                 parking,
                 timeSlots
@@ -129,7 +128,7 @@ function ParkingPage() {
                         <span className="rating-number">{parking.rating}</span>
                     </div>
                     <div className="action-buttons">
-                        <button className="circle-button"><FaCommentDots /></button>
+                        <button className="circle-button" onClick={() => navigate('/messages')}><FaCommentDots /></button>
                         <button className="circle-button"><FaPhone /></button>
                         <button className="circle-button"><FaPaperPlane /></button>
                     </div>
@@ -163,7 +162,7 @@ function ParkingPage() {
                 )}
 
             </div>
-           
+
 
             {canReview && (
                 <div className="review-form-wrapper">
@@ -212,6 +211,8 @@ function ParkingPage() {
             </button>
 
             <Footer />
+            
+            <Outlet />
         </div>
     );
 }

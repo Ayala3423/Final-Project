@@ -6,6 +6,7 @@ import { AuthContext } from '../context/AuthContext';
 function AdminMenu() {
     const [menuOpen, setMenuOpen] = useState(false);
     const navigate = useNavigate();
+    const [parkings, setParkings] = useState([]);
     const { logout } = useContext(AuthContext);
 
     const toggleMenu = () => setMenuOpen(!menuOpen);

@@ -2,8 +2,12 @@ const express = require('express');
 const router = express.Router();
 const messageController = require('../controllers/messageController');
 const { verifyToken } = require('../middleware/authMiddleware');
+const { ro } = require('@faker-js/faker');
 
 router.use(verifyToken);
+
+router.route('/conversation')
+    .get(messageController.getMessagesByConversationId);
 
 router.route('/:id')
     .get(messageController.getMessageById)
@@ -11,7 +15,7 @@ router.route('/:id')
     .delete(messageController.deleteMessage);
 
 router.route('/')
-    .get(messageController.getMessagesByUserId)
+    .get(messageController.getMessagesBySenderId)
     .post(messageController.createMessage)
     .all(messageController.getAllMessages);
 

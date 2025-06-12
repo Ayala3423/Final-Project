@@ -1,12 +1,13 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import Modal from '../components/Modal';
 import { apiService } from '../services/genericService';
 import { AuthContext } from '../context/AuthContext';
 
 function Reservation() {
+    const navigate = useNavigate();
     const location = useLocation();
-    const { parking, timeSlots } = location.state|| {};
+    const { parking, timeSlots } = location.state || {};
     const [reservationType, setReservationType] = useState('fixed');
     const [selectedSlots, setSelectedSlots] = useState([]);
     const [customStart, setCustomStart] = useState('');
@@ -16,11 +17,13 @@ function Reservation() {
     const [totalPrice, setTotalPrice] = useState(0);
     const [showPayment, setShowPayment] = useState(false);
     const { user } = useContext(AuthContext);
+    const [showTypeModal, setShowTypeModal] = useState(true); 
+    const [modalStep, setModalStep] = useState('selectType');
 
     useEffect(() => {
         const script = document.createElement('script');
 
-        script.src = `https://www.paypal.com/sdk/js?client-id=AQEfIXW9WDD93ySkAKhbbADxIkfYP71F1jPBFUar_01oNJeFCVQ9Wo-lQEpj-fRtsiZUut0fwk6EvEin&currency=ILS`;
+        script.src = `https://www.paypal.com/sdk/js?client-id=${import.meta.env.VITE_CLIENT_ID}&currency=ILS`;
         script.async = true;
         document.body.appendChild(script);
     }, []);
@@ -58,6 +61,8 @@ function Reservation() {
         setTotalPrice(price);
         setError('');
         setShowSummary(true);
+        setModalStep('summary');
+
     };
 
     const isTimeAvailable = (start, end) => {
@@ -94,7 +99,7 @@ function Reservation() {
 
     const handlePay = () => {
         console.log("ppp", parking, parking.ownerId);
-        
+
         const reservationData = {
             renterId: user.id,
             ownerId: parking.ownerId,
@@ -157,119 +162,102 @@ function Reservation() {
         return false;
     });
 
+    const handleCloseModal = () => {
+        setShowTypeModal(false);
+        navigate(-1); 
+    };
+
     return (
-        <div style={{ padding: '2rem' }}>
-            <h2>הזמנת חניה</h2>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label>
-                        <input
-                            type="radio"
-                            name="reservationType"
-                            value="fixed"
-                            checked={reservationType === 'fixed'}
-                            onChange={() => setReservationType('fixed')}
-                        />
-                        קבועה
-                    </label>
-                    <label style={{ marginRight: '1rem' }}>
-                        <input
-                            type="radio"
-                            name="reservationType"
-                            value="temporary"
-                            checked={reservationType === 'temporary'}
-                            onChange={() => setReservationType('temporary')}
-                        />
-                        זמנית
-                    </label>
-                    <label style={{ marginRight: '1rem' }}>
-                        <input
-                            type="radio"
-                            name="reservationType"
-                            value="custom"
-                            checked={reservationType === 'custom'}
-                            onChange={() => setReservationType('custom')}
-                        />
-                        מותאמת אישית
-                    </label>
-                </div>
-
-                {reservationType !== 'custom' && (
-                    <>
-                        <h4>בחר זמני חניה:</h4>
-                        {filteredSlots.map(slot => (
-                            <div key={slot.id} style={{ border: '1px solid #ccc', margin: '0.5rem 0', padding: '0.5rem' }}>
-                                <label>
-                                    <input
-                                        type="checkbox"
-                                        checked={selectedSlots.includes(slot.id)}
-                                        onChange={() => handleCheckboxChange(slot.id)}
-                                    />
-                                    {' '}
-                                    {slot.date} {slot.startTime} - {slot.endTime}
-                                </label>
+        <>
+            {showTypeModal && (
+                <Modal onClose={() => handleCloseModal()}>
+                    {modalStep === 'selectType' && (
+                        <>
+                            <h3>בחר סוג הזמנה</h3>
+                            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                                <button onClick={() => { setReservationType('fixed'); setModalStep('form'); }}>קבועה</button>
+                                <button onClick={() => { setReservationType('temporary'); setModalStep('form'); }}>זמנית</button>
+                                <button onClick={() => { setReservationType('custom'); setModalStep('form'); }}>מותאמת אישית</button>
                             </div>
-                        ))}
-                    </>
-                )}
-
-                {reservationType === 'custom' && (
-                    <div>
-                        <label>
-                            תאריך ושעת התחלה:
-                            <input
-                                type="datetime-local"
-                                value={customStart}
-                                onChange={(e) => setCustomStart(e.target.value)}
-                                style={{ marginLeft: '0.5rem' }}
-                            />
-                        </label>
-                        <br /><br />
-                        <label>
-                            תאריך ושעת סיום:
-                            <input
-                                type="datetime-local"
-                                value={customEnd}
-                                onChange={(e) => setCustomEnd(e.target.value)}
-                                style={{ marginLeft: '0.5rem' }}
-                            />
-                        </label>
-                    </div>
-                )}
-
-                {error && <p style={{ color: 'red' }}>{error}</p>}
-
-                <button type="submit" style={{ marginTop: '1rem' }}>המשך לסיכום</button>
-            </form>
-
-            {showSummary && (
-                <Modal onClose={() => setShowSummary(false)}>
-                    <h3>סיכום ההזמנה</h3>
-                    <p><strong>כתובת:</strong> {parking.address}</p>
-                    {parking.description && <p><strong>הערות:</strong> {parking.description}</p>}
-                    <p><strong>סכום לתשלום:</strong> {totalPrice.toFixed(2)} ₪</p>
-
-                    {reservationType === 'custom' ? (
-                        <p><strong>שעות מותאמות:</strong> {new Date(customStart).toLocaleString()} - {new Date(customEnd).toLocaleString()}</p>
-                    ) : (
-                        <p><strong>זמנים נבחרים:</strong> {selectedSlots.length}</p>
+                        </>
                     )}
 
-                    {/* כפתור מעבר לתשלום */}
-                    {!showPayment && (
-                        <button onClick={() => setShowPayment(true)} style={{ marginTop: '1rem' }}>
-                            לתשלום
-                        </button>
+                    {modalStep === 'form' && (
+                        <form onSubmit={handleSubmit}>
+                            {reservationType !== 'custom' && (
+                                <>
+                                    <h4>בחר זמני חניה:</h4>
+                                    {filteredSlots.map(slot => (
+                                        <div key={slot.id}>
+                                            <label>
+                                                <input
+                                                    type="checkbox"
+                                                    checked={selectedSlots.includes(slot.id)}
+                                                    onChange={() => handleCheckboxChange(slot.id)}
+                                                />
+                                                {' '}
+                                                {slot.date} {slot.startTime} - {slot.endTime}
+                                            </label>
+                                        </div>
+                                    ))}
+                                </>
+                            )}
+
+                            {reservationType === 'custom' && (
+                                <div>
+                                    <label>
+                                        התחלה:
+                                        <input
+                                            type="datetime-local"
+                                            value={customStart}
+                                            onChange={(e) => setCustomStart(e.target.value)}
+                                        />
+                                    </label>
+                                    <br />
+                                    <label>
+                                        סיום:
+                                        <input
+                                            type="datetime-local"
+                                            value={customEnd}
+                                            onChange={(e) => setCustomEnd(e.target.value)}
+                                        />
+                                    </label>
+                                </div>
+                            )}
+
+                            {error && <p style={{ color: 'red' }}>{error}</p>}
+                            <button type="submit" style={{ marginTop: '1rem' }}>המשך לסיכום</button>
+                        </form>
                     )}
 
-                    {/* כפתור PayPal יופיע רק אחרי לחיצה */}
-                    {showPayment && (
-                        <div id="paypal-button-container" style={{ marginTop: '1rem' }}></div>
+                    {modalStep === 'summary' && (
+                        <>
+                            <h3>סיכום ההזמנה</h3>
+                            <p><strong>כתובת:</strong> {parking.address}</p>
+                            {parking.description && <p><strong>הערות:</strong> {parking.description}</p>}
+                            <p><strong>סכום לתשלום:</strong> {totalPrice.toFixed(2)} ₪</p>
+
+                            {reservationType === 'custom' ? (
+                                <p><strong>שעות מותאמות:</strong> {new Date(customStart).toLocaleString()} - {new Date(customEnd).toLocaleString()}</p>
+                            ) : (
+                                <p><strong>זמנים נבחרים:</strong> {selectedSlots.length}</p>
+                            )}
+
+                            {!showPayment && (
+                                <button onClick={() => setShowPayment(true)} style={{ marginTop: '1rem' }}>
+                                    לתשלום
+                                </button>
+                            )}
+
+                            {showPayment && (
+                                <div id="paypal-button-container" style={{ marginTop: '1rem' }}></div>
+                            )}
+                        </>
                     )}
                 </Modal>
             )}
 
-        </div>
+        </>
     );
 }
 
