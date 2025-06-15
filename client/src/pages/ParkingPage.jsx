@@ -107,7 +107,7 @@ function ParkingPage() {
 
     return (
         <div className="parking-page">
-            <Header />
+
 
             <div className="parking-header">
                 <img

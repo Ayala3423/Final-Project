@@ -6,33 +6,28 @@ import OwnerMenu from './OwnerMenu';
 import AdminMenu from './AdminMenu';
 import '../styles/RentBro.css';
 
-
 function MainLayout() {
   const location = useLocation();
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
-
+  console.log("user", user);
+  
   const renderSidebar = () => {
+    if (user) {
+      switch (user.role) {
 
-    if (!(user)) {
-      return (
-        <div className="header-right">
-          <button className="list-property-btn" onClick={() => navigate('/login', { state: { backgroundLocation: location } })}>Login</button>
-          <button className="list-property-btn" onClick={() => navigate('/register', { state: { backgroundLocation: location } })}>Register</button>
-        </div>
-      );
+        case 'renter':
+          return <RenterMenu />;
+        case 'owner':
+          return <OwnerMenu />;
+        case 'admin':
+          return <AdminMenu />;
+        default:
+          return null;
+      }
     }
-
-    switch (user.role) {
-
-      case 'renter':
-        return <RenterMenu />;
-      case 'owner':
-        return <OwnerMenu />;
-      case 'admin':
-        return <AdminMenu />;
-      default:
-        return null;
+    else {
+      return;
     }
   };
 
@@ -42,6 +37,10 @@ function MainLayout() {
         <span className="logo-text">ParkIt</span>
         <span className="location-text">Delhi</span>
       </div>
+      {!user && <div className="header-right">
+        <button className="list-property-btn" onClick={() => navigate('/login', { state: { backgroundLocation: location } })}>Login</button>
+        <button className="list-property-btn" onClick={() => navigate('/register', { state: { backgroundLocation: location } })}>Register</button>
+      </div>}
       {renderSidebar()}
       <div className="content">
         <Outlet />

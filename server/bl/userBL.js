@@ -2,8 +2,10 @@ const bcrypt = require('bcrypt');
 const userService = require('../services/userService');
 
 const userBL = {
+   // userBL.js
 async signup(data) {
-    const { username, email, password, profileImage, ...rest } = data;
+    const { username, email, password, ...rest } = data;
+    console.log("📥 קיבלתי את הנתונים להרשמה:", data);
 
     const existing = await userService.findByUsernameOrEmail(username);
     if (existing) {
@@ -12,8 +14,7 @@ async signup(data) {
 
     let user;
     try {
-        // מוסיפים את profileImage כשדה בנתוני המשתמש
-        user = await userService.createUser({ username, email, profileImage, ...rest });
+        user = await userService.createUser({ username, email, ...rest });
 
         if (!password) {
             throw new Error('Password is required');
@@ -24,15 +25,16 @@ async signup(data) {
         console.log(`🔐 סיסמה נוצרה עבור משתמש: ${user.id}`);
 
         return user;
-
     } catch (err) {
         if (user) {
-            await userService.deleteUser(user.id); // מבטל את המשתמש אם הסיסמה נכשלה
+            await userService.deleteUser(user.id);
             console.warn(`⚠️ משתמש בוטל עקב שגיאה: ${err.message}`);
         }
-        throw new Error('Failed to create user with password');
+        console.error("שגיאה ביצירת משתמש:", err);
+        throw new Error('Failed to create user with password: ' + err.message);
     }
-},
+}
+,
 
 
     async login(identifier, password) {
@@ -63,11 +65,11 @@ async signup(data) {
     async getAllUsers() {
         return await userService.findAllUsers();
     },
-    
+
     async getUsersByParams(params) {
         return await userService.findUsersByParams(params);
     }
-    
+
 };
 
 module.exports = userBL;

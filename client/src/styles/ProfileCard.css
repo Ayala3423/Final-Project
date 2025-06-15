@@ -40,7 +40,13 @@
 }
 
 .profile-label {
-  font-weight: 600;
+  font-weight: 500;
+  color: #555555;
+}
+.profile-input[readonly] {
+  background-color: #f9f9f9;
+  color: #777;
+  cursor: not-allowed;
 }
 
 .profile-value {

@@ -4,10 +4,13 @@ const sequelize = require('./config/sequelize');
 require('./models/index'); 
 const cors = require('cors');
 dotenv.config();
+const path = require('path');
 
 const app = express();
 app.use(express.json());
 app.use(cors()); 
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+
 
 app.use("/parking", require("./routes/parkingRoutes"));
 app.use("/user", require("./routes/userRoutes"));
