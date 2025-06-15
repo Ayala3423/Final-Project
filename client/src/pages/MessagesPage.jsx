@@ -62,9 +62,20 @@ export default function MessagesPage() {
       }
     });
 
+    socket.on('messagesRead', ({ conversationId, messageIds }) => {
+      if (conversationId === selectedChatId) {
+        setMessages(prev =>
+          prev.map(msg =>
+            messageIds.includes(msg.id) ? { ...msg, isRead: true } : msg
+          )
+        );
+      }
+    });
+
     return () => {
       socket.off('receiveMessage');
       socket.off('userTyping');
+      socket.off('messagesRead'); // אל תשכחי להוריד את ההאזנה גם כאן
       socket.disconnect();
     };
   }, [selectedChatId]);
@@ -104,9 +115,24 @@ export default function MessagesPage() {
       console.log("Messages fetched for conversationId:", selectedChatId, data);
       setMessages(data);
       setUnreadMessages(prev => ({ ...prev, [selectedChatId]: 0 }));
+
+      const unreadMessageIds = data
+        .filter(msg => msg.receiverId === user.id && !msg.isRead)
+        .map(msg => msg.id);
+
+      if (unreadMessageIds.length > 0) {
+        apiService.updateMany('message/conversation', { messageIds: unreadMessageIds, field: {isRead: true} }, () => {
+          socket.emit('messageRead', { conversationId: selectedChatId, messageIds: unreadMessageIds });
+
+          console.log('Messages marked as read');
+        }, (error) => {
+          console.error('Error marking messages as read:', error);
+        });
+      }
     }, (error) => {
       console.error("Error fetching messages:", error);
     });
+
   }, [selectedChatId]);
 
   // גלילה אוטומטית
@@ -147,7 +173,7 @@ export default function MessagesPage() {
   };
 
   const handleTyping = () => {
-      console.log('✏️ אני מקליד...');
+    console.log('✏️ אני מקליד...');
 
     socket.emit('typing', { conversationId: selectedChatId, senderId: user.id, senderName: user.name });
   };
@@ -243,8 +269,14 @@ export default function MessagesPage() {
               className={`chat-bubble ${msg.senderId === user.id ? 'sent' : 'received'}`}
             >
               {msg.content}
+              {msg.senderId === user.id && (
+                <span className="message-status">
+                  {msg.isRead ? '✔✔' : '✔'}
+                </span>
+              )}
             </div>
           ))}
+
           <div ref={messagesEndRef} />
         </div>
 

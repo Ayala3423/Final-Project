@@ -8,19 +8,19 @@ const messageBL = {
     },
 
     async createMessage(data) {
-        
+
         return await genericService.create('message', data);
     },
 
     async getAllMessages() {
-        return await genericService.getAll('message', );
+        return await genericService.getAll('message',);
     },
 
     async getMessagesById(senderId) {
         if (!senderId) return [];
         return await genericService.getByParams('message', { senderId });
     },
-    
+
     async deleteMessage(id) {
         if (!id) return null;
         return await genericService.delete('message', id);
@@ -34,6 +34,11 @@ const messageBL = {
     async getMessagesByConversationId(conversationId) {
         if (!conversationId) return [];
         return await genericService.getByParams('message', { conversationId });
+    },
+
+    async setReadMessages(messageIds, field) {
+        if (!messageIds || !field) return nul;
+        return await genericService.update('message',  messageIds , field);
     }
 };
 

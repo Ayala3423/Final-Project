@@ -24,16 +24,36 @@ function MapView({ center, parkings, hoveredParkingId }) {
 
             if (Array.isArray(parkings)) {
                 parkings.forEach(spot => {
+                    console.log("spot", spot);
+
                     const marker = new window.google.maps.Marker({
                         position: { lat: spot.lat, lng: spot.lng },
                         map: mapInstance.current,
-                        title: spot.name,
+                        title: spot.address || '',
                         icon: {
                             url: 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png'
                         }
                     });
+
+                    // ✅ תיבת מידע עם מחיר
+                    const infoWindow = new window.google.maps.InfoWindow({
+                        content: `<div style="font-size:14px; font-weight:bold;">₪${spot.price}</div>`
+                    });
+
+                    // פותח תיבה בריחוף
+                    marker.addListener('mouseover', () => {
+                        infoWindow.open(mapInstance.current, marker);
+                    });
+
+                    // סוגר תיבה כשמפסיקים לרחף
+                    marker.addListener('mouseout', () => {
+                        infoWindow.close();
+                    });
+
+                    // שומר את המרקר
                     markersRef.current[spot.id] = marker;
                 });
+
             }
         };
 

@@ -37,6 +37,7 @@ function MainLayout() {
         <span className="logo-text">ParkIt</span>
         <span className="location-text">Delhi</span>
       </div>
+      <h2 className='username'>Hello {user.name}</h2>
       {!user && <div className="header-right">
         <button className="list-property-btn" onClick={() => navigate('/login', { state: { backgroundLocation: location } })}>Login</button>
         <button className="list-property-btn" onClick={() => navigate('/register', { state: { backgroundLocation: location } })}>Register</button>

@@ -11,7 +11,6 @@ const SearchBar = ({ onSearch, currentLocation }) => {
     const [useCurrentLocation, setUseCurrentLocation] = useState(true);
     const [currentTime, setCurrentTime] = useState("");
     const [coords, setCoords] = useState({ lat: null, lng: null });
-
     const [radius, setRadius] = useState(10); 
     const [startTime, setStartTime] = useState(""); 
     const [duration, setDuration] = useState(2); 
@@ -49,7 +48,6 @@ const SearchBar = ({ onSearch, currentLocation }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
         let lat, lng;
 
         if (useCurrentLocation) {

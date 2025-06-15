@@ -12,11 +12,13 @@ function TimeSlots({ timeSlots }) {
                     <div key={idx} className="timeslot-card">
                         <div className="time-row">
                             <span className="label">התחלה:</span>
-                            <span className="value">{new Date(slot.startTime).toLocaleString()}</span>
+                            {/* <span className="value">{new Date(slot.startTime).toLocaleString()}</span> */}
+                            <span className="value">{slot.startTime}</span>
                         </div>
                         <div className="time-row">
                             <span className="label">סיום:</span>
-                            <span className="value">{new Date(slot.endTime).toLocaleString()}</span>
+                            {/* <span className="value">{new Date(slot.endTime).toLocaleString()}</span> */}
+                            <span className="value">{slot.endTime}</span>
                         </div>
                     </div>
                 ))}

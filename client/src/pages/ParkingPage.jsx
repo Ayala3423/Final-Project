@@ -97,6 +97,7 @@ function ParkingPage() {
             return;
         }
 
+
         navigate('reservation', {
             state: {
                 parking,
@@ -202,13 +203,13 @@ function ParkingPage() {
                 </div>
             )}
 
-            <button
+            {user.role === "renter" && <button
                 className="booking-button"
                 onClick={handleReservation}
                 aria-label="יצירת הזמנה"
             >
                 <FaClipboardList size={24} />
-            </button>
+            </button>}
 
             <Footer />
             

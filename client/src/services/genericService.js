@@ -1,7 +1,7 @@
 import axios from "axios";
 import Cookies from "js-cookie";
 
-const API_URL = import.meta.env.VITE_API_URL|| 'http://localhost:3000';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 
 let getToken = () => Cookies.get('token');
 
@@ -12,7 +12,7 @@ export function setTokenGetter(fn) {
 async function request(url, params = {}, method = 'GET', body = null, onSuccess, onError) {
     try {
         console.log(`Requesting ${method} ${API_URL}/${url} with params:`, params);
-        
+
         const token = getToken();
         const config = {
             method,
@@ -68,7 +68,10 @@ export const apiService = {
         request(table, {}, 'POST', body, onSuccess, onError),
 
     update: (table, id, data, onSuccess, onError) =>
-        request(`${table}/${id}`,{}, 'PUT', data, onSuccess, onError),
+        request(`${table}/${id}`, {}, 'PUT', data, onSuccess, onError),
+
+    updateMany: (table, data, onSuccess, onError) =>
+        request(`${table}`, {}, 'PUT', data, onSuccess, onError),
 
     patch: (table, id, data, onSuccess, onError) =>
         request(`${table}/${id}`, {}, 'PATCH', data, onSuccess, onError),

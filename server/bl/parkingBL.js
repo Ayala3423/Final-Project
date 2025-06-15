@@ -95,8 +95,9 @@ const parkingBL = {
             price: {}
         };
 
-        if (minPrice) conditions.price[Op.gte] = parseFloat(minPrice);
-        if (maxPrice) conditions.price[Op.lte] = parseFloat(maxPrice);
+        if (minPrice !== undefined && minPrice !== null) conditions.price[Op.gte] = parseFloat(minPrice);
+        if (maxPrice !== undefined && maxPrice !== null) conditions.price[Op.lte] = parseFloat(maxPrice);
+
         if (!minPrice && !maxPrice) delete conditions.price;
         console.log("2");
 

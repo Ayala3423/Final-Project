@@ -10,7 +10,6 @@ router.get('/search', parkingController.searchParkings);
 
 router.use(verifyToken);
 
-console.log('Parking search route loaded');
 router.route('/:id')
     .get(parkingController.getParkingById)
     .put(parkingController.updateParking)

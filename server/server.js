@@ -55,7 +55,10 @@ io.on('connection', (socket) => {
     socket.broadcast.emit('userTyping', { conversationId, senderId });
   });
 
-  
+  socket.on('messageRead', ({ conversationId, messageIds }) => {
+    io.emit('messagesRead', { conversationId, messageIds });
+  });
+
 });
 
 
