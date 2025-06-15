@@ -9,20 +9,38 @@ const Register = () => {
     const [form, setForm] = useState({
         name: '', username: '', phone: '', email: '', address: '', password: '', role: 'renter'
     });
+    const [profileImage, setProfileImage] = useState(null); // קובץ תמונה
 
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });
     };
 
+    const handleImageChange = (e) => {
+        const file = e.target.files[0];
+        if (file && file.type.startsWith('image/')) {
+            setProfileImage(file);
+        } else {
+            alert('אנא העלה קובץ תמונה בלבד');
+        }
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
-        signupContext(form, navigate);
+        const formData = new FormData();
+        for (const key in form) {
+            formData.append(key, form[key]);
+        }
+        if (profileImage) {
+            formData.append('profileImage', profileImage); // זה ישלח בתור multipart
+        }
+
+        signupContext(formData, navigate); // תצטרכי לעדכן גם את `signupContext` (בהמשך)
     };
 
     return (
         <Modal onClose={() => navigate(-1)}>
             <h2>Register</h2>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} encType="multipart/form-data">
                 <input name="name" placeholder="Full Name" value={form.name} onChange={handleChange} required />
                 <input name="username" placeholder="Username" value={form.username} onChange={handleChange} required />
                 <input type="email" name="email" placeholder="Email" value={form.email} onChange={handleChange} required />
@@ -34,6 +52,10 @@ const Register = () => {
                     <option value="owner">Owner</option>
                     <option value="admin">Admin</option>
                 </select>
+
+                {/* שדה תמונה */}
+                <input type="file" accept="image/*" onChange={handleImageChange} />
+
                 <button type="submit">Register</button>
             </form>
         </Modal>

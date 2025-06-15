@@ -45,7 +45,13 @@ const User = sequelize.define('User', {
       min: 0,
       max: 5
     }
-  }
+  },
+  profileImage: {
+  type: DataTypes.STRING,
+  allowNull: false,
+  defaultValue: 'default-profile.png'  // שם הקובץ/נתיב לתמונת ברירת המחדל שלך
+},
+
 }, {
   tableName: 'Users',
   timestamps: false

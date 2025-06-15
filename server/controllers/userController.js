@@ -3,15 +3,28 @@ const {generateToken} = require('../utils/utils');
 
 const userController = {
 
-    async signup(req, res) {
-        try {
-            const user = await userBL.signup(req.body);
-            const token = generateToken({id: user.id, role: user.role});
-            res.status(200).json({ user, token });
-        } catch (error) {
-            res.status(400).json({ error: error.message });
+  async signup(req, res) {
+    try {
+        // חילוץ נתונים מה־body
+        const userData = req.body;
+
+        // אם יש תמונה מצורפת
+        if (req.file) {
+            userData.profileImage = req.file.path; // שומר את הנתיב של התמונה
         }
-    },
+
+        // המשך תהליך יצירת המשתמש
+        const user = await userBL.signup(userData);
+
+        // יצירת טוקן
+        const token = generateToken({ id: user.id, role: user.role });
+
+        res.status(200).json({ user, token });
+    } catch (error) {
+        res.status(400).json({ error: error.message });
+    }
+}
+,
 
     async login(req, res) {
         try {

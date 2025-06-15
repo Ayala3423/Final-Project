@@ -1,0 +1,78 @@
+.profile-card {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+  direction: rtl;
+  text-align: center;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 15px;
+}
+
+.profile-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.profile-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: right;
+}
+
+.profile-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 4px;
+}
+
+.profile-label {
+  font-weight: 600;
+}
+
+.profile-value {
+  color: #555555;
+}
+
+.profile-input {
+  padding: 4px 8px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  width: 60%;
+}
+
+.profile-actions {
+  margin-top: 20px;
+}
+
+.edit-button,
+.save-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.edit-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.save-button {
+  background-color: #28a745;
+  color: white;
+}

@@ -2,37 +2,38 @@ const bcrypt = require('bcrypt');
 const userService = require('../services/userService');
 
 const userBL = {
+async signup(data) {
+    const { username, email, password, profileImage, ...rest } = data;
 
-    async signup(data) {
-        const { username, email, password, ...rest } = data;
+    const existing = await userService.findByUsernameOrEmail(username);
+    if (existing) {
+        throw new Error('Username or email already exists');
+    }
 
-        const existing = await userService.findByUsernameOrEmail(username);
-        if (existing) {
-            throw new Error('Username or email already exists');
+    let user;
+    try {
+        // מוסיפים את profileImage כשדה בנתוני המשתמש
+        user = await userService.createUser({ username, email, profileImage, ...rest });
+
+        if (!password) {
+            throw new Error('Password is required');
         }
 
-        let user;
-        try {
-            user = await userService.createUser({ username, email, ...rest });
+        const hash = await bcrypt.hash(password, 10);
+        await userService.createPassword(user.id, hash);
+        console.log(`🔐 סיסמה נוצרה עבור משתמש: ${user.id}`);
 
-            if (!password) {
-                throw new Error('Password is required');
-            }
+        return user;
 
-            const hash = await bcrypt.hash(password, 10);
-            await userService.createPassword(user.id, hash);
-            console.log(`🔐 סיסמה נוצרה עבור משתמש: ${user.id}`);
-
-            return user;
-
-        } catch (err) {
-            if (user) {
-                await userService.deleteUser(user.id); // מבטל את המשתמש אם הסיסמה נכשלה
-                console.warn(`⚠️ משתמש בוטל עקב שגיאה: ${err.message}`);
-            }
-            throw new Error('Failed to create user with password');
+    } catch (err) {
+        if (user) {
+            await userService.deleteUser(user.id); // מבטל את המשתמש אם הסיסמה נכשלה
+            console.warn(`⚠️ משתמש בוטל עקב שגיאה: ${err.message}`);
         }
-    },
+        throw new Error('Failed to create user with password');
+    }
+},
+
 
     async login(identifier, password) {
         const user = await userService.findByUsernameOrEmail(identifier);

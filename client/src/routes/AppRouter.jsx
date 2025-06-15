@@ -25,6 +25,7 @@ import ParkingPage from '../pages/ParkingPage.jsx';
 import MessagesPage from '../pages/MessagesPage.jsx';
 import UsersList from '../pages/UsersList.jsx';
 import ParkingList from '../components/ParkingList.jsx';
+import ProfileCard from '../components/ProfileCard.jsx';
 
 // רוטה פרטית - רק למשתמשים מחוברים
 const PrivateRoute = ({ children, allowedRoles }) => {
@@ -80,6 +81,7 @@ function AppRouter() {
 
           >
             <Route path="my-parkings" element={<MyParkings />} />
+            <Route path="my-profile" element={<ProfileCard />} />
             <Route path="reservations" element={<ReservationsList />} />
             <Route path="add-parking" element={<AddParking />} />
           </Route>
@@ -93,7 +95,7 @@ function AppRouter() {
             }
           >
             <Route path="reservations" element={<ReservationsList />} />
-
+            <Route path="my-profile" element={<ProfileCard />} />
           </Route>
 
 

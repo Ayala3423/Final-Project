@@ -12,3 +12,25 @@
   border-radius: 6px;
   border: 1px solid #ccc;
 }
+.profile-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.profile-field {
+  margin-bottom: 16px;
+}
+
+.profile-input {
+  width: 100%;
+  padding: 6px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.cancel-button {
+  margin-right: 8px;
+  background-color: #eee;
+  color: #333;
+}

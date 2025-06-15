@@ -1,12 +1,16 @@
 import axios from 'axios';
 
-const API_URL = import.meta.env.VITE_API_URL;
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 
 const registerAuth = async (endpoint, body, onSuccess, onError) => {
   try {
-    console.log("user: ", body.username, body.password);
+    console.log("user: ", body.get ? body.get("username") : body.username);
 
-    const { data } = await axios.post(`${API_URL}/user/${endpoint}`, body);
+    const isFormData = body instanceof FormData;
+
+    const { data } = await axios.post(`${API_URL}/user/${endpoint}`, body, {
+      headers: isFormData ? {} : { 'Content-Type': 'application/json' }
+    });
 
     if (onSuccess) onSuccess(data);
     return data;
