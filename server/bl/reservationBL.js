@@ -30,7 +30,7 @@ const reservationBL = {
         if (!value) return [];
         console.log("Fetching reservations with value:", value);
         
-        return await genericService.getByParams('reservation', value);
+        return await genericService.getByParamsLimit('reservation', value);
     }
     
 };

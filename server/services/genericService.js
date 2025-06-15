@@ -20,6 +20,14 @@ const genericService = {
     async getByParams(model, params) {
         const Model = require(`../models/${model}`);
 
+        return await Model.findAll({
+            where: params,
+        });
+    },
+
+     async getByParamsLimit(model, params) {
+        const Model = require(`../models/${model}`);
+
         const { page = 1, limit = 10, ...filters } = params;
         const offset = (page - 1) * limit;
 
