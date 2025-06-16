@@ -3,7 +3,6 @@ import { useNavigate, Outlet } from 'react-router-dom';
 import '../styles/Dashboard.css';
 import { AuthContext } from '../context/AuthContext';
 
-
 function OwnerMenu() {
     const [menuOpen, setMenuOpen] = useState(false);
     const navigate = useNavigate();
@@ -16,8 +15,8 @@ function OwnerMenu() {
         navigate(path);
     };
 
-
     return (
+        <>
             <nav className="sidebar">
                 <button onClick={toggleMenu}>☰ תפריט</button>
                 {menuOpen && (
@@ -33,6 +32,8 @@ function OwnerMenu() {
                 )}
             </nav>
 
+            {menuOpen && <div className="menu-overlay" onClick={toggleMenu}></div>}
+        </>
     );
 }
 

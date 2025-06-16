@@ -18,11 +18,18 @@ export default function MessagesPage() {
   const messagesEndRef = useRef(null);
   const [newChatUsername, setNewChatUsername] = useState('');
   const [chatError, setChatError] = useState('');
+  const [soundEnabled, setSoundEnabled] = useState(true);
+
+  const soundEnabledRef = useRef(soundEnabled);
+
+  useEffect(() => {
+    soundEnabledRef.current = soundEnabled;
+  }, [soundEnabled]);
 
   const playNotificationSound = () => {
+    if (!soundEnabledRef.current) return;
     const audio = new Audio('-WPTWARN.wav');
     audio.play().catch(err => console.error("Audio play error:", err));
-
   };
 
   function generateUniqueConversationId() {
@@ -36,14 +43,19 @@ export default function MessagesPage() {
     socket.on('receiveMessage', (messageData) => {
       console.log('📥 Message received via socket:', messageData);
 
+      const isMyMessage = messageData.senderId === user.id;
+
       if (messageData.conversationId === selectedChatId) {
         setMessages(prev => [...prev, messageData]);
-        playNotificationSound();
       } else {
         setUnreadMessages(prev => ({
           ...prev,
           [messageData.conversationId]: (prev[messageData.conversationId] || 0) + 1
         }));
+      }
+
+      // השמע צליל רק אם זו הודעה של מישהו אחר
+      if (!isMyMessage) {
         playNotificationSound();
       }
     });
@@ -121,7 +133,7 @@ export default function MessagesPage() {
         .map(msg => msg.id);
 
       if (unreadMessageIds.length > 0) {
-        apiService.updateMany('message/conversation', { messageIds: unreadMessageIds, field: {isRead: true} }, () => {
+        apiService.updateMany('message/conversation', { messageIds: unreadMessageIds, field: { isRead: true } }, () => {
           socket.emit('messageRead', { conversationId: selectedChatId, messageIds: unreadMessageIds });
 
           console.log('Messages marked as read');
@@ -233,6 +245,12 @@ export default function MessagesPage() {
     <div className="chat-box">
       <div className="chat-sidebar">
         <h3>שיחות</h3>
+        <button
+          onClick={() => setSoundEnabled(prev => !prev)}
+          style={{ fontSize: '14px', padding: '4px 8px', cursor: 'pointer' }}
+        >
+          {soundEnabled ? '🔊 השתק' : '🔇 הפעל'}
+        </button>
         <div className="new-chat">
           <input
             type="text"
@@ -247,13 +265,18 @@ export default function MessagesPage() {
         <ul>
           {conversations.map(conv => {
             const chatPartnerId = conv.senderId === user.id ? conv.receiverId : conv.senderId;
+            const isActive = conv.conversationId === selectedChatId;
 
             return (
               <li
                 key={conv.conversationId}
+                className={isActive ? 'active' : ''}
                 onClick={() => setSelectedChatId(conv.conversationId)}
               >
                 שיחה עם: {chatPartnerId}
+                {unreadMessages[conv.conversationId] > 0 && (
+                  <span className="unread-count"> ({unreadMessages[conv.conversationId]})</span>
+                )}
               </li>
             );
           })}
@@ -286,9 +309,17 @@ export default function MessagesPage() {
               type="text"
               value={newMsg}
               onChange={(e) => setNewMsg(e.target.value)}
-              onKeyDown={handleTyping}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') {
+                  e.preventDefault(); // מונע ירידת שורה אם זה textarea בעתיד
+                  handleSend();
+                } else {
+                  handleTyping();
+                }
+              }}
               placeholder="כתוב הודעה..."
             />
+
             <button onClick={handleSend}>שלח</button>
           </div>
         )}

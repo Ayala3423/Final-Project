@@ -28,6 +28,8 @@ function ReservationsList() {
             (data) => {
                 if (data.length < 10) setHasMore(false);
                 setReservations(prev => [...prev, ...data]);
+                console.log("123", data);
+                
                 setLoading(false);
             },
             (err) => {
@@ -45,6 +47,8 @@ function ReservationsList() {
     if (!user) return <p>Please log in to view reservations.</p>;
     if (error) return <p>{error}</p>;
 
+    console.log("Reservations:", reservations);
+    
     return (
         <section className="reservations-section">
             <h3 className="reservations-title">Your Reservations</h3>
@@ -53,8 +57,8 @@ function ReservationsList() {
                 {reservations.map((res, idx) => (
                     <li key={idx} className="reservation-item">
                         <div><strong>Parking Address:</strong> {res.parkingAddress}</div>
-                        <div><strong>Start Time:</strong> {new Date(res.startTime).toLocaleString()}</div>
-                        <div><strong>End Time:</strong> {new Date(res.endTime).toLocaleString()}</div>
+                        <div><strong>Start Time:</strong>{res.startTime}</div>
+                        <div><strong>End Time:</strong>{res.endTime}</div>
                         {user.role === 'owner' && (
                             <div><strong>Renter:</strong> {res.renterName}</div>
                         )}

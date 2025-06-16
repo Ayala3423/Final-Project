@@ -12,6 +12,11 @@
   direction: rtl;
 }
 
+.unread-count {
+  color: red;
+  font-weight: bold;
+}
+
 .chat-sidebar h3 {
   margin-bottom: 12px;
   font-size: 18px;
