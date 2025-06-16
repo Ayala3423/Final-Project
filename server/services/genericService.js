@@ -7,9 +7,17 @@ const genericService = {
 
     async update(model, id, data) {
         const Model = require(`../models/${model}`);
-        const instance = await Model.findByPk(id);
-        if (!instance) return null;
-        return await instance.update(data);
+
+        if (Array.isArray(id)) {
+            // עדכון קבוצתי
+            const result = await Model.update(data, { where: { id } });
+            return result; // מחזיר [כמות רשומות שעודכנו]
+        } else {
+            // עדכון רגיל
+            const instance = await Model.findByPk(id);
+            if (!instance) return null;
+            return await instance.update(data);
+        }
     },
 
     async delete(model, id) { //TODO: soft delete
@@ -18,6 +26,16 @@ const genericService = {
     },
 
     async getByParams(model, params) {
+        const Model = require(`../models/${model}`);
+
+        return await Model.findAll({
+            where: params,
+        });
+    },
+
+    async getByParamsLimit(model, params) {
+        console.log('getByParamsLimit');
+        
         const Model = require(`../models/${model}`);
 
         const { page = 1, limit = 10, ...filters } = params;
@@ -32,7 +50,7 @@ const genericService = {
 
     async create(model, data) {
         console.log(`Creating new ${model} with data:`, data);
-        
+
         const Model = require(`../models/${model}`);
         return await Model.create(data);
     },

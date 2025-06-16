@@ -27,7 +27,7 @@ const parkingBL = {
     },
 
     async getParkingsByParams(filters, pagination) {
-        return await genericService.getByParams('Parking', filters, pagination);
+        return await genericService.getByParamsLimit('Parking', filters, pagination);
     },
 
     async createParking(data) {
@@ -73,7 +73,7 @@ const parkingBL = {
         const dayOfWeek = startDateTime.toLocaleDateString('en-US', { weekday: 'long' }).toLowerCase();
 
         // שליפה גנרית של חניות
-        const allParkings = await genericService.getByParams('Parking', {}); // כל החניות
+        const allParkings = await genericService.getByParamsLimit('Parking', {}); // כל החניות
         const parkingsInRange = allParkings.filter(p => {
             console.log(p);
 
@@ -95,8 +95,9 @@ const parkingBL = {
             price: {}
         };
 
-        if (minPrice) conditions.price[Op.gte] = parseFloat(minPrice);
-        if (maxPrice) conditions.price[Op.lte] = parseFloat(maxPrice);
+        if (minPrice !== undefined && minPrice !== null) conditions.price[Op.gte] = parseFloat(minPrice);
+        if (maxPrice !== undefined && maxPrice !== null) conditions.price[Op.lte] = parseFloat(maxPrice);
+
         if (!minPrice && !maxPrice) delete conditions.price;
         console.log("2");
 

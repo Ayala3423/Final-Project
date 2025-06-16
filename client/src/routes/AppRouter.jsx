@@ -118,6 +118,9 @@ function AppRouter() {
             <Route path="reservation" element={<Reservation />} />
 
           </Route>
+
+          <Route path="reservation" element={<Reservation />} />
+
         </Route>
 
       </Routes>

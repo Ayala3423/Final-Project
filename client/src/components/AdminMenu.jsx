@@ -1,4 +1,4 @@
-import React, { useState,useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { useNavigate, Outlet } from 'react-router-dom';
 import { HiMenuAlt3 } from 'react-icons/hi';
 import { AuthContext } from '../context/AuthContext';
@@ -17,26 +17,23 @@ function AdminMenu() {
     };
 
     return (
-        <div className="admin-body">
-            <nav className="sidebar">
-                <button className="menu-toggle" onClick={toggleMenu}>
-                    <HiMenuAlt3 size={24} />
-                </button>
+        <nav className="sidebar">
+            <button className="menu-toggle" onClick={toggleMenu}>
+                <HiMenuAlt3 size={24} />
+            </button>
 
-                {menuOpen && (
-                    <div className="dropdown-menu">
-                        <button onClick={() => handleClick('/')}>🏠 Home</button>
-                        <button onClick={() => handleClick('/admin/owner')}>owners</button>
-                        <button onClick={() => handleClick('/admin/renter')}>renters</button>
-                        <button onClick={() => handleClick('/admin/parking-management')}>parkings</button>
-                        <button onClick={() => handleClick('/admin/orders')}>orders</button>
-                        <button onClick={() => handleClick('/messages')}>Messages</button>
-                            <button onClick={() => logout()}>יציאה</button>   
-                    </div>
-                )}
-            </nav>
-
-        </div>
+            {menuOpen && (
+                <div className="dropdown-menu">
+                    <button onClick={() => handleClick('/')}>🏠 Home</button>
+                    <button onClick={() => handleClick('/admin/owner')}>owners</button>
+                    <button onClick={() => handleClick('/admin/renter')}>renters</button>
+                    <button onClick={() => handleClick('/admin/parking-management')}>parkings</button>
+                    <button onClick={() => handleClick('/admin/orders')}>orders</button>
+                    <button onClick={() => handleClick('/messages')}>Messages</button>
+                    <button onClick={() => logout()}>יציאה</button>
+                </div>
+            )}
+        </nav>
     );
 }
 

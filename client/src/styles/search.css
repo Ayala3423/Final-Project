@@ -1,32 +1,47 @@
 .search-container {
-  background: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-  max-width: 80%;
-  overflow-x: auto;
   direction: rtl;
   font-family: "Segoe UI", sans-serif;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow-y: auto;
 }
 
 .search-title {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   color: #222;
   text-align: center;
 }
 
 .search-form {
-  display: flex;
-  flex-wrap: wrap; 
-  gap: 20px;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
   width: 100%;
+}
+
+.price-slider-container {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.range-group {
+  display: flex;
+  gap: 10px;
+}
+
+.price-inputs {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
 }
 
 input[type="range"] {
@@ -36,7 +51,7 @@ input[type="range"] {
   background: rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   outline: none;
-  transition: background 0.3s;
+  transition: background-color 0.3s;
 }
 
 input[type="range"]::-webkit-slider-thumb {
@@ -64,6 +79,25 @@ input[type="range"]::-moz-range-thumb {
   cursor: pointer;
 }
 
+.price-inputs input {
+  width: 80px;
+  text-align: center;
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+input[type="number"],
+input[type="text"],
+input[type="datetime-local"],
+select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
 
 .search-form input[type="checkbox"] {
   appearance: none;
@@ -101,21 +135,6 @@ input[type="range"]::-moz-range-thumb {
   opacity: 1;
 }
 
-
-.search-form input[type="text"],
-.search-form input[type="number"],
-.search-form input[type="datetime-local"],
-.search-form select {
-  flex: 1 1 160px; 
-  min-width: 120px;
-  max-width: 100%;
-  padding: 10px 14px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
-  box-sizing: border-box;
-}
-
 .search-form label {
   font-size: 0.95rem;
   color: #444;
@@ -124,28 +143,12 @@ input[type="range"]::-moz-range-thumb {
   gap: 6px;
 }
 
-.price-slider-container,
-.price-inputs {
-  flex: 0 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 0;
-}
-
-.price-inputs input {
-  width: 80px;
-  text-align: center;
-}
-
 .search-button {
-  flex: 1 1 160px;
-  max-width: 200px;
-  white-space: nowrap;
+  grid-column: span 2;
   background-color: #2f3641;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   padding: 12px 20px;
   font-size: 1rem;
   cursor: pointer;
@@ -162,11 +165,11 @@ input[type="range"]::-moz-range-thumb {
 
 @media (max-width: 768px) {
   .search-form {
-    flex-wrap: wrap; 
+    grid-template-columns: 1fr;
   }
 
   .search-button {
+    grid-column: span 1;
     width: 100%;
-    justify-content: center;
   }
 }

@@ -30,8 +30,8 @@ const Message = sequelize.define('Message', {
     defaultValue: false
   },
   conversationId: {
-    type: DataTypes.INTEGER,
-    allowNull: true 
+    type: DataTypes.UUID,
+    allowNull: true
   }
 }, {
   tableName: 'Messages',

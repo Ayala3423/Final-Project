@@ -2,7 +2,7 @@
     display: flex;
     height: calc(100vh - 80px);
     /* גובה מותאם (אפשר לשנות לפי כותרת/ניווט) */
-    gap: 30px;
+    gap: 50px;
     padding: 20px 40px;
     box-sizing: border-box;
     background-color: #f5f7fa;

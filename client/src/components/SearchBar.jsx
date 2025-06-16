@@ -11,10 +11,9 @@ const SearchBar = ({ onSearch, currentLocation }) => {
     const [useCurrentLocation, setUseCurrentLocation] = useState(true);
     const [currentTime, setCurrentTime] = useState("");
     const [coords, setCoords] = useState({ lat: null, lng: null });
-
-    const [radius, setRadius] = useState(10); 
-    const [startTime, setStartTime] = useState(""); 
-    const [duration, setDuration] = useState(2); 
+    const [radius, setRadius] = useState(10);
+    const [startTime, setStartTime] = useState("");
+    const [duration, setDuration] = useState(2);
 
     useEffect(() => {
         const now = new Date();
@@ -49,7 +48,6 @@ const SearchBar = ({ onSearch, currentLocation }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
         let lat, lng;
 
         if (useCurrentLocation) {
@@ -84,7 +82,8 @@ const SearchBar = ({ onSearch, currentLocation }) => {
         apiService.getSearch(
             'parking',
             params,
-            (response) => { onSearch(response); 
+            (response) => {
+                onSearch(response);
                 console.log("Search results:", response);
                 // setCoords({ lat, lng }); // Update coords for map center
             },
@@ -138,6 +137,7 @@ const SearchBar = ({ onSearch, currentLocation }) => {
                     <option value="fixed">Permanent</option>
                 </select>
 
+                <div></div>
                 <label className="text-sm text-gray-700">
                     <input
                         type="checkbox"
@@ -163,23 +163,29 @@ const SearchBar = ({ onSearch, currentLocation }) => {
                 )}
 
                 {/* רדיוס חיפוש */}
+                <label className="text-sm text-gray-700" id="radius">radius</label>
                 <input
                     type="number"
+                    name="radius"
                     placeholder="Search radius (km)"
                     value={radius}
                     onChange={(e) => setRadius(Number(e.target.value))}
                 />
 
                 {/* שעת התחלה */}
+                <label className="text-sm text-gray-700" id="date">date</label>
                 <input
                     type="datetime-local"
+                    name="date"
                     value={startTime}
                     onChange={(e) => setStartTime(e.target.value)}
                 />
 
                 {/* משך זמן */}
+                <label className="text-sm text-gray-700" id="duration">duration</label>
                 <input
                     type="number"
+                    name="duration"
                     placeholder="Duration (hours)"
                     value={duration}
                     onChange={(e) => setDuration(Number(e.target.value))}

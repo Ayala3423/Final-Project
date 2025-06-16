@@ -47,7 +47,10 @@ const parkingController = {
         try {
             console.log('Searching parkings with query:', req.query);
             const result = await parkingBL.searchParkings(req.query);
+            console.log('result:', result);
+
             res.json(result);
+
         } catch (error) {
             console.error(error);
             res.status(500).json({ message: 'Error searching parkings' });

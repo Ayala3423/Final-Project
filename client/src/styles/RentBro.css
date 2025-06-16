@@ -52,24 +52,34 @@
 
 
 /* Header Styles */
-.header {
-    /* display: flex; */
+.mainLayout {
+        height: 6vh;
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    /* padding: 20px 40px; */
-    position: relative;
+    position: fixed;
+    width: 100%;
     z-index: 100;
-    background-color: rgba(0, 0, 0, 0.1);
+    padding: 8px 40px;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+.mainLayout.scrolled {
+    background-color: rgba(0, 0, 0, 1);
+    box-shadow: 0 2px 6px rgba(0,0,0,1);
+}
+
+
 .logo {
-    /* display: flex; */
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     z-index: 100;
     position: fixed;
     margin-left: 5%;
-    margin-top: 3%;
+    /* margin-top: 3%; */
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .logo-text {
@@ -83,6 +93,18 @@
     font-size: 14px;
     color: rgba(255, 255, 255, 0.8);
     margin-left: 20px;
+}
+
+.username-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+.username {
+  color: rgb(241, 240, 238);
+  font-size: 2.5vh;
 }
 
 .header-right {
@@ -291,7 +313,7 @@
 }
 
 .parking-section {
-    /* background-color: white; */
+    background-color: white;
     padding: 60px 40px;
     min-height: 100vh;
     width: 100%;

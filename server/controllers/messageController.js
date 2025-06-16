@@ -1,6 +1,6 @@
 const messageBL = require('../bl/messageBL');
 
-const messageController = { 
+const messageController = {
 
     async getMessageById(req, res) {
         try {
@@ -18,7 +18,7 @@ const messageController = {
     async createMessage(req, res) {
         try {
             console.log('Creating message with data:', req.body);
-            
+
             const newMessage = await messageBL.createMessage(req.body);
             res.status(201).json(newMessage);
         } catch (error) {
@@ -35,8 +35,8 @@ const messageController = {
             console.error('Error fetching messages:', error);
             res.status(500).json({ message: 'Internal server error' });
         }
-    }, 
-    
+    },
+
     async updateMessage(req, res) {
         try {
             const message = await messageBL.getMessageById(req.params.id);
@@ -78,7 +78,7 @@ const messageController = {
             res.status(500).json({ message: 'Internal server error' });
         }
     },
-    
+
     async getMessagesByConversationId(req, res) {
         try {
             const conversationId = req.query.conversationId;
@@ -86,6 +86,20 @@ const messageController = {
                 return res.status(400).json({ message: 'Conversation ID is required' });
             }
             const messages = await messageBL.getMessagesByConversationId(conversationId);
+            res.status(200).json(messages);
+        } catch (error) {
+            console.error('Error fetching messages by conversation ID:', error);
+            res.status(500).json({ message: 'Internal server error' });
+        }
+    },
+
+    async setReadMessages(req, res) {
+        try {
+            const { messageIds, field } = req.body;
+            if (!messageIds) {
+                return res.status(400).json({ message: 'Conversation ID is required' });
+            }
+            const messages = await messageBL.setReadMessages(messageIds, field);
             res.status(200).json(messages);
         } catch (error) {
             console.error('Error fetching messages by conversation ID:', error);

@@ -8,14 +8,17 @@ import SearchBar from '../components/SearchBar';
 function AvailabilityParkings({ currentLocation }) {
     const [searchResults, setSearchResults] = useState();
     const [hoveredParkingId, setHoveredParkingId] = useState(null);
+    console.log("aaaaa", currentLocation);
 
     useEffect(() => {
         console.log("Current Location:", currentLocation);
-        
-        apiService.getSearch('parking', currentLocation, (response) => {
-            console.log(response);
-            setSearchResults(response);
-        }, (error) => console.error(error.message));
+
+        if (currentLocation) { 
+            apiService.getSearch('parking', currentLocation, (response) => {
+                console.log("response", response);
+                setSearchResults(response);
+            }, (error) => console.error(error.message));
+        }
 
     }, [currentLocation]);
 
@@ -34,7 +37,7 @@ function AvailabilityParkings({ currentLocation }) {
                 <MapView
                     center={currentLocation}
                     parkings={searchResults}
-                    hoveredParkingId={hoveredParkingId} 
+                    hoveredParkingId={hoveredParkingId}
                 />
             </div>
         </div>

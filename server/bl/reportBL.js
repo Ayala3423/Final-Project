@@ -46,12 +46,12 @@ const reportBL = {
         if (parking && parking.ownerId === userId) {
             return { canReport: false };
         }
-        const existingReservation = await genericService.getByParams('Reservation', { renterId: userId, parkingId: parkingId });
+        const existingReservation = await genericService.getByParamsLimit('Reservation', { renterId: userId, parkingId: parkingId });
         // Check if the user has already reported this parking
         if (existingReservation.length == 0) {
             return { canReport: false };
         }
-        const existingReport = await genericService.getByParams('Report', { reporterId: userId, parkingId: parkingId });
+        const existingReport = await genericService.getByParamsLimit('Report', { reporterId: userId, parkingId: parkingId });
         
         if (existingReport.length > 0) {
             return { canReport: false };

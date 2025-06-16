@@ -7,7 +7,8 @@ const { ro } = require('@faker-js/faker');
 router.use(verifyToken);
 
 router.route('/conversation')
-    .get(messageController.getMessagesByConversationId);
+    .get(messageController.getMessagesByConversationId)
+    .put(messageController.setReadMessages);
 
 router.route('/:id')
     .get(messageController.getMessageById)

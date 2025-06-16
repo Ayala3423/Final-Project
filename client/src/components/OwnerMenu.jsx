@@ -18,7 +18,6 @@ function OwnerMenu() {
 
 
     return (
-        <div className="admin-body">
             <nav className="sidebar">
                 <button onClick={toggleMenu}>☰ תפריט</button>
                 {menuOpen && (
@@ -34,7 +33,6 @@ function OwnerMenu() {
                 )}
             </nav>
 
-        </div>
     );
 }
 
