@@ -11,7 +11,9 @@ async signup(req, res) {
         // אם יש תמונה מצורפת
         if (req.file) {
             // נשתמש בשם הקובץ בלבד עם נתיב יחסי – זה מה שייבנה בצד הקליינט
-            userData.profileImage = `uploads/${req.file.filename}`;
+            // userData.profileImage = `${req.file.filename}`;
+            userData.profileImage = `/uploads/profileImages/${req.file.filename}`;
+
         }
 
         const user = await userBL.signup(userData);
@@ -55,18 +57,33 @@ async signup(req, res) {
         }
     },
 
-    async updateUser(req, res) {
-        try {
-            const user = await userBL.updateUser(req.params.id, req.body);
-            if (user) {
-                res.status(200).json(user);
-            } else {
-                res.status(404).json({ error: 'User not found' });
-            }
-        } catch (error) {
-            res.status(400).json({ error: error.message });
+ async updateUser(req, res) {
+    try {
+        const id = req.params.id;
+
+        // פרטי גוף הבקשה
+        const data = { ...req.body };
+
+        // אם יש קובץ תמונה - נוסיף אותו לשדות לעדכון
+        if (req.file) {
+           data.profileImage = `/uploads/profileImages/${req.file.filename}`;
+
+            // data.profileImage = req.file.filename; // או req.file.path לפי איך שאת שומרת
         }
-    },
+
+        const updatedUser = await userBL.updateUser(id, data);
+
+        if (updatedUser) {
+            res.status(200).json(updatedUser);
+        } else {
+            res.status(404).json({ error: 'User not found' });
+        }
+    } catch (error) {
+        console.error("Error updating user:", error);
+        res.status(400).json({ error: error.message });
+    }
+}
+,
 
     async deleteUser(req, res) {
         try {

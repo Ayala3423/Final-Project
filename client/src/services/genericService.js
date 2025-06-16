@@ -14,18 +14,20 @@ async function request(url, params = {}, method = 'GET', body = null, onSuccess,
         console.log(`Requesting ${method} ${API_URL}/${url} with params:`, params);
         
         const token = getToken();
+        const isFormData = body instanceof FormData;
+
         const config = {
             method,
             url: `${API_URL}/${url}`,
             headers: {
                 Authorization: `Bearer ${token}`,
-                'Content-Type': 'application/json',
+                ...(isFormData ? {} : { 'Content-Type': 'application/json' }),
             },
             params
         };
 
         if (method !== 'GET' && method !== 'DELETE' && body) {
-            config.data = body;
+            config.data = isFormData ? body : JSON.stringify(body);
         }
 
         console.log(`Making ${method} request to ${API_URL}/${url}`);
@@ -44,6 +46,7 @@ async function request(url, params = {}, method = 'GET', body = null, onSuccess,
         if (onError) onError(error.message || error.toString());
     }
 }
+
 
 export const apiService = {
     getAll: (table, onSuccess, onError) =>

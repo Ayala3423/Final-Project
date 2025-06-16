@@ -57,6 +57,13 @@ function AddParkingForm() {
                 תיאור:
                 <textarea name="description" value={parking.description} onChange={handleChange} />
             </label>
+            {imageFile && (
+                <img
+                    src={URL.createObjectURL(imageFile)}
+                    alt="תצוגה מקדימה"
+                    style={{ width: '200px', marginTop: '10px' }}
+                />
+            )}
 
             <button type="submit">הוסף חניה</button>
         </form>
