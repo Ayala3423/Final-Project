@@ -69,7 +69,7 @@ async function seed() {
         const now = new Date();
         const currentHour = now.getHours();
         const startHour = currentHour - 1 >= 0 ? currentHour - 1 : 0;
-        const endHour = currentHour + 3 <= 23 ? currentHour + 3 : 23;
+        const endHour = currentHour + 3 <= 23 ? currentHour + 9 : 23;
 
         const startTime = `${startHour.toString().padStart(2, '0')}:00`;
         const endTime = `${endHour.toString().padStart(2, '0')}:00`;

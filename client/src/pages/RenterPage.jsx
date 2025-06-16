@@ -9,9 +9,7 @@ function Dashboard() {
 
     return (
         <div className="admin-layout">
-            <header className="admin-header">
-                <h1 id='H1'>Renter Dashboard</h1>
-            </header>
+          
             <main className="admin-content">
                 {/* Outlet מייצג את המקום בו טעונים תתי העמודים */}
                 <Outlet />
