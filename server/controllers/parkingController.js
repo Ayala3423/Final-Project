@@ -92,22 +92,34 @@ const parkingController = {
     },
 
 
-    async createParking(req, res) {
-        try {
-            console.log('Creating parking with data:', req.body);
+   async createParking(req, res) {
+    try {
+        console.log('Creating parking with data:', req.body);
 
-            const parking = await parkingBL.createParking(req.body);
-            console.log('Creating parking with data:', req.body);
+        const { address, description, ownerId } = req.body;
 
-            if (parking) {
-                res.status(200).json(parking);
-            } else {
-                res.status(404).json({ error: 'parking creating error' });
-            }
-        } catch (error) {
-            res.status(400).json({ error: error.message });
+        // שם קובץ התמונה אם יש קובץ
+        const imagePath = req.file ? `/uploads/parking/${req.file.filename}` : null;
+
+        const parkingData = {
+            address,
+            description,
+            ownerId,
+            imageUrl: imagePath
+        };
+
+        const parking = await parkingBL.createParking(parkingData);
+
+        if (parking) {
+            res.status(200).json(parking);
+        } else {
+            res.status(500).json({ error: 'שגיאה ביצירת החניה' });
         }
+    } catch (error) {
+        console.error('Error creating parking:', error);
+        res.status(400).json({ error: error.message });
     }
+}
 
 };
 

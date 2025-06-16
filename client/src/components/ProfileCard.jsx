@@ -8,14 +8,19 @@ const ProfileCard = () => {
   const [isEditing, setIsEditing] = useState(false);
   const [editedProfile, setEditedProfile] = useState(user || {});
   const [originalProfile, setOriginalProfile] = useState(user || {});
-  const [previewImage, setPreviewImage] = useState(user?.profileImage ? `${user.profileImage}` : null);
-
+  console.log(user.profileImage+"1");
+  const getFullImageUrl = (path) => {
+  if (!path) return null;
+  return `http://localhost:3000/${path.replace(/^\/+/, '')}`;
+};
+const [previewImage, setPreviewImage] = useState(getFullImageUrl(user?.profileImage));
   if (!user) return <div className="profile-card">לא נמצא פרופיל להצגה</div>;
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setEditedProfile({ ...editedProfile, [name]: value });
   };
+
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -35,11 +40,11 @@ const handleSave = () => {
     }
   }
 
-  apiService.updateWithFormData('user', user.id, formData, (response) => {
+  apiService.update('user', user.id, formData, (response) => {
     console.log('פרופיל עודכן בהצלחה:', response);
     updateUser(response); // עדכני את הקונטקסט עם התשובה מהשרת
     setOriginalProfile(response);
-    setPreviewImage(response.profileImage ? `http://localhost:3000/uploads/${response.profileImage}` : null);
+setPreviewImage(getFullImageUrl(response.profileImage));
     setIsEditing(false);
   }, (error) => {
     console.error('שגיאה בעדכון הפרופיל:', error);
@@ -49,15 +54,13 @@ const handleSave = () => {
 
 const handleCancel = () => {
   setEditedProfile(originalProfile);
-  setPreviewImage(originalProfile?.profileImage ? `http://localhost:3000/uploads/${originalProfile.profileImage}` : null);
+setPreviewImage(getFullImageUrl(originalProfile?.profileImage));
   setIsEditing(false);
 };
 
 
-  const profileImageSrc = previewImage ||
-    (editedProfile.profileImage
-      ? `http://localhost:3000/uploads/${editedProfile.profileImage}`
-      : 'https://via.placeholder.com/150');
+const profileImageSrc = previewImage || getFullImageUrl(editedProfile.profileImage) || 'https://via.placeholder.com/150';
+
 
   return (
     <div className="profile-card">

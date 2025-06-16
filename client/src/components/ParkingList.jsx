@@ -3,7 +3,6 @@ import '../styles/ParkingList.css';
 import { AuthContext } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import { apiService } from '../services/genericService';
-import { use } from 'react';
 
 function ParkingList({ parkings = [], onHover = () => { } }) {
     console.log("Parkings received in ParkingList:", parkings);
@@ -15,6 +14,10 @@ function ParkingList({ parkings = [], onHover = () => { } }) {
 
     const navigate = useNavigate();
     const { user } = useContext(AuthContext);
+const getFullImageUrl = (relativePath) => {
+    if (!relativePath) return '/default-parking.jpg';
+    return `http://localhost:3000/${relativePath.replace(/^\/+/, '')}`;
+};
 
     useEffect(() => {
         if (Array.isArray(parkings) && parkings.length > 0) {
@@ -82,11 +85,13 @@ function ParkingList({ parkings = [], onHover = () => { } }) {
                         onMouseLeave={() => onHover(null)}
                         onKeyDown={(e) => { if (e.key === 'Enter') handleClick(spot); }}
                     >
+
                         <img
-                            src={spot.imageUrl || '/default-parking.jpg'}
+                            src={getFullImageUrl(spot.imageUrl)}
                             alt={`Parking at ${spot.address}`}
                             className="parking-image"
                         />
+
                         <div className="parking-info" onClick={() => handleClick(spot)}>
                             <div className="parking-address">{spot.address}</div>
                             <div className="parking-description">{spot.description}</div>
