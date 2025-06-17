@@ -5,12 +5,9 @@ import MyParkings from './MyParkings';
 
 function OwnerDashboard() {
 
-
     return (
         <div className="admin-layout">
-            
             <main className="admin-content">
-                {/* Outlet מייצג את המקום בו טעונים תתי העמודים */}
                 <Outlet />
             </main>
         </div>

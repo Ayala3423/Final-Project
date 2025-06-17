@@ -105,15 +105,11 @@ function Reservation() {
             ownerId: parking.ownerId,
             parkingId: parking.id,
             timeSlotId: 1,
-            //reservationType: reservationType,
-            // selectedSlots: reservationType !== 'custom' ? selectedSlots : [],
             reservationDate: new Date().toISOString(),
-            // customStart: reservationType === 'custom' ? customStart : null,
-            // customEnd: reservationType === 'custom' ? customEnd : null,
             totalPrice: totalPrice
         };
 
-        apiService.create('reservation', reservationData, () => {
+        apiService.create('reservations', reservationData, () => {
             alert('תודה על ההזמנה! התשלום בוצע בהצלחה.');
             setSelectedSlots([]);
             setShowSummary(false);

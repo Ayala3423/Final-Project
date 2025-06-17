@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { useNavigate, Outlet } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { HiMenuAlt3 } from 'react-icons/hi';
 import { AuthContext } from '../context/AuthContext';
 

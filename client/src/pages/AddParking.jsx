@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import { apiService } from '../services/genericService';
-import '../styles/AddParking.css'; // נניח שזה קובץ ה-CSS שלך
+import '../styles/AddParking.css'; 
 
 function AddParkingForm() {
     const { user } = useContext(AuthContext);
@@ -31,7 +31,7 @@ function AddParkingForm() {
         }
 
         try {
-            await apiService.create('parking', formData, () => {
+            await apiService.create('parkings', formData, () => {
                 alert('החניה נוספה בהצלחה!');
             }, (error) => {
                 console.error("Error adding parking:", error);
@@ -44,17 +44,17 @@ function AddParkingForm() {
     return (
         <form className="parking-form" onSubmit={handleSubmit}>
             <label>
-                כתובת:
+                Address:
                 <input name="address" value={parking.address} onChange={handleChange} required />
             </label>
 
             <label>
-                תמונה:
+                Picture:
                 <input type="file" name="image" accept="image/*" onChange={handleImageChange} />
             </label>
 
             <label>
-                תיאור:
+                Description:
                 <textarea name="description" value={parking.description} onChange={handleChange} />
             </label>
             {imageFile && (
@@ -65,7 +65,7 @@ function AddParkingForm() {
                 />
             )}
 
-            <button type="submit">הוסף חניה</button>
+            <button type="submit">Add parking</button>
         </form>
     );
 }

@@ -80,12 +80,11 @@ const SearchBar = ({ onSearch, currentLocation }) => {
         };
         console.log("Search parameters:", params);
         apiService.getSearch(
-            'parking',
+            'parkings',
             params,
             (response) => {
                 onSearch(response);
                 console.log("Search results:", response);
-                // setCoords({ lat, lng }); // Update coords for map center
             },
             (error) => console.error(error.message)
         );
@@ -162,7 +161,6 @@ const SearchBar = ({ onSearch, currentLocation }) => {
                     </div>
                 )}
 
-                {/* רדיוס חיפוש */}
                 <label className="text-sm text-gray-700" id="radius">radius</label>
                 <input
                     type="number"
@@ -172,7 +170,6 @@ const SearchBar = ({ onSearch, currentLocation }) => {
                     onChange={(e) => setRadius(Number(e.target.value))}
                 />
 
-                {/* שעת התחלה */}
                 <label className="text-sm text-gray-700" id="date">date</label>
                 <input
                     type="datetime-local"
@@ -181,7 +178,6 @@ const SearchBar = ({ onSearch, currentLocation }) => {
                     onChange={(e) => setStartTime(e.target.value)}
                 />
 
-                {/* משך זמן */}
                 <label className="text-sm text-gray-700" id="duration">duration</label>
                 <input
                     type="number"

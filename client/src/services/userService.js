@@ -8,7 +8,7 @@ const registerAuth = async (endpoint, body, onSuccess, onError) => {
 
     const isFormData = body instanceof FormData;
 
-    const { data } = await axios.post(`${API_URL}/user/${endpoint}`, body, {
+    const { data } = await axios.post(`${API_URL}/users/${endpoint}`, body, {
       headers: isFormData ? {} : { 'Content-Type': 'application/json' }
     });
 

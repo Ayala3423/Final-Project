@@ -1,19 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
 import AvailabilityParkings from './AvailabilityParkings';
-import Header from '../components/Header';
 import Footer from '../components/Footer';
 import '../styles/RentBro.css';
 import { FaChevronDown } from 'react-icons/fa';
 
 function Home() {
-    const location = useLocation();
-    const navigate = useNavigate();
-    const [currentLocation, setCurrentLocation] = useState(null);
     const [myLocation, setMyLocation] = useState();
-    const [searchTerm, setSearchTerm] = useState('');
-    const [selectedType, setSelectedType] = useState('');
-    const [selectedBudget, setSelectedBudget] = useState('');
 
     const categories = [
         { name: 'Buy', active: false },
@@ -37,7 +29,6 @@ function Home() {
     return (
         <div className="rentbro-container">
             <div className="hero-image-section">
-                {/* <Header /> */}
 
                 <div className="main-content">
                     <h1 className="main-title">Welcome to the Parking Management System</h1>

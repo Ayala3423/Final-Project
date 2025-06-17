@@ -2,7 +2,6 @@ import React, { useEffect, useState, useContext } from 'react';
 import { useNavigate, useLocation, Outlet } from 'react-router-dom';
 import { FaStar, FaPhone, FaPaperPlane, FaCommentDots, FaClipboardList } from 'react-icons/fa';
 import '../styles/ParkingPage.css';
-import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { apiService } from '../services/genericService';
 import { AuthContext } from '../context/AuthContext';
@@ -23,13 +22,12 @@ function ParkingPage() {
 
     useEffect(() => {
         if (parking?.id) {
-            apiService.getByValue('timeSlot', { parkingId: parking.id }, (response) => {
-                console.log("TimeSlots fetched:", response);
+            apiService.getByValue('timeSlots', { parkingId: parking.id }, (response) => {
                 setTimeSlots(response);
             }, (error) => {
                 console.error("Error fetching time slots:", error);
             });
-            apiService.getByValue('report', { parkingId: parking.id }, (response) => {
+            apiService.getByValue('reports', { parkingId: parking.id }, (response) => {
                 console.log("Parking reports fetched:", response);
                 setReports(response);
             }, (error) => {
@@ -52,7 +50,7 @@ function ParkingPage() {
             description: reviewDescription,
         };
 
-        apiService.create('report', reviewData, (response) => {
+        apiService.create('reports', reviewData, (response) => {
             console.log("Review submitted:", response);
             setReports(prev => [...prev, response]);
             setCanReview(false);
@@ -73,7 +71,7 @@ function ParkingPage() {
                 return;
             }
 
-            apiService.getCheck('report', { parkingId: parking.id, userId: user.id }, (response) => {
+            apiService.getCheck('reports', { parkingId: parking.id, userId: user.id }, (response) => {
                 console.log("Check if user can review:", response.canReport.canReport);
                 setCanReview(response.canReport.canReport);
             }, (error) => {
@@ -145,7 +143,7 @@ function ParkingPage() {
             <TimeSlots timeSlots={timeSlots} />
 
             <div className="parking-reviews">
-                <h3>ביקורות</h3>
+                <h3>Reports</h3>
                 {reports.length > 0 ? (
                     <div className="review-list">
                         {reports.map((report, idx) => (

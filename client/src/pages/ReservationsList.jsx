@@ -23,7 +23,7 @@ function ReservationsList() {
         setLoading(true);
         const userOrder = user.role === 'owner' ? 'ownerId' : 'renterId';
         apiService.getByValue(
-            'reservation',
+            'reservations',
             { [userOrder]: user.id, page: pageNum, limit: 10 },
             (data) => {
                 if (data.length < 10) setHasMore(false);

@@ -9,7 +9,7 @@ const Register = () => {
     const [form, setForm] = useState({
         name: '', username: '', phone: '', email: '', address: '', password: '', role: 'renter'
     });
-    const [profileImage, setProfileImage] = useState(null); // קובץ תמונה
+    const [profileImage, setProfileImage] = useState(null); 
 
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });
@@ -31,10 +31,10 @@ const Register = () => {
             formData.append(key, form[key]);
         }
         if (profileImage) {
-            formData.append('profileImage', profileImage); // זה ישלח בתור multipart
+            formData.append('profileImage', profileImage); 
         }
 
-        signupContext(formData, navigate); // תצטרכי לעדכן גם את `signupContext` (בהמשך)
+        signupContext(formData, navigate); 
     };
 
     return (
@@ -53,7 +53,6 @@ const Register = () => {
                     <option value="admin">Admin</option>
                 </select>
 
-                {/* שדה תמונה */}
                 <input type="file" accept="image/*" onChange={handleImageChange} />
 
                 <button type="submit">Register</button>

@@ -5,10 +5,8 @@ import '../styles/Dashboard.css';
 
 function AdminDashboard() {
 
-
     return (
         <div className="admin-layout">
-            
             <main className="admin-content">
                 <Outlet />
             </main>

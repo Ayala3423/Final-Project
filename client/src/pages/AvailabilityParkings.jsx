@@ -14,7 +14,7 @@ function AvailabilityParkings({ currentLocation }) {
         console.log("Current Location:", currentLocation);
 
         if (currentLocation) { 
-            apiService.getSearch('parking', currentLocation, (response) => {
+            apiService.getSearch('parkings', currentLocation, (response) => {
                 console.log("response", response);
                 setSearchResults(response);
             }, (error) => console.error(error.message));

@@ -15,7 +15,7 @@ function MyParkings() {
       if (!user) {
         navigate('/login');
       } else {
-        apiService.getByValue('parking', { 'ownerId': user.id }, (response) => {
+        apiService.getByValue('parkings', { 'ownerId': user.id }, (response) => {
           setMyParkings(response);
         }, (error) => {
           console.error("Error fetching user parkings:", error);
@@ -30,9 +30,7 @@ function MyParkings() {
   }
 
   return <>
-    <ParkingList parkings={myParkings}
-
-    />;
+    <ParkingList parkings={myParkings}/>;
   </>
 }
 

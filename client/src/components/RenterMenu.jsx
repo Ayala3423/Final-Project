@@ -3,10 +3,7 @@ import { useNavigate, Outlet } from 'react-router-dom';
 import '../styles/Dashboard.css';
 import { AuthContext } from '../context/AuthContext';
 
-
-function RenterMenu() {
-    console.log('RenterMenu component rendered');
-    
+function RenterMenu() {    
     const [menuOpen, setMenuOpen] = useState(false);
     const navigate = useNavigate();
     const { logout } = useContext(AuthContext);
@@ -16,7 +13,6 @@ function RenterMenu() {
         setMenuOpen(false);
         navigate(path);
     };
-
 
     return (
             <nav className="sidebar">
@@ -30,9 +26,7 @@ function RenterMenu() {
                         <button onClick={() => logout()}>יציאה</button>
                     </div>
                 )}
-            </nav>
-
-            
+            </nav> 
     );
 }
 

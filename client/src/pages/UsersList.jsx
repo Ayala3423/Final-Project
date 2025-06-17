@@ -23,7 +23,7 @@ function UsersList() {
     }, [user, role]);
 
     const fetchUsers = () => {
-        apiService.getByValue('user', { 'role': role },
+        apiService.getByValue('users', { 'role': role },
             (data) => {
                 setUsers(data);
                 setLoading(false);
@@ -38,7 +38,7 @@ function UsersList() {
 
     const handleDelete = (userId) => {
         if (window.confirm("Are you sure you want to delete this user?")) {
-            apiService.remove('user', userId,
+            apiService.remove('users', userId,
                 () => {
                     setUsers(users.filter(u => u.id !== userId));
                 },

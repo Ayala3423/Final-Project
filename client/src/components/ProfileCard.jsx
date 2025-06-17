@@ -40,9 +40,9 @@ const handleSave = () => {
     }
   }
 
-  apiService.update('user', user.id, formData, (response) => {
+  apiService.update('users', user.id, formData, (response) => {
     console.log('פרופיל עודכן בהצלחה:', response);
-    updateUser(response); // עדכני את הקונטקסט עם התשובה מהשרת
+    updateUser(response); 
     setOriginalProfile(response);
 setPreviewImage(getFullImageUrl(response.profileImage));
     setIsEditing(false);

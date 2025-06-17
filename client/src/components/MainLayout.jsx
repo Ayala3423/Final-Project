@@ -47,7 +47,6 @@ function MainLayout() {
       </div>
       <div className="content">
         <Outlet />
-
       </div>
     </div>
   );

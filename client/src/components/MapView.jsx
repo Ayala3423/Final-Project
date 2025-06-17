@@ -35,22 +35,18 @@ function MapView({ center, parkings, hoveredParkingId }) {
                         }
                     });
 
-                    // ✅ תיבת מידע עם מחיר
                     const infoWindow = new window.google.maps.InfoWindow({
                         content: `<div style="font-size:14px; font-weight:bold;">₪${spot.price}</div>`
                     });
 
-                    // פותח תיבה בריחוף
                     marker.addListener('mouseover', () => {
                         infoWindow.open(mapInstance.current, marker);
                     });
 
-                    // סוגר תיבה כשמפסיקים לרחף
                     marker.addListener('mouseout', () => {
                         infoWindow.close();
                     });
 
-                    // שומר את המרקר
                     markersRef.current[spot.id] = marker;
                 });
 
@@ -79,7 +75,6 @@ function MapView({ center, parkings, hoveredParkingId }) {
         };
     }, [center, parkings]);
 
-    // הדגשת מרקר בריחוף
     useEffect(() => {
         Object.values(markersRef.current).forEach(marker => {
             marker.setIcon({
@@ -98,6 +93,5 @@ function MapView({ center, parkings, hoveredParkingId }) {
         <div ref={mapRef} style={{ width: '100%', height: '100vh' }} />
     );
 }
-
 
 export default MapView;

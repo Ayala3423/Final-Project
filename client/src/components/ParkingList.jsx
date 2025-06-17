@@ -22,11 +22,11 @@ const getFullImageUrl = (relativePath) => {
     useEffect(() => {
         if (Array.isArray(parkings) && parkings.length > 0) {
             setLocalParkings(parkings);
-            setHasMore(false); // לא נטען מהשרת אם יש חניות ב-props
+            setHasMore(false); 
         } else {
-            setHasMore(true); // כן נטען מהשרת אם אין חניות ב-props
-            setPage(1); // נתחיל טעינה מדף ראשון
-            setLocalParkings([]); // איפוס לרשימה מקומית
+            setHasMore(true); 
+            setPage(1); 
+            setLocalParkings([]); 
         }
     }, [parkings]);
 
@@ -40,7 +40,7 @@ const getFullImageUrl = (relativePath) => {
         if (loading || !hasMore) return;
 
         setLoading(true);
-        apiService.getByValue('parking', { page, limit: 10 }, (response) => {
+        apiService.getByValue('parkings', { page, limit: 10 }, (response) => {
             if (response.length < 10) setHasMore(false);
             setLocalParkings(prev => [...prev, ...response]);
             setLoading(false);
@@ -63,7 +63,7 @@ const getFullImageUrl = (relativePath) => {
             alert('Please log in to order a parking spot.');
             return;
         }
-        apiService.getByValue('timeSlot', { parkingId: parking.id }, (response) => {
+        apiService.getByValue('timeSlots', { parkingId: parking.id }, (response) => {
             navigate('/reservation', {
                 state: { parking: parking, timeSlots: response }
             });

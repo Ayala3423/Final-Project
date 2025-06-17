@@ -36,7 +36,7 @@ export default function MessagesPage() {
     return uuidv4();
   }
 
-  // חיבור ל-Socket
+  // connect to socket
   useEffect(() => {
     if (!socket.connected) socket.connect();
 
@@ -94,7 +94,7 @@ export default function MessagesPage() {
 
   // טוען את כל השיחות של המשתמש
   useEffect(() => {
-    apiService.getByValue('message', { senderId: user.id }, (data) => {
+    apiService.getByValue('messages', { senderId: user.id }, (data) => {
       // נבנה מיפוי ייחודי לפי conversationId
       const uniqueConversationsMap = {};
       data.forEach(msg => {
@@ -123,7 +123,7 @@ export default function MessagesPage() {
     }
     console.log("Fetching messages for conversationId:", selectedChatId);
 
-    apiService.getByValue('message/conversation', { conversationId: selectedChatId }, (data) => {
+    apiService.getByValue('messages/conversation', { conversationId: selectedChatId }, (data) => {
       console.log("Messages fetched for conversationId:", selectedChatId, data);
       setMessages(data);
       setUnreadMessages(prev => ({ ...prev, [selectedChatId]: 0 }));
@@ -133,7 +133,7 @@ export default function MessagesPage() {
         .map(msg => msg.id);
 
       if (unreadMessageIds.length > 0) {
-        apiService.updateMany('message/conversation', { messageIds: unreadMessageIds, field: { isRead: true } }, () => {
+        apiService.updateMany('messages/conversation', { messageIds: unreadMessageIds, field: { isRead: true } }, () => {
           socket.emit('messageRead', { conversationId: selectedChatId, messageIds: unreadMessageIds });
 
           console.log('Messages marked as read');
@@ -170,7 +170,7 @@ export default function MessagesPage() {
     console.log("Sending message:", messageObj);
 
     try {
-      apiService.create('message', messageObj, (savedMessage) => {
+      apiService.create('messages', messageObj, (savedMessage) => {
         console.log("Message sent:", savedMessage);
 
         socket.emit('sendMessage', savedMessage);
@@ -197,7 +197,7 @@ export default function MessagesPage() {
 
     try {
       // חפש משתמש לפי username
-      const userResult = await apiService.getByValue('user', { username: newChatUsername.trim() });
+      const userResult = await apiService.getByValue('users', { username: newChatUsername.trim() });
       if (!userResult || userResult.length === 0) {
         setChatError('משתמש לא נמצא');
         return;
