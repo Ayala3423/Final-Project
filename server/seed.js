@@ -1,119 +1,145 @@
-const { faker } = require('@faker-js/faker');
-const sequelize = require('./config/sequelize');
-const User = require('./models/User');
-const Parking = require('./models/Parking');
-const TimeSlot = require('./models/TimeSlot');
-const Message = require('./models/Message');
+import { User, Parking, TimeSlot, Reservation, Report } from './models/index.js';
+import { faker } from '@faker-js/faker';
+import { Op } from 'sequelize';
 
-async function seed() {
-  try {
+const createUsers = async () => {
+  const users = [
+    { name: "Admin User", username: "admin", role: "admin", email: "admin@example.com", phone: "0501234567", address: "Jerusalem", profileImage: "default-profile.png" },
+    { name: "John Doe", username: "johnd", role: "renter", email: "john@example.com", phone: "0507654321", address: "Beit Hakerem, Jerusalem", profileImage: "default-profile.png" },
+    { name: "Sarah Levi", username: "sarahlevi", role: "renter", email: "sarah@example.com", phone: "0521112233", address: "Katamon, Jerusalem", profileImage: "default-profile.png" },
+    { name: "David Cohen", username: "davidc", role: "owner", email: "david@example.com", phone: "0533334444", address: "Gilo, Jerusalem", profileImage: "default-profile.png" },
+    { name: "Miriam Azulay", username: "miriama", role: "owner", email: "miriam@example.com", phone: "0545556666", address: "Pisgat Ze'ev, Jerusalem", profileImage: "default-profile.png" }
+  ];
+  await User.bulkCreate(users);
+};
 
-    console.log('🔄 Creating users...');
-    const users = [];
-    const usernamesSet = new Set();
+const jerusalemAddresses = [
+  { address: "Ben Yehuda St 1", lat: 31.781, lon: 35.219 },
+  { address: "Jaffa St 45", lat: 31.784, lon: 35.213 },
+  { address: "King George St 20", lat: 31.7812, lon: 35.216 },
+  { address: "Hillel St 15", lat: 31.7798, lon: 35.2195 },
+  { address: "Emek Refaim St 32", lat: 31.761, lon: 35.215 },
+  { address: "Pierre Koenig St 17", lat: 31.753, lon: 35.212 },
+  { address: "Bar Ilan St 10", lat: 31.807, lon: 35.212 },
+  { address: "Yirmiyahu St 28", lat: 31.796, lon: 35.205 },
+  { address: "Herzl Blvd 91", lat: 31.773, lon: 35.181 },
+  { address: "Ramat Sharet 5", lat: 31.755, lon: 35.186 }
+];
 
-    while (users.length < 100) {
-      const rawUsername = faker.internet.userName();
-      const username = usernamesSet.has(rawUsername)
-        ? `${rawUsername}_${faker.string.alphanumeric(4)}`
-        : rawUsername;
+const createParkings = async () => {
+  const parkings = [];
+  for (let i = 0; i < 20; i++) {
+    const { address, lat, lon } = faker.helpers.arrayElement(jerusalemAddresses);
+    const ownerId = i < 10 ? 4 : 5;
 
-      if (usernamesSet.has(username)) continue;
-      usernamesSet.add(username);
-
-      const role = users.length % 3 === 0 ? 'admin' : users.length % 2 === 0 ? 'owner' : 'renter';
-
-      const user = await User.create({
-        name: faker.person.fullName(),
-        username,
-        phone: `050-${faker.number.int({ min: 1000000, max: 9999999 })}`,
-        email: faker.internet.email(),
-        address: faker.location.streetAddress(),
-        role,
-        averageRating: faker.number.float({ min: 0, max: 5, precision: 0.1 }),
-      });
-
-      users.push(user);
-    }
-
-    console.log('🏠 Creating parkings...');
-    const parkings = [];
-    const owners = users.filter(u => u.role === 'owner');
-
-    for (const owner of owners) {
-      const count = faker.number.int({ min: 1, max: 3 });
-      for (let i = 0; i < count; i++) {
-        const parking = await Parking.create({
-          ownerId: owner.id,
-          latitude: faker.number.float({ min: 31.7, max: 31.8, precision: 0.00001 }),
-          longitude: faker.number.float({ min: 35.2, max: 35.3, precision: 0.00001 }),
-          address: faker.location.streetAddress(),
-          description: faker.lorem.sentence(),
-          averageRating: faker.number.float({ min: 0, max: 5, precision: 0.1 }),
-          imageUrl: faker.image.urlLoremFlickr({ category: 'transport', width: 640, height: 480 }),
-        });
-        parkings.push(parking);
-      }
-    }
-
-    console.log('⏰ Creating time slots...');
-    for (const parking of parkings) {
-      const timeSlotCount = faker.number.int({ min: 2, max: 5 });
-      for (let i = 0; i < timeSlotCount; i++) {
-        const isFixed = faker.datatype.boolean();
-        const type = isFixed ? 'fixed' : 'temporary';
-        const date = !isFixed ? new Date().toISOString().slice(0, 10) : null;
-        const dayOfWeek = isFixed ? faker.helpers.arrayElement(['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday']) : null;
-        const recurrence = isFixed ? 'daily' : 'none';
-
-        const now = new Date();
-        const currentHour = now.getHours();
-        const startHour = currentHour - 1 >= 0 ? currentHour - 1 : 0;
-        const endHour = currentHour + 3 <= 23 ? currentHour + 9 : 23;
-
-        const startTime = `${startHour.toString().padStart(2, '0')}:00`;
-        const endTime = `${endHour.toString().padStart(2, '0')}:00`;
-
-        await TimeSlot.create({
-          parkingId: parking.id,
-          type,
-          date,
-          dayOfWeek,
-          recurrence,
-          startTime,
-          endTime,
-          isRented: false,
-          price: faker.number.float({ min: 10, max: 40, precision: 0.5 }),
-        });
-      }
-    }
-
-    console.log('💬 Creating messages...');
-    const messageCount = 200;
-
-    for (let i = 0; i < messageCount; i++) {
-      const sender = faker.helpers.arrayElement(users);
-      let receiver;
-      do {
-        receiver = faker.helpers.arrayElement(users);
-      } while (receiver.id === sender.id);
-
-      await Message.create({
-        senderId: sender.id,
-        receiverId: receiver.id,
-        content: faker.lorem.sentences({ min: 1, max: 3 }),
-        sentAt: faker.date.recent({ days: 10 }),
-        isRead: faker.datatype.boolean(),
-        conversationId: null, // ניתן להוסיף לוגיקה קבוצתית בעתיד
-      });
-    }
-
-    console.log('✅ Done seeding with faker!');
-    process.exit(0);
-  } catch (error) {
-    console.error('❌ Error seeding:', error);
-    process.exit(1);
+    parkings.push({
+      ownerId,
+      address,
+      latitude: lat + Math.random() * 0.001,
+      longitude: lon + Math.random() * 0.001,
+      description: faker.lorem.sentence(),
+      imageUrl: "default-parking.jpg"
+    });
   }
-}
+  await Parking.bulkCreate(parkings);
+};
+
+const createTimeSlots = async () => {
+  const allParkings = await Parking.findAll();
+  const slots = [];
+  const now = new Date();
+
+  for (let parking of allParkings) {
+    const fixed = Math.random() > 0.5;
+    if (fixed) {
+      const days = faker.helpers.arrayElements(
+        ['sunday', 'monday', 'wednesday', 'thursday'],
+        faker.number.int({ min: 1, max: 3 })
+      );
+      days.forEach(day => {
+        slots.push({
+          parkingId: parking.id,
+          type: 'fixed',
+          dayOfWeek: day,
+          recurrence: 'weekly',
+          startTime: '08:00',
+          endTime: '14:00',
+          price: faker.number.int({ min: 10, max: 25 }),
+          isAllowSubReservations: faker.datatype.boolean()
+        });
+      });
+    } else {
+      for (let i = 0; i < 7; i++) {
+        const date = new Date(now);
+        date.setDate(date.getDate() + i);
+        slots.push({
+          parkingId: parking.id,
+          type: 'temporary',
+          date: date.toISOString().split('T')[0],
+          startTime: `${faker.number.int({ min: 6, max: 10 })}:00`,
+          endTime: `${faker.number.int({ min: 15, max: 22 })}:00`,
+          price: faker.number.int({ min: 10, max: 25 }),
+          isAllowSubReservations: faker.datatype.boolean()
+        });
+      }
+    }
+  }
+  console.log("✅ Total slots to create:", slots.length);
+  await TimeSlot.bulkCreate(slots);
+};
+
+const createReservationsAndReports = async () => {
+  const allSlots = await TimeSlot.findAll({ limit: 110 });
+  const reservations = [];
+  const reports = [];
+
+  for (let i = 0; i < 30; i++) {
+    const slot = faker.helpers.arrayElement(allSlots);
+    const start = new Date();
+    start.setHours(8 + i % 5);
+    const end = new Date(start);
+    end.setHours(start.getHours() + 2);
+
+    const renterId = faker.helpers.arrayElement([2, 3]);
+    const ownerId = faker.helpers.arrayElement([4, 5]);
+
+    reservations.push({
+      renterId,
+      ownerId,
+      parkingId: slot.parkingId,
+      timeSlotId: slot.id,
+      startTime: start,
+      endTime: end,
+      totalPrice: 30,
+      reservationDate: new Date()
+    });
+
+    if (i % 2 === 0) {
+      reports.push({
+        reporterId: renterId,
+        reportedUserId: ownerId,
+        parkingId: slot.parkingId,
+        rating: faker.number.float({ min: 2, max: 5, precision: 0.5 }),
+        description: faker.helpers.arrayElement(["Great!", "Not clean", "Too tight", null])
+      });
+    }
+  }
+
+  await Reservation.bulkCreate(reservations);
+  await Report.bulkCreate(reports);
+};
+
+const seed = async () => {
+  try {
+    // await createUsers();
+    // await createParkings();
+    await createTimeSlots();
+    await createReservationsAndReports();
+
+    console.log("✅ Seed completed successfully.");
+  } catch (error) {
+    console.error("❌ Error seeding data:", error);
+  }
+};
 
 seed();

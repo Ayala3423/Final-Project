@@ -28,14 +28,17 @@ const Message = sequelize.define('Message', {
   isRead: {
     type: DataTypes.BOOLEAN,
     defaultValue: false
-  },
+  }
+,
   conversationId: {
     type: DataTypes.UUID,
     allowNull: true
   }
+  
 }, {
   tableName: 'Messages',
-  timestamps: false
+   paranoid: true, 
+    timestamps: true 
 });
 
 module.exports = Message;

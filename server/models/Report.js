@@ -48,7 +48,8 @@ const Report = sequelize.define('Report', {
   }
 }, {
   tableName: 'Reports',
-  timestamps: true 
+   paranoid: true, 
+    timestamps: true 
 });
 
 module.exports = Report;

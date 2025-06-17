@@ -5,7 +5,17 @@ const path = require('path');
 const http = require('http');
 const { Server } = require('socket.io');
 
-require('./models/index');
+// require('./models/index');??????????????????????
+const cron = require('node-cron');
+const purgeSoftDeletes = require('./scripts/purgeSoftDeletes'); // נניח שיצרת פונקציה ב־purgeSoftDeletes.js
+
+// לתזמן להריץ ב־3:00 לפנות בוקר ב-1 לחודש
+cron.schedule('0 3 1 * *', () => {
+  console.log('Starting monthly purge at', new Date());
+  purgeSoftDeletes()
+    .then(() => console.log('Purge completed'))
+    .catch(console.error);
+});
 
 dotenv.config();
 const app = express();

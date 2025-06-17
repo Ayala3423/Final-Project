@@ -9,22 +9,23 @@ const genericService = {
         const Model = require(`../models/${model}`);
 
         if (Array.isArray(id)) {
-            // עדכון קבוצתי
             const result = await Model.update(data, { where: { id } });
-            return result; // מחזיר [כמות רשומות שעודכנו]
+            return result;
         } else {
-            // עדכון רגיל
             const instance = await Model.findByPk(id);
             if (!instance) return null;
             return await instance.update(data);
         }
     },
 
-    async delete(model, id) { //TODO: soft delete
-        const Model = require(`../models/${model}`);
-        return await Model.destroy({ where: { id } });
-    },
-
+  async delete(model, id) {
+    const Model = require(`../models/${model}`);
+    return await Model.update(
+        { isDeleted: true },
+        { where: { id } }
+    );
+}
+,
     async getByParams(model, params) {
         const Model = require(`../models/${model}`);
 

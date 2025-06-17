@@ -47,14 +47,15 @@ const User = sequelize.define('User', {
     }
   },
   profileImage: {
-  type: DataTypes.STRING,
-  allowNull: false,
-  defaultValue: 'default-profile.png'  // שם הקובץ/נתיב לתמונת ברירת המחדל שלך
-},
+    type: DataTypes.STRING,
+    allowNull: false,
+    defaultValue: 'default-profile.png'
+  }
 
 }, {
   tableName: 'Users',
-  timestamps: false
+  paranoid: true,
+  timestamps: true
 });
 
 module.exports = User;

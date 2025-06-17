@@ -11,7 +11,7 @@ const Parking = sequelize.define('Parking', {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: {
-            model: 'Users', 
+            model: 'Users',
             key: 'id'
         },
         onDelete: 'CASCADE'
@@ -48,7 +48,8 @@ const Parking = sequelize.define('Parking', {
     }
 }, {
     tableName: 'Parkings',
-    timestamps: false
+    paranoid: true, 
+    timestamps: true 
 });
 
 module.exports = Parking;

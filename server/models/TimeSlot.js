@@ -47,10 +47,17 @@ const TimeSlot = sequelize.define('TimeSlot', {
   price: {
     type: DataTypes.FLOAT,
     allowNull: false
-  }
+  }, 
+  isAllowSubReservations: {
+    type: DataTypes.BOOLEAN,
+    defaultValue: false,
+    allowNull: false
+  },
+
 }, {
   tableName: 'TimeSlots',
-  timestamps: false
+  paranoid: true,
+  timestamps: true
 });
 
 module.exports = TimeSlot;

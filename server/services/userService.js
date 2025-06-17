@@ -27,8 +27,12 @@ const userService = {
   },
 
   async deleteUser(id) {
-    return await User.destroy({ where: { id } });
+    return await User.update(
+      { isDeleted: true },
+      { where: { id } }
+    );
   },
+
 
   async findAllUsers() {
     return await User.findAll({
