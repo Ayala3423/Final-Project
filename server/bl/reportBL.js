@@ -1,5 +1,5 @@
 const genericService = require('../services/genericService');
-import { log } from "../utils/logger.js";
+const { log } =  require("../utils/logger.js");
 
 const reportBL = {
 

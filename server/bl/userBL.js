@@ -1,9 +1,8 @@
 const bcrypt = require('bcrypt');
 const userService = require('../services/userService');
-import { log } from "../utils/logger.js";
+const { log } =  require("../utils/logger.js");
 
 const userBL = {
-    // userBL.js
     async signup(data) {
         log(`signup: Received signup data: ${JSON.stringify(data)}`);
 

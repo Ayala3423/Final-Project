@@ -16,10 +16,11 @@ function AddParkingForm() {
     const [imageFile, setImageFile] = useState(null);
     const [availability, setAvailability] = useState([
         {
-            type: 'קבוע', // 'קבוע' או 'זמני'
+            type: 'fixed', // 'קבוע' או 'זמני'
             days: [],
             startTime: '',
-            endTime: ''
+            endTime: '',
+            price: ''   // הוספתי שדה מחיר ריק כברירת מחדל
         }
     ]);
 
@@ -49,7 +50,7 @@ function AddParkingForm() {
     const addAvailability = () => {
         setAvailability([
             ...availability,
-            { type: 'קבוע', days: [], startTime: '', endTime: '' }
+            { type: 'fixed', days: [], startTime: '', endTime: '', price: '' }
         ]);
     };
 
@@ -72,18 +73,27 @@ function AddParkingForm() {
                 formData.append('image', imageFile);
             }
 
+            // שולחים קודם את החניה
             apiService.create('parkings', formData, (res) => {
                 console.log("Parking added successfully:", res);
-                const parkingId = res.data.id;
-                apiService.create('availability', {
+                const parkingId = res.id;
+
+                // שולחים את זמני הזמינות כולל מחירים
+                apiService.create('timeSlots', availability.map(slot => ({
+                    ...slot,
                     parkingId,
-                    slots: availability
+                    price: parseFloat(slot.price), // המרה למספר
+                })), (res) => {
+                    console.log("success", res);
+                }, (error) => {
+                    console.error("Error adding timeslot:", error)
+
                 });
+
             }, (error) => {
                 console.error("Error adding parking:", error)
             });
 
-            alert('החניה נוספה בהצלחה!');
         } catch (error) {
             console.error("Failed to add parking or availability", error);
         }
@@ -133,12 +143,12 @@ function AddParkingForm() {
                             value={slot.type}
                             onChange={(e) => handleAvailabilityChange(index, 'type', e.target.value)}
                         >
-                            <option value="קבוע">קבוע</option>
-                            <option value="זמני">זמני</option>
+                            <option value="fixed">קבוע</option>
+                            <option value="temporary">זמני</option>
                         </select>
                     </label>
 
-                    {slot.type === 'זמני' && (
+                    {slot.type === 'temporary' && (
                         <>
                             <label>
                                 Start Date:
@@ -194,12 +204,24 @@ function AddParkingForm() {
                         />
                     </label>
 
+                    {/* הוספתי כאן שדה מחיר */}
+                    <label>
+                        מחיר (בש"ח):
+                        <input
+                            type="number"
+                            min="0"
+                            step="0.01"
+                            value={slot.price}
+                            onChange={(e) => handleAvailabilityChange(index, 'price', e.target.value)}
+                            required
+                        />
+                    </label>
+
                     {availability.length > 1 && (
                         <button type="button" onClick={() => removeAvailability(index)}>הסר</button>
                     )}
                 </div>
             ))}
-
 
             <button type="button" onClick={addAvailability}>+ Add timeslot</button>
 

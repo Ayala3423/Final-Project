@@ -131,8 +131,8 @@ const createReservationsAndReports = async () => {
 
 const seed = async () => {
   try {
-    // await createUsers();
-    // await createParkings();
+    await createUsers();
+    await createParkings();
     await createTimeSlots();
     await createReservationsAndReports();
 

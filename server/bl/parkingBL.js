@@ -1,7 +1,7 @@
 const genericService = require('../services/genericService');
 const { Op } = require('sequelize');
 const { getCoordinatesFromAddress, haversineDistance } = require('../utils/utils');
-import { log } from "../utils/logger.js";
+const { log } =  require("../utils/logger.js");
 
 function isToday(date) {
     const now = new Date();
