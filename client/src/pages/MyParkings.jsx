@@ -26,7 +26,7 @@ function MyParkings() {
   }, [user, loading, navigate]);
 
   if (loading) {
-    return <div>טוען נתונים...</div>;
+    return <div>Loading data...</div>;
   }
 
   return <>

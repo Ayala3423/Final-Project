@@ -24,7 +24,7 @@ import Reservation from '../pages/Reservation.jsx';
 import ParkingPage from '../pages/ParkingPage.jsx';
 import MessagesPage from '../pages/MessagesPage.jsx';
 import UsersList from '../pages/UsersList.jsx';
-import ParkingList from '../components/ParkingList.jsx';
+import ParkingManagement from '../pages/ParkingManagement.jsx';
 import ProfileCard from '../components/ProfileCard.jsx';
 
 // רוטה פרטית - רק למשתמשים מחוברים
@@ -67,7 +67,7 @@ function AppRouter() {
             }
           >
             <Route path=":role" element={<UsersList />} />
-            <Route path="parking-management" element={<ParkingList />} />
+            <Route path="parking-management" element={<ParkingManagement />} />
             <Route path="orders" element={<ReservationsList />} />
           </Route>
 

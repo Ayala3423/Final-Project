@@ -5,7 +5,7 @@ const API_KEY = 'AIzaSyCcteuv39cQV0oEpPLjoXCJfN_D7f_yNTs';
 function MapView({ center, parkings, hoveredParkingId }) {
     const mapRef = useRef(null);
     const mapInstance = useRef(null);
-    const markersRef = useRef({}); // חדש: שמירת המרקרים לפי ID
+    const markersRef = useRef({}); 
 
     useEffect(() => {
         const initializeMap = () => {

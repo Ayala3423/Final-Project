@@ -42,7 +42,7 @@ const SearchBar = ({ onSearch, currentLocation }) => {
                 lng: parseFloat(data[0].lon),
             };
         } else {
-            throw new Error("כתובת לא נמצאה");
+            throw new Error("Address not found");
         }
     };
 
@@ -63,7 +63,7 @@ const SearchBar = ({ onSearch, currentLocation }) => {
                 lat = geo.lat;
                 lng = geo.lng;
             } catch (error) {
-                console.error("שגיאה בהמרת מיקום:", error.message);
+                console.error("Error converting location:", error.message);
                 return;
             }
         }
@@ -96,7 +96,7 @@ const SearchBar = ({ onSearch, currentLocation }) => {
             <form onSubmit={handleSubmit} className="search-form">
 
                 <div className="price-slider-container">
-                    <label>💰 Price Range:</label>
+                    <label>Price Range:</label>
                     <div className="range-group">
                         <input
                             type="range"
@@ -128,6 +128,7 @@ const SearchBar = ({ onSearch, currentLocation }) => {
                     </div>
                 </div>
 
+                <label>🅿️ Parking Type:</label>
                 <select
                     value={parkingType}
                     onChange={(e) => setParkingType(e.target.value)}
@@ -136,7 +137,6 @@ const SearchBar = ({ onSearch, currentLocation }) => {
                     <option value="fixed">Permanent</option>
                 </select>
 
-                <div></div>
                 <label className="text-sm text-gray-700">
                     <input
                         type="checkbox"
@@ -161,33 +161,36 @@ const SearchBar = ({ onSearch, currentLocation }) => {
                     </div>
                 )}
 
-                <label className="text-sm text-gray-700" id="radius">radius</label>
+                <label className="text-sm text-gray-700" htmlFor="radius">Search Radius (km):</label>
                 <input
                     type="number"
                     name="radius"
+                    id="radius"
                     placeholder="Search radius (km)"
                     value={radius}
                     onChange={(e) => setRadius(Number(e.target.value))}
                 />
 
-                <label className="text-sm text-gray-700" id="date">date</label>
+                <label className="text-sm text-gray-700" htmlFor="date">Start Time:</label>
                 <input
                     type="datetime-local"
                     name="date"
+                    id="date"
                     value={startTime}
                     onChange={(e) => setStartTime(e.target.value)}
                 />
 
-                <label className="text-sm text-gray-700" id="duration">duration</label>
+                <label className="text-sm text-gray-700" htmlFor="duration">Duration (hours):</label>
                 <input
                     type="number"
                     name="duration"
+                    id="duration"
                     placeholder="Duration (hours)"
                     value={duration}
                     onChange={(e) => setDuration(Number(e.target.value))}
                 />
 
-                <div className="text-sm text-gray-600">🕓 Current time: {currentTime}</div>
+                <div className="text-sm text-gray-600">Current time: {currentTime}</div>
 
                 <button type="submit" className="search-button">
                     <FaSearch /> Search

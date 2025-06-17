@@ -36,7 +36,6 @@ export default function MessagesPage() {
     return uuidv4();
   }
 
-  // connect to socket
   useEffect(() => {
     if (!socket.connected) socket.connect();
 
@@ -54,7 +53,6 @@ export default function MessagesPage() {
         }));
       }
 
-      // השמע צליל רק אם זו הודעה של מישהו אחר
       if (!isMyMessage) {
         playNotificationSound();
       }
@@ -87,15 +85,13 @@ export default function MessagesPage() {
     return () => {
       socket.off('receiveMessage');
       socket.off('userTyping');
-      socket.off('messagesRead'); // אל תשכחי להוריד את ההאזנה גם כאן
+      socket.off('messagesRead');
       socket.disconnect();
     };
   }, [selectedChatId]);
 
-  // טוען את כל השיחות של המשתמש
   useEffect(() => {
     apiService.getByValue('messages', { senderId: user.id }, (data) => {
-      // נבנה מיפוי ייחודי לפי conversationId
       const uniqueConversationsMap = {};
       data.forEach(msg => {
         if (!uniqueConversationsMap[msg.conversationId]) {
@@ -115,7 +111,6 @@ export default function MessagesPage() {
     });
   }, [user]);
 
-  // טוען הודעות של השיחה הנבחרת
   useEffect(() => {
     if (!selectedChatId) {
       setMessages([]);
@@ -147,7 +142,6 @@ export default function MessagesPage() {
 
   }, [selectedChatId]);
 
-  // גלילה אוטומטית
   useEffect(() => {
     if (messagesEndRef.current) {
       messagesEndRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -174,7 +168,6 @@ export default function MessagesPage() {
         console.log("Message sent:", savedMessage);
 
         socket.emit('sendMessage', savedMessage);
-        // setMessages(prev => [...prev, savedMessage]);
         setNewMsg('');
       }, (error) => {
         console.error("Error sending message:", error);
@@ -185,7 +178,7 @@ export default function MessagesPage() {
   };
 
   const handleTyping = () => {
-    console.log('✏️ אני מקליד...');
+    console.log('Im typing...');
 
     socket.emit('typing', { conversationId: selectedChatId, senderId: user.id, senderName: user.name });
   };
@@ -196,7 +189,6 @@ export default function MessagesPage() {
     setChatError('');
 
     try {
-      // חפש משתמש לפי username
       const userResult = await apiService.getByValue('users', { username: newChatUsername.trim() });
       if (!userResult || userResult.length === 0) {
         setChatError('משתמש לא נמצא');
@@ -209,7 +201,6 @@ export default function MessagesPage() {
         return;
       }
 
-      // בדוק אם כבר קיימת שיחה איתו
       const existingConversation = conversations.find(conv => {
         const chatPartnerId = conv.senderId === user.id ? conv.receiverId : conv.senderId;
         return chatPartnerId === foundUser.id;
