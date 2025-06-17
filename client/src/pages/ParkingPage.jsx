@@ -107,7 +107,6 @@ function ParkingPage() {
     return (
         <div className="parking-page">
 
-
             <div className="parking-header">
                 <img
                     src={parking.imageUrl || '/default-parking.jpg'}
@@ -135,9 +134,9 @@ function ParkingPage() {
             </div>
 
             <div className="parking-info-box">
-                <p><strong>תיאור:</strong> {parking.description || 'אין תיאור זמין'}</p>
-                <p><strong>מחיר:</strong> ₪{parking.price || '—'}</p>
-                <p><strong>מקומות פנויים:</strong> {parking.availableSpots ?? '—'}</p>
+                <p><strong>Descreption:</strong> {parking.description || 'אין תיאור זמין'}</p>
+                <p><strong>Price:</strong> ₪{parking.price || '—'}</p>
+                <p><strong>Availible:</strong> {parking.availableSpots ?? '—'}</p>
             </div>
 
             <TimeSlots timeSlots={timeSlots} />
@@ -157,7 +156,7 @@ function ParkingPage() {
                         ))}
                     </div>
                 ) : (
-                    <p>אין ביקורות עדיין.</p>
+                    <p>There are no reports.</p>
                 )}
 
             </div>
@@ -194,7 +193,7 @@ function ParkingPage() {
                                 onChange={(e) => setReviewDescription(e.target.value)}
                             />
                             <button className="submit-review-button" onClick={handleSubmitReview}>
-                                שלח ביקורת
+                                Send Review
                             </button>
                         </div>
                     )}

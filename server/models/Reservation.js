@@ -45,11 +45,11 @@ const Reservation = sequelize.define('Reservation', {
   },
   startTime: {
     type: DataTypes.DATE,
-    allowNull: false
+    allowNull: true
   },
   endTime: {
     type: DataTypes.DATE,
-    allowNull: false
+    allowNull: true
   },
   totalPrice: {
     type: DataTypes.FLOAT,

@@ -16,14 +16,14 @@ function RenterMenu() {
 
     return (
             <nav className="sidebar">
-                <button onClick={toggleMenu}>☰ תפריט</button>
+                <button onClick={toggleMenu}>☰ </button>
                 {menuOpen && (
                     <div className="dropdown-menu">
                         <button onClick={() => handleClick('/')}>🏠</button>
-                        <button onClick={() => handleClick('/renter/my-profile')}>הפרופיל שלי!</button>
-                        <button onClick={() => handleClick('/renter/reservations')}>הזמנות שלי</button>
+                        <button onClick={() => handleClick('/renter/my-profile')}>My profile</button>
+                        <button onClick={() => handleClick('/renter/reservations')}>Reservations</button>
                         <button onClick={() => handleClick('/messages')}>Messages</button>
-                        <button onClick={() => logout()}>יציאה</button>
+                        <button onClick={() => logout()}>Logout</button>
                     </div>
                 )}
             </nav> 

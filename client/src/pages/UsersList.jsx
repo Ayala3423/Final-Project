@@ -1,3 +1,4 @@
+// src/pages/UsersList.jsx
 import React, { useEffect, useState, useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import { apiService } from '../services/genericService';
@@ -10,8 +11,7 @@ function UsersList() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const { role } = useParams();
-    console.log("Role from params:", role);
-    
+
     useEffect(() => {
         if (!user || user.role !== 'admin') {
             setError('Only admins can view the user list');
@@ -23,7 +23,7 @@ function UsersList() {
     }, [user, role]);
 
     const fetchUsers = () => {
-        apiService.getByValue('users', { 'role': role },
+        apiService.getByValue('users', { role },
             (data) => {
                 setUsers(data);
                 setLoading(false);
@@ -40,7 +40,7 @@ function UsersList() {
         if (window.confirm("Are you sure you want to delete this user?")) {
             apiService.remove('users', userId,
                 () => {
-                    setUsers(users.filter(u => u.id !== userId));
+                    setUsers(prev => prev.filter(u => u.id !== userId));
                 },
                 (err) => {
                     console.error("Error deleting user:", err);
@@ -68,7 +68,7 @@ function UsersList() {
                             <th>Email</th>
                             <th>Role</th>
                             <th>Phone</th>
-                            <th>Delete</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -80,7 +80,17 @@ function UsersList() {
                                 <td>{u.role}</td>
                                 <td>{u.phone}</td>
                                 <td>
-                                    <button onClick={() => handleDelete(u.id)}>🗑️</button>
+                                    {u.id !== user.id ? (
+                                        <button
+                                            onClick={() => handleDelete(u.id)}
+                                            className="delete-button"
+                                            title="Delete user"
+                                        >
+                                            🗑️
+                                        </button>
+                                    ) : (
+                                        <span className="self-text">Can't delete self</span>
+                                    )}
                                 </td>
                             </tr>
                         ))}

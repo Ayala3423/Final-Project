@@ -6,16 +6,16 @@ function TimeSlots({ timeSlots }) {
 
     return (
         <div className="parking-timeslots">
-            <h3 className="timeslots-title">🕒 זמני חניה זמינים</h3>
+            <h3 className="timeslots-title">Availible times</h3>
             <div className="timeslots-grid">
                 {timeSlots.map((slot, idx) => (
                     <div key={idx} className="timeslot-card">
                         <div className="time-row">
-                            <span className="label">התחלה:</span>
+                            <span className="label">Start:</span>
                             <span className="value">{slot.startTime}</span>
                         </div>
                         <div className="time-row">
-                            <span className="label">סיום:</span>
+                            <span className="label">End:</span>
                             <span className="value">{slot.endTime}</span>
                         </div>
                     </div>

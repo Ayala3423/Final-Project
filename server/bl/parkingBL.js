@@ -1,6 +1,7 @@
 const genericService = require('../services/genericService');
-const { Op } = require('sequelize')
+const { Op } = require('sequelize');
 const { getCoordinatesFromAddress, haversineDistance } = require('../utils/utils');
+import { log } from "../utils/logger.js";
 
 function isToday(date) {
     const now = new Date();
@@ -12,59 +13,54 @@ function getTimeString(date) {
 }
 
 const parkingBL = {
-
     async getParkingById(id) {
-
+        log(`getParkingById: Fetching parking with id=${id}`);
         return await genericService.getById('Parking', id);
     },
 
     async updateParking(id, data) {
+        log(`updateParking: Updating parking id=${id} with data=${JSON.stringify(data)}`);
         return await genericService.update('Parking', id, data);
     },
 
     async deleteParking(id) {
+        log(`deleteParking: Deleting parking with id=${id}`);
         return await genericService.delete('Parking', id);
     },
 
     async getParkingsByParams(filters, pagination) {
+        log(`getParkingsByParams: filters=${JSON.stringify(filters)}, pagination=${JSON.stringify(pagination)}`);
         return await genericService.getByParamsLimit('Parking', filters, pagination);
     },
 
     async createParking(data) {
+        log(`createParking: Creating with address=${data.address}`);
         const { latitude, longitude } = await getCoordinatesFromAddress(data.address);
         data.latitude = latitude;
         data.longitude = longitude;
-
         return await genericService.create('Parking', data);
     },
 
     async getAllParkings(user) {
-        console.log('אימות');
-        if (user.role == "admin")
+        log(`getAllParkings: role=${user.role}`);
+        if (user.role === "admin") {
             return await genericService.getAll('Parking');
-        else if (user.role == "owner") {
+        } else if (user.role === "owner") {
             return await genericService.getByForeignKey('Parking', 'ownerId', user.id);
-        }
-        else {
-            throw new Error('unathorized role parking')
+        } else {
+            throw new Error('Unauthorized role parking');
         }
     },
-    //TODO: add TimeSlot model and relations
-    //TODO: add createTimeSlot method
 
-    //TODO: ask mrs. if we need 2 api.
     async searchParkings(query) {
+        log(`searchParkings: query=${JSON.stringify(query)}`);
+
         const {
-            lat,
-            lng,
-            radius = 1000,
-            type = 'temporary',
-            minPrice = 0,
-            maxPrice = 100000000000,
-            startTime = new Date(),
-            hours = 2
+            lat, lng, radius = 1000, type = 'temporary',
+            minPrice = 0, maxPrice = 100000000000,
+            startTime = new Date(), hours = 2
         } = query;
-        console.log("searchParkings called with query:", query);
+
         if (!lat || !lng) throw new Error('Missing coordinates');
 
         const startDateTime = new Date(startTime);
@@ -72,22 +68,14 @@ const parkingBL = {
         const today = startDateTime.toISOString().split("T")[0];
         const dayOfWeek = startDateTime.toLocaleDateString('en-US', { weekday: 'long' }).toLowerCase();
 
-        // שליפה גנרית של חניות
-        const allParkings = await genericService.getByParamsLimit('Parking', {}); // כל החניות
+        const allParkings = await genericService.getByParamsLimit('Parking', {});
         const parkingsInRange = allParkings.filter(p => {
-            console.log(p);
-
             const distance = haversineDistance(lat, lng, p.latitude, p.longitude);
-            console.log(distance + " distance1");
-
             return distance <= radius;
         });
 
         const parkingIds = parkingsInRange.map(p => p.id);
-        console.log(parkingIds.length + " length");
-
-        if (parkingIds.length == 0) return [];
-        console.log("1");
+        if (parkingIds.length === 0) return [];
 
         const conditions = {
             parkingId: { [Op.in]: parkingIds },
@@ -97,15 +85,12 @@ const parkingBL = {
 
         if (minPrice !== undefined && minPrice !== null) conditions.price[Op.gte] = parseFloat(minPrice);
         if (maxPrice !== undefined && maxPrice !== null) conditions.price[Op.lte] = parseFloat(maxPrice);
-
         if (!minPrice && !maxPrice) delete conditions.price;
-        console.log("2");
 
         const allowedTypes = [type];
         if (type === 'temporary' && isToday(startDateTime)) {
             allowedTypes.push('fixed');
         }
-        console.log("3");
 
         conditions.type = { [Op.in]: allowedTypes };
 
@@ -119,7 +104,6 @@ const parkingBL = {
                 endTime: { [Op.gte]: getTimeString(endDateTime) }
             });
         }
-        console.log("4");
 
         if (allowedTypes.includes('fixed')) {
             orConditions.push({
@@ -131,10 +115,9 @@ const parkingBL = {
         }
 
         conditions[Op.or] = orConditions;
-        console.log("5" + JSON.stringify(conditions));
 
+        log(`searchParkings: final conditions=${JSON.stringify(conditions)}`);
         const slots = await genericService.getAdvanced('TimeSlot', conditions, ['Parking']);
-        console.log("6");
 
         return slots.map(slot => ({
             id: slot.Parking.id,
@@ -152,7 +135,6 @@ const parkingBL = {
             ownerId: slot.Parking.ownerId,
         }));
     }
-
 };
 
 module.exports = parkingBL;
