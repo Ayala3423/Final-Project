@@ -35,7 +35,7 @@ const genericService = {
 
     async getByParamsLimit(model, params) {
         console.log('getByParamsLimit');
-        
+
         const Model = require(`../models/${model}`);
 
         const { page = 1, limit = 10, ...filters } = params;
@@ -52,7 +52,13 @@ const genericService = {
         console.log(`Creating new ${model} with data:`, data);
 
         const Model = require(`../models/${model}`);
-        return await Model.create(data);
+
+        if (Array.isArray(data)) {
+            return await Model.bulkCreate(data);
+        } else {
+            return await Model.create(data);
+
+        }
     },
 
     async getAdvanced(model, conditions, include = null) {
