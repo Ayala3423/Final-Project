@@ -16,7 +16,7 @@ function RenterMenu() {
 
     return (
             <nav className="sidebar">
-                <button onClick={toggleMenu}>☰ </button>
+                <button onClick={toggleMenu}>☰ menu</button>
                 {menuOpen && (
                     <div className="dropdown-menu">
                         <button onClick={() => handleClick('/')}>🏠</button>

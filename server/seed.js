@@ -1,17 +1,39 @@
-import { User, Parking, TimeSlot, Reservation, Report } from './models/index.js';
+import { User, Parking, TimeSlot, Reservation, Report, Passwords } from './models/index.js';
 import { faker } from '@faker-js/faker';
 import { Op } from 'sequelize';
+import bcrypt from 'bcrypt';
 
 const createUsers = async () => {
-  const users = [
+  const plainPasswords = [
+    { username: "admin", password: "1" },
+    { username: "johnd", password: "1" },
+    { username: "sarahlevi", password: "1" },
+    { username: "davidc", password: "1" },
+    { username: "miriama", password: "1" }
+  ];
+
+  const usersData = [
     { name: "Admin User", username: "admin", role: "admin", email: "admin@example.com", phone: "0501234567", address: "Jerusalem", profileImage: "default-profile.png" },
     { name: "John Doe", username: "johnd", role: "renter", email: "john@example.com", phone: "0507654321", address: "Beit Hakerem, Jerusalem", profileImage: "default-profile.png" },
     { name: "Sarah Levi", username: "sarahlevi", role: "renter", email: "sarah@example.com", phone: "0521112233", address: "Katamon, Jerusalem", profileImage: "default-profile.png" },
     { name: "David Cohen", username: "davidc", role: "owner", email: "david@example.com", phone: "0533334444", address: "Gilo, Jerusalem", profileImage: "default-profile.png" },
     { name: "Miriam Azulay", username: "miriama", role: "owner", email: "miriam@example.com", phone: "0545556666", address: "Pisgat Ze'ev, Jerusalem", profileImage: "default-profile.png" }
   ];
-  await User.bulkCreate(users);
+
+  const users = await User.bulkCreate(usersData, { returning: true });
+
+  const passwords = await Promise.all(users.map(async user => {
+    const plain = plainPasswords.find(p => p.username === user.username)?.password || "password123";
+    const hash = await bcrypt.hash(plain, 10);
+    return {
+      userId: user.id,
+      hash: hash
+    };
+  }));
+
+  await Passwords.bulkCreate(passwords);
 };
+
 
 const jerusalemAddresses = [
   { address: "Ben Yehuda St 1", lat: 31.781, lon: 35.219 },
@@ -131,10 +153,10 @@ const createReservationsAndReports = async () => {
 
 const seed = async () => {
   try {
-    await createUsers();
-    await createParkings();
-    await createTimeSlots();
-    await createReservationsAndReports();
+    // await createUsers();
+    // await createParkings();
+    // await createTimeSlots();
+    // await createReservationsAndReports();
 
     console.log("✅ Seed completed successfully.");
   } catch (error) {

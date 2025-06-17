@@ -39,11 +39,11 @@ function Reservation() {
     const handleInitialNext = () => {
         setError('');
         if (!customStart || !customEnd) {
-            setError('אנא בחר תאריך התחלה וסיום.');
+            setError('Please select a start and end time.');
             return;
         }
         if (new Date(customStart) >= new Date(customEnd)) {
-            setError('שעת ההתחלה חייבת להיות לפני הסיום.');
+            setError('End time must be after start time.');
             return;
         }
         if (!isTimeAvailable(customStart, customEnd)) {
@@ -64,11 +64,11 @@ function Reservation() {
 
         if (reservationType === 'custom') {
             if (!customStart || !customEnd) {
-                setError('אנא בחר תאריך התחלה וסיום.');
+                setError('Please select a start and end time.');
                 return;
             }
             if (new Date(customStart) >= new Date(customEnd)) {
-                setError('שעת ההתחלה חייבת להיות לפני הסיום.');
+                setError('Start time must be before end time.');
                 return;
             }
             if (!isTimeAvailable(customStart, customEnd)) {
@@ -77,7 +77,7 @@ function Reservation() {
             }
         } else {
             if (selectedSlots.length === 0) {
-                setError('אנא בחר לפחות זמן אחד.');
+                setError('Please select at least one time slot.');
                 return;
             }
         }
@@ -122,11 +122,11 @@ function Reservation() {
         };
 
         apiService.create('reservations', reservationData, () => {
-            alert('התשלום בוצע וההזמנה נשמרה.');
+            alert('The reservation has been successfully created.');
             navigate('/');
         }, (err) => {
             console.error(err);
-            alert('שגיאה בהזמנה.');
+            alert('Error creating reservation. Please try again later.');
         });
     };
 
@@ -161,11 +161,11 @@ function Reservation() {
         <Modal onClose={() => navigate(-1)}>
             {modalStep === 'initial' && (
                 <div className="reservation-modal">
-                    <h2>בחר זמן התחלה וסיום</h2>
-                    <label>התחלה:
+                    <h2>Select start and end time</h2>
+                    <label>Start:
                         <input type="datetime-local" value={customStart} onChange={e => setCustomStart(e.target.value)} />
                     </label>
-                    <label>סיום:
+                    <label>End:
                         <input type="datetime-local" value={customEnd} onChange={e => setCustomEnd(e.target.value)} />
                     </label>
 
@@ -177,23 +177,22 @@ function Reservation() {
                             setError('');
                         }}
                     >
-                        חניה קבועה
+                        Fixed time slot
                     </button>
 
-                    <h4>זמנים נפוצים:</h4>
+                    <h4>Available time slots</h4>
                     {timeSlots.map(slot => (
                         <div key={slot.id} className="slot-preview">{slot.date} {slot.startTime} - {slot.endTime}</div>
                     ))}
 
                     {error && <p className="error-text">{error}</p>}
-                    <button onClick={handleInitialNext}>המשך</button>
+                    <button onClick={handleInitialNext}>Continue</button>
                 </div>
             )}
 
-
             {modalStep === 'fixed' && (
                 <div className="reservation-modal">
-                    <h3>בחר זמני חניה קבועה</h3>
+                    <h3>Select fixed parking times</h3>
                     {filteredSlots.length > 0 ? (
                         filteredSlots.map(slot => (
                             <label key={slot.id}>
@@ -202,32 +201,28 @@ function Reservation() {
                             </label>
                         ))
                     ) : (
-                        <p>אין זמני חניה קבועה זמינים כרגע.</p>
+                        <p>No fixed parking times available currently.</p>
                     )}
                     {error && <p className="error-text">{error}</p>}
-                    <button onClick={() => setModalStep('initial')}>חזור</button>
-                    {filteredSlots.length > 0 && <button onClick={handleSubmit}>המשך לסיכום</button>}
+                    <button onClick={() => setModalStep('initial')}>Back</button>
+                    {filteredSlots.length > 0 && <button onClick={handleSubmit}>Continue to summary</button>}
                 </div>
             )}
 
             {modalStep === 'alternative' && (
                 <div className="reservation-modal">
-                    <h3>החניה לא זמינה בזמן שבחרת</h3>
-                    <p>נסה לבחור אחד מהזמנים הבאים:</p>
+                    <h3>Parking not available at the selected time</h3>
+                    <p>Try selecting one of the following available times:</p>
                     {timeSlots.map(slot => (
                         <div
                             key={slot.id}
                             className="alternative-slot"
                             onClick={() => {
-                                // בחר את הזמן שנלחץ
                                 setCustomStart(`${slot.date}T${slot.startTime}`);
                                 setCustomEnd(`${slot.date}T${slot.endTime}`);
-                                // עדכן סוג הזמנה ל־custom כי זה זמני
                                 setReservationType('custom');
-                                // חשב מחיר
                                 const price = calculatePriceForSlot(slot);
                                 setTotalPrice(price);
-                                // מעבר לסיכום
                                 setModalStep('summary');
                                 setError('');
                             }}
@@ -236,19 +231,18 @@ function Reservation() {
                             {slot.date} {slot.startTime} - {slot.endTime}
                         </div>
                     ))}
-                    <button onClick={() => setModalStep('initial')}>חזור</button>
+                    <button onClick={() => setModalStep('initial')}>Back</button>
                 </div>
             )}
 
-
             {modalStep === 'summary' && (
                 <div className="reservation-modal">
-                    <h3>סיכום ההזמנה</h3>
-                    <p><strong>כתובת:</strong> {parking.address}</p>
-                    <p><strong>סה"כ לתשלום:</strong> {totalPrice.toFixed(2)} ₪</p>
-                    <button onClick={() => setShowPayment(true)}>לתשלום</button>
+                    <h3>Reservation Summary</h3>
+                    <p><strong>Address:</strong> {parking.address}</p>
+                    <p><strong>Total price:</strong> {totalPrice.toFixed(2)} ₪</p>
+                    <button onClick={() => setShowPayment(true)}>Proceed to payment</button>
                     {showPayment && <div id="paypal-button-container" style={{ marginTop: '1rem' }}></div>}
-                    <button onClick={() => setModalStep('initial')}>חזור</button>
+                    <button onClick={() => setModalStep('initial')}>Back</button>
                 </div>
             )}
         </Modal>
