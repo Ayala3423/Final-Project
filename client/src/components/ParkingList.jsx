@@ -22,8 +22,15 @@ function ParkingList({ parkings = [], onHover = () => { }, onDelete }) {
             alert('Please log in to order a parking spot.');
             return;
         }
-        navigate('/reservation', {
-            state: { parking }
+        apiService.getByValue('timeSlots', { parkingId: parking.id }, (response) => {
+            console.log("Time slots for parking:", response);
+
+            navigate('/reservation', {
+                state: { parking, timeSlots: response }
+            });
+        }, (error) => {
+            console.error("Failed to fetch time slots:", error);
+            alert("Failed to fetch time slots for this parking.");
         });
     };
 

@@ -42,84 +42,364 @@
 [2025-06-17T15:50:26.939Z] getReportsByParkingId: Fetching reports for parkingId=21
 [2025-06-17T15:50:26.962Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=21
 [2025-06-17T15:50:26.966Z] getReportsByParkingId: Fetching reports for parkingId=21
-[2025-06-17T15:53:18.233Z] searchParkings: query={"lat":"31.7035534","lng":"35.1134003"}
-[2025-06-17T15:53:18.244Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
-[2025-06-17T15:53:18.255Z] searchParkings: query={"lat":"31.7035534","lng":"35.1134003"}
-[2025-06-17T15:53:18.260Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
-[2025-06-17T15:53:29.178Z] searchParkings: query={"lat":"31.7035603","lng":"35.1134054"}
-[2025-06-17T15:53:29.190Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
-[2025-06-17T15:53:29.205Z] searchParkings: query={"lat":"31.7035603","lng":"35.1134054"}
-[2025-06-17T15:53:29.210Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
-[2025-06-17T15:57:40.242Z] getMessagesById: Fetching messages for senderId=1
-[2025-06-17T15:57:40.279Z] getMessagesById: Fetching messages for senderId=1
-[2025-06-17T15:57:44.571Z] searchParkings: query={"lat":"31.7035516","lng":"35.113407"}
-[2025-06-17T15:57:44.581Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
-[2025-06-17T15:57:44.599Z] searchParkings: query={"lat":"31.7035516","lng":"35.113407"}
-[2025-06-17T15:57:44.607Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
-[2025-06-17T17:44:29.658Z] searchParkings: query={"lat":"31.70304","lng":"35.127296"}
-[2025-06-17T17:44:29.679Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
-[2025-06-17T17:44:29.719Z] searchParkings: query={"lat":"31.70304","lng":"35.127296"}
-[2025-06-17T17:44:29.756Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
-[2025-06-17T20:50:36.147Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=21
-[2025-06-17T20:50:36.166Z] getReportsByParkingId: Fetching reports for parkingId=21
-[2025-06-17T20:50:36.217Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=21
-[2025-06-17T20:50:36.223Z] getReportsByParkingId: Fetching reports for parkingId=21
-[2025-06-17T21:02:05.493Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=21
-[2025-06-17T21:02:05.502Z] getReportsByParkingId: Fetching reports for parkingId=21
-[2025-06-17T21:02:05.531Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=21
-[2025-06-17T21:02:05.537Z] getReportsByParkingId: Fetching reports for parkingId=21
-[2025-06-18T07:26:04.406Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=21
-[2025-06-18T07:26:04.425Z] getReportsByParkingId: Fetching reports for parkingId=21
-[2025-06-18T07:26:04.458Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=21
-[2025-06-18T07:26:04.467Z] getReportsByParkingId: Fetching reports for parkingId=21
-[2025-06-18T09:49:29.261Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=21
-[2025-06-18T09:49:29.282Z] getReportsByParkingId: Fetching reports for parkingId=21
-[2025-06-18T09:49:29.330Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=21
-[2025-06-18T09:49:29.334Z] getReportsByParkingId: Fetching reports for parkingId=21
-[2025-06-18T10:17:42.418Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=21
-[2025-06-18T10:17:42.423Z] getReportsByParkingId: Fetching reports for parkingId=21
-[2025-06-18T10:17:42.452Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=21
-[2025-06-18T10:17:42.455Z] getReportsByParkingId: Fetching reports for parkingId=21
-[2025-06-18T12:17:39.805Z] updateUser: Updating user id: 1 with data: {"averageRating":"0","id":"1","username":"a","email":"ayalamdlov@gmail.com","name":"ayala medlov","phone":"0548573423","address":"26 פנים מאירים","role":"renter","profileImage":"/uploads/profileImages/profileImage-1750173034758-374958519.jpg","updatedAt":"2025-06-17T15:10:34.911Z","createdAt":"2025-06-17T15:10:34.911Z"}
-[2025-06-18T12:17:46.691Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
-[2025-06-18T12:17:46.706Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
-[2025-06-18T12:17:46.741Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
-[2025-06-18T12:17:46.748Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
-[2025-06-18T12:17:55.803Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
-[2025-06-18T12:17:55.811Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
-[2025-06-18T12:17:55.830Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
-[2025-06-18T12:17:55.837Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
-[2025-06-18T12:18:29.756Z] searchParkings: query={"lat":"31.7035444","lng":"35.1132502"}
-[2025-06-18T12:18:29.776Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
-[2025-06-18T12:18:29.799Z] searchParkings: query={"lat":"31.7035444","lng":"35.1132502"}
-[2025-06-18T12:18:29.806Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
-[2025-06-18T12:19:02.234Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
-[2025-06-18T12:19:02.251Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
-[2025-06-18T12:19:02.269Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
-[2025-06-18T12:19:02.275Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
-[2025-06-18T12:20:06.353Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=4
-[2025-06-18T12:20:06.361Z] getReportsByParkingId: Fetching reports for parkingId=4
-[2025-06-18T12:20:06.381Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=4
-[2025-06-18T12:20:06.385Z] getReportsByParkingId: Fetching reports for parkingId=4
-[2025-06-18T12:23:00.311Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=4
-[2025-06-18T12:23:00.321Z] getReportsByParkingId: Fetching reports for parkingId=4
-[2025-06-18T12:23:06.298Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=4
-[2025-06-18T12:23:06.307Z] getReportsByParkingId: Fetching reports for parkingId=4
-[2025-06-18T12:28:20.076Z] login: Attempting login for identifier: admin
-[2025-06-18T12:28:20.090Z] login: No user found for identifier: admin
-[2025-06-18T12:28:29.790Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=4
-[2025-06-18T12:28:29.793Z] getReportsByParkingId: Fetching reports for parkingId=4
-[2025-06-18T12:28:29.805Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=4
-[2025-06-18T12:28:29.810Z] getReportsByParkingId: Fetching reports for parkingId=4
-[2025-06-18T12:28:39.056Z] login: Attempting login for identifier: admin
-[2025-06-18T12:28:39.064Z] login: No user found for identifier: admin
-[2025-06-18T12:28:43.947Z] searchParkings: query={"lat":"31.7035479","lng":"35.1132404"}
-[2025-06-18T12:28:43.955Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
-[2025-06-18T12:28:43.974Z] searchParkings: query={"lat":"31.7035479","lng":"35.1132404"}
-[2025-06-18T12:28:43.979Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
-[2025-06-18T12:31:46.669Z] searchParkings: query={"lat":"31.7035396","lng":"35.1132367"}
-[2025-06-18T12:31:46.724Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
-[2025-06-18T12:31:46.772Z] searchParkings: query={"lat":"31.7035396","lng":"35.1132367"}
-[2025-06-18T12:31:46.779Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
-[2025-06-18T12:31:52.284Z] login: Attempting login for identifier: admin
-[2025-06-18T12:31:52.427Z] login: Password mismatch for user id: 1
+[2025-06-17T16:04:36.990Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:04:37.026Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:04:37.058Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:04:37.065Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:04:47.554Z] login: Attempting login for identifier: johnd
+[2025-06-17T16:04:47.560Z] login: No password entry found for user id: 2
+[2025-06-17T16:05:04.853Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:05:04.869Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:05:04.906Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:05:04.913Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:05:18.432Z] login: Attempting login for identifier: johnd
+[2025-06-17T16:05:18.452Z] login: No password entry found for user id: 2
+[2025-06-17T16:05:21.201Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:05:21.204Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:05:21.221Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:05:21.232Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:05:22.162Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:05:22.165Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:05:22.175Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:05:22.179Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:05:44.146Z] login: Attempting login for identifier: johnd
+[2025-06-17T16:05:44.155Z] login: No password entry found for user id: 2
+[2025-06-17T16:07:47.208Z] login: Attempting login for identifier: johnd
+[2025-06-17T16:07:47.272Z] login: Successful login for user id: 2
+[2025-06-17T16:08:34.034Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=8
+[2025-06-17T16:08:34.044Z] getReportsByParkingId: Fetching reports for parkingId=8
+[2025-06-17T16:08:34.052Z] checkReportPermission: Checking permissions for userId=2, parkingId=8
+[2025-06-17T16:08:34.075Z] getReportsByParkingId: Fetching reports for parkingId=8
+[2025-06-17T16:08:34.080Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=8
+[2025-06-17T16:08:34.092Z] checkReportPermission: Already reported, cannot report again
+[2025-06-17T16:08:34.100Z] checkReportPermission: Checking permissions for userId=2, parkingId=8
+[2025-06-17T16:08:34.109Z] checkReportPermission: Already reported, cannot report again
+[2025-06-17T16:08:35.830Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:08:35.837Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:08:35.854Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:08:35.857Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:08:43.429Z] getReservationsByValue: Fetching reservations with value={"renterId":"2","page":"1","limit":"10"}
+[2025-06-17T16:08:43.438Z] getReservationsByValue: Fetching reservations with value={"renterId":"2","page":"1","limit":"10"}
+[2025-06-17T16:11:05.996Z] updateUser: Updating user id: 2 with data: {"name":"John Doe","username":"johnd","id":"2","phone":"0507654325","email":"john@example.com","address":"Beit Hakerem, Jerusalem","role":"renter","averageRating":"0","profileImage":"default-profile.png","createdAt":"2025-06-17T16:07:37.000Z","updatedAt":"2025-06-17T16:07:37.000Z","deletedAt":"null"}
+[2025-06-17T16:11:15.405Z] getMessagesById: Fetching messages for senderId=2
+[2025-06-17T16:11:15.423Z] getMessagesById: Fetching messages for senderId=2
+[2025-06-17T16:11:21.995Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:11:22.000Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:11:22.009Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:11:22.014Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:14:12.942Z] getMessagesById: Fetching messages for senderId=2
+[2025-06-17T16:14:12.956Z] getMessagesById: Fetching messages for senderId=2
+[2025-06-17T16:14:15.262Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:14:15.266Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:14:15.275Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:14:15.284Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:14:16.961Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-17T16:14:16.967Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-17T16:14:16.976Z] checkReportPermission: Checking permissions for userId=2, parkingId=5
+[2025-06-17T16:14:16.997Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-17T16:14:16.985Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-17T16:14:17.001Z] checkReportPermission: No reservation found, cannot report
+[2025-06-17T16:14:17.007Z] checkReportPermission: Checking permissions for userId=2, parkingId=5
+[2025-06-17T16:14:17.016Z] checkReportPermission: No reservation found, cannot report
+[2025-06-17T16:15:15.810Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:15:15.820Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:15:15.828Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:15:15.835Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:15:21.853Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:15:21.857Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:15:21.871Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:15:21.880Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:15:47.344Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:15:47.354Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:15:47.364Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:15:47.366Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:16:36.247Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:16:36.269Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:16:36.284Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:16:36.287Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:18:44.433Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-17T16:18:47.990Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:18:47.996Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:18:48.024Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:18:48.029Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:18:49.281Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-17T16:19:16.737Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:19:16.750Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:19:16.776Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:19:16.784Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:19:17.582Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-17T16:19:54.017Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:19:54.029Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:19:54.049Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:19:54.053Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:19:55.174Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-17T16:20:16.490Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:20:16.503Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:20:16.514Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:20:16.517Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:20:23.446Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-17T16:20:51.138Z] createReservation: Creating reservation with data={"renterId":2,"ownerId":4,"parkingId":5,"timeSlotId":null,"reservationDate":"2025-06-17T16:20:51.128Z","totalPrice":288}
+[2025-06-17T16:20:54.287Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:20:54.298Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:20:54.321Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:20:54.331Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:21:00.256Z] getReservationsByValue: Fetching reservations with value={"renterId":"2","page":"1","limit":"10"}
+[2025-06-17T16:21:00.270Z] getReservationsByValue: Fetching reservations with value={"renterId":"2","page":"1","limit":"10"}
+[2025-06-17T16:21:15.431Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:21:15.448Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:21:15.467Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:21:15.475Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:21:16.901Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-17T16:21:16.898Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-17T16:21:16.906Z] checkReportPermission: Checking permissions for userId=2, parkingId=5
+[2025-06-17T16:21:16.923Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-17T16:21:16.928Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-17T16:21:16.940Z] checkReportPermission: Permission granted
+[2025-06-17T16:21:16.949Z] checkReportPermission: Checking permissions for userId=2, parkingId=5
+[2025-06-17T16:21:16.960Z] checkReportPermission: Permission granted
+[2025-06-17T16:21:27.843Z] createReport: Creating report with data={"parkingId":5,"userId":2,"rating":1,"description":"ccc"}
+[2025-06-17T16:21:27.843Z] createReport: Missing required data
+[2025-06-17T16:22:21.532Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-17T16:22:21.535Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-17T16:22:21.538Z] checkReportPermission: Checking permissions for userId=2, parkingId=5
+[2025-06-17T16:22:21.557Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-17T16:22:21.562Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-17T16:22:21.568Z] checkReportPermission: Permission granted
+[2025-06-17T16:22:21.573Z] checkReportPermission: Checking permissions for userId=2, parkingId=5
+[2025-06-17T16:22:21.581Z] checkReportPermission: Permission granted
+[2025-06-17T16:22:25.313Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-17T16:22:25.323Z] checkReportPermission: Checking permissions for userId=2, parkingId=5
+[2025-06-17T16:22:25.319Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-17T16:22:25.335Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-17T16:22:25.338Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-17T16:22:25.341Z] checkReportPermission: Permission granted
+[2025-06-17T16:22:25.346Z] checkReportPermission: Checking permissions for userId=2, parkingId=5
+[2025-06-17T16:22:25.352Z] checkReportPermission: Permission granted
+[2025-06-17T16:22:34.021Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-17T16:22:34.024Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-17T16:22:34.026Z] checkReportPermission: Checking permissions for userId=2, parkingId=5
+[2025-06-17T16:22:34.035Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-17T16:22:34.038Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-17T16:22:34.043Z] checkReportPermission: Permission granted
+[2025-06-17T16:22:34.049Z] checkReportPermission: Checking permissions for userId=2, parkingId=5
+[2025-06-17T16:22:34.056Z] checkReportPermission: Permission granted
+[2025-06-17T16:22:46.736Z] createReport: Creating report with data={"parkingId":5,"userId":2,"rating":3,"description":"x"}
+[2025-06-17T16:22:46.737Z] createReport: Missing required data
+[2025-06-17T16:23:26.680Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-17T16:23:26.683Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-17T16:23:26.687Z] checkReportPermission: Checking permissions for userId=2, parkingId=5
+[2025-06-17T16:23:26.699Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-17T16:23:26.704Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-17T16:23:26.712Z] checkReportPermission: Permission granted
+[2025-06-17T16:23:26.718Z] checkReportPermission: Checking permissions for userId=2, parkingId=5
+[2025-06-17T16:23:26.729Z] checkReportPermission: Permission granted
+[2025-06-17T16:23:32.313Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-17T16:23:32.316Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-17T16:23:32.320Z] checkReportPermission: Checking permissions for userId=2, parkingId=5
+[2025-06-17T16:23:32.330Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-17T16:23:32.332Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-17T16:23:32.338Z] checkReportPermission: Permission granted
+[2025-06-17T16:23:32.342Z] checkReportPermission: Checking permissions for userId=2, parkingId=5
+[2025-06-17T16:23:32.347Z] checkReportPermission: Permission granted
+[2025-06-17T16:23:35.443Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-17T16:23:35.440Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-17T16:23:35.447Z] checkReportPermission: Checking permissions for userId=2, parkingId=5
+[2025-06-17T16:23:35.452Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-17T16:23:35.456Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-17T16:23:35.458Z] checkReportPermission: Permission granted
+[2025-06-17T16:23:35.463Z] checkReportPermission: Checking permissions for userId=2, parkingId=5
+[2025-06-17T16:23:35.469Z] checkReportPermission: Permission granted
+[2025-06-17T16:23:43.428Z] createReport: Creating report with data={"parkingId":5,"userId":2,"rating":4,"description":"x"}
+[2025-06-17T16:23:43.428Z] createReport: Missing required data
+[2025-06-17T16:23:50.249Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-17T16:23:50.255Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-17T16:23:50.258Z] checkReportPermission: Checking permissions for userId=2, parkingId=5
+[2025-06-17T16:23:50.276Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-17T16:23:50.274Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-17T16:23:50.284Z] checkReportPermission: Permission granted
+[2025-06-17T16:23:50.289Z] checkReportPermission: Checking permissions for userId=2, parkingId=5
+[2025-06-17T16:23:50.298Z] checkReportPermission: Permission granted
+[2025-06-17T16:25:21.981Z] createReport: Missing required data
+[2025-06-17T16:25:21.981Z] createReport: Creating report with data={"parkingId":5,"userId":2,"rating":3,"description":"a"}
+[2025-06-17T16:25:44.246Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-17T16:25:44.250Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-17T16:25:44.256Z] checkReportPermission: Checking permissions for userId=2, parkingId=5
+[2025-06-17T16:25:44.272Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-17T16:25:44.274Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-17T16:25:44.279Z] checkReportPermission: Permission granted
+[2025-06-17T16:25:44.285Z] checkReportPermission: Checking permissions for userId=2, parkingId=5
+[2025-06-17T16:25:44.295Z] checkReportPermission: Permission granted
+[2025-06-17T16:26:10.146Z] createReport: Creating report with data={"parkingId":5,"userId":2,"rating":3,"description":"ד"}
+[2025-06-17T16:26:10.146Z] createReport: Missing required data
+[2025-06-17T16:26:28.251Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-17T16:26:28.255Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-17T16:26:28.260Z] checkReportPermission: Checking permissions for userId=2, parkingId=5
+[2025-06-17T16:26:28.269Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-17T16:26:28.270Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-17T16:26:28.273Z] checkReportPermission: Permission granted
+[2025-06-17T16:26:28.283Z] checkReportPermission: Checking permissions for userId=2, parkingId=5
+[2025-06-17T16:26:28.295Z] checkReportPermission: Permission granted
+[2025-06-17T16:26:36.286Z] createReport: Creating report with data={"parkingId":5,"userId":2,"rating":1,"description":"ז"}
+[2025-06-17T16:26:36.286Z] createReport: Missing required data
+[2025-06-17T16:26:43.966Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-17T16:26:43.973Z] checkReportPermission: Checking permissions for userId=2, parkingId=5
+[2025-06-17T16:26:43.977Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-17T16:26:43.996Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-17T16:26:44.009Z] checkReportPermission: Permission granted
+[2025-06-17T16:26:44.004Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-17T16:26:44.015Z] checkReportPermission: Checking permissions for userId=2, parkingId=5
+[2025-06-17T16:26:44.023Z] checkReportPermission: Permission granted
+[2025-06-17T16:26:48.390Z] createReport: Creating report with data={"parkingId":5,"userId":2,"rating":3,"description":"ב"}
+[2025-06-17T16:26:48.391Z] createReport: Missing required data
+[2025-06-17T16:27:11.029Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-17T16:27:11.032Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-17T16:27:11.036Z] checkReportPermission: Checking permissions for userId=2, parkingId=5
+[2025-06-17T16:27:11.050Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-17T16:27:11.048Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-17T16:27:11.052Z] checkReportPermission: Permission granted
+[2025-06-17T16:27:11.057Z] checkReportPermission: Checking permissions for userId=2, parkingId=5
+[2025-06-17T16:27:11.065Z] checkReportPermission: Permission granted
+[2025-06-17T16:28:47.446Z] createReport: Creating report with data={"parkingId":5,"reportedUserId":4,"reporterId":2,"rating":3,"description":"sssssssssss"}
+[2025-06-17T16:28:47.447Z] checkReportPermission: Checking permissions for userId=2, parkingId=5
+[2025-06-17T16:28:47.457Z] checkReportPermission: Permission granted
+[2025-06-17T16:28:49.443Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-17T16:28:49.446Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-17T16:28:49.450Z] checkReportPermission: Checking permissions for userId=2, parkingId=5
+[2025-06-17T16:28:49.466Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-17T16:28:49.473Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-17T16:28:49.489Z] checkReportPermission: Already reported, cannot report again
+[2025-06-17T16:28:49.497Z] checkReportPermission: Checking permissions for userId=2, parkingId=5
+[2025-06-17T16:28:49.506Z] checkReportPermission: Already reported, cannot report again
+[2025-06-17T16:29:03.151Z] getReservationsByValue: Fetching reservations with value={"renterId":"2","page":"1","limit":"10"}
+[2025-06-17T16:29:03.178Z] getReservationsByValue: Fetching reservations with value={"renterId":"2","page":"1","limit":"10"}
+[2025-06-17T16:29:07.888Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:29:07.892Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:29:07.903Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:29:07.907Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:29:09.685Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-17T16:29:09.688Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-17T16:29:09.696Z] checkReportPermission: Checking permissions for userId=2, parkingId=5
+[2025-06-17T16:29:09.711Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-17T16:29:09.714Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-17T16:29:09.726Z] checkReportPermission: Already reported, cannot report again
+[2025-06-17T16:29:09.732Z] checkReportPermission: Checking permissions for userId=2, parkingId=5
+[2025-06-17T16:29:09.744Z] checkReportPermission: Already reported, cannot report again
+[2025-06-17T16:29:13.688Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:29:13.697Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:29:13.710Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:29:13.738Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:29:33.212Z] login: Attempting login for identifier: admin
+[2025-06-17T16:29:33.269Z] login: Successful login for user id: 1
+[2025-06-17T16:29:35.983Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:29:35.987Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:29:35.998Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:29:36.001Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:29:43.255Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-17T16:29:43.272Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-17T16:29:48.542Z] getUsersByParams: Fetching users with params: {"role":"renter"}
+[2025-06-17T16:29:51.099Z] getParkingsByParams: filters={"page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-17T16:29:51.114Z] getParkingsByParams: filters={"page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-17T16:29:53.471Z] getParkingsByParams: filters={"page":"2"}, pagination={"limit":10,"offset":null}
+[2025-06-17T16:29:55.256Z] getParkingsByParams: filters={"page":"3"}, pagination={"limit":10,"offset":null}
+[2025-06-17T16:30:02.809Z] getMessagesById: Fetching messages for senderId=1
+[2025-06-17T16:30:02.832Z] getMessagesById: Fetching messages for senderId=1
+[2025-06-17T16:30:11.738Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:30:11.745Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:30:11.758Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:30:11.764Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:30:19.177Z] login: Attempting login for identifier: davidc
+[2025-06-17T16:30:19.230Z] login: Successful login for user id: 4
+[2025-06-17T16:30:22.645Z] getParkingsByParams: filters={"ownerId":"4"}, pagination={"limit":null,"offset":null}
+[2025-06-17T16:30:22.655Z] getParkingsByParams: filters={"ownerId":"4"}, pagination={"limit":null,"offset":null}
+[2025-06-17T16:30:24.483Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-17T16:30:24.494Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-17T16:31:06.592Z] createParking: Creating with address=אשכולי 4 ירושלים
+[2025-06-17T16:31:07.346Z] createTimeSlot: Creating TimeSlot with data=[{"type":"fixed","days":["ראשון"],"startTime":"22:00","endTime":"23:00","price":14,"parkingId":21}]
+[2025-06-17T16:33:50.666Z] createParking: Creating with address=אשכולי 4 ירושלים
+[2025-06-17T16:33:51.068Z] createTimeSlot: Creating TimeSlot with data=[{"type":"fixed","days":["רביעי"],"startTime":"19:00","endTime":"23:00","price":111,"parkingId":22}]
+[2025-06-17T16:34:43.490Z] createParking: Creating with address=אשכולי 4 ירושלים
+[2025-06-17T16:34:44.086Z] createTimeSlot: Creating TimeSlot with data=[{"type":"fixed","days":["שני"],"startTime":"19:00","endTime":"22:00","price":34,"parkingId":23}]
+[2025-06-17T16:35:25.639Z] createParking: Creating with address=אשכולי 4 ירושלים
+[2025-06-17T16:35:26.052Z] createTimeSlot: Creating TimeSlot with data=[{"type":"fixed","days":["שני"],"startTime":"19:00","endTime":"22:00","price":44,"parkingId":24}]
+[2025-06-17T16:35:26.090Z] getParkingsByParams: filters={"ownerId":"4"}, pagination={"limit":null,"offset":null}
+[2025-06-17T16:35:26.097Z] getParkingsByParams: filters={"ownerId":"4"}, pagination={"limit":null,"offset":null}
+[2025-06-17T16:35:47.596Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:35:47.604Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:35:47.618Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T16:35:47.625Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T16:35:53.410Z] getParkingsByParams: filters={"ownerId":"4"}, pagination={"limit":null,"offset":null}
+[2025-06-17T16:35:53.422Z] getParkingsByParams: filters={"ownerId":"4"}, pagination={"limit":null,"offset":null}
+[2025-06-17T16:36:09.828Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=10
+[2025-06-17T16:36:09.831Z] getReportsByParkingId: Fetching reports for parkingId=10
+[2025-06-17T16:36:09.846Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=10
+[2025-06-17T16:36:09.850Z] getReportsByParkingId: Fetching reports for parkingId=10
+[2025-06-17T16:36:12.900Z] getParkingsByParams: filters={"ownerId":"4"}, pagination={"limit":null,"offset":null}
+[2025-06-17T16:36:12.911Z] getParkingsByParams: filters={"ownerId":"4"}, pagination={"limit":null,"offset":null}
+[2025-06-17T16:44:19.010Z] deleteParking: Deleting parking with id=8
+[2025-06-17T16:44:38.126Z] getParkingsByParams: filters={"ownerId":"4"}, pagination={"limit":null,"offset":null}
+[2025-06-17T16:44:38.136Z] getParkingsByParams: filters={"ownerId":"4"}, pagination={"limit":null,"offset":null}
+[2025-06-17T16:44:44.554Z] deleteParking: Deleting parking with id=10
+[2025-06-17T16:45:23.033Z] getParkingsByParams: filters={"ownerId":"4"}, pagination={"limit":null,"offset":null}
+[2025-06-17T16:45:23.046Z] getParkingsByParams: filters={"ownerId":"4"}, pagination={"limit":null,"offset":null}
+[2025-06-17T16:45:27.805Z] getParkingsByParams: filters={"ownerId":"4"}, pagination={"limit":null,"offset":null}
+[2025-06-17T16:45:27.822Z] getParkingsByParams: filters={"ownerId":"4"}, pagination={"limit":null,"offset":null}
+[2025-06-17T16:45:59.943Z] getParkingsByParams: filters={"ownerId":"4"}, pagination={"limit":null,"offset":null}
+[2025-06-17T16:46:02.472Z] getParkingsByParams: filters={"ownerId":"4"}, pagination={"limit":null,"offset":null}
+[2025-06-17T16:46:07.764Z] getParkingsByParams: filters={"ownerId":"4"}, pagination={"limit":null,"offset":null}
+[2025-06-17T16:47:22.187Z] getParkingsByParams: filters={"ownerId":"4"}, pagination={"limit":null,"offset":null}
+[2025-06-17T16:47:25.539Z] getParkingsByParams: filters={"ownerId":"4"}, pagination={"limit":null,"offset":null}
+[2025-06-17T16:47:28.010Z] getParkingsByParams: filters={"ownerId":"4"}, pagination={"limit":null,"offset":null}
+[2025-06-17T16:51:26.247Z] getParkingsByParams: filters={"ownerId":"4","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-17T16:51:26.271Z] getParkingsByParams: filters={"ownerId":"4","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-17T16:51:32.245Z] getParkingsByParams: filters={"ownerId":"4","page":"2"}, pagination={"limit":10,"offset":null}
+[2025-06-17T16:51:38.213Z] getParkingsByParams: filters={"ownerId":"4","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-17T16:51:38.227Z] getParkingsByParams: filters={"ownerId":"4","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-17T16:51:39.394Z] getParkingsByParams: filters={"ownerId":"4","page":"2"}, pagination={"limit":10,"offset":null}
+[2025-06-17T16:51:58.130Z] getParkingsByParams: filters={"ownerId":"4","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-17T16:51:58.152Z] getParkingsByParams: filters={"ownerId":"4","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-17T16:52:02.446Z] getParkingsByParams: filters={"ownerId":"4","page":"2"}, pagination={"limit":10,"offset":null}
+[2025-06-17T16:52:11.255Z] getParkingsByParams: filters={"ownerId":"4","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-17T16:52:11.261Z] getParkingsByParams: filters={"ownerId":"4","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-17T16:52:20.716Z] getParkingsByParams: filters={"ownerId":"4","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-17T16:52:26.275Z] getParkingsByParams: filters={"ownerId":"4","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-17T16:52:29.827Z] getParkingsByParams: filters={"ownerId":"4","page":"2"}, pagination={"limit":10,"offset":null}
+[2025-06-17T16:52:33.595Z] getParkingsByParams: filters={"ownerId":"4","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-17T16:52:33.600Z] getParkingsByParams: filters={"ownerId":"4","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-17T16:53:12.832Z] getParkingsByParams: filters={"ownerId":"4","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-17T16:53:12.842Z] getParkingsByParams: filters={"ownerId":"4","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-17T16:53:21.623Z] getParkingsByParams: filters={"ownerId":"4","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-17T16:53:21.628Z] getParkingsByParams: filters={"ownerId":"4","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-17T16:53:23.872Z] getParkingsByParams: filters={"ownerId":"4","page":"2"}, pagination={"limit":10,"offset":null}
+[2025-06-17T16:53:35.290Z] getParkingsByParams: filters={"ownerId":"4","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-17T16:53:35.299Z] getParkingsByParams: filters={"ownerId":"4","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-17T16:54:11.658Z] getParkingsByParams: filters={"ownerId":"4","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-17T16:54:22.632Z] getParkingsByParams: filters={"ownerId":"4","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-17T16:54:22.641Z] getParkingsByParams: filters={"ownerId":"4","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-17T16:54:36.187Z] getParkingsByParams: filters={"ownerId":"4","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-17T16:54:39.759Z] getParkingsByParams: filters={"ownerId":"4","page":"2"}, pagination={"limit":10,"offset":null}
+[2025-06-17T16:55:17.449Z] getReportsByParkingId: Fetching reports for parkingId=22
+[2025-06-17T16:55:17.455Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=22
+[2025-06-17T16:55:17.477Z] getReportsByParkingId: Fetching reports for parkingId=22
+[2025-06-17T16:55:17.480Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=22
+[2025-06-17T17:10:41.121Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T17:10:41.139Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T17:10:41.158Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T17:10:41.163Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T17:10:45.086Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T17:10:45.090Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T17:10:45.096Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T17:10:45.099Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T17:11:12.852Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T17:11:12.858Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T17:11:12.870Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T17:11:12.876Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T17:11:28.345Z] login: Attempting login for identifier: sarahlevi
+[2025-06-17T17:11:28.401Z] login: Successful login for user id: 3
+[2025-06-17T17:11:50.636Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T17:11:50.650Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T17:11:50.670Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T17:11:50.673Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T22:01:57.985Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T22:01:58.051Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-17T22:01:58.074Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
+[2025-06-17T22:01:58.082Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}

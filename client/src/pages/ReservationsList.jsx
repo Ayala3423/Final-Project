@@ -89,17 +89,15 @@ function ReservationsList() {
             <ul className="reservations-list">
                 {reservations.map((res, idx) => (
                     <li key={idx} className="reservation-item">
-                        <div><strong>Parking Address:</strong> {res.parkingAddress}</div>
                         <div><strong>Start Time:</strong> {res.startTime}</div>
                         <div><strong>End Time:</strong> {res.endTime}</div>
                         {user.role === 'owner' && (
                             <div><strong>Renter:</strong> {res.renterName}</div>
                         )}
                         {user.role === 'renter' && (
-                            <div><strong>Owner:</strong> {res.ownerName}</div>
+                            <div><strong>Owner:</strong> {res.ownerId}</div>
                         )}
-                        <div><strong>Status:</strong> {res.status}</div>
-
+                        
                         {user.role === 'renter' && canCancel(res.startTime) && (
                             <button onClick={() => handleCancel(res.id)} className="cancel-button">
                                 Cancel Reservation

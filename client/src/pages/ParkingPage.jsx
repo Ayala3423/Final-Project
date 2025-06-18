@@ -20,6 +20,9 @@ function ParkingPage() {
     const [hoverRating, setHoverRating] = useState(0);
     const [reviewDescription, setReviewDescription] = useState('');
 
+    console.log("reports:", reports);
+
+
     useEffect(() => {
         if (parking?.id) {
             apiService.getByValue('timeSlots', { parkingId: parking.id }, (response) => {
@@ -45,7 +48,8 @@ function ParkingPage() {
 
         const reviewData = {
             parkingId: parking.id,
-            userId: user.id,
+            reportedUserId: parking.ownerId,
+            reporterId: user.id,
             rating: reviewRating,
             description: reviewDescription,
         };
@@ -149,9 +153,11 @@ function ParkingPage() {
                             <div key={idx} className="review-card">
                                 <div className="review-header">
                                     <FaStar className="star-icon" color="#ffc107" />
-                                    <span className="review-rating">{report.rating}</span>
+                                    <span className="review-rating">{report?.rating?.toFixed(2)}</span>
                                 </div>
-                                <p className="review-description">{report.description || 'אין תוכן לביקורת'}</p>
+                                <p className="review-description">
+                                    {report?.description?.trim() ? report.description : 'אין תוכן לביקורת'}
+                                </p>
                             </div>
                         ))}
                     </div>
@@ -209,7 +215,7 @@ function ParkingPage() {
             </button>}
 
             <Footer />
-            
+
             <Outlet />
         </div>
     );

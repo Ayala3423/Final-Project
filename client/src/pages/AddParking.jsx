@@ -2,10 +2,13 @@ import React, { useState, useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import { apiService } from '../services/genericService';
 import '../styles/AddParking.css';
+import { useNavigate } from 'react-router-dom';
 
 const weekdays = ['ראשון', 'שני', 'שלישי', 'רביעי', 'חמישי', 'שישי', 'שבת'];
 
 function AddParkingForm() {
+    const navigate = useNavigate();
+
     const { user } = useContext(AuthContext);
     const [parking, setParking] = useState({
         address: '',
@@ -85,6 +88,25 @@ function AddParkingForm() {
                     price: parseFloat(slot.price), // המרה למספר
                 })), (res) => {
                     console.log("success", res);
+
+                    // איפוס שדות:
+                    setParking({
+                        address: '',
+                        description: '',
+                        isAllowSubReservations: false
+                    });
+                    setAvailability([{
+                        type: 'fixed',
+                        days: [],
+                        startTime: '',
+                        endTime: '',
+                        price: ''
+                    }]);
+                    setImageFile(null);
+
+                    // ניווט לדף החניות שלי
+                    navigate('/owner/my-parkings'); // שנה את הנתיב לפי הנתיב שבאמת מוגדר אצלך
+
                 }, (error) => {
                     console.error("Error adding timeslot:", error)
 
