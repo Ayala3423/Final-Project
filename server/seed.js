@@ -1,4 +1,4 @@
-import { User, Parking, TimeSlot, Reservation, Report } from './models/index.js';
+import { User, Parking, TimeSlot, Reservation, Report, Message } from './models/index.js';
 import { faker } from '@faker-js/faker';
 import { Op } from 'sequelize';
 
@@ -25,6 +25,35 @@ const jerusalemAddresses = [
   { address: "Herzl Blvd 91", lat: 31.773, lon: 35.181 },
   { address: "Ramat Sharet 5", lat: 31.755, lon: 35.186 }
 ];
+
+const createMessages = async () => {
+  const messages = [];
+
+  // נניח ניצור שיחות בין renter ל-owner
+  const conversations = [
+    { senderId: 2, receiverId: 4 }, // John -> David
+    { senderId: 3, receiverId: 5 }, // Sarah -> Miriam
+  ];
+
+  for (const convo of conversations) {
+    const conversationId = faker.string.uuid();
+
+    // ניצור 5 הודעות לכל שיחה
+    for (let i = 0; i < 5; i++) {
+      const isRead = faker.datatype.boolean();
+      messages.push({
+        senderId: i % 2 === 0 ? convo.senderId : convo.receiverId,
+        receiverId: i % 2 === 0 ? convo.receiverId : convo.senderId,
+        content: faker.lorem.sentence(),
+        sentAt: faker.date.recent(10),
+        isRead,
+        conversationId
+      });
+    }
+  }
+
+  await Message.bulkCreate(messages);
+};
 
 const createParkings = async () => {
   const parkings = [];
@@ -135,6 +164,7 @@ const seed = async () => {
     await createParkings();
     await createTimeSlots();
     await createReservationsAndReports();
+    await createMessages();  // ⬅ הוספנו את זה
 
     console.log("✅ Seed completed successfully.");
   } catch (error) {

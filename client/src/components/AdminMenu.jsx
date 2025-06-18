@@ -3,10 +3,9 @@ import { useNavigate } from 'react-router-dom';
 import { HiMenuAlt3 } from 'react-icons/hi';
 import { AuthContext } from '../context/AuthContext';
 
-function AdminMenu() {
+function AdminMenu({ unreadCount }) {
     const [menuOpen, setMenuOpen] = useState(false);
     const navigate = useNavigate();
-    const [parkings, setParkings] = useState([]);
     const { logout } = useContext(AuthContext);
 
     const toggleMenu = () => setMenuOpen(!menuOpen);
@@ -29,7 +28,12 @@ function AdminMenu() {
                     <button onClick={() => handleClick('/admin/renter')}>renters</button>
                     <button onClick={() => handleClick('/admin/parking-management')}>parkings</button>
                     <button onClick={() => handleClick('/admin/orders')}>orders</button>
-                    <button onClick={() => handleClick('/messages')}>Messages</button>
+                    <button onClick={() => handleClick('/messages')}>
+                        Messages
+                        {unreadCount > 0 && (
+                            <span className="notification-badge">{unreadCount}</span>
+                        )}
+                    </button>
                     <button onClick={() => logout()}>יציאה</button>
                 </div>
             )}

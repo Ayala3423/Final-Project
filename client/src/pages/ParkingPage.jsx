@@ -200,7 +200,7 @@ function ParkingPage() {
                 </div>
             )}
 
-            {user.role === "renter" && <button
+            {user?.role === "renter" && <button
                 className="booking-button"
                 onClick={handleReservation}
                 aria-label="יצירת הזמנה"

@@ -1,34 +1,48 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Outlet, useNavigate, useLocation } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext';
 import RenterMenu from './RenterMenu';
 import OwnerMenu from './OwnerMenu';
 import AdminMenu from './AdminMenu';
 import '../styles/RentBro.css';
+import { apiService } from '../services/genericService';
 
 function MainLayout() {
+  const [unreadCount, setUnreadCount] = useState(0);
   const location = useLocation();
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
   console.log("user", user);
 
-  const renderSidebar = () => {
+  useEffect(() => {
     if (user) {
-      switch (user.role) {
-        case 'renter':
-          return <RenterMenu />;
-        case 'owner':
-          return <OwnerMenu />;
-        case 'admin':
-          return <AdminMenu />;
-        default:
-          return null;
-      }
+      apiService.getByValue("messages", { isRead: false }, (res) => {
+        console.log("messages", res);
+        setUnreadCount(res.length);
+
+      }, (error) => {
+        console.log("error", error);
+      })
     }
-    else {
-      return;
+  }, [user]);
+
+
+ const renderSidebar = () => {
+  if (user) {
+    switch (user.role) {
+      case 'renter':
+        return <RenterMenu unreadCount={unreadCount} />;
+      case 'owner':
+        return <OwnerMenu unreadCount={unreadCount} />;
+      case 'admin':
+        return <AdminMenu unreadCount={unreadCount} />;
+      default:
+        return null;
     }
-  };
+  } else {
+    return null;
+  }
+};
 
   return (
     <div className="header">

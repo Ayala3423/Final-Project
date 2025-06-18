@@ -3,11 +3,10 @@ import { useNavigate, Outlet } from 'react-router-dom';
 import '../styles/Dashboard.css';
 import { AuthContext } from '../context/AuthContext';
 
-function OwnerMenu() {
+function OwnerMenu({ unreadCount }) {
     const [menuOpen, setMenuOpen] = useState(false);
     const navigate = useNavigate();
     const { logout } = useContext(AuthContext);
-    const { user } = useContext(AuthContext);
     const toggleMenu = () => setMenuOpen(!menuOpen);
 
     const handleClick = (path) => {
@@ -26,7 +25,12 @@ function OwnerMenu() {
                         <button onClick={() => handleClick('/owner/my-parkings')}>My parkings</button>
                         <button onClick={() => handleClick('/owner/reservations')}>Reservations</button>
                         <button onClick={() => handleClick('/owner/add-parking')}>Add parking</button>
-                        <button onClick={() => handleClick('/messages')}>Messages</button>
+                        <button onClick={() => handleClick('/messages')}>
+                            Messages
+                            {unreadCount > 0 && (
+                                <span className="notification-badge">{unreadCount}</span>
+                            )}
+                        </button>
                         <button onClick={() => logout()}>Logout</button>
                     </div>
                 )}

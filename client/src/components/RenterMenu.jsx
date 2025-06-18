@@ -3,7 +3,7 @@ import { useNavigate, Outlet } from 'react-router-dom';
 import '../styles/Dashboard.css';
 import { AuthContext } from '../context/AuthContext';
 
-function RenterMenu() {    
+function RenterMenu({ unreadCount }) {
     const [menuOpen, setMenuOpen] = useState(false);
     const navigate = useNavigate();
     const { logout } = useContext(AuthContext);
@@ -15,18 +15,23 @@ function RenterMenu() {
     };
 
     return (
-            <nav className="sidebar">
-                <button onClick={toggleMenu}>☰ </button>
-                {menuOpen && (
-                    <div className="dropdown-menu">
-                        <button onClick={() => handleClick('/')}>🏠</button>
-                        <button onClick={() => handleClick('/renter/my-profile')}>My profile</button>
-                        <button onClick={() => handleClick('/renter/reservations')}>Reservations</button>
-                        <button onClick={() => handleClick('/messages')}>Messages</button>
-                        <button onClick={() => logout()}>Logout</button>
-                    </div>
-                )}
-            </nav> 
+        <nav className="sidebar">
+            <button onClick={toggleMenu}>☰ </button>
+            {menuOpen && (
+                <div className="dropdown-menu">
+                    <button onClick={() => handleClick('/')}>🏠</button>
+                    <button onClick={() => handleClick('/renter/my-profile')}>My profile</button>
+                    <button onClick={() => handleClick('/renter/reservations')}>Reservations</button>
+                    <button onClick={() => handleClick('/messages')}>
+                        Messages
+                        {unreadCount > 0 && (
+                            <span className="notification-badge">{unreadCount}</span>
+                        )}
+                    </button>
+                    <button onClick={() => logout()}>Logout</button>
+                </div>
+            )}
+        </nav>
     );
 }
 
