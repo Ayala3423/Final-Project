@@ -42,7 +42,7 @@ const reservationBL = {
     async getReservationsByValue(value) {
         log(`getReservationsByValue: Fetching reservations with value=${JSON.stringify(value)}`);
         if (!value) return [];
-        return await genericService.getByParamsLimit('Reservation', value);
+        return await genericService.getReservationsFullByValue(value);
     }
     
 };

@@ -38,7 +38,7 @@ function ParkingManagement() {
   return (
     <div>
       <h2>Parking Management</h2>
-      <ParkingList parkings={parkings} />
+      <ParkingList parkings={parkings} setParkings={setParkings}/>
       
       {hasMore && (
         <div style={{ textAlign: 'center', marginTop: '1rem' }}>

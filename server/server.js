@@ -4,6 +4,9 @@ const cors = require('cors');
 const path = require('path');
 const http = require('http');
 const { Server } = require('socket.io');
+const { generateToken } = require('./utils/utils');
+const jwt = require('jsonwebtoken');
+require('./scripts/notificationScheduler');
 
 // require('./models/index');??????????????????????
 const cron = require('node-cron');
@@ -29,6 +32,24 @@ app.use("/timeSlots", require("./routes/timeSlotRoutes"));
 app.use("/reservations", require("./routes/reservationRoutes"));
 app.use("/reports", require("./routes/reportRoutes"));
 app.use("/messages", require("./routes/messageRoutes"));
+app.use("/data", require("./routes/dataRoutes"));
+
+app.post('/api/refresh-token', (req, res) => {
+  const { refreshToken } = req.body;
+
+  if (!refreshToken) {
+    return res.status(401).json({ message: 'Refresh token missing' });
+  }
+
+  jwt.verify(refreshToken, process.env.REFRESH_TOKEN_SECRET, (err, decoded) => {
+    if (err) {
+      return res.status(403).json({ message: 'Invalid refresh token' });
+    }
+
+    const accessToken = generateToken({ id: decoded.userId, role: decoded.role });
+    res.json({ accessToken });
+  });
+});
 
 const server = http.createServer(app);
 
@@ -61,7 +82,6 @@ io.on('connection', (socket) => {
 
 app.set('io', io);
 
-// מפעיל את השרת (רק כאן)
 const PORT = process.env.PORT || 3000;
 server.listen(PORT, () => {
   console.log(`🚀 Server is running on port ${PORT}`);

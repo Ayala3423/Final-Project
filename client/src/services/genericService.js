@@ -5,8 +5,14 @@ const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000';
 
 let getToken = () => Cookies.get('token');
 
+let getRefreshToken = () => Cookies.get('refreshToken');
+
 export function setTokenGetter(fn) {
     getToken = fn;
+}
+
+export function setRefreshTokenGetter(fn) {
+    getRefreshToken = fn;
 }
 
 async function request(url, params = {}, method = 'GET', body = null, onSuccess, onError) {
@@ -38,18 +44,48 @@ async function request(url, params = {}, method = 'GET', body = null, onSuccess,
 
         if (onSuccess) onSuccess(data);
         return data;
+
     } catch (error) {
+        // בדיקה אם הטוקן פג תוקף
+        if (error.response?.status === 403 && !params._retry) {
+            try {
+                console.warn('Token expired, trying to refresh...');
+                params._retry = true; // מניעת לולאה אינסופית
+
+                const refreshToken = getRefreshToken();
+
+                // בקשה ל-refresh token
+                const refreshResponse = await axios.post(`${API_URL}/api/refresh-token`, { refreshToken });
+                const newAccessToken = refreshResponse.data.accessToken;
+
+                // שמירה של הטוקן החדש
+                Cookies.set('token', newAccessToken);
+
+                // ניסיון חוזר עם הטוקן החדש
+                return await request(url, params, method, body, onSuccess, onError);
+
+            } catch (refreshError) {
+                console.error('Refresh token failed:', refreshError);
+                // כאן אפשר לבצע לוגאאוט אם את רוצה
+                // logOutFunc();
+            }
+        }
+
         if (error.response?.status === 403) {
+            // כאן אפשר לבצע לוגאאוט אם את רוצה
             // logOutFunc();
         }
+
         console.error("API Error:", error);
         if (onError) onError(error.message || error.toString());
     }
 }
 
-
 export const apiService = {
     getAll: (table, onSuccess, onError) =>
+        request(table, {}, 'GET', null, onSuccess, onError),
+
+    get: (table, onSuccess, onError) =>
         request(table, {}, 'GET', null, onSuccess, onError),
 
     getByValue: (table, params, onSuccess, onError) =>

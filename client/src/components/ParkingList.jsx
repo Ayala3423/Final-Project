@@ -4,7 +4,7 @@ import { AuthContext } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import { apiService } from '../services/genericService';
 
-function ParkingList({ parkings = [], onHover = () => { }, onDelete }) {
+function ParkingList({ parkings = [], setParkings = () => { }, onHover = () => { } }) {
     const navigate = useNavigate();
     const { user } = useContext(AuthContext);
 
@@ -37,7 +37,7 @@ function ParkingList({ parkings = [], onHover = () => { }, onDelete }) {
     const handleDelete = (parkingId) => {
         if (!window.confirm("Are you sure you want to delete this parking spot?")) return;
         apiService.remove('parkings', parkingId, () => {
-            if (onDelete) onDelete(parkingId);
+            setParkings(prev => prev.filter(p => p.id !== parkingId));
         }, (error) => {
             console.error("Failed to delete parking:", error);
             alert("Failed to delete parking.");
@@ -72,14 +72,16 @@ function ParkingList({ parkings = [], onHover = () => { }, onDelete }) {
                         </div>
 
                         {user?.role === 'renter' && (
-                            <button onClick={() => handleOrder(spot)}>order me</button>
+                            <button onClick={() => handleOrder(spot)}>Order Me</button>
                         )}
 
-                        {(user?.role === 'admin' || (user?.role === 'owner' && user.id === spot.ownerId)) && (
+
+                        {user?.role === 'admin' && (
                             <button onClick={() => handleDelete(spot.id)} className="delete-button">
                                 Delete
                             </button>
                         )}
+
                     </li>
                 ))}
             </ul>

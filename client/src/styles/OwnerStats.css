@@ -1,0 +1,23 @@
+.stats-container {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.stat-card {
+    flex: 1;
+    background: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.stat-card h3 {
+    margin-bottom: 10px;
+}
+
+.statText {
+    font-size: 18px;
+    color: #333;
+}

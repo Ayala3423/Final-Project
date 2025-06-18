@@ -50,7 +50,6 @@ function haversineDistance(lat1, lon1, lat2, lon2) {
   return R * c; // מרחק בק"מ
 }
 
-
 function generateToken(payload) {
   console.log('Generating token with payload:', payload);
   if (!process.env.JWT_SECRET) {
@@ -58,8 +57,17 @@ function generateToken(payload) {
   }
 
   return jwt.sign(payload, process.env.JWT_SECRET, {
-    expiresIn: '14d'
+    expiresIn: '10d'
   });
 }
 
-module.exports = { getCoordinatesFromAddress, generateToken, haversineDistance };
+function generateRefreshToken(payload) {
+  console.log('Generating token with payload:', payload);
+  if (!process.env.JWT_SECRET) {
+    throw new Error('JWT_SECRET is not defined in environment variables');
+  }
+
+  return jwt.sign(payload, process.env.REFRESH_TOKEN_SECRET, { expiresIn: '30d' });
+}
+
+module.exports = { getCoordinatesFromAddress, generateToken, generateRefreshToken, haversineDistance };

@@ -11,6 +11,10 @@ function TimeSlots({ timeSlots }) {
                 {timeSlots.map((slot, idx) => (
                     <div key={idx} className="timeslot-card">
                         <div className="time-row">
+                            <span className="label">Price:</span>
+                            <span className="value">{slot.price} ₪</span>
+                        </div>
+                        <div className="time-row">
                             <span className="label">Start:</span>
                             <span className="value">{slot.startTime}</span>
                         </div>

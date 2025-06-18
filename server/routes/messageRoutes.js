@@ -6,6 +6,9 @@ const { ro } = require('@faker-js/faker');
 
 router.use(verifyToken);
 
+router.route('/unRead')
+    .get(messageController.getUnReadMessages);
+
 router.route('/conversation')
     .get(messageController.getMessagesByConversationId)
     .put(messageController.setReadMessages);
@@ -16,7 +19,7 @@ router.route('/:id')
     .delete(messageController.deleteMessage);
 
 router.route('/')
-    .get(messageController.getMessagesBySenderId)
+    .get(messageController.getUserCoversations)
     .post(messageController.createMessage)
     .all(messageController.getAllMessages);
 

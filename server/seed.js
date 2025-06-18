@@ -1,5 +1,4 @@
-import { User, Parking, TimeSlot, Reservation, Report, Passwords } from './models/index.js';
-import { User, Parking, TimeSlot, Reservation, Report, Message } from './models/index.js';
+import { User, Parking, TimeSlot, Reservation, Report, Passwords, Message } from './models/index.js';
 import { faker } from '@faker-js/faker';
 import { Op } from 'sequelize';
 import bcrypt from 'bcrypt';
@@ -183,15 +182,11 @@ const createReservationsAndReports = async () => {
 
 const seed = async () => {
   try {
-    // await createUsers();
-    // await createParkings();
-    // await createTimeSlots();
-    // await createReservationsAndReports();
     await createUsers();
     await createParkings();
     await createTimeSlots();
     await createReservationsAndReports();
-    await createMessages();  // ⬅ הוספנו את זה
+    await createMessages(); 
 
     console.log("✅ Seed completed successfully.");
   } catch (error) {

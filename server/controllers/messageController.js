@@ -15,6 +15,16 @@ const messageController = {
         }
     },
 
+    async getUnReadMessages(req, res) {
+        try {
+            const messages = await messageBL.getUnReadMessages(req.user.id);
+            res.status(200).json(messages);
+        } catch (error) {
+            console.error('Error fetching unread messages:', error);
+            res.status(500).json({ message: 'Internal server error' });
+        }
+    },
+
     async createMessage(req, res) {
         try {
             console.log('Creating message with data:', req.body);
@@ -65,13 +75,13 @@ const messageController = {
         }
     },
 
-    async getMessagesBySenderId(req, res) {
+    async getUserCoversations(req, res) {
         try {
-            const senderId = req.query.senderId;
-            if (!senderId) {
-                return res.status(400).json({ message: 'Sender ID is required' });
+            const userId = req.user.id;
+            if (!userId) {
+                return res.status(400).json({ message: 'userId is required' });
             }
-            const messages = await messageBL.getMessagesById(senderId);
+            const messages = await messageBL.getConversationsById(userId);
             res.status(200).json(messages);
         } catch (error) {
             console.error('Error fetching messages by sender ID:', error);

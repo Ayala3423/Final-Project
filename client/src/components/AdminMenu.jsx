@@ -23,7 +23,7 @@ function AdminMenu({ unreadCount }) {
 
             {menuOpen && (
                 <div className="dropdown-menu">
-                    <button onClick={() => handleClick('/')}>🏠 Home</button>
+                    <button onClick={() => handleClick('/admin')}>🏠 Home</button>
                     <button onClick={() => handleClick('/admin/owner')}>owners</button>
                     <button onClick={() => handleClick('/admin/renter')}>renters</button>
                     <button onClick={() => handleClick('/admin/parking-management')}>parkings</button>

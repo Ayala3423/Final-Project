@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import { apiService } from '../services/genericService';
 import { AuthContext } from '../context/AuthContext';
 import TimeSlots from '../components/TimeSlots';
+import AddTimeSlot from './AddTimeSlot'; // Importing the AddTimeSlot component
 
 function ParkingPage() {
     const navigate = useNavigate();
@@ -19,8 +20,20 @@ function ParkingPage() {
     const [reviewRating, setReviewRating] = useState(0);
     const [hoverRating, setHoverRating] = useState(0);
     const [reviewDescription, setReviewDescription] = useState('');
+    const [newTimeSlots, setNewTimeSlots] = useState([{
+        type: 'fixed',
+        days: [],
+        startTime: '',
+        endTime: '',
+        price: ''
+    }]);
+    const averageRating = reports.length > 0
+        ? reports.reduce((sum, r) => sum + (r.rating || 0), 0) / reports.length
+        : 0;
 
-    console.log("reports:", reports);
+    const [showAddTimeSlotForm, setShowAddTimeSlotForm] = useState(false);
+
+    console.log("parkinggggggggggggg:", parking);
 
 
     useEffect(() => {
@@ -108,6 +121,33 @@ function ParkingPage() {
         });
     };
 
+    const handleAddTimeSlots = () => {
+        apiService.create('timeSlots', newTimeSlots.map(slot => ({
+            ...slot,
+            parkingId: parking.id,
+            price: parseFloat(slot.price),
+        })), (res) => {
+            console.log("TimeSlots added successfully:", res);
+
+            // עדכון הרשימה המוצגת
+            setTimeSlots(prev => [...prev, ...res]);
+
+            // איפוס הטופס
+            setNewTimeSlots([{
+                type: 'fixed',
+                days: [],
+                startTime: '',
+                endTime: '',
+                price: ''
+            }]);
+
+            setShowAddTimeSlotForm(false);
+        }, (error) => {
+            console.error("Error adding timeslot:", error);
+            alert('אירעה שגיאה בעת הוספת זמינות חדשה');
+        });
+    };
+
     return (
         <div className="parking-page">
 
@@ -124,11 +164,12 @@ function ParkingPage() {
                             <FaStar
                                 key={i}
                                 className="star"
-                                color={i < parking.rating ? '#ffc107' : '#e4e5e9'}
+                                color={i < Math.round(averageRating) ? '#ffc107' : '#e4e5e9'}
                             />
                         ))}
-                        <span className="rating-number">{parking.rating}</span>
+                        <span className="rating-number">{averageRating.toFixed(1)}</span>
                     </div>
+
                     <div className="action-buttons">
                         <button className="circle-button" onClick={() => navigate('/messages')}><FaCommentDots /></button>
                         <button className="circle-button"><FaPhone /></button>
@@ -139,11 +180,25 @@ function ParkingPage() {
 
             <div className="parking-info-box">
                 <p><strong>Descreption:</strong> {parking.description || 'אין תיאור זמין'}</p>
-                <p><strong>Price:</strong> ₪{parking.price || '—'}</p>
-                <p><strong>Availible:</strong> {parking.availableSpots ?? '—'}</p>
             </div>
 
             <TimeSlots timeSlots={timeSlots} />
+
+            {user?.id === parking.ownerId && (
+                <div className="add-timeslot-section">
+                    {!showAddTimeSlotForm ? (
+                        <button className="add-timeslot-button" onClick={() => setShowAddTimeSlotForm(true)}>
+                            Add time
+                        </button>
+                    ) : (
+                        <div className="add-timeslot-form">
+                            <AddTimeSlot availability={newTimeSlots} setAvailability={setNewTimeSlots} />
+                            <button onClick={handleAddTimeSlots}>שמור זמינות</button>
+                            <button onClick={() => setShowAddTimeSlotForm(false)}>ביטול</button>
+                        </div>
+                    )}
+                </div>
+            )}
 
             <div className="parking-reviews">
                 <h3>Reports</h3>
@@ -164,9 +219,7 @@ function ParkingPage() {
                 ) : (
                     <p>There are no reports.</p>
                 )}
-
             </div>
-
 
             {canReview && (
                 <div className="review-form-wrapper">

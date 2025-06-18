@@ -19,6 +19,8 @@ router.route('/login')
 // שאר הפעולות דורשות התחברות
 router.use(verifyToken);
 
+
+
 // עדכון משתמש עם אפשרות להעלות תמונה
 router.route('/:id')
     .get(userController.getUserById)

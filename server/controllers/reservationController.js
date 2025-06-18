@@ -63,7 +63,7 @@ const reservationController = {
 
     async getReservationsByValue(req, res) {
         try {
-            const filter = req.query; // Assuming filter criteria are passed as query parameters
+            const filter = req.query;
             const reservations = await reservationBL.getReservationsByValue(filter);
             res.status(200).json(reservations);
         } catch (error) {

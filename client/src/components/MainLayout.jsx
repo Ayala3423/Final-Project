@@ -16,7 +16,7 @@ function MainLayout() {
 
   useEffect(() => {
     if (user) {
-      apiService.getByValue("messages", { isRead: false }, (res) => {
+      apiService.getByValue("messages/unRead", {}, (res) => {
         console.log("messages", res);
         setUnreadCount(res.length);
 

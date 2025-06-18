@@ -21,13 +21,13 @@ const messageBL = {
         return await genericService.getAll('message');
     },
 
-    async getMessagesById(senderId) {
-        if (!senderId) {
+    async getConversationsById(userId) {
+        if (!userId) {
             log('getMessagesById: No senderId provided');
             return [];
         }
-        log(`getMessagesById: Fetching messages for senderId=${senderId}`);
-        return await genericService.getByParams('message', { senderId });
+        log(`getMessagesById: Fetching messages for senderId=${userId}`);
+        return await genericService.getUserConversations( userId );
     },
 
     async deleteMessage(id) {
@@ -64,6 +64,15 @@ const messageBL = {
         }
         log(`setReadMessages: Updating messages ${messageIds} with field ${JSON.stringify(field)}`);
         return await genericService.update('message', messageIds, field);
+    },
+
+    async getUnReadMessages(userId) {
+        if (!userId) {
+            log('getUnReadMessages: No userId provided');
+            return [];
+        }
+        log(`getUnReadMessages: Fetching unread messages for userId=${userId}`);
+        return await genericService.getByParams('message', { receiverId: userId, isRead: false });
     }
 };
 

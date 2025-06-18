@@ -6,6 +6,10 @@
     padding-bottom: 100px;
 }
 
+.gm-ui-hover-effect {
+    display: none !important;
+}
+
 /* Header Image + Title */
 .parking-header {
     display: flex;

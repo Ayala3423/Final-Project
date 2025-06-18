@@ -28,6 +28,8 @@ function ReservationsList() {
             { [userOrder]: user.id, page: pageNum, limit: 10 },
             (data) => {
                 if (data.length < 10) setHasMore(false);
+                console.log("reservations", data);
+
                 setReservations(prev => [...prev, ...data]);
                 setLoading(false);
             },
@@ -88,16 +90,17 @@ function ReservationsList() {
 
             <ul className="reservations-list">
                 {reservations.map((res, idx) => (
-                    <li key={idx} className="reservation-item">
-                        <div><strong>Start Time:</strong> {res.startTime}</div>
-                        <div><strong>End Time:</strong> {res.endTime}</div>
+                    <li key={res.id} className="reservation-item">
+                        <div><strong>Address:</strong> {res.Parking?.address}</div>
+                        <div><strong>Start Time:</strong> {new Date(res.startTime).toLocaleString()}</div>
+                        <div><strong>End Time:</strong> {new Date(res.endTime).toLocaleString()}</div>
+                        <div><strong>Date:</strong> {new Date(res.reservationDate).toLocaleString()}</div>
                         {user.role === 'owner' && (
-                            <div><strong>Renter:</strong> {res.renterName}</div>
+                            <div><strong>Renter:</strong> {res.Renter?.name || 'Unknown'}</div>
                         )}
                         {user.role === 'renter' && (
-                            <div><strong>Owner:</strong> {res.ownerId}</div>
+                            <div><strong>Owner:</strong> {res.Owner?.name || 'Unknown'}</div>
                         )}
-                        
                         {user.role === 'renter' && canCancel(res.startTime) && (
                             <button onClick={() => handleCancel(res.id)} className="cancel-button">
                                 Cancel Reservation

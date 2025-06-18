@@ -51,7 +51,7 @@ function MyParkings() {
   };
 
   return <>
-    <ParkingList parkings={myParkings} />;
+    <ParkingList parkings={myParkings} setParkings={setMyParkings} />;
     {hasMore && (
       <div style={{ textAlign: 'center', marginTop: '1rem' }}>
         <button onClick={handleLoadMore} disabled={loading}>

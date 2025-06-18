@@ -37,6 +37,9 @@ Message.belongsTo(User, { foreignKey: 'receiverId', as: 'Receiver' });
 User.hasOne(Passwords, { foreignKey: 'userId', as: 'Password' });
 Passwords.belongsTo(User, { foreignKey: 'userId', as: 'User' });
 
+Parking.hasMany(Reservation, { foreignKey: 'parkingId' });
+Reservation.belongsTo(Parking, { foreignKey: 'parkingId' });
+
 sequelize.sync({ alter: true })
   .then(() => {
     console.log('✅ DB connected and synced (from index.js)');

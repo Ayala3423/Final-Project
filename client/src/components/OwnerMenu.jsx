@@ -20,7 +20,7 @@ function OwnerMenu({ unreadCount }) {
                 <button onClick={toggleMenu}>☰ menu</button>
                 {menuOpen && (
                     <div className="dropdown-menu">
-                        <button onClick={() => handleClick('/')}>home</button>
+                        <button onClick={() => handleClick('/owner')}>home</button>
                         <button onClick={() => handleClick('/owner/my-profile')}>My profile</button>
                         <button onClick={() => handleClick('/owner/my-parkings')}>My parkings</button>
                         <button onClick={() => handleClick('/owner/reservations')}>Reservations</button>

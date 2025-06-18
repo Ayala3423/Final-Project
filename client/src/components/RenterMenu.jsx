@@ -15,20 +15,8 @@ function RenterMenu({ unreadCount }) {
     };
 
     return (
-            <nav className="sidebar">
-                <button onClick={toggleMenu}>☰ menu</button>
-                {menuOpen && (
-                    <div className="dropdown-menu">
-                        <button onClick={() => handleClick('/')}>🏠</button>
-                        <button onClick={() => handleClick('/renter/my-profile')}>My profile</button>
-                        <button onClick={() => handleClick('/renter/reservations')}>Reservations</button>
-                        <button onClick={() => handleClick('/messages')}>Messages</button>
-                        <button onClick={() => logout()}>Logout</button>
-                    </div>
-                )}
-            </nav> 
-        <nav className="sidebar">
-            <button onClick={toggleMenu}>☰ </button>
+             <nav className="sidebar">
+            <button onClick={toggleMenu}>☰ menu</button>
             {menuOpen && (
                 <div className="dropdown-menu">
                     <button onClick={() => handleClick('/')}>🏠</button>
@@ -44,6 +32,7 @@ function RenterMenu({ unreadCount }) {
                 </div>
             )}
         </nav>
+       
     );
 }
 

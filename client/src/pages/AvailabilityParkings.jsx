@@ -30,6 +30,7 @@ function AvailabilityParkings({ currentLocation }) {
             <div className="parking-list-wrapper">
                 <ParkingList
                     parkings={searchResults}
+                    setParkings={setSearchResults}
                     onHover={setHoveredParkingId}
                 />
             </div>

@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import '../styles/MapView.css';
 
 const API_KEY = 'AIzaSyCcteuv39cQV0oEpPLjoXCJfN_D7f_yNTs';
 
@@ -49,7 +50,6 @@ function MapView({ center, parkings, hoveredParkingId }) {
 
                     markersRef.current[spot.id] = marker;
                 });
-
             }
         };
 

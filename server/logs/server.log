@@ -403,3 +403,1091 @@
 [2025-06-17T22:01:58.051Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
 [2025-06-17T22:01:58.074Z] searchParkings: query={"lat":"32.096256","lng":"34.9372416"}
 [2025-06-17T22:01:58.082Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T12:37:52.199Z] searchParkings: query={"lat":"31.7035404","lng":"35.1132452"}
+[2025-06-18T12:37:52.254Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T12:37:52.330Z] searchParkings: query={"lat":"31.7035404","lng":"35.1132452"}
+[2025-06-18T12:37:52.339Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T12:41:50.051Z] login: Attempting login for identifier: admin
+[2025-06-18T12:41:50.315Z] login: Successful login for user id: 1
+[2025-06-18T12:43:02.341Z] searchParkings: query={"lat":"31.703538","lng":"35.1132453"}
+[2025-06-18T12:43:02.363Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T12:43:02.402Z] searchParkings: query={"lat":"31.703538","lng":"35.1132453"}
+[2025-06-18T12:43:02.409Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T12:43:03.703Z] getUsersByParams: Fetching users with params: {"role":"renter"}
+[2025-06-18T12:43:03.718Z] getUsersByParams: Fetching users with params: {"role":"renter"}
+[2025-06-18T12:43:05.973Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-18T12:53:19.701Z] searchParkings: query={"lat":"31.7035431","lng":"35.1132364"}
+[2025-06-18T12:53:19.731Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T12:53:19.777Z] searchParkings: query={"lat":"31.7035431","lng":"35.1132364"}
+[2025-06-18T12:53:19.782Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T12:53:54.675Z] deleteParking: Deleting parking with id=2
+[2025-06-18T13:05:20.509Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T13:05:20.541Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T13:05:20.689Z] searchParkings: query={"lat":"31.7035409","lng":"35.1132432"}
+[2025-06-18T13:05:20.703Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T13:05:20.750Z] searchParkings: query={"lat":"31.7035409","lng":"35.1132432"}
+[2025-06-18T13:05:20.756Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T13:05:27.762Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T13:05:27.775Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T13:05:27.823Z] searchParkings: query={"lat":"31.7035409","lng":"35.1132432"}
+[2025-06-18T13:05:27.830Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T13:05:27.847Z] searchParkings: query={"lat":"31.7035409","lng":"35.1132432"}
+[2025-06-18T13:05:27.853Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T13:06:23.352Z] searchParkings: query={"lat":"31.7035413","lng":"35.1132432"}
+[2025-06-18T13:06:23.369Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T13:06:23.391Z] searchParkings: query={"lat":"31.7035413","lng":"35.1132432"}
+[2025-06-18T13:06:23.398Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T13:06:24.920Z] login: Attempting login for identifier: davidc
+[2025-06-18T13:06:25.150Z] login: Successful login for user id: 4
+[2025-06-18T13:06:25.239Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T13:06:30.874Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T13:06:30.891Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T13:06:30.920Z] getMessagesByConversationId: Fetching messages for conversationId=57069716-a322-47cc-a5e2-b2c6c82aba4b
+[2025-06-18T13:06:30.951Z] setReadMessages: Updating messages 1,3,5 with field {"isRead":true}
+[2025-06-18T13:07:13.693Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T13:07:13.714Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T13:07:52.036Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"2","limit":"10"}
+[2025-06-18T13:11:22.361Z] getUnReadMessages: Fetching unread messages for userId=2
+[2025-06-18T13:11:22.419Z] getUnReadMessages: Fetching unread messages for userId=2
+[2025-06-18T13:11:22.470Z] searchParkings: query={"lat":"32.0853","lng":"34.7818"}
+[2025-06-18T13:11:22.486Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T13:11:22.571Z] searchParkings: query={"lat":"32.0853","lng":"34.7818"}
+[2025-06-18T13:11:22.579Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T13:11:27.118Z] getMessagesById: Fetching messages for senderId=2
+[2025-06-18T13:11:27.144Z] getMessagesById: Fetching messages for senderId=2
+[2025-06-18T13:11:27.163Z] getMessagesByConversationId: Fetching messages for conversationId=57069716-a322-47cc-a5e2-b2c6c82aba4b
+[2025-06-18T13:11:27.193Z] setReadMessages: Updating messages 2 with field {"isRead":true}
+[2025-06-18T13:11:39.400Z] getUsersByParams: Fetching users with params: {"username":"4"}
+[2025-06-18T13:11:47.040Z] getUsersByParams: Fetching users with params: {"username":"c"}
+[2025-06-18T13:11:48.872Z] getUsersByParams: Fetching users with params: {"username":"c"}
+[2025-06-18T13:12:00.266Z] getUsersByParams: Fetching users with params: {"username":"davidc"}
+[2025-06-18T13:12:02.655Z] getUsersByParams: Fetching users with params: {"username":"davidc"}
+[2025-06-18T13:12:19.513Z] searchParkings: query={"lat":"31.70354","lng":"35.1132449"}
+[2025-06-18T13:12:19.530Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T13:12:19.556Z] searchParkings: query={"lat":"31.70354","lng":"35.1132449"}
+[2025-06-18T13:12:19.564Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T13:12:31.850Z] login: Attempting login for identifier: davidc
+[2025-06-18T13:12:32.086Z] login: Successful login for user id: 4
+[2025-06-18T13:12:32.172Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T13:12:34.559Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T13:12:34.581Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T13:12:34.603Z] getMessagesByConversationId: Fetching messages for conversationId=57069716-a322-47cc-a5e2-b2c6c82aba4b
+[2025-06-18T13:13:03.552Z] searchParkings: query={"lat":"32.0853","lng":"34.7818"}
+[2025-06-18T13:13:03.573Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T13:13:03.591Z] searchParkings: query={"lat":"32.0853","lng":"34.7818"}
+[2025-06-18T13:13:03.597Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T13:13:07.626Z] login: Attempting login for identifier: johnd
+[2025-06-18T13:13:07.840Z] login: Successful login for user id: 2
+[2025-06-18T13:13:07.874Z] getUnReadMessages: Fetching unread messages for userId=2
+[2025-06-18T13:13:13.182Z] getMessagesById: Fetching messages for senderId=2
+[2025-06-18T13:13:13.201Z] getMessagesById: Fetching messages for senderId=2
+[2025-06-18T13:13:13.224Z] getMessagesByConversationId: Fetching messages for conversationId=57069716-a322-47cc-a5e2-b2c6c82aba4b
+[2025-06-18T13:13:24.759Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T13:13:24.787Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T13:13:24.809Z] getMessagesByConversationId: Fetching messages for conversationId=57069716-a322-47cc-a5e2-b2c6c82aba4b
+[2025-06-18T13:13:59.418Z] getUsersByParams: Fetching users with params: {"username":"johnd"}
+[2025-06-18T13:14:08.217Z] getUsersByParams: Fetching users with params: {"username":"miriama"}
+[2025-06-18T13:14:08.253Z] getMessagesByConversationId: Fetching messages for conversationId=e3872afe-ca70-459d-a3fc-c2c60e314fa4
+[2025-06-18T13:14:10.599Z] getMessagesByConversationId: Fetching messages for conversationId=57069716-a322-47cc-a5e2-b2c6c82aba4b
+[2025-06-18T13:14:11.438Z] getMessagesByConversationId: Fetching messages for conversationId=e3872afe-ca70-459d-a3fc-c2c60e314fa4
+[2025-06-18T13:14:21.571Z] searchParkings: query={"lat":"32.0853","lng":"34.7818"}
+[2025-06-18T13:14:21.581Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T13:14:21.606Z] searchParkings: query={"lat":"32.0853","lng":"34.7818"}
+[2025-06-18T13:14:21.615Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T13:14:25.168Z] login: Attempting login for identifier: davidc
+[2025-06-18T13:14:25.383Z] login: Successful login for user id: 4
+[2025-06-18T13:14:25.429Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T13:14:37.149Z] searchParkings: query={"lat":"32.0853","lng":"34.7818"}
+[2025-06-18T13:14:37.164Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T13:14:37.184Z] searchParkings: query={"lat":"32.0853","lng":"34.7818"}
+[2025-06-18T13:14:37.190Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T13:14:40.592Z] login: Attempting login for identifier: miriama
+[2025-06-18T13:14:40.731Z] login: Successful login for user id: 5
+[2025-06-18T13:14:40.760Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T13:14:43.355Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-18T13:14:43.367Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-18T13:14:43.377Z] getMessagesByConversationId: Fetching messages for conversationId=479eb57b-bf9d-4e3b-9bdf-08ddd43c4f9b
+[2025-06-18T13:14:43.395Z] setReadMessages: Updating messages 8 with field {"isRead":true}
+[2025-06-18T13:14:50.050Z] getUsersByParams: Fetching users with params: {"username":"davidc"}
+[2025-06-18T13:14:50.074Z] getMessagesByConversationId: Fetching messages for conversationId=c9741eff-4a19-43f6-8f71-9d01a2eb277d
+[2025-06-18T13:14:56.395Z] createMessage: Creating message with data={"conversationId":"e3872afe-ca70-459d-a3fc-c2c60e314fa4","senderId":4,"receiverId":5,"content":"feeg","sentAt":"2025-06-18T13:14:56.384Z"}
+[2025-06-18T13:14:59.206Z] getMessagesByConversationId: Fetching messages for conversationId=479eb57b-bf9d-4e3b-9bdf-08ddd43c4f9b
+[2025-06-18T13:14:59.752Z] getMessagesByConversationId: Fetching messages for conversationId=c9741eff-4a19-43f6-8f71-9d01a2eb277d
+[2025-06-18T13:15:02.000Z] createMessage: Creating message with data={"conversationId":"c9741eff-4a19-43f6-8f71-9d01a2eb277d","senderId":5,"receiverId":4,"content":"fwef","sentAt":"2025-06-18T13:15:01.987Z"}
+[2025-06-18T13:15:06.420Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-18T13:15:06.425Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T13:15:06.440Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-18T13:15:06.445Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T13:15:06.459Z] getMessagesByConversationId: Fetching messages for conversationId=479eb57b-bf9d-4e3b-9bdf-08ddd43c4f9b
+[2025-06-18T13:15:07.954Z] getMessagesByConversationId: Fetching messages for conversationId=c9741eff-4a19-43f6-8f71-9d01a2eb277d
+[2025-06-18T13:16:38.081Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-18T13:16:38.091Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T13:16:38.117Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-18T13:16:38.123Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T13:16:38.138Z] getMessagesByConversationId: Fetching messages for conversationId=479eb57b-bf9d-4e3b-9bdf-08ddd43c4f9b
+[2025-06-18T13:18:13.711Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T13:18:13.722Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T13:18:13.750Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T13:18:13.759Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T13:18:13.779Z] getMessagesByConversationId: Fetching messages for conversationId=57069716-a322-47cc-a5e2-b2c6c82aba4b
+[2025-06-18T13:18:18.423Z] createMessage: Creating message with data={"conversationId":"57069716-a322-47cc-a5e2-b2c6c82aba4b","senderId":4,"receiverId":2,"content":"waf","sentAt":"2025-06-18T13:18:18.410Z"}
+[2025-06-18T13:18:20.911Z] getMessagesByConversationId: Fetching messages for conversationId=e3872afe-ca70-459d-a3fc-c2c60e314fa4
+[2025-06-18T13:18:22.659Z] createMessage: Creating message with data={"conversationId":"e3872afe-ca70-459d-a3fc-c2c60e314fa4","senderId":4,"receiverId":5,"content":"brd","sentAt":"2025-06-18T13:18:22.651Z"}
+[2025-06-18T13:18:25.646Z] getMessagesByConversationId: Fetching messages for conversationId=c9741eff-4a19-43f6-8f71-9d01a2eb277d
+[2025-06-18T13:18:27.264Z] createMessage: Creating message with data={"conversationId":"c9741eff-4a19-43f6-8f71-9d01a2eb277d","senderId":5,"receiverId":4,"content":"bfd","sentAt":"2025-06-18T13:18:27.255Z"}
+[2025-06-18T13:18:31.632Z] getMessagesByConversationId: Fetching messages for conversationId=c9741eff-4a19-43f6-8f71-9d01a2eb277d
+[2025-06-18T13:18:31.657Z] setReadMessages: Updating messages 12,15 with field {"isRead":true}
+[2025-06-18T13:18:35.191Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-18T13:18:35.196Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T13:18:35.223Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-18T13:18:35.231Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T13:18:35.253Z] getMessagesByConversationId: Fetching messages for conversationId=479eb57b-bf9d-4e3b-9bdf-08ddd43c4f9b
+[2025-06-18T13:18:36.710Z] getMessagesByConversationId: Fetching messages for conversationId=c9741eff-4a19-43f6-8f71-9d01a2eb277d
+[2025-06-18T13:18:37.202Z] getMessagesByConversationId: Fetching messages for conversationId=479eb57b-bf9d-4e3b-9bdf-08ddd43c4f9b
+[2025-06-18T13:18:46.072Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-18T13:18:46.079Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T13:18:46.106Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T13:18:46.100Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-18T13:18:46.127Z] getMessagesByConversationId: Fetching messages for conversationId=479eb57b-bf9d-4e3b-9bdf-08ddd43c4f9b
+[2025-06-18T13:18:46.999Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-18T13:18:47.006Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T13:18:47.027Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-18T13:18:47.033Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T13:18:47.050Z] getMessagesByConversationId: Fetching messages for conversationId=479eb57b-bf9d-4e3b-9bdf-08ddd43c4f9b
+[2025-06-18T13:19:05.000Z] getMessagesByConversationId: Fetching messages for conversationId=57069716-a322-47cc-a5e2-b2c6c82aba4b
+[2025-06-18T13:19:05.464Z] getMessagesByConversationId: Fetching messages for conversationId=e3872afe-ca70-459d-a3fc-c2c60e314fa4
+[2025-06-18T13:19:06.254Z] getMessagesByConversationId: Fetching messages for conversationId=57069716-a322-47cc-a5e2-b2c6c82aba4b
+[2025-06-18T13:19:06.592Z] getMessagesByConversationId: Fetching messages for conversationId=c9741eff-4a19-43f6-8f71-9d01a2eb277d
+[2025-06-18T13:19:09.523Z] createMessage: Creating message with data={"conversationId":"c9741eff-4a19-43f6-8f71-9d01a2eb277d","senderId":4,"receiverId":4,"content":"bdb","sentAt":"2025-06-18T13:19:09.514Z"}
+[2025-06-18T13:19:12.590Z] getMessagesByConversationId: Fetching messages for conversationId=c9741eff-4a19-43f6-8f71-9d01a2eb277d
+[2025-06-18T13:19:25.391Z] getMessagesByConversationId: Fetching messages for conversationId=e3872afe-ca70-459d-a3fc-c2c60e314fa4
+[2025-06-18T13:19:26.659Z] getMessagesByConversationId: Fetching messages for conversationId=c9741eff-4a19-43f6-8f71-9d01a2eb277d
+[2025-06-18T13:19:26.691Z] setReadMessages: Updating messages 16 with field {"isRead":true}
+[2025-06-18T13:19:29.537Z] getMessagesByConversationId: Fetching messages for conversationId=e3872afe-ca70-459d-a3fc-c2c60e314fa4
+[2025-06-18T13:19:30.186Z] getMessagesByConversationId: Fetching messages for conversationId=c9741eff-4a19-43f6-8f71-9d01a2eb277d
+[2025-06-18T13:19:39.486Z] getMessagesByConversationId: Fetching messages for conversationId=e3872afe-ca70-459d-a3fc-c2c60e314fa4
+[2025-06-18T13:19:40.979Z] getMessagesByConversationId: Fetching messages for conversationId=c9741eff-4a19-43f6-8f71-9d01a2eb277d
+[2025-06-18T13:19:45.572Z] getMessagesByConversationId: Fetching messages for conversationId=e3872afe-ca70-459d-a3fc-c2c60e314fa4
+[2025-06-18T13:19:48.397Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T13:19:48.409Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T13:19:48.430Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T13:19:48.442Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T13:19:48.468Z] getMessagesByConversationId: Fetching messages for conversationId=57069716-a322-47cc-a5e2-b2c6c82aba4b
+[2025-06-18T13:19:50.848Z] getMessagesByConversationId: Fetching messages for conversationId=e3872afe-ca70-459d-a3fc-c2c60e314fa4
+[2025-06-18T13:19:51.753Z] getMessagesByConversationId: Fetching messages for conversationId=c9741eff-4a19-43f6-8f71-9d01a2eb277d
+[2025-06-18T13:19:53.389Z] getMessagesByConversationId: Fetching messages for conversationId=e3872afe-ca70-459d-a3fc-c2c60e314fa4
+[2025-06-18T13:19:55.068Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-18T13:19:55.076Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T13:19:55.095Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-18T13:19:55.102Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T13:19:55.123Z] getMessagesByConversationId: Fetching messages for conversationId=479eb57b-bf9d-4e3b-9bdf-08ddd43c4f9b
+[2025-06-18T13:19:56.036Z] getMessagesByConversationId: Fetching messages for conversationId=c9741eff-4a19-43f6-8f71-9d01a2eb277d
+[2025-06-18T13:19:56.582Z] getMessagesByConversationId: Fetching messages for conversationId=479eb57b-bf9d-4e3b-9bdf-08ddd43c4f9b
+[2025-06-18T13:20:48.890Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-18T13:20:48.902Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T13:20:48.934Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-18T13:20:48.941Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T13:20:48.963Z] getMessagesByConversationId: Fetching messages for conversationId=479eb57b-bf9d-4e3b-9bdf-08ddd43c4f9b
+[2025-06-18T13:20:52.002Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T13:20:52.019Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T13:20:52.026Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T13:20:52.046Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T13:20:52.088Z] getMessagesByConversationId: Fetching messages for conversationId=57069716-a322-47cc-a5e2-b2c6c82aba4b
+[2025-06-18T13:20:53.669Z] getMessagesByConversationId: Fetching messages for conversationId=e3872afe-ca70-459d-a3fc-c2c60e314fa4
+[2025-06-18T13:20:54.086Z] getMessagesByConversationId: Fetching messages for conversationId=c9741eff-4a19-43f6-8f71-9d01a2eb277d
+[2025-06-18T13:23:01.176Z] getMessagesByConversationId: Fetching messages for conversationId=c9741eff-4a19-43f6-8f71-9d01a2eb277d
+[2025-06-18T13:23:01.521Z] getMessagesByConversationId: Fetching messages for conversationId=479eb57b-bf9d-4e3b-9bdf-08ddd43c4f9b
+[2025-06-18T13:23:04.370Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-18T13:23:04.379Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T13:23:04.382Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-18T13:23:04.405Z] getMessagesByConversationId: Fetching messages for conversationId=479eb57b-bf9d-4e3b-9bdf-08ddd43c4f9b
+[2025-06-18T13:23:04.409Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T13:23:06.947Z] getMessagesByConversationId: Fetching messages for conversationId=c9741eff-4a19-43f6-8f71-9d01a2eb277d
+[2025-06-18T13:23:17.236Z] createMessage: Creating message with data={"conversationId":"c9741eff-4a19-43f6-8f71-9d01a2eb277d","senderId":5,"receiverId":4,"content":"הדשה","sentAt":"2025-06-18T13:23:17.228Z"}
+[2025-06-18T13:23:28.155Z] getParkingsByParams: filters={"ownerId":"4","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T13:23:28.168Z] getParkingsByParams: filters={"ownerId":"4","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T13:23:32.154Z] deleteParking: Deleting parking with id=2
+[2025-06-18T13:27:46.737Z] deleteParking: Deleting parking with id=2
+[2025-06-18T13:27:48.706Z] getParkingsByParams: filters={"ownerId":"4","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T13:27:48.716Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T13:27:48.745Z] getParkingsByParams: filters={"ownerId":"4","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T13:27:48.751Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T13:27:50.482Z] deleteParking: Deleting parking with id=3
+[2025-06-18T13:27:51.955Z] getParkingsByParams: filters={"ownerId":"4","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T13:27:51.970Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T13:27:51.983Z] getParkingsByParams: filters={"ownerId":"4","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T13:27:51.987Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T13:27:58.714Z] deleteParking: Deleting parking with id=4
+[2025-06-18T13:28:00.136Z] getParkingsByParams: filters={"ownerId":"4","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T13:28:00.146Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T13:28:00.155Z] getParkingsByParams: filters={"ownerId":"4","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T13:28:00.161Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T13:28:58.795Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T13:28:58.819Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T13:29:42.736Z] searchParkings: query={"lat":"31.7035565","lng":"35.1134059"}
+[2025-06-18T13:29:42.750Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T13:29:42.776Z] searchParkings: query={"lat":"31.7035565","lng":"35.1134059"}
+[2025-06-18T13:29:42.780Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T13:29:46.812Z] login: Attempting login for identifier: johnd
+[2025-06-18T13:29:46.884Z] login: Successful login for user id: 2
+[2025-06-18T13:29:46.917Z] getUnReadMessages: Fetching unread messages for userId=2
+[2025-06-18T13:29:49.699Z] getReservationsByValue: Fetching reservations with value={"renterId":"2","page":"1","limit":"10"}
+[2025-06-18T13:29:49.708Z] getReservationsByValue: Fetching reservations with value={"renterId":"2","page":"1","limit":"10"}
+[2025-06-18T13:32:14.090Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T13:32:14.111Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T13:32:16.536Z] deleteParking: Deleting parking with id=12
+[2025-06-18T13:32:19.173Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T13:32:19.176Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T13:32:19.186Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T13:32:19.190Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T13:32:21.208Z] deleteParking: Deleting parking with id=13
+[2025-06-18T13:32:56.232Z] deleteParking: Deleting parking with id=15
+[2025-06-18T13:32:58.904Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T13:32:58.909Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T13:32:58.924Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T13:32:58.929Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T13:33:00.792Z] deleteParking: Deleting parking with id=14
+[2025-06-18T13:41:43.555Z] getReservationsByValue: Fetching reservations with value={"renterId":"2","page":"1","limit":"10"}
+[2025-06-18T13:41:43.569Z] getReservationsByValue: Fetching reservations with value={"renterId":"2","page":"1","limit":"10"}
+[2025-06-18T13:43:14.942Z] createTimeSlot: Creating TimeSlot with data={"parkingId":16,"startTime":"5:00","endTime":"4:00"}
+[2025-06-18T13:43:22.012Z] createTimeSlot: Creating TimeSlot with data={"parkingId":16,"startTime":"22:00","endTime":"23:00\\"}
+[2025-06-18T13:45:54.436Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T13:45:54.446Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T13:45:54.473Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T13:45:54.466Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T13:46:36.264Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T13:46:36.267Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T13:46:36.279Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T13:46:36.283Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T13:47:28.156Z] searchParkings: query={"lat":"32.0853","lng":"34.7818"}
+[2025-06-18T13:47:28.169Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T13:47:28.184Z] searchParkings: query={"lat":"32.0853","lng":"34.7818"}
+[2025-06-18T13:47:28.189Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T13:47:29.942Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T13:47:29.953Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T13:53:11.919Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=18
+[2025-06-18T13:53:11.922Z] getReportsByParkingId: Fetching reports for parkingId=18
+[2025-06-18T13:53:11.944Z] getReportsByParkingId: Fetching reports for parkingId=18
+[2025-06-18T13:53:11.940Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=18
+[2025-06-18T13:53:14.541Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T13:53:14.548Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T13:55:33.921Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=20
+[2025-06-18T13:55:33.925Z] getReportsByParkingId: Fetching reports for parkingId=20
+[2025-06-18T13:55:33.938Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=20
+[2025-06-18T13:55:33.941Z] getReportsByParkingId: Fetching reports for parkingId=20
+[2025-06-18T13:55:36.189Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T13:55:36.196Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T13:57:15.012Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T13:57:15.024Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T13:59:09.267Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T13:59:09.277Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T13:59:09.287Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T13:59:09.292Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T13:59:11.268Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T13:59:11.273Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T13:59:11.281Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T13:59:11.285Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T13:59:43.651Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T13:59:43.661Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T13:59:43.673Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T13:59:43.669Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T13:59:57.482Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T13:59:57.486Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T13:59:57.504Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T13:59:57.534Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T14:01:16.997Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T14:01:17.002Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T14:01:17.017Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T14:01:17.020Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T14:02:09.270Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T14:02:09.278Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T14:02:09.286Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T14:02:09.290Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T14:02:16.485Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T14:02:16.489Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T14:02:16.500Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T14:02:16.496Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T14:03:56.891Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T14:03:56.896Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T14:03:56.914Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T14:03:56.911Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T14:05:21.765Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T14:05:21.769Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T14:05:21.782Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T14:05:21.786Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T14:06:21.208Z] searchParkings: query={"lat":"32.0853","lng":"34.7818"}
+[2025-06-18T14:06:21.218Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T14:06:21.229Z] searchParkings: query={"lat":"32.0853","lng":"34.7818"}
+[2025-06-18T14:06:21.232Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T14:06:23.951Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=17
+[2025-06-18T14:06:23.957Z] getReportsByParkingId: Fetching reports for parkingId=17
+[2025-06-18T14:06:23.961Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=17
+[2025-06-18T14:06:23.969Z] getReportsByParkingId: Fetching reports for parkingId=17
+[2025-06-18T14:07:13.799Z] createParking: Creating with address=אשכולי 4 ירושלים
+[2025-06-18T14:07:15.364Z] createParking: Creating with address=אשכולי 4 ירושלים
+[2025-06-18T14:07:15.560Z] createTimeSlot: Creating TimeSlot with data=[{"type":"fixed","days":["ראשון"],"startTime":"22:00","endTime":"23:00","price":100,"parkingId":21}]
+[2025-06-18T14:07:15.616Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T14:07:15.625Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T14:07:16.173Z] createTimeSlot: Creating TimeSlot with data=[{"type":"fixed","days":["ראשון"],"startTime":"22:00","endTime":"23:00","price":100,"parkingId":22}]
+[2025-06-18T14:10:45.970Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=20
+[2025-06-18T14:10:45.973Z] getReportsByParkingId: Fetching reports for parkingId=20
+[2025-06-18T14:10:45.992Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=20
+[2025-06-18T14:10:45.997Z] getReportsByParkingId: Fetching reports for parkingId=20
+[2025-06-18T14:10:58.272Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=20
+[2025-06-18T14:10:58.276Z] getReportsByParkingId: Fetching reports for parkingId=20
+[2025-06-18T14:10:58.281Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T14:10:58.292Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=20
+[2025-06-18T14:10:58.294Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T14:10:58.296Z] getReportsByParkingId: Fetching reports for parkingId=20
+[2025-06-18T14:11:20.666Z] createTimeSlot: Creating TimeSlot with data=[{"type":"fixed","days":["שלישי"],"startTime":"22:00","endTime":"23:00","price":4,"parkingId":20}]
+[2025-06-18T14:11:57.164Z] getReservationsByValue: Fetching reservations with value={"ownerId":"5","page":"1","limit":"10"}
+[2025-06-18T14:11:57.177Z] getReservationsByValue: Fetching reservations with value={"ownerId":"5","page":"1","limit":"10"}
+[2025-06-18T14:11:58.694Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T14:11:58.700Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T14:12:00.149Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=21
+[2025-06-18T14:12:00.153Z] getReportsByParkingId: Fetching reports for parkingId=21
+[2025-06-18T14:12:00.164Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=21
+[2025-06-18T14:12:00.167Z] getReportsByParkingId: Fetching reports for parkingId=21
+[2025-06-18T14:19:21.591Z] searchParkings: query={"lat":"31.7035537","lng":"35.1134028"}
+[2025-06-18T14:19:21.603Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T14:19:21.612Z] searchParkings: query={"lat":"31.7035537","lng":"35.1134028"}
+[2025-06-18T14:19:21.614Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T14:19:24.906Z] getMessagesById: Fetching messages for senderId=2
+[2025-06-18T14:19:24.916Z] getMessagesById: Fetching messages for senderId=2
+[2025-06-18T14:19:24.936Z] getMessagesByConversationId: Fetching messages for conversationId=57069716-a322-47cc-a5e2-b2c6c82aba4b
+[2025-06-18T14:19:24.952Z] setReadMessages: Updating messages 13 with field {"isRead":true}
+[2025-06-18T14:19:37.275Z] searchParkings: query={"lat":"31.7035518","lng":"35.1134007"}
+[2025-06-18T14:19:37.287Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T14:19:37.298Z] searchParkings: query={"lat":"31.7035518","lng":"35.1134007"}
+[2025-06-18T14:19:37.302Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T14:22:39.495Z] getUnReadMessages: Fetching unread messages for userId=2
+[2025-06-18T14:22:39.514Z] getUnReadMessages: Fetching unread messages for userId=2
+[2025-06-18T14:22:40.535Z] searchParkings: query={"lat":"31.7035542","lng":"35.1133995"}
+[2025-06-18T14:22:40.539Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T14:22:40.550Z] searchParkings: query={"lat":"31.7035542","lng":"35.1133995"}
+[2025-06-18T14:22:40.562Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T14:23:00.725Z] getUnReadMessages: Fetching unread messages for userId=2
+[2025-06-18T14:23:00.734Z] getUnReadMessages: Fetching unread messages for userId=2
+[2025-06-18T14:23:00.814Z] searchParkings: query={"lat":"31.7035542","lng":"35.1133995"}
+[2025-06-18T14:23:00.818Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T14:23:00.829Z] searchParkings: query={"lat":"31.7035542","lng":"35.1133995"}
+[2025-06-18T14:23:00.834Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T14:24:09.606Z] getUnReadMessages: Fetching unread messages for userId=2
+[2025-06-18T14:24:09.618Z] getUnReadMessages: Fetching unread messages for userId=2
+[2025-06-18T14:24:10.037Z] searchParkings: query={"lat":"31.7035522","lng":"35.1133995"}
+[2025-06-18T14:24:10.040Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T14:24:10.048Z] searchParkings: query={"lat":"31.7035522","lng":"35.1133995"}
+[2025-06-18T14:24:10.053Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T14:44:27.285Z] getUnReadMessages: Fetching unread messages for userId=2
+[2025-06-18T14:44:27.298Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=21
+[2025-06-18T14:44:27.305Z] getReportsByParkingId: Fetching reports for parkingId=21
+[2025-06-18T14:44:27.312Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T14:44:27.335Z] getUnReadMessages: Fetching unread messages for userId=2
+[2025-06-18T14:44:27.339Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=21
+[2025-06-18T14:44:27.342Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T14:44:27.337Z] getReportsByParkingId: Fetching reports for parkingId=21
+[2025-06-18T14:44:58.246Z] searchParkings: query={"lat":"31.7035512","lng":"35.1134066"}
+[2025-06-18T14:44:58.263Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T14:44:58.289Z] searchParkings: query={"lat":"31.7035512","lng":"35.1134066"}
+[2025-06-18T14:44:58.294Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T14:45:29.681Z] searchParkings: query={"lat":"31.7035516","lng":"35.1134045"}
+[2025-06-18T14:45:29.788Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T14:45:29.814Z] searchParkings: query={"lat":"31.7035516","lng":"35.1134045"}
+[2025-06-18T14:45:29.822Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T14:45:39.444Z] login: Attempting login for identifier: johnd
+[2025-06-18T14:45:39.511Z] login: Successful login for user id: 2
+[2025-06-18T14:45:49.403Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=21
+[2025-06-18T14:45:49.409Z] getReportsByParkingId: Fetching reports for parkingId=21
+[2025-06-18T14:45:49.421Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T14:45:49.433Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=21
+[2025-06-18T14:45:49.442Z] getReportsByParkingId: Fetching reports for parkingId=21
+[2025-06-18T14:45:49.454Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T14:45:53.754Z] searchParkings: query={"lat":"31.7035521","lng":"35.1133961"}
+[2025-06-18T14:45:53.759Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T14:45:53.769Z] searchParkings: query={"lat":"31.7035521","lng":"35.1133961"}
+[2025-06-18T14:45:53.773Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T14:45:59.023Z] login: Attempting login for identifier: admin
+[2025-06-18T14:45:59.091Z] login: Successful login for user id: 1
+[2025-06-18T14:46:50.117Z] login: Attempting login for identifier: admin
+[2025-06-18T14:46:50.516Z] login: Successful login for user id: 1
+[2025-06-18T14:47:00.892Z] searchParkings: query={"lat":"31.7035546","lng":"35.1133997"}
+[2025-06-18T14:47:00.900Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T14:47:00.925Z] searchParkings: query={"lat":"31.7035546","lng":"35.1133997"}
+[2025-06-18T14:47:00.930Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T14:47:04.213Z] login: Attempting login for identifier: admin
+[2025-06-18T14:47:04.279Z] login: Successful login for user id: 1
+[2025-06-18T14:47:24.566Z] searchParkings: query={"lat":"31.7035546","lng":"35.1133997"}
+[2025-06-18T14:47:24.604Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T14:47:24.635Z] searchParkings: query={"lat":"31.7035546","lng":"35.1133997"}
+[2025-06-18T14:47:24.639Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T14:47:26.607Z] login: Attempting login for identifier: admin
+[2025-06-18T14:47:27.059Z] login: Successful login for user id: 1
+[2025-06-18T14:47:27.102Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T14:51:47.587Z] getUsersByParams: Fetching users with params: {"role":"owner","_retry":"true"}
+[2025-06-18T14:51:47.591Z] getUnReadMessages: No userId provided
+[2025-06-18T14:51:47.598Z] getUnReadMessages: No userId provided
+[2025-06-18T14:51:47.611Z] getUsersByParams: Fetching users with params: {"role":"owner","_retry":"true"}
+[2025-06-18T14:51:50.149Z] getUsersByParams: Fetching users with params: {"role":"renter"}
+[2025-06-18T14:51:54.385Z] searchParkings: query={"lat":"31.703551","lng":"35.1133962"}
+[2025-06-18T14:51:54.391Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T14:51:54.402Z] searchParkings: query={"lat":"31.703551","lng":"35.1133962"}
+[2025-06-18T14:51:54.405Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T14:51:57.070Z] login: Attempting login for identifier: admin
+[2025-06-18T14:51:57.135Z] login: Successful login for user id: 1
+[2025-06-18T14:51:57.172Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T14:56:19.785Z] getUsersByParams: Fetching users with params: {"role":"owner","_retry":"true"}
+[2025-06-18T14:56:19.799Z] getUsersByParams: Fetching users with params: {"role":"owner","_retry":"true"}
+[2025-06-18T14:57:06.279Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-18T14:57:06.319Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-18T14:57:06.331Z] getMessagesByConversationId: Fetching messages for conversationId=479eb57b-bf9d-4e3b-9bdf-08ddd43c4f9b
+[2025-06-18T14:57:08.569Z] getMessagesByConversationId: Fetching messages for conversationId=c9741eff-4a19-43f6-8f71-9d01a2eb277d
+[2025-06-18T14:57:09.946Z] getMessagesByConversationId: Fetching messages for conversationId=479eb57b-bf9d-4e3b-9bdf-08ddd43c4f9b
+[2025-06-18T14:57:12.145Z] getMessagesByConversationId: Fetching messages for conversationId=c9741eff-4a19-43f6-8f71-9d01a2eb277d
+[2025-06-18T14:57:30.593Z] searchParkings: query={"lat":"31.7035536","lng":"35.1133999"}
+[2025-06-18T14:57:30.605Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T14:57:30.617Z] searchParkings: query={"lat":"31.7035536","lng":"35.1133999"}
+[2025-06-18T14:57:30.622Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T14:57:33.327Z] login: Attempting login for identifier: miriama
+[2025-06-18T14:57:33.393Z] login: Successful login for user id: 5
+[2025-06-18T14:57:33.442Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T14:57:35.464Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-18T14:57:35.481Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-18T14:57:35.506Z] getMessagesByConversationId: Fetching messages for conversationId=479eb57b-bf9d-4e3b-9bdf-08ddd43c4f9b
+[2025-06-18T14:57:37.378Z] getMessagesByConversationId: Fetching messages for conversationId=c9741eff-4a19-43f6-8f71-9d01a2eb277d
+[2025-06-18T14:57:38.081Z] getMessagesByConversationId: Fetching messages for conversationId=479eb57b-bf9d-4e3b-9bdf-08ddd43c4f9b
+[2025-06-18T14:57:52.468Z] searchParkings: query={"lat":"31.7035533","lng":"35.1134"}
+[2025-06-18T14:57:52.477Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T14:57:52.487Z] searchParkings: query={"lat":"31.7035533","lng":"35.1134"}
+[2025-06-18T14:57:52.490Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T14:57:55.410Z] login: Attempting login for identifier: davidc
+[2025-06-18T14:57:55.473Z] login: Successful login for user id: 4
+[2025-06-18T14:57:55.508Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T14:57:57.373Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T14:57:57.385Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T14:57:57.398Z] getMessagesByConversationId: Fetching messages for conversationId=57069716-a322-47cc-a5e2-b2c6c82aba4b
+[2025-06-18T14:57:59.016Z] getMessagesByConversationId: Fetching messages for conversationId=e3872afe-ca70-459d-a3fc-c2c60e314fa4
+[2025-06-18T14:57:59.375Z] getMessagesByConversationId: Fetching messages for conversationId=c9741eff-4a19-43f6-8f71-9d01a2eb277d
+[2025-06-18T14:57:59.389Z] setReadMessages: Updating messages 17 with field {"isRead":true}
+[2025-06-18T14:58:00.149Z] getMessagesByConversationId: Fetching messages for conversationId=e3872afe-ca70-459d-a3fc-c2c60e314fa4
+[2025-06-18T14:58:08.325Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T14:58:08.332Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T14:58:08.348Z] getMessagesByConversationId: Fetching messages for conversationId=57069716-a322-47cc-a5e2-b2c6c82aba4b
+[2025-06-18T14:58:10.837Z] getMessagesByConversationId: Fetching messages for conversationId=e3872afe-ca70-459d-a3fc-c2c60e314fa4
+[2025-06-18T14:58:18.119Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-18T14:58:18.133Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-18T14:58:18.146Z] getMessagesByConversationId: Fetching messages for conversationId=479eb57b-bf9d-4e3b-9bdf-08ddd43c4f9b
+[2025-06-18T14:58:19.294Z] getMessagesByConversationId: Fetching messages for conversationId=c9741eff-4a19-43f6-8f71-9d01a2eb277d
+[2025-06-18T14:58:25.318Z] getMessagesByConversationId: Fetching messages for conversationId=c9741eff-4a19-43f6-8f71-9d01a2eb277d
+[2025-06-18T14:58:34.246Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T14:58:34.258Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T14:58:34.272Z] getMessagesByConversationId: Fetching messages for conversationId=57069716-a322-47cc-a5e2-b2c6c82aba4b
+[2025-06-18T15:10:40.781Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10","_retry":"true"}
+[2025-06-18T15:10:41.715Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10","_retry":"true"}
+[2025-06-18T15:10:42.123Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T15:10:43.715Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T15:10:43.739Z] getMessagesByConversationId: Fetching messages for conversationId=57069716-a322-47cc-a5e2-b2c6c82aba4b
+[2025-06-18T15:10:45.103Z] getMessagesByConversationId: Fetching messages for conversationId=e3872afe-ca70-459d-a3fc-c2c60e314fa4
+[2025-06-18T15:10:45.557Z] getMessagesByConversationId: Fetching messages for conversationId=c9741eff-4a19-43f6-8f71-9d01a2eb277d
+[2025-06-18T15:10:46.635Z] getMessagesByConversationId: Fetching messages for conversationId=e3872afe-ca70-459d-a3fc-c2c60e314fa4
+[2025-06-18T15:10:47.237Z] getMessagesByConversationId: Fetching messages for conversationId=57069716-a322-47cc-a5e2-b2c6c82aba4b
+[2025-06-18T15:10:52.380Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T15:10:52.392Z] getUnReadMessages: No userId provided
+[2025-06-18T15:10:52.398Z] getUnReadMessages: No userId provided
+[2025-06-18T15:10:53.988Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T15:10:54.016Z] getMessagesByConversationId: Fetching messages for conversationId=57069716-a322-47cc-a5e2-b2c6c82aba4b
+[2025-06-18T15:10:57.067Z] searchParkings: query={"lat":"31.7035493","lng":"35.1133962"}
+[2025-06-18T15:10:58.594Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T15:10:58.637Z] searchParkings: query={"lat":"31.7035493","lng":"35.1133962"}
+[2025-06-18T15:10:58.656Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T15:11:03.851Z] searchParkings: query={"lat":"31.7035493","lng":"35.1133962"}
+[2025-06-18T15:11:04.474Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T15:11:04.490Z] searchParkings: query={"lat":"31.7035493","lng":"35.1133962"}
+[2025-06-18T15:11:04.497Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T15:11:22.399Z] searchParkings: query={"lat":"32.0853","lng":"34.7818"}
+[2025-06-18T15:11:22.412Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T15:11:22.431Z] searchParkings: query={"lat":"32.0853","lng":"34.7818"}
+[2025-06-18T15:11:22.438Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T15:30:59.053Z] login: Attempting login for identifier: miriama
+[2025-06-18T15:30:59.291Z] login: Successful login for user id: 5
+[2025-06-18T15:30:59.350Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T15:54:19.330Z] getUnReadMessages: No userId provided
+[2025-06-18T15:54:19.337Z] getUnReadMessages: No userId provided
+[2025-06-18T15:55:09.185Z] getUnReadMessages: No userId provided
+[2025-06-18T15:55:09.195Z] getUnReadMessages: No userId provided
+[2025-06-18T17:18:51.297Z] getUnReadMessages: No userId provided
+[2025-06-18T17:18:51.301Z] getUnReadMessages: No userId provided
+[2025-06-18T17:18:57.200Z] getUnReadMessages: No userId provided
+[2025-06-18T17:18:57.207Z] getUnReadMessages: No userId provided
+[2025-06-18T17:19:14.078Z] getUnReadMessages: No userId provided
+[2025-06-18T17:19:14.085Z] getUnReadMessages: No userId provided
+[2025-06-18T17:21:04.277Z] getUnReadMessages: No userId provided
+[2025-06-18T17:21:04.280Z] getUnReadMessages: No userId provided
+[2025-06-18T17:21:10.622Z] getUnReadMessages: No userId provided
+[2025-06-18T17:21:10.631Z] getUnReadMessages: No userId provided
+[2025-06-18T17:22:51.784Z] getUnReadMessages: No userId provided
+[2025-06-18T17:22:51.791Z] getUnReadMessages: No userId provided
+[2025-06-18T17:24:12.045Z] getUnReadMessages: No userId provided
+[2025-06-18T17:24:13.417Z] getUnReadMessages: No userId provided
+[2025-06-18T17:26:30.315Z] getUnReadMessages: No userId provided
+[2025-06-18T17:26:30.322Z] getUnReadMessages: No userId provided
+[2025-06-18T17:33:01.137Z] searchParkings: query={"lat":"31.7035407","lng":"35.1132447"}
+[2025-06-18T17:33:01.177Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T17:33:17.295Z] login: Attempting login for identifier: admin
+[2025-06-18T17:33:17.299Z] login: Attempting login for identifier: admin
+[2025-06-18T17:33:17.305Z] login: Attempting login for identifier: admin
+[2025-06-18T17:33:17.309Z] login: Attempting login for identifier: admin
+[2025-06-18T17:33:17.314Z] login: Attempting login for identifier: admin
+[2025-06-18T17:33:17.343Z] login: Attempting login for identifier: admin
+[2025-06-18T17:33:17.409Z] login: Successful login for user id: 1
+[2025-06-18T17:33:17.416Z] login: Successful login for user id: 1
+[2025-06-18T17:33:17.423Z] login: Successful login for user id: 1
+[2025-06-18T17:33:17.430Z] login: Attempting login for identifier: admin
+[2025-06-18T17:33:17.434Z] login: Successful login for user id: 1
+[2025-06-18T17:33:17.443Z] login: Attempting login for identifier: admin
+[2025-06-18T17:33:17.449Z] login: Attempting login for identifier: admin
+[2025-06-18T17:33:17.459Z] searchParkings: query={"lat":"31.7035407","lng":"35.1132447"}
+[2025-06-18T17:33:17.471Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T17:33:17.478Z] login: Successful login for user id: 1
+[2025-06-18T17:33:17.484Z] login: Successful login for user id: 1
+[2025-06-18T17:33:17.518Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T17:33:17.534Z] login: Successful login for user id: 1
+[2025-06-18T17:33:17.540Z] login: Successful login for user id: 1
+[2025-06-18T17:33:17.552Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T17:33:17.557Z] login: Successful login for user id: 1
+[2025-06-18T17:33:17.626Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T17:33:17.672Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T17:34:49.692Z] searchParkings: query={"lat":"31.7035406","lng":"35.1132488"}
+[2025-06-18T17:34:50.555Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T17:34:50.587Z] searchParkings: query={"lat":"31.7035406","lng":"35.1132488"}
+[2025-06-18T17:34:50.600Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T17:34:53.843Z] login: Attempting login for identifier: admin
+[2025-06-18T17:34:53.954Z] login: Successful login for user id: 1
+[2025-06-18T17:34:54.045Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T17:35:03.387Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T17:35:03.401Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T17:35:12.866Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T17:35:12.878Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T17:35:19.482Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T17:35:19.489Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T17:35:58.398Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T17:35:58.431Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T17:36:48.870Z] searchParkings: query={"lat":"31.7035435","lng":"35.1132479"}
+[2025-06-18T17:36:48.894Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T17:36:48.928Z] searchParkings: query={"lat":"31.7035435","lng":"35.1132479"}
+[2025-06-18T17:36:48.937Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T17:36:49.457Z] login: Attempting login for identifier: admin
+[2025-06-18T17:36:50.239Z] login: Successful login for user id: 1
+[2025-06-18T17:36:50.285Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T17:37:15.098Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T17:37:15.106Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T17:37:21.034Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T17:37:21.043Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T17:38:06.986Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T17:38:07.004Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T17:38:22.326Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T17:38:22.966Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T17:38:49.671Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T17:38:49.681Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T17:39:17.038Z] searchParkings: query={"lat":"31.7035435","lng":"35.1132479"}
+[2025-06-18T17:39:17.057Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T17:39:17.084Z] searchParkings: query={"lat":"31.7035435","lng":"35.1132479"}
+[2025-06-18T17:39:17.095Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T17:39:20.986Z] login: Attempting login for identifier: admin
+[2025-06-18T17:39:21.055Z] login: Successful login for user id: 1
+[2025-06-18T17:39:21.097Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T17:40:25.149Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T17:40:25.168Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T17:40:48.461Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T17:40:48.499Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T17:41:15.016Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T17:41:15.026Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T17:41:29.373Z] getMessagesById: Fetching messages for senderId=1
+[2025-06-18T17:41:29.398Z] getMessagesById: Fetching messages for senderId=1
+[2025-06-18T17:41:31.768Z] searchParkings: query={"lat":"31.7035413","lng":"35.1132428"}
+[2025-06-18T17:41:31.780Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T17:41:31.804Z] searchParkings: query={"lat":"31.7035413","lng":"35.1132428"}
+[2025-06-18T17:41:31.812Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T17:41:34.346Z] getReservationsByValue: Fetching reservations with value={"renterId":"1","page":"1","limit":"10"}
+[2025-06-18T17:41:34.361Z] getReservationsByValue: Fetching reservations with value={"renterId":"1","page":"1","limit":"10"}
+[2025-06-18T17:41:40.814Z] searchParkings: query={"lat":"31.7035413","lng":"35.1132428"}
+[2025-06-18T17:41:40.823Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T17:41:40.838Z] searchParkings: query={"lat":"31.7035413","lng":"35.1132428"}
+[2025-06-18T17:41:40.844Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T17:41:47.557Z] searchParkings: query={"lat":"31.7035416","lng":"35.1132436"}
+[2025-06-18T17:41:47.563Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T17:41:47.582Z] searchParkings: query={"lat":"31.7035416","lng":"35.1132436"}
+[2025-06-18T17:41:47.592Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T17:41:51.393Z] login: Attempting login for identifier: admin
+[2025-06-18T17:41:51.463Z] login: Successful login for user id: 1
+[2025-06-18T17:41:51.505Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T17:42:25.146Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T17:42:25.159Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T17:42:43.397Z] searchParkings: query={"lat":"31.7035467","lng":"35.1132388"}
+[2025-06-18T17:42:43.408Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T17:42:43.420Z] searchParkings: query={"lat":"31.7035467","lng":"35.1132388"}
+[2025-06-18T17:42:43.427Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T17:42:47.232Z] login: Attempting login for identifier: miriama
+[2025-06-18T17:42:47.297Z] login: Successful login for user id: 5
+[2025-06-18T17:42:47.332Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T17:43:42.208Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T17:43:42.228Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T17:44:02.050Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T17:44:05.853Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T17:44:37.538Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T17:44:42.276Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T17:44:43.294Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T17:45:27.212Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T17:45:27.253Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T17:45:56.558Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T17:47:10.634Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T17:47:11.233Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T17:49:15.740Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T17:49:15.781Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T17:51:44.151Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T17:51:44.181Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T17:52:23.578Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T17:52:25.835Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T17:53:56.926Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T17:53:56.947Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T17:56:09.993Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T17:56:10.014Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:00:03.869Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:00:03.898Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:00:29.240Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:00:29.260Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:04:23.330Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:04:23.356Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:05:19.980Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:05:20.010Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:05:40.327Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:05:40.356Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:10:05.915Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:10:05.931Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:10:08.903Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:10:08.916Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:10:09.920Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:10:09.939Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:10:16.907Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:10:16.920Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:10:21.777Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:10:21.804Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:10:49.123Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:10:49.147Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:11:01.908Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:11:01.928Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:12:03.908Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:12:03.927Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:12:07.148Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:12:07.160Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:12:09.198Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:12:09.212Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:13:21.135Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:13:21.168Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:14:06.842Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:14:06.877Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:16:06.754Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:16:06.775Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:20:55.577Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:20:55.613Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:28:36.674Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:28:36.710Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:31:11.759Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:31:11.801Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:39:58.669Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:39:58.722Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:42:20.562Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:42:20.610Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:43:58.378Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:43:58.438Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:50:03.225Z] searchParkings: query={"lat":"31.7035533","lng":"35.1133979"}
+[2025-06-18T18:50:04.387Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T18:50:04.446Z] searchParkings: query={"lat":"31.7035533","lng":"35.1133979"}
+[2025-06-18T18:50:04.463Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T18:50:48.230Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:50:48.275Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:51:15.818Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:51:15.840Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:52:49.328Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:52:49.360Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:55:27.427Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:55:27.480Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-18T18:55:30.919Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T18:55:30.933Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T18:55:43.905Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=18
+[2025-06-18T18:55:43.911Z] getReportsByParkingId: Fetching reports for parkingId=18
+[2025-06-18T18:55:43.945Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=18
+[2025-06-18T18:55:43.941Z] getReportsByParkingId: Fetching reports for parkingId=18
+[2025-06-18T18:55:45.808Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-18T18:55:45.825Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-18T18:55:45.884Z] getMessagesByConversationId: Fetching messages for conversationId=479eb57b-bf9d-4e3b-9bdf-08ddd43c4f9b
+[2025-06-18T18:56:48.042Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T18:56:48.074Z] getParkingsByParams: filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T18:56:55.788Z] searchParkings: query={"lat":"31.70304","lng":"35.127296"}
+[2025-06-18T18:56:55.796Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T18:56:55.842Z] searchParkings: query={"lat":"31.70304","lng":"35.127296"}
+[2025-06-18T18:56:55.848Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T19:40:51.933Z] login: Attempting login for identifier: davidc
+[2025-06-18T19:40:52.346Z] login: Successful login for user id: 4
+[2025-06-18T19:40:52.382Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T19:40:56.307Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T19:40:56.321Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T19:40:56.334Z] getMessagesByConversationId: Fetching messages for conversationId=57069716-a322-47cc-a5e2-b2c6c82aba4b
+[2025-06-18T19:41:08.754Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T19:41:08.758Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T19:41:08.766Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T19:41:08.770Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T19:41:08.782Z] getMessagesByConversationId: Fetching messages for conversationId=57069716-a322-47cc-a5e2-b2c6c82aba4b
+[2025-06-18T19:43:54.390Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T19:43:54.401Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T19:43:54.420Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T19:43:54.423Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T19:43:54.431Z] getMessagesByConversationId: Fetching messages for conversationId=57069716-a322-47cc-a5e2-b2c6c82aba4b
+[2025-06-18T19:44:57.428Z] searchParkings: query={"lat":"32.0853","lng":"34.7818"}
+[2025-06-18T19:44:57.447Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T19:44:57.475Z] searchParkings: query={"lat":"32.0853","lng":"34.7818"}
+[2025-06-18T19:44:57.482Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T19:44:59.861Z] searchParkings: query={"lat":"32.0853","lng":"34.7818"}
+[2025-06-18T19:44:59.866Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T19:44:59.878Z] searchParkings: query={"lat":"32.0853","lng":"34.7818"}
+[2025-06-18T19:44:59.882Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T19:45:26.024Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T19:45:26.031Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T19:45:26.053Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T19:45:26.049Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T19:45:26.067Z] getMessagesByConversationId: Fetching messages for conversationId=57069716-a322-47cc-a5e2-b2c6c82aba4b
+[2025-06-18T19:45:37.597Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T19:45:37.621Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T19:45:37.640Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T19:45:37.643Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T19:45:37.652Z] getMessagesByConversationId: Fetching messages for conversationId=57069716-a322-47cc-a5e2-b2c6c82aba4b
+[2025-06-18T19:45:59.561Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T19:45:59.565Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T19:45:59.584Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T19:45:59.588Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T19:45:59.594Z] getMessagesByConversationId: Fetching messages for conversationId=57069716-a322-47cc-a5e2-b2c6c82aba4b
+[2025-06-18T19:48:55.448Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T19:48:55.459Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T19:48:55.481Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T19:48:55.485Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T19:48:55.497Z] getMessagesByConversationId: Fetching messages for conversationId=57069716-a322-47cc-a5e2-b2c6c82aba4b
+[2025-06-18T19:49:08.472Z] getMessagesByConversationId: Fetching messages for conversationId=e3872afe-ca70-459d-a3fc-c2c60e314fa4
+[2025-06-18T19:49:08.818Z] getMessagesByConversationId: Fetching messages for conversationId=c9741eff-4a19-43f6-8f71-9d01a2eb277d
+[2025-06-18T19:49:09.221Z] getMessagesByConversationId: Fetching messages for conversationId=57069716-a322-47cc-a5e2-b2c6c82aba4b
+[2025-06-18T19:49:10.205Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T19:49:10.229Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T19:49:10.251Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T19:49:10.256Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T19:49:10.264Z] getMessagesByConversationId: Fetching messages for conversationId=57069716-a322-47cc-a5e2-b2c6c82aba4b
+[2025-06-18T19:49:12.457Z] getMessagesByConversationId: Fetching messages for conversationId=e3872afe-ca70-459d-a3fc-c2c60e314fa4
+[2025-06-18T19:49:12.848Z] getMessagesByConversationId: Fetching messages for conversationId=c9741eff-4a19-43f6-8f71-9d01a2eb277d
+[2025-06-18T19:49:13.213Z] getMessagesByConversationId: Fetching messages for conversationId=57069716-a322-47cc-a5e2-b2c6c82aba4b
+[2025-06-18T19:52:32.876Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T19:52:32.892Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T19:52:32.908Z] getMessagesByConversationId: Fetching messages for conversationId=57069716-a322-47cc-a5e2-b2c6c82aba4b
+[2025-06-18T19:52:55.271Z] getMessagesByConversationId: Fetching messages for conversationId=c9741eff-4a19-43f6-8f71-9d01a2eb277d
+[2025-06-18T19:52:55.915Z] getMessagesByConversationId: Fetching messages for conversationId=e3872afe-ca70-459d-a3fc-c2c60e314fa4
+[2025-06-18T19:52:57.528Z] getMessagesByConversationId: Fetching messages for conversationId=57069716-a322-47cc-a5e2-b2c6c82aba4b
+[2025-06-18T19:54:38.504Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T19:54:38.519Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T19:54:38.541Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T19:54:38.545Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T19:54:38.561Z] getMessagesByConversationId: Fetching messages for conversationId=57069716-a322-47cc-a5e2-b2c6c82aba4b
+[2025-06-18T19:55:46.364Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T19:55:46.381Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T19:55:46.392Z] getMessagesByConversationId: Fetching messages for conversationId=57069716-a322-47cc-a5e2-b2c6c82aba4b
+[2025-06-18T19:56:01.681Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T19:56:01.685Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T19:56:01.700Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T19:56:01.704Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T19:56:01.723Z] getMessagesByConversationId: Fetching messages for conversationId=57069716-a322-47cc-a5e2-b2c6c82aba4b
+[2025-06-18T19:57:45.229Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T19:57:45.247Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:02:01.248Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T20:02:01.261Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:02:01.280Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T20:02:01.285Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:02:11.464Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T20:02:11.469Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:02:11.485Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:02:11.482Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T20:04:39.736Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T20:04:57.975Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T20:05:00.273Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:05:00.603Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:05:36.035Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T20:05:49.213Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:05:50.404Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T20:05:51.871Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:06:47.877Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T20:06:53.355Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:06:59.498Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T20:07:00.074Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:07:00.108Z] getMessagesByConversationId: Fetching messages for conversationId=2bd2a6e9-8200-4a61-a405-89f85989650c
+[2025-06-18T20:07:00.128Z] setReadMessages: Updating messages 32 with field {"isRead":true}
+[2025-06-18T20:07:03.054Z] getMessagesByConversationId: Fetching messages for conversationId=1c3d82e4-7f00-4fdf-8a91-dd589f6dcec3
+[2025-06-18T20:07:03.074Z] setReadMessages: Updating messages 28 with field {"isRead":true}
+[2025-06-18T20:07:03.903Z] getMessagesByConversationId: Fetching messages for conversationId=dd4f128e-8c96-4a2d-86a4-20be242f4149
+[2025-06-18T20:07:03.922Z] setReadMessages: Updating messages 24 with field {"isRead":true}
+[2025-06-18T20:07:05.499Z] getMessagesByConversationId: Fetching messages for conversationId=dd4f128e-8c96-4a2d-86a4-20be242f4149
+[2025-06-18T20:07:07.801Z] getMessagesByConversationId: Fetching messages for conversationId=1c3d82e4-7f00-4fdf-8a91-dd589f6dcec3
+[2025-06-18T20:07:08.207Z] getMessagesByConversationId: Fetching messages for conversationId=2bd2a6e9-8200-4a61-a405-89f85989650c
+[2025-06-18T20:07:09.351Z] getMessagesByConversationId: Fetching messages for conversationId=c9741eff-4a19-43f6-8f71-9d01a2eb277d
+[2025-06-18T20:07:10.231Z] getMessagesByConversationId: Fetching messages for conversationId=e3872afe-ca70-459d-a3fc-c2c60e314fa4
+[2025-06-18T20:07:10.637Z] getMessagesByConversationId: Fetching messages for conversationId=57069716-a322-47cc-a5e2-b2c6c82aba4b
+[2025-06-18T20:07:12.043Z] getMessagesByConversationId: Fetching messages for conversationId=dd4f128e-8c96-4a2d-86a4-20be242f4149
+[2025-06-18T20:07:12.399Z] getMessagesByConversationId: Fetching messages for conversationId=1c3d82e4-7f00-4fdf-8a91-dd589f6dcec3
+[2025-06-18T20:07:12.724Z] getMessagesByConversationId: Fetching messages for conversationId=2bd2a6e9-8200-4a61-a405-89f85989650c
+[2025-06-18T20:09:09.163Z] getMessagesByConversationId: Fetching messages for conversationId=1c3d82e4-7f00-4fdf-8a91-dd589f6dcec3
+[2025-06-18T20:09:09.462Z] getMessagesByConversationId: Fetching messages for conversationId=dd4f128e-8c96-4a2d-86a4-20be242f4149
+[2025-06-18T20:09:10.227Z] getMessagesByConversationId: Fetching messages for conversationId=c9741eff-4a19-43f6-8f71-9d01a2eb277d
+[2025-06-18T20:09:11.173Z] getMessagesByConversationId: Fetching messages for conversationId=c9741eff-4a19-43f6-8f71-9d01a2eb277d
+[2025-06-18T20:14:44.850Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T20:14:45.536Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:14:46.227Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T20:14:46.926Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:14:49.088Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T20:14:50.112Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:14:50.128Z] getMessagesByConversationId: Fetching messages for conversationId=2bd2a6e9-8200-4a61-a405-89f85989650c
+[2025-06-18T20:17:42.285Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T20:17:44.657Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:17:44.667Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T20:17:44.675Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:17:44.726Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T20:17:44.734Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:17:44.753Z] getMessagesByConversationId: Fetching messages for conversationId=2bd2a6e9-8200-4a61-a405-89f85989650c
+[2025-06-18T20:25:28.993Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T20:25:29.015Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:25:29.093Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:25:29.101Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T20:25:29.124Z] getMessagesByConversationId: Fetching messages for conversationId=2bd2a6e9-8200-4a61-a405-89f85989650c
+[2025-06-18T20:25:31.812Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:25:31.832Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:25:56.800Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T20:25:56.912Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T20:25:56.936Z] getMessagesByConversationId: Fetching messages for conversationId=2bd2a6e9-8200-4a61-a405-89f85989650c
+[2025-06-18T20:26:10.115Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:26:10.124Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:28:35.829Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:28:35.844Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:30:23.444Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:30:23.456Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:30:23.477Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:30:23.502Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:31:16.946Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:31:16.970Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:31:16.991Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:31:18.509Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:33:01.860Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:33:01.874Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:33:01.896Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:33:01.904Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:35:27.552Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:35:27.574Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:35:27.618Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:35:27.625Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:38:39.869Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:38:39.885Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:38:39.916Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:38:39.926Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:41:02.933Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:41:02.948Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:41:02.973Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:41:02.979Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:41:48.200Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:41:48.208Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:41:48.230Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:41:48.236Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:42:22.295Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:42:22.311Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:42:22.330Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:42:22.337Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:42:33.448Z] getParkingsByParams: filters={"ownerId":"4","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T20:42:33.470Z] getParkingsByParams: filters={"ownerId":"4","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T20:42:37.957Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:42:37.984Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:42:41.212Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"2","limit":"10"}
+[2025-06-18T20:43:30.454Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:43:30.461Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:43:30.489Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:43:30.498Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:45:39.282Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:45:39.296Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:45:39.330Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:45:39.338Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:45:40.977Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:45:40.986Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:45:41.001Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:45:41.007Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:45:46.535Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:45:46.542Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:45:46.554Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:45:46.559Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:45:48.151Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:45:48.160Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:45:48.171Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:45:48.177Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:45:57.266Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:45:57.273Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:45:57.296Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:45:57.304Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:45:57.906Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:45:57.914Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:45:57.929Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:45:57.937Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:46:29.665Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:46:29.672Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:46:29.695Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:46:29.704Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:46:58.877Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:46:58.899Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:46:58.919Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T20:46:58.927Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:49:09.271Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T20:49:09.293Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T20:49:09.306Z] getMessagesByConversationId: Fetching messages for conversationId=2bd2a6e9-8200-4a61-a405-89f85989650c
+[2025-06-18T20:49:12.587Z] getMessagesByConversationId: Fetching messages for conversationId=57069716-a322-47cc-a5e2-b2c6c82aba4b
+[2025-06-18T20:49:13.225Z] getMessagesByConversationId: Fetching messages for conversationId=c9741eff-4a19-43f6-8f71-9d01a2eb277d
+[2025-06-18T20:49:21.713Z] getParkingsByParams: filters={"ownerId":"4","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T20:49:21.724Z] getParkingsByParams: filters={"ownerId":"4","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T20:49:25.778Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-18T20:49:25.782Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-18T20:49:25.799Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-18T20:49:25.820Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-18T20:52:06.527Z] getParkingsByParams: filters={"ownerId":"4","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T20:52:06.546Z] getParkingsByParams: filters={"ownerId":"4","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T20:52:16.368Z] searchParkings: query={"lat":"31.7035405","lng":"35.1132482"}
+[2025-06-18T20:52:16.378Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T20:52:16.400Z] searchParkings: query={"lat":"31.7035405","lng":"35.1132482"}
+[2025-06-18T20:52:16.407Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T20:52:28.032Z] login: Attempting login for identifier: sarahlevi
+[2025-06-18T20:52:28.110Z] login: Successful login for user id: 3
+[2025-06-18T20:52:28.156Z] getUnReadMessages: Fetching unread messages for userId=3
+[2025-06-18T20:52:31.124Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-18T20:52:31.132Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-18T20:52:31.145Z] checkReportPermission: Checking permissions for userId=3, parkingId=5
+[2025-06-18T20:52:31.159Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-18T20:52:31.165Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-18T20:52:31.179Z] checkReportPermission: No reservation found, cannot report
+[2025-06-18T20:52:31.195Z] checkReportPermission: Checking permissions for userId=3, parkingId=5
+[2025-06-18T20:52:31.220Z] checkReportPermission: No reservation found, cannot report
+[2025-06-18T20:52:32.647Z] searchParkings: query={"lat":"31.7035442","lng":"35.1132561"}
+[2025-06-18T20:52:32.656Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T20:52:32.677Z] searchParkings: query={"lat":"31.7035442","lng":"35.1132561"}
+[2025-06-18T20:52:32.685Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T20:52:36.084Z] searchParkings: query={"lat":"31.7035442","lng":"35.1132561"}
+[2025-06-18T20:52:36.095Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T20:52:36.112Z] searchParkings: query={"lat":"31.7035442","lng":"35.1132561"}
+[2025-06-18T20:52:36.120Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T20:52:39.438Z] login: Attempting login for identifier: davidc
+[2025-06-18T20:52:39.505Z] login: Successful login for user id: 4
+[2025-06-18T20:52:39.551Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:52:43.202Z] getParkingsByParams: filters={"ownerId":"4","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T20:52:43.214Z] getParkingsByParams: filters={"ownerId":"4","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T20:53:22.439Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-18T20:53:22.444Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-18T20:53:22.465Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-18T20:53:22.471Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-18T20:54:14.166Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-18T20:54:14.171Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-18T20:54:14.179Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:54:14.202Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-18T20:54:14.213Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T20:54:14.207Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-18T20:59:06.913Z] searchParkings: query={"lat":"31.7035487","lng":"35.1132442"}
+[2025-06-18T20:59:06.942Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T20:59:06.985Z] searchParkings: query={"lat":"31.7035487","lng":"35.1132442"}
+[2025-06-18T20:59:06.999Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T20:59:09.932Z] login: Attempting login for identifier: admin
+[2025-06-18T20:59:10.009Z] login: Successful login for user id: 1
+[2025-06-18T20:59:10.065Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T20:59:13.912Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-18T20:59:13.931Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-18T20:59:16.283Z] getUsersByParams: Fetching users with params: {"role":"renter"}
+[2025-06-18T20:59:16.293Z] getUsersByParams: Fetching users with params: {"role":"renter"}
+[2025-06-18T20:59:17.460Z] getParkingsByParams: filters={"page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T20:59:17.492Z] getParkingsByParams: filters={"page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T21:01:23.969Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T21:01:23.993Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T21:01:33.360Z] searchParkings: query={"lat":"31.7035489","lng":"35.1132483"}
+[2025-06-18T21:01:33.368Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T21:01:33.382Z] searchParkings: query={"lat":"31.7035489","lng":"35.1132483"}
+[2025-06-18T21:01:33.391Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T21:01:46.269Z] login: Attempting login for identifier: davidc
+[2025-06-18T21:01:46.340Z] login: Successful login for user id: 4
+[2025-06-18T21:01:46.378Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T21:02:14.885Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T21:02:14.910Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T21:02:22.514Z] searchParkings: query={"lat":"31.7035417","lng":"35.1132368"}
+[2025-06-18T21:02:22.524Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T21:02:22.539Z] searchParkings: query={"lat":"31.7035417","lng":"35.1132368"}
+[2025-06-18T21:02:22.550Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T21:02:24.643Z] login: Attempting login for identifier: admin
+[2025-06-18T21:02:24.710Z] login: Successful login for user id: 1
+[2025-06-18T21:02:24.754Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T21:03:48.488Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-18T21:03:48.502Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-18T21:05:31.085Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T21:05:31.091Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T21:06:40.106Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T21:06:40.140Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T21:10:15.910Z] getMessagesById: Fetching messages for senderId=1
+[2025-06-18T21:10:15.939Z] getMessagesById: Fetching messages for senderId=1
+[2025-06-18T21:10:15.965Z] getMessagesByConversationId: Fetching messages for conversationId=2bd2a6e9-8200-4a61-a405-89f85989650c
+[2025-06-18T21:17:07.265Z] getMessagesById: Fetching messages for senderId=1
+[2025-06-18T21:17:07.290Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T21:17:07.351Z] getMessagesById: Fetching messages for senderId=1
+[2025-06-18T21:17:07.363Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T21:17:07.390Z] getUsersByParams: Fetching users with params: {"id":"2"}
+[2025-06-18T21:17:07.415Z] getUsersByParams: Fetching users with params: {"id":"2"}
+[2025-06-18T21:17:07.439Z] getUsersByParams: Fetching users with params: {"id":"3"}
+[2025-06-18T21:17:07.459Z] getUsersByParams: Fetching users with params: {"id":"3"}
+[2025-06-18T21:17:07.480Z] getUsersByParams: Fetching users with params: {"id":"4"}
+[2025-06-18T21:17:07.498Z] getUsersByParams: Fetching users with params: {"id":"4"}
+[2025-06-18T21:17:07.517Z] getUsersByParams: Fetching users with params: {"id":"5"}
+[2025-06-18T21:17:07.538Z] getUsersByParams: Fetching users with params: {"id":"5"}
+[2025-06-18T21:17:07.569Z] getMessagesByConversationId: Fetching messages for conversationId=2bd2a6e9-8200-4a61-a405-89f85989650c
+[2025-06-18T21:17:44.128Z] getMessagesById: Fetching messages for senderId=1
+[2025-06-18T21:17:44.163Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T21:17:44.204Z] getMessagesById: Fetching messages for senderId=1
+[2025-06-18T21:17:44.217Z] getUnReadMessages: Fetching unread messages for userId=1
+[2025-06-18T21:17:44.249Z] getMessagesByConversationId: Fetching messages for conversationId=2bd2a6e9-8200-4a61-a405-89f85989650c
+[2025-06-18T21:17:50.259Z] searchParkings: query={"lat":"31.7035436","lng":"35.1132384"}
+[2025-06-18T21:17:50.279Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T21:17:50.335Z] searchParkings: query={"lat":"31.7035436","lng":"35.1132384"}
+[2025-06-18T21:17:50.349Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-18T21:17:53.522Z] login: Attempting login for identifier: davidc
+[2025-06-18T21:17:53.756Z] login: Successful login for user id: 4
+[2025-06-18T21:17:53.839Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T21:17:55.359Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T21:17:55.396Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T21:17:55.439Z] getMessagesByConversationId: Fetching messages for conversationId=2bd2a6e9-8200-4a61-a405-89f85989650c
+[2025-06-18T21:17:56.530Z] getMessagesByConversationId: Fetching messages for conversationId=57069716-a322-47cc-a5e2-b2c6c82aba4b
+[2025-06-18T21:17:57.043Z] getMessagesByConversationId: Fetching messages for conversationId=c9741eff-4a19-43f6-8f71-9d01a2eb277d
+[2025-06-18T21:18:03.581Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T21:18:03.604Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T21:18:03.655Z] getMessagesById: Fetching messages for senderId=4
+[2025-06-18T21:18:03.668Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T21:18:03.718Z] getMessagesByConversationId: Fetching messages for conversationId=2bd2a6e9-8200-4a61-a405-89f85989650c
+[2025-06-18T21:19:55.321Z] getMessagesByConversationId: Fetching messages for conversationId=57069716-a322-47cc-a5e2-b2c6c82aba4b
+[2025-06-18T21:19:55.708Z] getMessagesByConversationId: Fetching messages for conversationId=c9741eff-4a19-43f6-8f71-9d01a2eb277d
+[2025-06-18T21:21:38.592Z] getMessagesByConversationId: Fetching messages for conversationId=57069716-a322-47cc-a5e2-b2c6c82aba4b
+[2025-06-18T21:21:39.167Z] getMessagesByConversationId: Fetching messages for conversationId=2bd2a6e9-8200-4a61-a405-89f85989650c
+[2025-06-18T21:21:39.567Z] getMessagesByConversationId: Fetching messages for conversationId=c9741eff-4a19-43f6-8f71-9d01a2eb277d
+[2025-06-18T21:21:41.305Z] getMessagesByConversationId: Fetching messages for conversationId=2bd2a6e9-8200-4a61-a405-89f85989650c
+[2025-06-18T21:27:06.636Z] getMessagesByConversationId: Fetching messages for conversationId=c9741eff-4a19-43f6-8f71-9d01a2eb277d
+[2025-06-18T21:27:10.117Z] getMessagesByConversationId: Fetching messages for conversationId=57069716-a322-47cc-a5e2-b2c6c82aba4b
+[2025-06-18T21:27:10.404Z] getMessagesByConversationId: Fetching messages for conversationId=2bd2a6e9-8200-4a61-a405-89f85989650c
+[2025-06-18T21:27:56.271Z] getMessagesByConversationId: Fetching messages for conversationId=c9741eff-4a19-43f6-8f71-9d01a2eb277d
+[2025-06-18T21:27:57.329Z] getMessagesByConversationId: Fetching messages for conversationId=57069716-a322-47cc-a5e2-b2c6c82aba4b
+[2025-06-18T21:27:57.818Z] getMessagesByConversationId: Fetching messages for conversationId=2bd2a6e9-8200-4a61-a405-89f85989650c
+[2025-06-18T21:28:11.986Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T21:28:12.047Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T21:38:26.842Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T21:38:26.922Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T21:45:56.563Z] getParkingsByParams: filters={"ownerId":"4","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T21:45:56.594Z] getParkingsByParams: filters={"ownerId":"4","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-18T21:46:02.634Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T21:46:02.675Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"1","limit":"10"}
+[2025-06-18T21:46:07.303Z] getReservationsByValue: Fetching reservations with value={"ownerId":"4","page":"2","limit":"10"}
+[2025-06-18T21:56:26.736Z] getUnReadMessages: Fetching unread messages for userId=4
+[2025-06-18T21:56:26.831Z] getUnReadMessages: Fetching unread messages for userId=4

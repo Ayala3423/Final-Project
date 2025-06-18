@@ -1,5 +1,6 @@
 const User = require('../models/User');
 const Passwords = require('../models/Passwords');
+const Reservation = require('../models/Reservation');
 const { Op } = require('sequelize');
 
 const userService = {
@@ -33,7 +34,6 @@ const userService = {
     );
   },
 
-
   async findAllUsers() {
     return await User.findAll({
       where: {
@@ -56,7 +56,6 @@ const userService = {
     return await User.findAll({ where });
   },
 
-
   async createPassword(userId, hash) {
     return await Passwords.create({ userId, hash });
   },
@@ -67,7 +66,17 @@ const userService = {
 
   async deletePassword(userId) {
     return await Passwords.destroy({ where: { userId } });
-  }
+  },
+
+  async getOrdersByParams(ownerId) {
+    return orders = await Order.findAll({
+      include: {
+        model: Parking,
+        where: { ownerId }
+      },
+      attributes: ['startDate']
+    });
+  },
 
 };
 

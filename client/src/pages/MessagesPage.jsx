@@ -42,8 +42,22 @@ export default function MessagesPage() {
     socket.on('receiveMessage', (messageData) => {
       console.log('📥 Message received via socket:', messageData);
 
-      const isMyMessage = messageData.senderId === user.id;
+      // אם השיחה לא קיימת - נכניס אותה
+      setConversations(prev => {
+        const exists = prev.some(conv => conv.conversationId === messageData.conversationId);
+        if (!exists) {
+          const newConv = {
+            conversationId: messageData.conversationId,
+            senderId: messageData.senderId,
+            receiverId: messageData.receiverId
+          };
+          return [newConv, ...prev];
+        }
+        return prev;
+      });
 
+      // ממשיכים עם הקוד הרגיל
+      const isMyMessage = messageData.senderId === user.id;
       if (messageData.conversationId === selectedChatId) {
         setMessages(prev => [...prev, messageData]);
       } else {
@@ -91,15 +105,17 @@ export default function MessagesPage() {
   }, [selectedChatId]);
 
   useEffect(() => {
-    apiService.getByValue('messages', { senderId: user.id }, (data) => {
+    apiService.get('messages', (data) => {
       const uniqueConversationsMap = {};
       data.forEach(msg => {
-        if (!uniqueConversationsMap[msg.conversationId]) {
-          uniqueConversationsMap[msg.conversationId] = msg;
+        const otherUserId = msg.senderId === user.id ? msg.receiverId : msg.senderId;
+        if (!uniqueConversationsMap[otherUserId]) {
+          uniqueConversationsMap[otherUserId] = msg;
         }
       });
 
       const uniqueConversations = Object.values(uniqueConversationsMap);
+
       setConversations(uniqueConversations);
       console.log("Unique Conversations fetched:", uniqueConversations);
 

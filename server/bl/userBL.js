@@ -1,6 +1,6 @@
 const bcrypt = require('bcrypt');
 const userService = require('../services/userService');
-const { log } =  require("../utils/logger.js");
+const { log } = require("../utils/logger.js");
 
 const userBL = {
     async signup(data) {
@@ -89,6 +89,26 @@ const userBL = {
     async getUsersByParams(params) {
         log(`getUsersByParams: Fetching users with params: ${JSON.stringify(params)}`);
         return await userService.findUsersByParams(params);
+    },
+
+    async getOrdersPerMonth(ownerId) {
+        log(`getOrdersPerMonth: Fetching orders per month for owner id: ${ownerId}`);
+        const orders = await userService.getOrdersByParams(ownerId);
+        const monthMap = {};
+
+        orders.forEach(order => {
+            const month = new Date(order.startDate).getMonth() + 1; // Months are 0-indexed
+            if (!monthMap[month]) {
+                monthMap[month] = 0;
+            }
+            monthMap[month]++;
+        });
+        const chartData = Object.keys(monthMap).map(month => ({
+            month,
+            orders: monthMap[month]
+        })).sort((a, b) => new Date(a.month) - new Date(b.month)); // ממיין לפי תאריך
+        log(`getOrdersPerMonth: Orders per month data: ${JSON.stringify(chartData)}`);
+        return chartData;
     }
 
 };
