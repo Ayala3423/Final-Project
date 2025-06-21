@@ -13,7 +13,7 @@ async function getCoordinatesFromAddress(address) {
         limit: 1
       },
       headers: {
-        'User-Agent': 'MyApp' // חובה לפי תנאי Nominatim
+        'User-Agent': 'MyApp' 
       }
     });
 
@@ -34,7 +34,7 @@ async function getCoordinatesFromAddress(address) {
 
 function haversineDistance(lat1, lon1, lat2, lon2) {
   const toRad = deg => (deg * Math.PI) / 180;
-  const R = 6371; // רדיוס כדור הארץ בק"מ
+  const R = 6371; 
 
   const dLat = toRad(lat2 - lat1);
   const dLon = toRad(lon2 - lon1);
@@ -47,7 +47,7 @@ function haversineDistance(lat1, lon1, lat2, lon2) {
 
   const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 
-  return R * c; // מרחק בק"מ
+  return R * c; 
 }
 
 function generateToken(payload) {

@@ -5,7 +5,6 @@ const fs = require('fs');
 function createUploadMiddleware(folderName) {
   const uploadDir = path.join(__dirname, `../uploads/${folderName}`);
 
-  // ודא שהתיקייה קיימת
   if (!fs.existsSync(uploadDir)) {
     fs.mkdirSync(uploadDir, { recursive: true });
   }

@@ -4,6 +4,7 @@
     /* גובה מותאם (אפשר לשנות לפי כותרת/ניווט) */
     gap: 50px;
     padding: 20px 40px;
+    width: 100%;
     box-sizing: border-box;
     background-color: #f5f7fa;
     font-family: 'Arial', sans-serif;

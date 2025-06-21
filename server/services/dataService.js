@@ -1,5 +1,5 @@
 const { Sequelize } = require('sequelize');
-const { Reservation, Parking, Report } = require('../models'); // תשני לפי איך מוגדר אצלך
+const { Reservation, Parking, Report } = require('../models');
 
 const getStatistics = async (ownerId, role) => {
     const whereClause = role === 'admin' ? {} : { ownerId };
