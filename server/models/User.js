@@ -33,10 +33,7 @@ const User = sequelize.define('User', {
     type: DataTypes.STRING,
     allowNull: true
   },
-  role: {
-    type: DataTypes.ENUM('renter', 'owner', 'admin'),
-    allowNull: false
-  },
+
   averageRating: {
     type: DataTypes.FLOAT,
     allowNull: true,

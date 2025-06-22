@@ -1,6 +1,7 @@
-import { User, Parking, TimeSlot, Reservation, Report, Passwords, Message, Role } from './models/index.js';
-import { faker } from '@faker-js/faker';
-import bcrypt from 'bcrypt';
+const { User, Parking, TimeSlot, Reservation, Report, Passwords, Message, Role } = require('./models');
+
+const { faker } = require('@faker-js/faker');
+const bcrypt = require('bcrypt');
 
 const createUsers = async () => {
   const plainPasswords = [

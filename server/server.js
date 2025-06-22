@@ -8,7 +8,6 @@ const { generateToken } = require('./utils/utils');
 const jwt = require('jsonwebtoken');
 require('./scripts/notificationScheduler');
 
-// require('./models/index');??????????????????????
 const cron = require('node-cron');
 const purgeSoftDeletes = require('./scripts/purgeSoftDeletes'); // נניח שיצרת פונקציה ב־purgeSoftDeletes.js
 
@@ -33,6 +32,7 @@ app.use("/reservations", require("./routes/reservationRoutes"));
 app.use("/reports", require("./routes/reportRoutes"));
 app.use("/messages", require("./routes/messageRoutes"));
 app.use("/data", require("./routes/dataRoutes"));
+app.use('/payments', require("./routes/payment"));
 
 app.post('/api/refresh-token', (req, res) => {
   const { refreshToken } = req.body;
