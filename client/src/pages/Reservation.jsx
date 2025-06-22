@@ -130,19 +130,44 @@ function Reservation() {
         });
     };
 
-    const renderPayPalButton = () => {
-        if (window.paypal) {
-            window.paypal.Buttons({
-                createOrder: (data, actions) => {
-                    return actions.order.create({
-                        purchase_units: [{ amount: { value: totalPrice.toFixed(2) } }]
-                    });
-                },
-                onApprove: (data, actions) => actions.order.capture().then(() => handlePay()),
-                onError: err => console.error(err)
-            }).render('#paypal-button-container');
+const renderPayPalButton = () => {
+  if (window.paypal) {
+    window.paypal.Buttons({
+      createOrder: (data, actions) => {
+        return actions.order.create({
+          purchase_units: [{ amount: { value: totalPrice.toFixed(2) } }]
+        });
+      },
+      onApprove: async (data, actions) => {
+        try {
+          const details = await actions.order.capture(); // מאמת את התשלום
+          const orderID = data.orderID;
+
+          // שולחת לשרת את כל הנתונים + orderID
+          await apiService.create('payments/confirm', {
+            orderID,
+            reservationData: {
+              renterId: user.id,
+              ownerId: parking.ownerId,
+              parkingId: parking.id,
+              timeSlotId: reservationType === 'custom' ? null : selectedSlots[0],
+              reservationDate: new Date().toISOString(),
+              totalPrice: totalPrice
+            }
+          });
+
+          alert('Payment and reservation successful!');
+          navigate('/');
+        } catch (err) {
+          console.error('Payment or confirmation failed:', err);
+          alert('There was a problem processing the payment.');
         }
-    };
+      },
+      onError: err => console.error(err)
+    }).render('#paypal-button-container');
+  }
+};
+
 
     const calculatePriceForSlot = (slot) => {
         const startDateTime = new Date(`${slot.date}T${slot.startTime}`);

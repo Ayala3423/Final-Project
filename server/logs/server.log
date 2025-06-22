@@ -1675,3 +1675,17 @@
 [2025-06-22T09:36:03.761Z] getReportsByParkingId: Fetching reports for parkingId=4
 [2025-06-22T09:36:03.788Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=4
 [2025-06-22T09:36:03.797Z] getReportsByParkingId: Fetching reports for parkingId=4
+[2025-06-22T10:56:01.834Z] getUnReadMessages: Fetching unread messages for userId=3
+[2025-06-22T10:56:01.862Z] getUnReadMessages: Fetching unread messages for userId=3
+[2025-06-22T10:56:02.055Z] searchParkings: query={"lat":"31.951014","lng":"34.888075"}
+[2025-06-22T10:56:02.077Z] searchParkings: query={"lat":"31.951014","lng":"34.888075"}
+[2025-06-22T10:57:13.631Z] getUnReadMessages: Fetching unread messages for userId=3
+[2025-06-22T10:57:13.647Z] getUnReadMessages: Fetching unread messages for userId=3
+[2025-06-22T10:57:13.686Z] searchParkings: query={"lat":"31.951014","lng":"34.888075"}
+[2025-06-22T10:57:13.691Z] searchParkings: query={"lat":"31.951014","lng":"34.888075"}
+[2025-06-22T10:59:51.968Z] getReservationsByValue: Fetching reservations with value={"ownerId":"3","page":"1","limit":"10"}
+[2025-06-22T10:59:52.005Z] getReservationsByValue: Fetching reservations with value={"ownerId":"3","page":"1","limit":"10"}
+[2025-06-22T10:59:55.479Z] getParkingsByParams: filters={"ownerId":"3","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-22T10:59:55.483Z] getParkingsByParams: filters={"ownerId":"3","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-22T10:59:58.519Z] getMessagesById: Fetching messages for senderId=3
+[2025-06-22T10:59:58.528Z] getMessagesById: Fetching messages for senderId=3
