@@ -1,6 +1,5 @@
-import { User, Parking, TimeSlot, Reservation, Report, Passwords, Message } from './models/index.js';
+import { User, Parking, TimeSlot, Reservation, Report, Passwords, Message, Role } from './models/index.js';
 import { faker } from '@faker-js/faker';
-import { Op } from 'sequelize';
 import bcrypt from 'bcrypt';
 
 const createUsers = async () => {
@@ -13,27 +12,37 @@ const createUsers = async () => {
   ];
 
   const usersData = [
-    { name: "Admin User", username: "admin", role: "admin", email: "admin@example.com", phone: "0501234567", address: "Jerusalem", profileImage: "default-profile.png" },
-    { name: "John Doe", username: "johnd", role: "renter", email: "john@example.com", phone: "0507654321", address: "Beit Hakerem, Jerusalem", profileImage: "default-profile.png" },
-    { name: "Sarah Levi", username: "sarahlevi", role: "renter", email: "sarah@example.com", phone: "0521112233", address: "Katamon, Jerusalem", profileImage: "default-profile.png" },
-    { name: "David Cohen", username: "davidc", role: "owner", email: "david@example.com", phone: "0533334444", address: "Gilo, Jerusalem", profileImage: "default-profile.png" },
-    { name: "Miriam Azulay", username: "miriama", role: "owner", email: "miriam@example.com", phone: "0545556666", address: "Pisgat Ze'ev, Jerusalem", profileImage: "default-profile.png" }
+    { name: "Admin User", username: "admin", email: "admin@example.com", phone: "0501234567", address: "Jerusalem", profileImage: "default-profile.png" },
+    { name: "John Doe", username: "johnd", email: "john@example.com", phone: "0507654321", address: "Beit Hakerem, Jerusalem", profileImage: "default-profile.png" },
+    { name: "Sarah Levi", username: "sarahlevi", email: "sarah@example.com", phone: "0521112233", address: "Katamon, Jerusalem", profileImage: "default-profile.png" },
+    { name: "David Cohen", username: "davidc", email: "david@example.com", phone: "0533334444", address: "Gilo, Jerusalem", profileImage: "default-profile.png" },
+    { name: "Miriam Azulay", username: "miriama", email: "miriam@example.com", phone: "0545556666", address: "Pisgat Ze'ev, Jerusalem", profileImage: "default-profile.png" }
   ];
 
   const users = await User.bulkCreate(usersData, { returning: true });
 
+  const roles = [
+    { userId: users[0].id, role: "admin" },
+    { userId: users[1].id, role: "renter" },
+    { userId: users[2].id, role: "renter" },
+    { userId: users[3].id, role: "owner" },
+    { userId: users[4].id, role: "owner" },
+
+    // הוספה של כמה משתמשים עם מספר תפקידים
+    { userId: users[3].id, role: "renter" },
+    { userId: users[4].id, role: "renter" }
+  ];
+
+  await Role.bulkCreate(roles);
+
   const passwords = await Promise.all(users.map(async user => {
     const plain = plainPasswords.find(p => p.username === user.username)?.password || "password123";
     const hash = await bcrypt.hash(plain, 10);
-    return {
-      userId: user.id,
-      hash: hash
-    };
+    return { userId: user.id, hash };
   }));
 
   await Passwords.bulkCreate(passwords);
 };
-
 
 const jerusalemAddresses = [
   { address: "Ben Yehuda St 1", lat: 31.781, lon: 35.219 },
@@ -48,40 +57,11 @@ const jerusalemAddresses = [
   { address: "Ramat Sharet 5", lat: 31.755, lon: 35.186 }
 ];
 
-const createMessages = async () => {
-  const messages = [];
-
-  // נניח ניצור שיחות בין renter ל-owner
-  const conversations = [
-    { senderId: 2, receiverId: 4 }, // John -> David
-    { senderId: 3, receiverId: 5 }, // Sarah -> Miriam
-  ];
-
-  for (const convo of conversations) {
-    const conversationId = faker.string.uuid();
-
-    // ניצור 5 הודעות לכל שיחה
-    for (let i = 0; i < 5; i++) {
-      const isRead = faker.datatype.boolean();
-      messages.push({
-        senderId: i % 2 === 0 ? convo.senderId : convo.receiverId,
-        receiverId: i % 2 === 0 ? convo.receiverId : convo.senderId,
-        content: faker.lorem.sentence(),
-        sentAt: faker.date.recent(10),
-        isRead,
-        conversationId
-      });
-    }
-  }
-
-  await Message.bulkCreate(messages);
-};
-
 const createParkings = async () => {
   const parkings = [];
   for (let i = 0; i < 20; i++) {
     const { address, lat, lon } = faker.helpers.arrayElement(jerusalemAddresses);
-    const ownerId = i < 10 ? 4 : 5;
+    const ownerId = i < 10 ? 4 : 5; // David (4), Miriam (5)
 
     parkings.push({
       ownerId,
@@ -135,49 +115,7 @@ const createTimeSlots = async () => {
       }
     }
   }
-  console.log("✅ Total slots to create:", slots.length);
   await TimeSlot.bulkCreate(slots);
-};
-
-const createReservationsAndReports = async () => {
-  const allSlots = await TimeSlot.findAll({ limit: 110 });
-  const reservations = [];
-  const reports = [];
-
-  for (let i = 0; i < 30; i++) {
-    const slot = faker.helpers.arrayElement(allSlots);
-    const start = new Date();
-    start.setHours(8 + i % 5);
-    const end = new Date(start);
-    end.setHours(start.getHours() + 2);
-
-    const renterId = faker.helpers.arrayElement([2, 3]);
-    const ownerId = faker.helpers.arrayElement([4, 5]);
-
-    reservations.push({
-      renterId,
-      ownerId,
-      parkingId: slot.parkingId,
-      timeSlotId: slot.id,
-      startTime: start,
-      endTime: end,
-      totalPrice: 30,
-      reservationDate: new Date()
-    });
-
-    if (i % 2 === 0) {
-      reports.push({
-        reporterId: renterId,
-        reportedUserId: ownerId,
-        parkingId: slot.parkingId,
-        rating: faker.number.float({ min: 2, max: 5, precision: 0.5 }),
-        description: faker.helpers.arrayElement(["Great!", "Not clean", "Too tight", null])
-      });
-    }
-  }
-
-  await Reservation.bulkCreate(reservations);
-  await Report.bulkCreate(reports);
 };
 
 const seed = async () => {
@@ -185,9 +123,6 @@ const seed = async () => {
     await createUsers();
     await createParkings();
     await createTimeSlots();
-    await createReservationsAndReports();
-    await createMessages(); 
-
     console.log("✅ Seed completed successfully.");
   } catch (error) {
     console.error("❌ Error seeding data:", error);

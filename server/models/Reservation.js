@@ -36,7 +36,7 @@ const Reservation = sequelize.define('Reservation', {
   },
   timeSlotId: {
     type: DataTypes.INTEGER,
-    allowNull: true, // <- שונה ל-nullable
+    allowNull: true,
     references: {
       model: 'TimeSlots',
       key: 'id'

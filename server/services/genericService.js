@@ -103,21 +103,26 @@ const genericService = {
     },
 
     async sendAutoNotifications() {
-        // 1. מציאת המשתמש מנהל
-        const adminUser = await User.findOne({ where: { role: 'admin' } });
+        const adminUser = await User.findOne({
+            include: [{
+                model: db.Role,
+                where: { role: 'admin' }
+            }]
+        });
         if (!adminUser) {
             console.error('Admin user not found');
             return;
         }
 
-        // 2. מציאת כל המשתמשים שהם לא מנהלים
         const users = await User.findAll({
-            where: { role: { [Op.ne]: 'admin' } }
+            include: [{
+                model: db.Role,
+                where: { role: { [Op.ne]: 'admin' } }
+            }]
         });
 
         const messagesToCreate = [];
 
-        // 3. עבור כל משתמש יוצרים לו הודעה עם conversationId ייחודי לו
         for (const user of users) {
             const conversationId = await genericService.getOrCreateConversationId(adminUser.id, user.id);
 
@@ -131,7 +136,6 @@ const genericService = {
             });
         }
 
-        // 4. יצירה בבאלק
         await Message.bulkCreate(messagesToCreate);
 
         console.log(`Sent notification messages to ${users.length} users from admin (id=${adminUser.id})`);

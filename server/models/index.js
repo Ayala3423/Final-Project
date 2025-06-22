@@ -5,6 +5,7 @@ const Reservation = require('./Reservation');
 const Report = require('./Report');
 const Message = require('./Message');
 const Passwords = require('./Passwords');
+const Role = require('./Role');
 const sequelize = require('../config/sequelize');
 
 User.hasMany(Parking, { foreignKey: 'ownerId', as: 'Parkings' });
@@ -39,6 +40,9 @@ Passwords.belongsTo(User, { foreignKey: 'userId', as: 'User' });
 
 Parking.hasMany(Reservation, { foreignKey: 'parkingId' });
 Reservation.belongsTo(Parking, { foreignKey: 'parkingId' });
+
+User.hasOne(Role, { foreignKey: 'userId' });
+Role.belongsTo(User, { foreignKey: 'userId' });
 
 sequelize.sync({ alter: true })
   .then(() => {

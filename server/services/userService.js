@@ -1,4 +1,5 @@
 const User = require('../models/User');
+const Role = require('../models/Role');
 const Passwords = require('../models/Passwords');
 const Reservation = require('../models/Reservation');
 const { Op } = require('sequelize');
@@ -8,13 +9,25 @@ const userService = {
   async findByUsernameOrEmail(identifier) {
     return await User.findOne({
       where: {
-        username: identifier
+        [Op.or]: [
+          { username: identifier },
+          { email: identifier }
+        ]
       }
     });
   },
 
   async createUser(userData) {
-    return await User.create(userData);
+    const { role, ...userFields } = userData;
+
+    const user = await User.create(userFields);
+
+    await Role.create({
+      role: role,
+      userId: user.id
+    });
+
+    return { user, role: roleRecord };
   },
 
   async findUserById(id) {
@@ -24,36 +37,59 @@ const userService = {
   async updateUser(id, data) {
     const user = await User.findByPk(id);
     if (!user) return null;
+    if (data.role) {
+      const roleRecord = await Role.findOne({ where: { userId: user.id } });
+      if (roleRecord) {
+        await roleRecord.update({ role: data.role });
+      } else {
+        await Role.create({ role: data.role, userId: user.id });
+      }
+    }
+    delete data.role;
+
     return await user.update(data);
+
   },
 
   async deleteUser(id) {
-    return await User.update(
-      { isDeleted: true },
-      { where: { id } }
-    );
+    return await User.destroy({ where: { id } });
+
   },
 
   async findAllUsers() {
     return await User.findAll({
-      where: {
-        role: ['renter', 'owner']
-      }
+      include: [{
+        model: Role,
+        where: {
+          role: ['renter', 'owner']
+        }
+      }]
     });
+
   },
 
   async findUsersByParams(params) {
+
+    const include = [];
+
+    if (params.role) {
+      include.push({
+        model: Role,
+        where: { role: params.role }
+      });
+    }
+
     const where = {};
+
     if (params.username) {
       where.username = { [Op.like]: `%${params.username}%` };
     }
     if (params.email) {
       where.email = { [Op.like]: `%${params.email}%` };
     }
-    if (params.role) {
-      where.role = params.role;
-    }
-    return await User.findAll({ where });
+
+    return await User.findAll({ where, include });
+
   },
 
   async createPassword(userId, hash) {
