@@ -498,7 +498,7 @@
     width: 100%;
     z-index: 100;
     padding: 8px 40px;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(14, 13, 13, 0.6);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -587,6 +587,7 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     max-width: 900px;
     line-height: 1.2;
+    margin-bottom: 10vh;
 }
 
 /* Category Buttons */

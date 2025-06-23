@@ -116,7 +116,7 @@ function Home() {
             {/* Hero Section */}
             <div className="hero-image-section">
                 <div className="main-content">
-                    <h1 className="main-title">Find Your Perfect Parking Spot in Seconds</h1>
+                    <h1 className="main-title">Find Your Perfect Parking Spot</h1>
                     {/* <p className="subtitle">The smart way to discover, book, and manage parking spaces across the city</p> */}
 
                     <div className="search-wrapper">
