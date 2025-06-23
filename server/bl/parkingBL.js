@@ -1,7 +1,7 @@
 const genericService = require('../services/genericService');
 const { Op } = require('sequelize');
 const { getCoordinatesFromAddress, haversineDistance } = require('../utils/utils');
-const { log } =  require("../utils/logger.js");
+const { log } = require("../utils/logger.js");
 
 function isToday(date) {
     const now = new Date();
@@ -55,12 +55,31 @@ const parkingBL = {
     async searchParkings(query) {
         log(`searchParkings: query=${JSON.stringify(query)}`);
 
-        const {
-            lat, lng, radius = 1000, type = 'temporary',
+        let {
+            lat, lng, radius = 5000, type = 'temporary',
             minPrice = 0, maxPrice = 100000000000,
-            startTime = new Date(), hours = 2
+            startTime = new Date(), hours = 2,
+            searchText // הפרמטר החדש
         } = query;
 
+        // אם אין קואורדינטות אבל יש טקסט - מבצעים גיאוקודינג
+        if ((!lat || !lng) && searchText) {
+            const geocodeRes = await fetch(`https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(searchText)}&format=json&limit=1`);
+            const geocodeData = await geocodeRes.json();
+
+            if (geocodeData.length > 0) {
+                lat = parseFloat(geocodeData[0].lat);
+                lng = parseFloat(geocodeData[0].lon);
+
+                // עדכון ה-query עם הקואורדינטות שנמצאו
+                query.lat = lat;
+                query.lng = lng;
+            } else {
+                throw new Error('Location not found');
+            }
+        }
+
+        // אם עדיין אין קואורדינטות - זרוק שגיאה
         if (!lat || !lng) throw new Error('Missing coordinates');
 
         const startDateTime = new Date(startTime);
@@ -69,13 +88,14 @@ const parkingBL = {
         const dayOfWeek = startDateTime.toLocaleDateString('en-US', { weekday: 'long' }).toLowerCase();
 
         const allParkings = await genericService.getByParamsLimit('Parking', {});
+
         const parkingsInRange = allParkings.filter(p => {
             const distance = haversineDistance(lat, lng, p.latitude, p.longitude);
             return distance <= radius;
         });
 
         const parkingIds = parkingsInRange.map(p => p.id);
-        if (parkingIds.length === 0) return [];
+        if (parkingIds.length === 0) return { center: { lat, lng }, parkings: [] };
 
         const conditions = {
             parkingId: { [Op.in]: parkingIds },
@@ -119,22 +139,26 @@ const parkingBL = {
         log(`searchParkings: final conditions=${JSON.stringify(conditions)}`);
         const slots = await genericService.getAdvanced('TimeSlot', conditions, ['Parking']);
 
-        return slots.map(slot => ({
-            id: slot.Parking.id,
-            address: slot.Parking.address,
-            lat: slot.Parking.latitude,
-            lng: slot.Parking.longitude,
-            description: slot.Parking.description,
-            imageUrl: slot.Parking.imageUrl,
-            rating: slot.Parking.averageRating,
-            price: slot.price,
-            type: slot.type,
-            timeSlotId: slot.id,
-            startTime: slot.startTime,
-            endTime: slot.endTime,
-            ownerId: slot.Parking.ownerId,
-        }));
+        return {
+            center: { lat, lng }, // כאן זה כבר תמיד מעודכן
+            parkings: slots.map(slot => ({
+                id: slot.Parking.id,
+                address: slot.Parking.address,
+                lat: slot.Parking.latitude,
+                lng: slot.Parking.longitude,
+                description: slot.Parking.description,
+                imageUrl: slot.Parking.imageUrl,
+                rating: slot.Parking.averageRating,
+                price: slot.price,
+                type: slot.type,
+                timeSlotId: slot.id,
+                startTime: slot.startTime,
+                endTime: slot.endTime,
+                ownerId: slot.Parking.ownerId,
+            }))
+        };
     }
+
 };
 
 module.exports = parkingBL;

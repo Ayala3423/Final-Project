@@ -3,6 +3,7 @@ import React from 'react';
 const weekdays = ['ראשון', 'שני', 'שלישי', 'רביעי', 'חמישי', 'שישי', 'שבת'];
 
 export default function AddTimeSlot({ availability, setAvailability }) {
+    
     if (!Array.isArray(availability)) {
         console.error('Availability is not an array', availability);
         return <div>שגיאה בטעינת זמינות</div>;

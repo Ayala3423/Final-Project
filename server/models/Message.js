@@ -34,7 +34,6 @@ const Message = sequelize.define('Message', {
     type: DataTypes.UUID,
     allowNull: true
   }
-  
 }, {
   tableName: 'Messages',
    paranoid: true, 

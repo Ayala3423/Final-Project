@@ -29,7 +29,7 @@ const reservationBL = {
             log(`deleteReservation: Reservation id=${id} not found`);
             return null;
         }
-        return await genericService.remove('Reservation', id);
+        return await genericService.delete('Reservation', id);
     },
 
     async createReservation(data) {

@@ -34,7 +34,7 @@ const genericService = {
         return await Model.findAll({
             where: params,
         });
-    },
+    }, 
 
     async getByParamsLimit(model, params) {
         console.log('getByParamsLimit');

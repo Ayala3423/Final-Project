@@ -4,6 +4,7 @@ import "../styles/search.css";
 import { apiService } from "../services/genericService";
 
 const SearchBar = ({ onSearch, currentLocation }) => {
+
     const [minPrice, setMinPrice] = useState(0);
     const [maxPrice, setMaxPrice] = useState(100);
     const [parkingType, setParkingType] = useState("temporary");
@@ -78,7 +79,7 @@ const SearchBar = ({ onSearch, currentLocation }) => {
             hours: duration,
             radius
         };
-        console.log("Search parameters:", params);
+        
         apiService.getSearch(
             'parkings',
             params,

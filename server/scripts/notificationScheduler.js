@@ -1,51 +1,73 @@
 const cron = require('node-cron');
 const genericService = require('../services/genericService');
-const { Parking, Reservation, User } = require('../models');  // נניח שככה אתה מייבא את המודלים
+const userService = require('../services/userService');
+const emailService = require('../services/emailService');
+const { Op } = require('sequelize');
 
-cron.schedule('56 22 * * *', async () => {
-    console.log('Running scheduled notifications at 22:56...');
+const THRESHOLD_DAYS = 30;
 
-    try {
-        // קודם כל: שליחת ההתראות הרגילות
-        await genericService.sendAutoNotifications();
-        console.log('Notifications sent successfully.');
+const runScheduledNotifications = async () => {
+  console.log('Running scheduled notifications at 22:56...');
 
-        // עכשיו נבצע את בדיקת ההשכרות הישנות
-        const THRESHOLD_DAYS = 30;  // לדוגמה: 30 ימים
+  try {
+    await genericService.sendAutoNotifications();
+    console.log('Auto notifications sent.');
 
-        const allParkings = await Parking.findAll();
+    await sendInactiveParkingAlerts();
+    await sendUnreadNotificationEmails();
 
-        for (const parking of allParkings) {
-            // נבדוק מתי ההזמנה האחרונה
-            const lastReservation = await Reservation.findOne({
-                where: { parkingId: parking.id },
-                order: [['startTime', 'DESC']]
-            });
+    console.log('All notifications completed.');
+  } catch (err) {
+    console.error('Error during scheduled notifications:', err);
+  }
+};
 
-            let daysSinceLastReservation;
-            if (!lastReservation) {
-                // לא הוזמנה בכלל
-                daysSinceLastReservation = Infinity;
-            } else {
-                const lastDate = new Date(lastReservation.startTime);
-                const now = new Date();
-                const diffTime = now - lastDate;
-                daysSinceLastReservation = diffTime / (1000 * 60 * 60 * 24);
-            }
+const sendInactiveParkingAlerts = async () => {
+  const allParkings = await genericService.getAll('Parking');
 
-            if (daysSinceLastReservation > THRESHOLD_DAYS) {
-                const owner = await User.findByPk(parking.ownerId);
-                if (owner) {
-                    await genericService.sendNotification({
-                        userId: owner.id,
-                        message: `החניה בכתובת ${parking.address} לא הושכרה מזה ${Math.floor(daysSinceLastReservation)} ימים. אולי כדאי לעדכן זמינות או מחיר.`
-                    });
-                    console.log(`Notification sent to owner ${owner.id} for parking ${parking.id}`);
-                }
-            }
-        }
+  for (const parking of allParkings) {
+    const reservations = await genericService.getByParams('Reservation', {
+      parkingId: parking.id
+    });
 
-    } catch (err) {
-        console.error('Error sending notifications:', err);
+    const lastReservation = reservations.sort((a, b) => new Date(b.startTime) - new Date(a.startTime))[0];
+    const now = new Date();
+    const lastDate = lastReservation ? new Date(lastReservation.startTime) : null;
+    const daysSince = lastDate ? (now - lastDate) / (1000 * 60 * 60 * 24) : Infinity;
+
+    if (daysSince > THRESHOLD_DAYS) {
+      const owner = await userService.findUserById(parking.ownerId);
+      if (owner) {
+        const message = `החניה בכתובת ${parking.address} לא הושכרה מזה ${Math.floor(daysSince)} ימים. אולי כדאי לעדכן זמינות או מחיר.`;
+        await genericService.sendNotification(owner.id, message);
+        console.log(`Notification sent to owner ${owner.id} for parking ${parking.id}`);
+      }
     }
-});
+  }
+};
+
+const sendUnreadNotificationEmails = async () => {
+  const thresholdDate = new Date();
+  thresholdDate.setDate(thresholdDate.getDate() - THRESHOLD_DAYS);
+
+  const oldUnread = await genericService.getAdvanced('Notification', {
+    read: false,
+    createdAt: { [Op.lt]: thresholdDate }
+  }, 'User');
+
+  for (const notification of oldUnread) {
+    const user = notification.User;
+    if (user?.email) {
+      await emailService.sendEmail({
+        to: user.email,
+        subject: 'תזכורת: יש לך התראות שלא נקראו',
+        text: 'יש לך התראות שלא נקראו כבר יותר מחודש באתר RentBro. מומלץ להיכנס ולבדוק!'
+      });
+      console.log(`Reminder email sent to user ${user.id}`);
+    }
+  }
+};
+
+cron.schedule('56 22 * * *', runScheduledNotifications);
+
+module.exports = { runScheduledNotifications };

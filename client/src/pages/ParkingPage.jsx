@@ -6,9 +6,10 @@ import Footer from '../components/Footer';
 import { apiService } from '../services/genericService';
 import { AuthContext } from '../context/AuthContext';
 import TimeSlots from '../components/TimeSlots';
-import AddTimeSlot from './AddTimeSlot'; // Importing the AddTimeSlot component
+import AddTimeSlot from './AddTimeSlot';
 
 function ParkingPage() {
+
     const navigate = useNavigate();
     const location = useLocation();
     const parking = location.state?.parking;
@@ -32,9 +33,6 @@ function ParkingPage() {
         : 0;
 
     const [showAddTimeSlotForm, setShowAddTimeSlotForm] = useState(false);
-
-    console.log("parkinggggggggggggg:", parking);
-
 
     useEffect(() => {
         if (parking?.id) {
@@ -182,7 +180,7 @@ function ParkingPage() {
                 <p><strong>Descreption:</strong> {parking.description || 'אין תיאור זמין'}</p>
             </div>
 
-            <TimeSlots timeSlots={timeSlots} />
+            <TimeSlots timeSlots={timeSlots} setTimeSlots={setTimeSlots} />
 
             {user?.id === parking.ownerId && (
                 <div className="add-timeslot-section">

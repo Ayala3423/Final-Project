@@ -5,6 +5,7 @@ import { apiService } from '../services/genericService';
 import { AuthContext } from '../context/AuthContext';
 
 function Reservation() {
+
     const navigate = useNavigate();
     const location = useLocation();
     const { parking, timeSlots } = location.state || {};
@@ -19,16 +20,39 @@ function Reservation() {
     const [modalStep, setModalStep] = useState('initial');
     const [showPayment, setShowPayment] = useState(false);
 
+    if (user?.id === parking?.ownerId) {
+        return (
+            <Modal onClose={() => navigate(-1)}>
+                <div className="reservation-modal">
+                    <h3>משכיר לא יכול להזמין את החניה של עצמו</h3>
+                    <button onClick={() => navigate(-1)}>חזרה</button>
+                </div>
+            </Modal>
+        );
+    }
+
     useEffect(() => {
-        const script = document.createElement('script');
-        script.src = `https://www.paypal.com/sdk/js?client-id=${import.meta.env.VITE_CLIENT_ID}&currency=ILS`;
-        script.async = true;
-        document.body.appendChild(script);
-    }, []);
+        if (showPayment && !document.getElementById('paypal-script')) {
+            const script = document.createElement('script');
+            script.id = 'paypal-script';
+            script.src = `https://www.paypal.com/sdk/js?client-id=${import.meta.env.VITE_CLIENT_ID}&currency=ILS`;
+            script.async = true;
+            document.body.appendChild(script);
+        }
+    }, [showPayment]);
 
     useEffect(() => {
         setError('');
     }, [modalStep]);
+
+    useEffect(() => {
+        return () => {
+            const paypalScript = document.getElementById('paypal-script');
+            if (paypalScript) {
+                paypalScript.remove();
+            }
+        };
+    }, []);
 
     const handleCheckboxChange = (slotId) => {
         setSelectedSlots((prev) =>
@@ -90,7 +114,18 @@ function Reservation() {
     };
 
     const isTimeAvailable = (start, end) => {
-        return false; 
+        const startTime = new Date(start);
+        const endTime = new Date(end);
+
+        for (const slot of timeSlots) {
+            const slotStart = new Date(`${slot.date}T${slot.startTime}`);
+            const slotEnd = new Date(`${slot.date}T${slot.endTime}`);
+
+            if (startTime < slotEnd && endTime > slotStart) {
+                return false; // יש חפיפה
+            }
+        }
+        return true; // הזמן פנוי
     };
 
     const calculatePrice = () => {
@@ -111,63 +146,43 @@ function Reservation() {
         return total;
     };
 
-    const handlePay = () => {
-        const reservationData = {
-            renterId: user.id,
-            ownerId: parking.ownerId,
-            parkingId: parking.id,
-            timeSlotId: reservationType === 'custom' ? null : selectedSlots[0],
-            reservationDate: new Date().toISOString(),
-            totalPrice: totalPrice
-        };
+    const renderPayPalButton = () => {
+        if (window.paypal) {
+            window.paypal.Buttons({
+                createOrder: (data, actions) => {
+                    return actions.order.create({
+                        purchase_units: [{ amount: { value: totalPrice.toFixed(2) } }]
+                    });
+                },
+                onApprove: async (data, actions) => {
+                    try {
+                        const details = await actions.order.capture(); // מאמת את התשלום
+                        const orderID = data.orderID;
 
-        apiService.create('reservations', reservationData, () => {
-            alert('The reservation has been successfully created.');
-            navigate('/');
-        }, (err) => {
-            console.error(err);
-            alert('Error creating reservation. Please try again later.');
-        });
-    };
+                        // שולחת לשרת את כל הנתונים + orderID
+                        await apiService.create('payments/confirm', {
+                            orderID,
+                            reservationData: {
+                                renterId: user.id,
+                                ownerId: parking.ownerId,
+                                parkingId: parking.id,
+                                timeSlotIds: reservationType === 'custom' ? [] : selectedSlots,
+                                reservationDate: new Date().toISOString(),
+                                totalPrice: totalPrice
+                            }
+                        });
 
-const renderPayPalButton = () => {
-  if (window.paypal) {
-    window.paypal.Buttons({
-      createOrder: (data, actions) => {
-        return actions.order.create({
-          purchase_units: [{ amount: { value: totalPrice.toFixed(2) } }]
-        });
-      },
-      onApprove: async (data, actions) => {
-        try {
-          const details = await actions.order.capture(); // מאמת את התשלום
-          const orderID = data.orderID;
-
-          // שולחת לשרת את כל הנתונים + orderID
-          await apiService.create('payments/confirm', {
-            orderID,
-            reservationData: {
-              renterId: user.id,
-              ownerId: parking.ownerId,
-              parkingId: parking.id,
-              timeSlotId: reservationType === 'custom' ? null : selectedSlots[0],
-              reservationDate: new Date().toISOString(),
-              totalPrice: totalPrice
-            }
-          });
-
-          alert('Payment and reservation successful!');
-          navigate('/');
-        } catch (err) {
-          console.error('Payment or confirmation failed:', err);
-          alert('There was a problem processing the payment.');
+                        alert('Payment and reservation successful!');
+                        navigate('/');
+                    } catch (err) {
+                        console.error('Payment or confirmation failed:', err);
+                        alert('There was a problem processing the payment.');
+                    }
+                },
+                onError: err => console.error(err)
+            }).render('#paypal-button-container');
         }
-      },
-      onError: err => console.error(err)
-    }).render('#paypal-button-container');
-  }
-};
-
+    };
 
     const calculatePriceForSlot = (slot) => {
         const startDateTime = new Date(`${slot.date}T${slot.startTime}`);
@@ -230,7 +245,14 @@ const renderPayPalButton = () => {
                     )}
                     {error && <p className="error-text">{error}</p>}
                     <button onClick={() => setModalStep('initial')}>Back</button>
-                    {filteredSlots.length > 0 && <button onClick={handleSubmit}>Continue to summary</button>}
+                    {filteredSlots.length > 0 && (
+                        <button
+                            disabled={selectedSlots.length === 0}
+                            onClick={handleSubmit}
+                        >
+                            Continue to summary
+                        </button>
+                    )}
                 </div>
             )}
 

@@ -6,6 +6,8 @@ const Report = require('./Report');
 const Message = require('./Message');
 const Passwords = require('./Passwords');
 const Role = require('./Role');
+const Resource = require('./Resource');
+const RolePermission = require('./RolePermission');
 const sequelize = require('../config/sequelize');
 
 User.hasMany(Parking, { foreignKey: 'ownerId', as: 'Parkings' });
@@ -44,6 +46,9 @@ Reservation.belongsTo(Parking, { foreignKey: 'parkingId' });
 User.hasOne(Role, { foreignKey: 'userId' });
 Role.belongsTo(User, { foreignKey: 'userId' });
 
+Role.belongsToMany(Resource, { through: RolePermission, foreignKey: 'roleId' });
+Resource.belongsToMany(Role, { through: RolePermission, foreignKey: 'permissionId' });
+
 sequelize.sync({ alter: true })
   .then(() => {
     console.log('✅ DB connected and synced (from index.js)');
@@ -52,4 +57,4 @@ sequelize.sync({ alter: true })
     console.error('❌ DB sync failed (from index.js):', err);
   });
 
-module.exports = { sequelize, User, Parking, TimeSlot, Reservation, Report, Message, Passwords };
+module.exports = { sequelize, Role, User, Parking, TimeSlot, Reservation, Report, Message, Passwords, Resource, RolePermission };

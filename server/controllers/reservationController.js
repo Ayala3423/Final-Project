@@ -30,7 +30,7 @@ const reservationController = {
 
     async deleteReservation(req, res) {
         try {
-            const result = await reservationBL.deleteReservation(req.params.id);
+            const result = await reservationBL.deleteReservation(Number(req.params.id));
             if (!result) {
                 return res.status(404).json({ message: 'Reservation not found' });
             }

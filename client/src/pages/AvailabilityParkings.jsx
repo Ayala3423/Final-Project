@@ -1,31 +1,51 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ParkingList from '../components/ParkingList';
 import MapView from '../components/MapView';
 import { apiService } from '../services/genericService';
 import '../styles/AvailabilityParkings.css';
 import SearchBar from '../components/SearchBar';
 
-function AvailabilityParkings({ currentLocation }) {
+function AvailabilityParkings({ currentLocation, searchText, triggerSearch }) {
+
     const [searchResults, setSearchResults] = useState();
     const [hoveredParkingId, setHoveredParkingId] = useState(null);
-    console.log("aaaaa", currentLocation);
+    const [mapCenter, setMapCenter] = useState(currentLocation); // הוספה    
 
     useEffect(() => {
+        handleSearch();
+    }, [triggerSearch]);
+
+    const handleSearch = () => {
+        console.log("Search Text:", searchText);
         console.log("Current Location:", currentLocation);
 
-        if (currentLocation) { 
-            apiService.getSearch('parkings', currentLocation, (response) => {
-                console.log("response", response);
-                setSearchResults(response);
-            }, (error) => console.error(error.message));
+        if (!searchText && !currentLocation) return;
+
+        let query = {};
+
+        if (searchText) {
+            query.searchText = searchText;
+        } else if (currentLocation) {
+            query = {
+                lat: currentLocation.lat,
+                lng: currentLocation.lng
+            };
         }
 
-    }, [currentLocation]);
+        apiService.getSearch('parkings', query, (response) => {
+            console.log("response", response);
+            setSearchResults(response.parkings);
+            setMapCenter(response.center); // עדכון מרכז המפה
+        }, (error) => console.error(error.message));
+    };
 
     return (
         <div className="availability-container">
             <div className="map-view-wrapper">
-                <SearchBar onSearch={setSearchResults} currentLocation={currentLocation} />
+                <SearchBar onSearch={(response) => {
+                    setSearchResults(response.parkings);
+                    setMapCenter(response.center);
+                }} currentLocation={currentLocation} />
             </div>
             <div className="parking-list-wrapper">
                 <ParkingList
@@ -36,7 +56,7 @@ function AvailabilityParkings({ currentLocation }) {
             </div>
             <div className="map-view-wrapper">
                 <MapView
-                    center={currentLocation}
+                    center={mapCenter} // שינוי
                     parkings={searchResults}
                     hoveredParkingId={hoveredParkingId}
                 />

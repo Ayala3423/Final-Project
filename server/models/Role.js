@@ -9,7 +9,7 @@ const Role = sequelize.define('Role', {
     primaryKey: true
   },
   role: {
-    type: DataTypes.ENUM('renter', 'owner', 'admin'),
+    type: DataTypes.ENUM('renter', 'owner', 'admin', 'guest'),
     allowNull: false
   },
   userId: {

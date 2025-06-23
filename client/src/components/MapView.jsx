@@ -3,54 +3,35 @@ import '../styles/MapView.css';
 
 const API_KEY = 'AIzaSyCcteuv39cQV0oEpPLjoXCJfN_D7f_yNTs';
 
+// פונקציה בטוחה להמרת ערך ל־number או null אם לא תקין
+const toNumber = (value) => {
+    const num = parseFloat(value);
+    return isNaN(num) ? null : num;
+};
+
 function MapView({ center, parkings, hoveredParkingId }) {
     const mapRef = useRef(null);
     const mapInstance = useRef(null);
-    const markersRef = useRef({}); 
+    const markersRef = useRef({});
+    const centerMarkerRef = useRef(null); // ניהול המארקר של המרכז
 
+    // אתחול המפה רק פעם אחת
     useEffect(() => {
         const initializeMap = () => {
             if (!mapRef.current || mapInstance.current) return;
 
-            mapInstance.current = new window.google.maps.Map(mapRef.current, {
-                center,
-                zoom: 14
-            });
+            const lat = toNumber(center?.lat);
+            const lng = toNumber(center?.lng);
 
-            new window.google.maps.Marker({
-                position: center,
-                map: mapInstance.current,
-                title: 'Your Location'
-            });
-
-            if (Array.isArray(parkings)) {
-                parkings.forEach(spot => {
-                    console.log("spot", spot);
-
-                    const marker = new window.google.maps.Marker({
-                        position: { lat: spot.lat, lng: spot.lng },
-                        map: mapInstance.current,
-                        title: spot.address || '',
-                        icon: {
-                            url: 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png'
-                        }
-                    });
-
-                    const infoWindow = new window.google.maps.InfoWindow({
-                        content: `<div style="font-size:14px; font-weight:bold;">₪${spot.price}</div>`
-                    });
-
-                    marker.addListener('mouseover', () => {
-                        infoWindow.open(mapInstance.current, marker);
-                    });
-
-                    marker.addListener('mouseout', () => {
-                        infoWindow.close();
-                    });
-
-                    markersRef.current[spot.id] = marker;
-                });
+            if (lat === null || lng === null) {
+                console.warn("MapView: מרכז לא תקין, לא מאתחל מפה");
+                return;
             }
+
+            mapInstance.current = new window.google.maps.Map(mapRef.current, {
+                center: { lat, lng },
+                zoom: 14,
+            });
         };
 
         if (window.google && window.google.maps) {
@@ -70,28 +51,105 @@ function MapView({ center, parkings, hoveredParkingId }) {
         }
 
         return () => {
+            Object.values(markersRef.current).forEach(marker => marker.setMap(null));
             markersRef.current = {};
+            if (centerMarkerRef.current) {
+                centerMarkerRef.current.setMap(null);
+            }
+            centerMarkerRef.current = null;
             mapInstance.current = null;
         };
-    }, [center, parkings]);
+    }, []);
 
+    // עדכון מרכז המפה + מארקר המרכז
+    useEffect(() => {
+        if (mapInstance.current && center) {
+            const lat = toNumber(center.lat);
+            const lng = toNumber(center.lng);
+
+            if (lat === null || lng === null) {
+                console.warn("MapView: מרכז לא תקין, לא מעדכן מרכז");
+                return;
+            }
+
+            mapInstance.current.setCenter({ lat, lng });
+
+            // עדכון מארקר של המרכז
+            if (centerMarkerRef.current) {
+                centerMarkerRef.current.setMap(null);
+            }
+
+            centerMarkerRef.current = new window.google.maps.Marker({
+                position: { lat, lng },
+                map: mapInstance.current,
+                title: 'Center Location',
+                icon: {
+                    url: 'https://maps.google.com/mapfiles/ms/icons/green-dot.png',
+                },
+            });
+        }
+    }, [center]);
+
+    // עדכון המארקרים של החניות
+    useEffect(() => {
+        if (!mapInstance.current) return;
+
+        // ניקוי מארקרים קודמים
+        Object.values(markersRef.current).forEach(marker => marker.setMap(null));
+        markersRef.current = {};
+
+        if (Array.isArray(parkings)) {
+            parkings.forEach(spot => {
+                const lat = toNumber(spot.lat);
+                const lng = toNumber(spot.lng);
+
+                if (lat === null || lng === null) {
+                    console.warn("MapView: קואורדינטות חניה לא תקינות", spot);
+                    return;
+                }
+
+                const marker = new window.google.maps.Marker({
+                    position: { lat, lng },
+                    map: mapInstance.current,
+                    title: spot.address || '',
+                    icon: {
+                        url: 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png',
+                    },
+                });
+
+                const infoWindow = new window.google.maps.InfoWindow({
+                    content: `<div style="font-size:14px; font-weight:bold;">₪${spot.price}</div>`,
+                });
+
+                marker.addListener('mouseover', () => {
+                    infoWindow.open(mapInstance.current, marker);
+                });
+
+                marker.addListener('mouseout', () => {
+                    infoWindow.close();
+                });
+
+                markersRef.current[spot.id] = marker;
+            });
+        }
+    }, [parkings]);
+
+    // שינוי צבע מארקר בהובר
     useEffect(() => {
         Object.values(markersRef.current).forEach(marker => {
             marker.setIcon({
-                url: 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png'
+                url: 'https://maps.google.com/mapfiles/ms/icons/blue-dot.png',
             });
         });
 
         if (hoveredParkingId && markersRef.current[hoveredParkingId]) {
             markersRef.current[hoveredParkingId].setIcon({
-                url: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png'
+                url: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png',
             });
         }
     }, [hoveredParkingId]);
 
-    return (
-        <div ref={mapRef} style={{ width: '100%', height: '100vh' }} />
-    );
+    return <div ref={mapRef} style={{ width: '100%', height: '100vh' }} />;
 }
 
 export default MapView;

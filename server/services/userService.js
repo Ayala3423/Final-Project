@@ -34,6 +34,27 @@ const userService = {
     return await User.findByPk(id);
   },
 
+  async createRole(userId, role) {
+    return await Role.create({ userId, role });
+  },
+
+  async getRolesByUserId(userId) {
+    return await Role.findAll({ where: { userId } });
+  },
+
+  async updateRole(userId, newRole) {
+    const roleRecord = await Role.findOne({ where: { userId } });
+    if (roleRecord) {
+      return await roleRecord.update({ role: newRole });
+    } else {
+      return await Role.create({ userId, role: newRole });
+    }
+  },
+
+  async deleteRole(userId) {
+    return await Role.destroy({ where: { userId } });
+  },
+
   async updateUser(id, data) {
     const user = await User.findByPk(id);
     if (!user) return null;
@@ -112,7 +133,7 @@ const userService = {
       },
       attributes: ['startDate']
     });
-  },
+  }
 
 };
 

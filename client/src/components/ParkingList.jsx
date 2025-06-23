@@ -4,7 +4,8 @@ import { AuthContext } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import { apiService } from '../services/genericService';
 
-function ParkingList({ parkings = [], setParkings = () => { }, onHover = () => { } }) {
+function ParkingList({ parkings, setParkings = () => { }, onHover = () => { } }) {
+    
     const navigate = useNavigate();
     const { user } = useContext(AuthContext);
 

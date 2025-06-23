@@ -14,8 +14,30 @@
     overflow-y: auto;
 }
 
+.suggestions-list {
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.suggestions-list li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.suggestions-list li:hover {
+    background-color: #eee;
+}
+
 /* סקציות חדשות */
-.about-section, .features-section, .contact-section {
+.about-section,
+.features-section,
+.contact-section {
     padding: 80px 0;
     background: #f8f9fa;
 }
@@ -252,7 +274,8 @@
     margin-bottom: 20px;
 }
 
-.form-input, .form-textarea {
+.form-input,
+.form-textarea {
     width: 100%;
     padding: 15px;
     border: 1px solid rgba(255, 255, 255, 0.2);
@@ -264,11 +287,13 @@
     box-sizing: border-box;
 }
 
-.form-input::placeholder, .form-textarea::placeholder {
+.form-input::placeholder,
+.form-textarea::placeholder {
     color: rgba(255, 255, 255, 0.7);
 }
 
-.form-input:focus, .form-textarea:focus {
+.form-input:focus,
+.form-textarea:focus {
     outline: none;
     border-color: #3498db;
     background: rgba(255, 255, 255, 0.15);
@@ -298,22 +323,23 @@
     .subtitle {
         font-size: 18px;
     }
-    
+
     .stats-bar {
         flex-direction: column;
         gap: 20px;
         text-align: center;
     }
-    
-    .about-content, .contact-content {
+
+    .about-content,
+    .contact-content {
         grid-template-columns: 1fr;
         gap: 40px;
     }
-    
+
     .features-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .section-header h2 {
         font-size: 32px;
     }
@@ -324,11 +350,11 @@
     .subtitle {
         font-size: 16px;
     }
-    
+
     .section-header h2 {
         font-size: 28px;
     }
-    
+
     .contact-form {
         padding: 25px;
     }
@@ -374,6 +400,7 @@
     line-height: 1.5;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
+
 .search-btn {
     background: linear-gradient(45deg, #ffbb00, #d38c2f);
     color: white;
@@ -462,7 +489,7 @@
 
 /* Header Styles */
 .mainLayout {
-        height: 6vh;
+    height: 6vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -476,7 +503,7 @@
 
 .mainLayout.scrolled {
     background-color: rgba(0, 0, 0, 1);
-    box-shadow: 0 2px 6px rgba(0,0,0,1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 1);
 }
 
 
@@ -505,15 +532,15 @@
 }
 
 .username-container {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1000;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
 }
 
 .username {
-  color: rgb(241, 240, 238);
-  font-size: 2.5vh;
+    color: rgb(241, 240, 238);
+    font-size: 2.5vh;
 }
 
 .header-right {

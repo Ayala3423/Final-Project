@@ -46,33 +46,27 @@ async function request(url, params = {}, method = 'GET', body = null, onSuccess,
         return data;
 
     } catch (error) {
-        // בדיקה אם הטוקן פג תוקף
         if (error.response?.status === 403 && !params._retry) {
             try {
                 console.warn('Token expired, trying to refresh...');
-                params._retry = true; // מניעת לולאה אינסופית
+                params._retry = true; 
 
                 const refreshToken = getRefreshToken();
 
-                // בקשה ל-refresh token
                 const refreshResponse = await axios.post(`${API_URL}/api/refresh-token`, { refreshToken });
                 const newAccessToken = refreshResponse.data.accessToken;
 
-                // שמירה של הטוקן החדש
                 Cookies.set('token', newAccessToken);
 
-                // ניסיון חוזר עם הטוקן החדש
                 return await request(url, params, method, body, onSuccess, onError);
 
             } catch (refreshError) {
                 console.error('Refresh token failed:', refreshError);
-                // כאן אפשר לבצע לוגאאוט אם את רוצה
                 // logOutFunc();
             }
         }
 
         if (error.response?.status === 403) {
-            // כאן אפשר לבצע לוגאאוט אם את רוצה
             // logOutFunc();
         }
 

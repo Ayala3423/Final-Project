@@ -5,7 +5,7 @@ import { apiService } from '../services/genericService';
 import { io } from 'socket.io-client';
 import { v4 as uuidv4 } from 'uuid';
 
-const socket = io('http://localhost:3000'); // כתובת השרת שלך
+const socket = io('http://localhost:3000'); 
 
 export default function MessagesPage() {
   const { user } = useContext(AuthContext);
@@ -42,7 +42,6 @@ export default function MessagesPage() {
     socket.on('receiveMessage', (messageData) => {
       console.log('📥 Message received via socket:', messageData);
 
-      // אם השיחה לא קיימת - נכניס אותה
       setConversations(prev => {
         const exists = prev.some(conv => conv.conversationId === messageData.conversationId);
         if (!exists) {
@@ -56,7 +55,6 @@ export default function MessagesPage() {
         return prev;
       });
 
-      // ממשיכים עם הקוד הרגיל
       const isMyMessage = messageData.senderId === user.id;
       if (messageData.conversationId === selectedChatId) {
         setMessages(prev => [...prev, messageData]);

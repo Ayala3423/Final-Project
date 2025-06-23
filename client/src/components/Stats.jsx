@@ -2,7 +2,6 @@ import React from 'react';
 import '../styles/OwnerStats.css';
 
 function OwnerStats({ statistics }) {
-    console.log('OwnerStats statistics:', statistics);
     
     return (
         <div className="stats-container">

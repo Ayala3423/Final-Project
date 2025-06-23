@@ -4,6 +4,7 @@ import { apiService } from '../services/genericService';
 import '../styles/ReservationsList.css';
 
 function ReservationsList() {
+    
     const { user } = useContext(AuthContext);
     const [reservations, setReservations] = useState([]);
     const [page, setPage] = useState(1);

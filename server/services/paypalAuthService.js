@@ -1,4 +1,3 @@
-// services/paypalAuthService.js
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
 const CLIENT = process.env.PAYPAL_CLIENT_ID;
 const SECRET = process.env.PAYPAL_SECRET;

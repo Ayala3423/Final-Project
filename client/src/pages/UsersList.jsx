@@ -1,4 +1,3 @@
-// src/pages/UsersList.jsx
 import React, { useEffect, useState, useContext } from 'react';
 import { AuthContext } from '../context/AuthContext';
 import { apiService } from '../services/genericService';
@@ -6,6 +5,7 @@ import '../styles/UsersList.css';
 import { useParams } from 'react-router-dom';
 
 function UsersList() {
+    
     const { user } = useContext(AuthContext);
     const [users, setUsers] = useState([]);
     const [loading, setLoading] = useState(true);

@@ -3,6 +3,7 @@ import ParkingList from '../components/ParkingList';
 import { apiService } from '../services/genericService';
 
 function ParkingManagement() {
+  
   const [parkings, setParkings] = useState([]);
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);

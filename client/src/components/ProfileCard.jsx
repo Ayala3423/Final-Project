@@ -4,6 +4,7 @@ import '../styles/ProfileCard.css';
 import { apiService } from '../services/genericService.js';
 
 const ProfileCard = () => {
+
   const getFullImageUrl = (path) => {
     if (!path) return null;
     return `http://localhost:3000/${path.replace(/^\/+/, '')}`;
@@ -106,6 +107,7 @@ const ProfileCard = () => {
 };
 
 const ProfileField = ({ label, name, value, isEditing, onChange }) => (
+
   <div className="profile-field">
     <label htmlFor={name} className="profile-label">{label}</label>
     {isEditing ? (
@@ -122,6 +124,7 @@ const ProfileField = ({ label, name, value, isEditing, onChange }) => (
       <div className="profile-value">{value}</div>
     )}
   </div>
+  
 );
 
 export default ProfileCard;

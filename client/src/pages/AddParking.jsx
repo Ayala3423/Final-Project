@@ -3,9 +3,10 @@ import { AuthContext } from '../context/AuthContext';
 import { apiService } from '../services/genericService';
 import '../styles/AddParking.css';
 import { useNavigate } from 'react-router-dom';
-import AddTimeSlot from './AddTimeSlot';  // ייבוא הקומפוננטה לניהול זמינות
+import AddTimeSlot from './AddTimeSlot';  
 
 function AddParking() {
+    
     const navigate = useNavigate();
     const { user } = useContext(AuthContext);
 

@@ -1,4 +1,3 @@
-// controllers/paymentsController.js
 const  confirmPaymentAndPayout  = require('../bl/reservationBL');
 
 confirmPayment = async (req, res) => {
@@ -12,4 +11,5 @@ confirmPayment = async (req, res) => {
     res.status(500).json({ error: 'Payment confirmation failed.' });
   }
 };
+
 module.exports = {confirmPayment};

@@ -7,12 +7,11 @@ import { apiService } from '../services/genericService';
 import { AuthContext } from '../context/AuthContext';
 
 function AdminDashboard() {
+
     const { user } = useContext(AuthContext);
     const location = useLocation();
-
     const [dashboardData, setDashboardData] = useState(null);
     const [loading, setLoading] = useState(true);
-
     const isRootAdminPath = location.pathname === '/admin';
 
     useEffect(() => {

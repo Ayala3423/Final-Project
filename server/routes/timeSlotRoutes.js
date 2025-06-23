@@ -15,6 +15,6 @@ router.route('/:id')
 
 router.route('/')
     .post(timeSlotController.createTimeSlot)
-    .all(timeSlotController.getAllTimeSlots)
-    ;
+    .all(timeSlotController.getAllTimeSlots);
+    
 module.exports = router;

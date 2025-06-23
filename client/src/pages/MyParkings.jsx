@@ -5,6 +5,7 @@ import ParkingList from '../components/ParkingList';
 import { apiService } from '../services/genericService';
 
 function MyParkings() {
+  
   const { user } = useContext(AuthContext);
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);

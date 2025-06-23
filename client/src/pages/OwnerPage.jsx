@@ -7,6 +7,7 @@ import { apiService } from '../services/genericService';
 import { AuthContext } from '../context/AuthContext';
 
 function OwnerDashboard() {
+    
     const { user } = useContext(AuthContext);
     const location = useLocation();
 

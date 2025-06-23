@@ -4,7 +4,6 @@ const { generateRefreshToken } = require('../utils/utils');
 
 const userController = {
 
-    // controller
     async signup(req, res) {
         try {
             const userData = req.body;
@@ -29,13 +28,17 @@ const userController = {
 
     async login(req, res) {
         try {
-            const { username, password } = req.body;
-            const user = await userBL.login(username, password);
-            if (user) {
-                const token = generateToken({ id: user.id, role: user.role });
-                const refreshToken = generateRefreshToken({ userId: user.id, role: user.role });
+            const { username, password, role } = req.body;
+            const user = await userBL.login(username, password, role);
+            if (user.role) {
+                const token = generateToken({ id: user.id, role: role });
+                const refreshToken = generateRefreshToken({ userId: user.id, role: role });
 
-                res.status(200).json({ user, token, refreshToken });
+                res.status(200).json({
+                    user: { ...user.dataValues, role: user.role },
+                    token,
+                    refreshToken
+                });
             } else {
                 res.status(401).json({ error: 'Invalid credentials' });
             }
@@ -82,8 +85,7 @@ const userController = {
             console.error("Error updating user:", error);
             res.status(400).json({ error: error.message });
         }
-    }
-    ,
+    },
 
     async deleteUser(req, res) {
         try {
@@ -120,7 +122,7 @@ const userController = {
     async getOrdersPerMonth(req, res) {
         try {
             console.log("Fetching orders per month for user:", req.user.id);
-            
+
             const ownerId = req.user.id;
             const chartData = await userBL.getOrdersPerMonth(ownerId);
             res.status(200).json(chartData);
@@ -129,7 +131,8 @@ const userController = {
             console.error("Error fetching orders per month:", error);
             res.status(400).json({ error: error.message });
         }
-    },
+    }
+    
 };
 
 module.exports = userController;

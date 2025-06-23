@@ -4,7 +4,7 @@ import '../styles/Modal.css';
 function Modal({ children, onClose }) {
 
     const handleClickInside = (e) => {
-        e.stopPropagation(); // עוצר את ההדיפה של האירוע כלפי מעלה
+        e.stopPropagation(); 
     };
 
     return (

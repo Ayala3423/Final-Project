@@ -3,6 +3,7 @@ import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContaine
 import '../styles/OrdersChart.css';
 
 function OrdersChart({ chartData }) {
+  
   const data = Object.entries(chartData || {}).map(([month, total]) => ({
     month,
     total,

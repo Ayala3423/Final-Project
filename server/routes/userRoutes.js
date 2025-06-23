@@ -5,31 +5,23 @@ const { verifyToken } = require('../middleware/authMiddleware');
 //const { upload } = require('../middleware/upload'); // הוספת multer
 const { createUploadMiddleware } = require('../middleware/upload');
 
-console.log('ImHERE');
 const upload = createUploadMiddleware('profileImages');
 
-// הרשמה עם תמונת פרופיל
 router.route('/signup')
     .post(upload.single('profileImage'), userController.signup);
 
-// התחברות
 router.route('/login')
     .post(userController.login);
 
-// שאר הפעולות דורשות התחברות
 router.use(verifyToken);
 
-
-
-// עדכון משתמש עם אפשרות להעלות תמונה
 router.route('/:id')
     .get(userController.getUserById)
-    .put(upload.single('profileImage'), userController.updateUser) // כאן התמיכה ב-FormData
+    .put(upload.single('profileImage'), userController.updateUser) 
     .delete(userController.deleteUser);
 
-// חיפוש משתמשים לפי פרמטרים / כולם
 router.route('/')
     .get(userController.getUsersByParams)
-    .all(userController.getAllUsers); // אולי כדאי לבדוק אם all נחוץ
+    .all(userController.getAllUsers); 
 
 module.exports = router;

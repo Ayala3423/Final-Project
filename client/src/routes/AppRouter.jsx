@@ -3,21 +3,16 @@ import { Routes, Route, Navigate, useLocation, useParams } from 'react-router-do
 import { AuthContext } from '../context/AuthContext.jsx';
 import MainLayout from '../components/MainLayout';
 
-
-// עמודים כלליים
 import Home from '../pages/Home.jsx';
 import Login from '../pages/Login.jsx';
 import Register from '../pages/Register.jsx';
 
-// Admin
 import AdminDashboard from '../pages/AdminPage.jsx';
 
-// Owner
 import OwnerDashboard from '../pages/OwnerPage.jsx';
 import MyParkings from '../pages/MyParkings.jsx';
 import ReservationsList from '../pages/ReservationsList.jsx';
 import AddParking from '../pages/AddParking.jsx';
-// Renter
 import RenterDashboard from '../pages/RenterPage.jsx'
 
 import Reservation from '../pages/Reservation.jsx';
@@ -27,7 +22,6 @@ import UsersList from '../pages/UsersList.jsx';
 import ParkingManagement from '../pages/ParkingManagement.jsx';
 import ProfileCard from '../components/ProfileCard.jsx';
 
-// רוטה פרטית - רק למשתמשים מחוברים
 const PrivateRoute = ({ children, allowedRoles }) => {
 
   const { user, loading } = useContext(AuthContext);
@@ -51,7 +45,6 @@ function AppRouter() {
 
   return (
     <>
-      {/* מציגים את הדף הקודם אם backgroundLocation קיים */}
       <Routes location={state?.backgroundLocation || location}>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
@@ -134,6 +127,5 @@ function AppRouter() {
     </>
   );
 }
-
 
 export default AppRouter;

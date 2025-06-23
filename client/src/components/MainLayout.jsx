@@ -8,11 +8,11 @@ import '../styles/RentBro.css';
 import { apiService } from '../services/genericService';
 
 function MainLayout() {
+  
   const [unreadCount, setUnreadCount] = useState(0);
   const location = useLocation();
   const { user } = useContext(AuthContext);
   const navigate = useNavigate();
-  console.log("user", user);
 
   useEffect(() => {
     if (user) {
@@ -25,7 +25,6 @@ function MainLayout() {
       })
     }
   }, [user]);
-
 
  const renderSidebar = () => {
   if (user) {

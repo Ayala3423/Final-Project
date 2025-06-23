@@ -1,6 +1,5 @@
-// services/payoutService.js
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
-const { findUserById } = require('../services/userService'); // תכף נעשה את זה
+const { findUserById } = require('../services/userService');
 
 exports.sendToOwner = async (ownerId, amount, accessToken) => {
   const owner = await findUserById(ownerId);
