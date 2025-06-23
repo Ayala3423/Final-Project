@@ -412,6 +412,7 @@
     transition: all 0.3s ease;
     white-space: nowrap;
     margin-left: 10px;
+    margin: 20px;
 }
 
 .search-btn:hover {
@@ -574,7 +575,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10% 20px;
+    padding: 35vh 20px;
     text-align: center;
 }
 
@@ -596,6 +597,13 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+
+.hero-image-section .main-content {
+  background: rgba(0, 0, 0, 0.3); /* כהה יותר */
+  /* padding: 40px; */
+  border-radius: 20px;
+}
+
 
 .category-btn {
     background: rgba(255, 255, 255, 0.2);
