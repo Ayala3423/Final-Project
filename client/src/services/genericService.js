@@ -49,7 +49,7 @@ async function request(url, params = {}, method = 'GET', body = null, onSuccess,
         if (error.response?.status === 403 && !params._retry) {
             try {
                 console.warn('Token expired, trying to refresh...');
-                params._retry = true; 
+                params._retry = true;
 
                 const refreshToken = getRefreshToken();
 
@@ -62,12 +62,11 @@ async function request(url, params = {}, method = 'GET', body = null, onSuccess,
 
             } catch (refreshError) {
                 console.error('Refresh token failed:', refreshError);
-                // logOutFunc();
             }
         }
 
         if (error.response?.status === 403) {
-            // logOutFunc();
+            console.error('Refresh token failed:', refreshError);
         }
 
         console.error("API Error:", error);
@@ -84,6 +83,9 @@ export const apiService = {
 
     getByValue: (table, params, onSuccess, onError) =>
         request(table, params, 'GET', null, onSuccess, onError),
+
+    getPopular: (table, onSuccess, onError) =>
+        request(`${table}/top-popular`, {}, 'GET', null, onSuccess, onError),
 
     getSearch: (table, params, onSuccess, onError) =>
         request(`${table}/search`, params, 'GET', null, onSuccess, onError),

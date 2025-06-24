@@ -9,7 +9,8 @@
   background-color: #f5f5f5;
   border-left: 1px solid #ccc;
   padding: 16px;
-  direction: rtl;
+  direction: ltr;
+  margin-top: 10vh;
 }
 
 .unread-count {
@@ -56,6 +57,8 @@
   flex: 1;
   padding: 16px;
   overflow-y: auto;
+    margin-top: 10vh;
+
 }
 
 .chat-bubble {

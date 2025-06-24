@@ -5,6 +5,8 @@ const { verifyToken } = require('../middleware/authMiddleware');
 
 router.use(verifyToken);
 
+router.route('/renew/:id').post(reservationController.renewReservation );
+
 router.route('/:id')
     .get(reservationController.getReservationById)
     .put(reservationController.updateReservation)

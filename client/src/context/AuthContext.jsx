@@ -74,4 +74,5 @@ alert('User updated successfully');
       {children}
     </AuthContext.Provider>
   );
+  
 };

@@ -1,39 +1,50 @@
 const { User, Parking, TimeSlot, Reservation, Report, Passwords, Message, Role, Resource, RolePermission } = require('./models');
-
+const fs = require('fs');
+const path = require('path');
 const { faker } = require('@faker-js/faker');
 const bcrypt = require('bcrypt');
 
 const createUsers = async () => {
-const plainPasswords = [
-  { username: "guest", password: "1" },
-  { username: "admin", password: "1" },
-  { username: "johnd", password: "1" },
-  { username: "sarahlevi", password: "1" },
-  { username: "davidc", password: "1" },
-  { username: "miriama", password: "1" }
-];
+  const uploadDir = path.join(__dirname, 'uploads', 'profileImages');
+  const imageFiles = fs.readdirSync(uploadDir).filter(file =>
+    /\.(jpg|jpeg|png|webp|png)$/i.test(file)
+  );
+
+  const plainPasswords = [
+    { username: "guest", password: "1" },
+    { username: "admin", password: "1" },
+    { username: "johnd", password: "1" },
+    { username: "sarahlevi", password: "1" },
+    { username: "davidc", password: "1" },
+    { username: "miriama", password: "1" }
+  ];
 
   const usersData = [
-  { name: "Guest", username: "guest", email: "guest@example.com", phone: "0000000000", address: "Unknown", profileImage: "default-profile.png" },
-  { name: "Admin User", username: "admin", email: "admin@example.com", phone: "0501234567", address: "Jerusalem", profileImage: "default-profile.png" },
-  { name: "John Doe", username: "johnd", email: "john@example.com", phone: "0507654321", address: "Beit Hakerem, Jerusalem", profileImage: "default-profile.png" },
-  { name: "Sarah Levi", username: "sarahlevi", email: "sarah@example.com", phone: "0521112233", address: "Katamon, Jerusalem", profileImage: "default-profile.png" },
-  { name: "David Cohen", username: "davidc", email: "david@example.com", phone: "0533334444", address: "Gilo, Jerusalem", profileImage: "default-profile.png" },
-  { name: "Miriam Azulay", username: "miriama", email: "miriam@example.com", phone: "0545556666", address: "Pisgat Ze'ev, Jerusalem", profileImage: "default-profile.png" }
-];
+    { name: "Guest", username: "guest", email: "guest@example.com", phone: "0000000000", address: "Unknown" },
+    { name: "Admin User", username: "admin", email: "admin@example.com", phone: "0501234567", address: "Jerusalem" },
+    { name: "John Doe", username: "johnd", email: "john@example.com", phone: "0507654321", address: "Beit Hakerem, Jerusalem" },
+    { name: "Sarah Levi", username: "sarahlevi", email: "sarah@example.com", phone: "0521112233", address: "Katamon, Jerusalem" },
+    { name: "David Cohen", username: "davidc", email: "david@example.com", phone: "0533334444", address: "Gilo, Jerusalem" },
+    { name: "Miriam Azulay", username: "miriama", email: "miriam@example.com", phone: "0545556666", address: "Pisgat Ze'ev, Jerusalem" }
+  ];
 
-  const users = await User.bulkCreate(usersData, { returning: true });
+  const usersWithImages = usersData.map(user => ({
+    ...user,
+    profileImage: faker.helpers.arrayElement(imageFiles) || 'default-profile.png'
+  }));
+
+  const users = await User.bulkCreate(usersWithImages, { returning: true });
 
   const roles = [
-  { userId: users[0].id, role: "guest" },
-  { userId: users[1].id, role: "admin" },
-  { userId: users[2].id, role: "renter" },
-  { userId: users[3].id, role: "renter" },
-  { userId: users[4].id, role: "owner" },
-  { userId: users[5].id, role: "owner" },
-  { userId: users[4].id, role: "renter" },
-  { userId: users[5].id, role: "renter" }
-];
+    { userId: users[0].id, role: "guest" },
+    { userId: users[1].id, role: "admin" },
+    { userId: users[2].id, role: "renter" },
+    { userId: users[3].id, role: "renter" },
+    { userId: users[4].id, role: "owner" },
+    { userId: users[5].id, role: "owner" },
+    { userId: users[4].id, role: "renter" },
+    { userId: users[5].id, role: "renter" }
+  ];
 
 
   await Role.bulkCreate(roles);
@@ -132,10 +143,17 @@ const createRolePermissions = async () => {
     { role: 'admin', resourceKey: '/dashboard:GET' },
     { role: 'owner', resourceKey: '/dashboard:GET' },
     { role: 'admin', resourceKey: '/users:ALL' },
+    { role: 'admin', resourceKey: '/users:DELETE' },
+    { role: 'admin', resourceKey: '/users:PUT' },
     { role: 'admin', resourceKey: '/parkings:ALL' },
     { role: 'admin', resourceKey: '/reports:ALL' },
     { role: 'admin', resourceKey: '/reservations:ALL' },
     { role: 'admin', resourceKey: '/timeslots:ALL' },
+
+    { role: 'admin', resourceKey: '/users:POST' },
+    { role: 'owner', resourceKey: '/users:POST' },
+    { role: 'renter', resourceKey: '/users:POST' },
+    { role: 'guest', resourceKey: '/users:POST' },
 
     { role: 'guest', resourceKey: '/parkings/search:GET' },
     { role: 'admin', resourceKey: '/parkings/search:GET' },
@@ -194,10 +212,18 @@ const jerusalemAddresses = [
 ];
 
 const createParkings = async () => {
+  const uploadDir = path.join(__dirname, 'uploads', 'parkings');
+  const imageFiles = fs.readdirSync(uploadDir).filter(file =>
+    /\.(jpg|jpeg|png|webp)$/i.test(file)
+  );
+
   const parkings = [];
+
   for (let i = 0; i < 20; i++) {
     const { address, lat, lon } = faker.helpers.arrayElement(jerusalemAddresses);
-    const ownerId = i < 10 ? 4 : 5; // David (4), Miriam (5)
+    const ownerId = i < 10 ? 4 : 5;
+
+    const imageFile = faker.helpers.arrayElement(imageFiles);
 
     parkings.push({
       ownerId,
@@ -205,9 +231,10 @@ const createParkings = async () => {
       latitude: lat + Math.random() * 0.001,
       longitude: lon + Math.random() * 0.001,
       description: faker.lorem.sentence(),
-      imageUrl: "default-parking.jpg"
+      imageUrl: imageFile || "default-parking.jpg"
     });
   }
+
   await Parking.bulkCreate(parkings);
 };
 

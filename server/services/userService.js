@@ -1,7 +1,6 @@
 const User = require('../models/User');
 const Role = require('../models/Role');
 const Passwords = require('../models/Passwords');
-const Reservation = require('../models/Reservation');
 const { Op } = require('sequelize');
 
 const userService = {
@@ -74,7 +73,6 @@ const userService = {
 
   async deleteUser(id) {
     return await User.destroy({ where: { id } });
-
   },
 
   async findAllUsers() {

@@ -6,10 +6,10 @@ import '../styles/AvailabilityParkings.css';
 import SearchBar from '../components/SearchBar';
 
 function AvailabilityParkings({ currentLocation, searchText, triggerSearch }) {
-
+    
     const [searchResults, setSearchResults] = useState();
     const [hoveredParkingId, setHoveredParkingId] = useState(null);
-    const [mapCenter, setMapCenter] = useState(currentLocation); // הוספה    
+    const [mapCenter, setMapCenter] = useState(currentLocation);  
 
     useEffect(() => {
         handleSearch();
@@ -35,7 +35,7 @@ function AvailabilityParkings({ currentLocation, searchText, triggerSearch }) {
         apiService.getSearch('parkings', query, (response) => {
             console.log("response", response);
             setSearchResults(response.parkings);
-            setMapCenter(response.center); // עדכון מרכז המפה
+            setMapCenter(response.center); 
         }, (error) => console.error(error.message));
     };
 
@@ -56,7 +56,7 @@ function AvailabilityParkings({ currentLocation, searchText, triggerSearch }) {
             </div>
             <div className="map-view-wrapper">
                 <MapView
-                    center={mapCenter} // שינוי
+                    center={mapCenter} 
                     parkings={searchResults}
                     hoveredParkingId={hoveredParkingId}
                 />

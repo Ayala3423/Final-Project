@@ -3219,3 +3219,1978 @@
 [2025-06-23T22:32:58.078Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
 [2025-06-23T22:32:58.094Z] searchParkings: query={"lat":"31.7035706","lng":"35.1133847"}
 [2025-06-23T22:32:58.101Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T06:55:19.030Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T06:55:19.049Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T06:55:22.973Z] searchParkings: query={"lat":"31.7035384","lng":"35.1132415"}
+[2025-06-24T06:55:22.986Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T06:55:23.009Z] searchParkings: query={"lat":"31.7035384","lng":"35.1132415"}
+[2025-06-24T06:55:23.019Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T07:02:30.832Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T07:02:30.851Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T07:02:31.597Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T07:02:31.605Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T07:06:13.890Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T07:06:13.915Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T07:06:14.449Z] searchParkings: query={"lat":"31.7035545","lng":"35.1132273"}
+[2025-06-24T07:06:14.459Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T07:06:14.477Z] searchParkings: query={"lat":"31.7035545","lng":"35.1132273"}
+[2025-06-24T07:06:14.486Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T07:07:37.939Z] searchParkings: query={"lat":"31.7035521","lng":"35.1132385"}
+[2025-06-24T07:07:37.952Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T07:07:37.964Z] searchParkings: query={"lat":"31.7035521","lng":"35.1132385"}
+[2025-06-24T07:07:37.972Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T07:07:50.972Z] searchParkings: query={"lat":"31.7035478","lng":"35.1132297"}
+[2025-06-24T07:07:50.987Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T07:07:51.014Z] searchParkings: query={"lat":"31.7035478","lng":"35.1132297"}
+[2025-06-24T07:07:51.025Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T07:17:30.833Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T07:17:30.864Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T07:17:39.371Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T07:17:39.379Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T07:17:39.887Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T07:17:39.895Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T07:17:56.697Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T07:17:56.715Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T07:18:15.389Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T07:18:15.407Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T07:18:17.383Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T07:18:17.393Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T07:18:34.290Z] searchParkings: query={"lat":"31.7035467","lng":"35.1132344"}
+[2025-06-24T07:18:34.308Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T07:18:34.350Z] searchParkings: query={"lat":"31.7035467","lng":"35.1132344"}
+[2025-06-24T07:18:34.359Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T07:18:44.550Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T07:18:44.586Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T07:18:45.127Z] searchParkings: query={"lat":"31.7035487","lng":"35.1132317"}
+[2025-06-24T07:18:45.138Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T07:18:45.157Z] searchParkings: query={"lat":"31.7035487","lng":"35.1132317"}
+[2025-06-24T07:18:45.171Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T07:20:07.367Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T07:20:07.973Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T07:20:07.979Z] searchParkings: query={"lat":"31.7035447","lng":"35.1132404"}
+[2025-06-24T07:20:07.997Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T07:20:08.012Z] searchParkings: query={"lat":"31.7035447","lng":"35.1132404"}
+[2025-06-24T07:20:08.018Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T07:21:36.413Z] searchParkings: query={"lat":"31.7035491","lng":"35.113245"}
+[2025-06-24T07:21:36.422Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T07:22:02.851Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T07:22:02.860Z] searchParkings: query={"lat":"31.7035491","lng":"35.113245"}
+[2025-06-24T07:22:04.834Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T07:27:50.892Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T07:27:50.997Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T07:27:51.311Z] searchParkings: query={"lat":"31.7035377","lng":"35.113218"}
+[2025-06-24T07:27:51.459Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T07:27:51.484Z] searchParkings: query={"lat":"31.7035377","lng":"35.113218"}
+[2025-06-24T07:27:51.500Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T07:39:03.142Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T07:39:03.199Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T07:39:03.530Z] searchParkings: query={"lat":"31.7035579","lng":"35.1132785"}
+[2025-06-24T07:39:03.538Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T07:39:03.560Z] searchParkings: query={"lat":"31.7035579","lng":"35.1132785"}
+[2025-06-24T07:39:03.570Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T07:43:15.550Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T07:43:15.580Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T07:43:16.910Z] searchParkings: query={"lat":"31.7035397","lng":"35.1132483"}
+[2025-06-24T07:43:16.918Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T07:43:16.937Z] searchParkings: query={"lat":"31.7035397","lng":"35.1132483"}
+[2025-06-24T07:43:16.945Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T09:18:00.194Z] Cache miss for key: top:popular:parkings. Fetching from DB...
+[2025-06-24T09:18:00.195Z] getTopPopularParkings: Fetching from DB
+[2025-06-24T09:18:03.304Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T09:18:03.306Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T09:18:03.367Z] Cache miss for key: search:{"lat":"31.7035439","lng":"35.1132478"}. Fetching from DB...
+[2025-06-24T09:18:03.368Z] searchParkings: query={"lat":"31.7035439","lng":"35.1132478"}
+[2025-06-24T09:18:06.633Z] Cache hit for key: top:popular:parkings
+[2025-06-24T09:18:06.642Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T09:18:06.658Z] Cache hit for key: unread:5
+[2025-06-24T09:18:06.687Z] Cache hit for key: search:{"lat":"31.7035439","lng":"35.1132478"}
+[2025-06-24T09:23:59.525Z] Cache hit for key: top:popular:parkings
+[2025-06-24T09:23:59.575Z] Cache hit for key: top:popular:parkings
+[2025-06-24T09:23:59.563Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T09:23:59.564Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T09:23:59.646Z] Cache hit for key: unread:5
+[2025-06-24T09:23:59.786Z] Cache miss for key: search:{"lat":"31.7035444","lng":"35.1132361"}. Fetching from DB...
+[2025-06-24T09:23:59.788Z] searchParkings: query={"lat":"31.7035444","lng":"35.1132361"}
+[2025-06-24T09:23:59.809Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T09:23:59.912Z] Cache hit for key: search:{"lat":"31.7035444","lng":"35.1132361"}
+[2025-06-24T09:24:33.831Z] Cache hit for key: top:popular:parkings
+[2025-06-24T09:25:26.833Z] Cache hit for key: unread:5
+[2025-06-24T09:25:28.274Z] Cache hit for key: unread:5
+[2025-06-24T09:25:28.274Z] Cache hit for key: top:popular:parkings
+[2025-06-24T09:25:28.275Z] Cache miss for key: search:{"lat":"31.7554688","lng":"34.9929472"}. Fetching from DB...
+[2025-06-24T09:25:28.276Z] searchParkings: query={"lat":"31.7554688","lng":"34.9929472"}
+[2025-06-24T09:25:32.324Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T09:25:32.351Z] Cache hit for key: search:{"lat":"31.7554688","lng":"34.9929472"}
+[2025-06-24T09:25:46.768Z] Cache hit for key: top:popular:parkings
+[2025-06-24T09:25:50.331Z] Cache hit for key: unread:5
+[2025-06-24T09:25:50.356Z] Cache hit for key: top:popular:parkings
+[2025-06-24T09:25:50.356Z] Cache hit for key: unread:5
+[2025-06-24T09:25:50.365Z] Cache miss for key: search:{"lat":"31.7035463","lng":"35.1132347"}. Fetching from DB...
+[2025-06-24T09:25:50.366Z] searchParkings: query={"lat":"31.7035463","lng":"35.1132347"}
+[2025-06-24T09:25:50.389Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T09:25:50.416Z] Cache hit for key: search:{"lat":"31.7035463","lng":"35.1132347"}
+[2025-06-24T09:25:55.970Z] Cache hit for key: top:popular:parkings
+[2025-06-24T09:25:55.988Z] Cache hit for key: unread:5
+[2025-06-24T09:25:55.992Z] Cache hit for key: top:popular:parkings
+[2025-06-24T09:25:56.006Z] Cache hit for key: unread:5
+[2025-06-24T09:25:56.085Z] Cache hit for key: search:{"lat":"31.7035463","lng":"35.1132347"}
+[2025-06-24T09:25:56.097Z] Cache hit for key: search:{"lat":"31.7035463","lng":"35.1132347"}
+[2025-06-24T09:28:26.471Z] Cache miss for key: top:popular:parkings. Fetching from DB...
+[2025-06-24T09:28:26.473Z] getTopPopularParkings: Fetching from DB
+[2025-06-24T09:28:26.534Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T09:28:26.536Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T09:28:26.563Z] Cache hit for key: top:popular:parkings
+[2025-06-24T09:28:26.578Z] Cache hit for key: unread:5
+[2025-06-24T09:28:26.886Z] Cache miss for key: search:{"lat":"31.7035485","lng":"35.1132348"}. Fetching from DB...
+[2025-06-24T09:28:26.888Z] searchParkings: query={"lat":"31.7035485","lng":"35.1132348"}
+[2025-06-24T09:28:26.898Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T09:28:26.949Z] Cache hit for key: search:{"lat":"31.7035485","lng":"35.1132348"}
+[2025-06-24T09:34:04.655Z] Cache hit for key: top:popular:parkings
+[2025-06-24T09:34:04.658Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T09:34:04.659Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T09:34:04.678Z] Cache hit for key: top:popular:parkings
+[2025-06-24T09:34:04.700Z] Cache hit for key: unread:5
+[2025-06-24T09:34:05.183Z] Cache miss for key: search:{"lat":"31.7035371","lng":"35.1132241"}. Fetching from DB...
+[2025-06-24T09:34:05.184Z] searchParkings: query={"lat":"31.7035371","lng":"35.1132241"}
+[2025-06-24T09:34:05.191Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T09:34:05.220Z] Cache hit for key: search:{"lat":"31.7035371","lng":"35.1132241"}
+[2025-06-24T09:34:15.253Z] Cache hit for key: top:popular:parkings
+[2025-06-24T09:34:15.260Z] Cache hit for key: unread:5
+[2025-06-24T09:34:15.272Z] Cache hit for key: top:popular:parkings
+[2025-06-24T09:34:15.276Z] Cache hit for key: unread:5
+[2025-06-24T09:34:15.935Z] Cache miss for key: search:{"lat":"31.7035496","lng":"35.1132424"}. Fetching from DB...
+[2025-06-24T09:34:15.936Z] searchParkings: query={"lat":"31.7035496","lng":"35.1132424"}
+[2025-06-24T09:34:15.962Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T09:34:15.990Z] Cache hit for key: search:{"lat":"31.7035496","lng":"35.1132424"}
+[2025-06-24T10:20:18.636Z] Cache miss for key: top:popular:parkings. Fetching from DB...
+[2025-06-24T10:20:18.637Z] getTopPopularParkings: Fetching from DB
+[2025-06-24T10:20:18.656Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T10:20:18.657Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T10:20:18.736Z] Cache hit for key: top:popular:parkings
+[2025-06-24T10:20:18.737Z] Cache hit for key: unread:5
+[2025-06-24T10:20:23.079Z] Cache miss for key: search:{"lat":"31.7035417","lng":"35.1132451"}. Fetching from DB...
+[2025-06-24T10:20:23.081Z] searchParkings: query={"lat":"31.7035417","lng":"35.1132451"}
+[2025-06-24T10:20:23.093Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T10:20:23.132Z] Cache hit for key: search:{"lat":"31.7035417","lng":"35.1132451"}
+[2025-06-24T10:20:34.394Z] Cache hit for key: top:popular:parkings
+[2025-06-24T10:20:34.411Z] Cache hit for key: unread:5
+[2025-06-24T10:20:34.417Z] Cache hit for key: top:popular:parkings
+[2025-06-24T10:20:34.431Z] Cache hit for key: unread:5
+[2025-06-24T10:20:34.772Z] Cache miss for key: search:{"lat":"31.7035483","lng":"35.1132444"}. Fetching from DB...
+[2025-06-24T10:20:34.774Z] searchParkings: query={"lat":"31.7035483","lng":"35.1132444"}
+[2025-06-24T10:20:34.801Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T10:20:34.843Z] Cache hit for key: search:{"lat":"31.7035483","lng":"35.1132444"}
+[2025-06-24T10:22:24.475Z] Cache hit for key: top:popular:parkings
+[2025-06-24T10:22:24.479Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T10:22:24.480Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T10:22:24.497Z] Cache hit for key: top:popular:parkings
+[2025-06-24T10:22:24.520Z] Cache hit for key: unread:5
+[2025-06-24T10:22:25.156Z] Cache miss for key: search:{"lat":"31.7035472","lng":"35.113239"}. Fetching from DB...
+[2025-06-24T10:22:25.157Z] searchParkings: query={"lat":"31.7035472","lng":"35.113239"}
+[2025-06-24T10:22:25.167Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T10:22:25.193Z] Cache hit for key: search:{"lat":"31.7035472","lng":"35.113239"}
+[2025-06-24T10:39:10.375Z] Cache miss for key: top:popular:parkings. Fetching from DB...
+[2025-06-24T10:39:10.376Z] getTopPopularParkings: Fetching from DB
+[2025-06-24T10:39:10.380Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T10:39:10.380Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T10:39:10.411Z] Cache hit for key: top:popular:parkings
+[2025-06-24T10:39:10.413Z] Cache hit for key: unread:5
+[2025-06-24T10:39:13.699Z] Cache miss for key: search:{"lat":"31.7035437","lng":"35.1132348"}. Fetching from DB...
+[2025-06-24T10:39:13.700Z] searchParkings: query={"lat":"31.7035437","lng":"35.1132348"}
+[2025-06-24T10:39:13.706Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T10:39:13.726Z] Cache hit for key: search:{"lat":"31.7035437","lng":"35.1132348"}
+[2025-06-24T10:39:14.342Z] Cache hit for key: top:popular:parkings
+[2025-06-24T10:39:14.349Z] Cache hit for key: unread:5
+[2025-06-24T10:39:14.353Z] Cache hit for key: top:popular:parkings
+[2025-06-24T10:39:14.370Z] Cache hit for key: unread:5
+[2025-06-24T10:39:14.441Z] Cache hit for key: search:{"lat":"31.7035437","lng":"35.1132348"}
+[2025-06-24T10:39:14.452Z] Cache hit for key: search:{"lat":"31.7035437","lng":"35.1132348"}
+[2025-06-24T10:39:29.201Z] Cache hit for key: top:popular:parkings
+[2025-06-24T10:39:29.204Z] Cache hit for key: unread:5
+[2025-06-24T10:39:29.214Z] Cache hit for key: top:popular:parkings
+[2025-06-24T10:39:29.219Z] Cache hit for key: unread:5
+[2025-06-24T10:39:29.439Z] Cache miss for key: search:{"lat":"31.7035522","lng":"35.1132341"}. Fetching from DB...
+[2025-06-24T10:39:29.439Z] searchParkings: query={"lat":"31.7035522","lng":"35.1132341"}
+[2025-06-24T10:39:29.456Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T10:39:29.475Z] Cache hit for key: search:{"lat":"31.7035522","lng":"35.1132341"}
+[2025-06-24T10:40:19.275Z] Cache hit for key: top:popular:parkings
+[2025-06-24T10:40:19.277Z] Cache hit for key: unread:5
+[2025-06-24T10:40:19.285Z] Cache hit for key: top:popular:parkings
+[2025-06-24T10:40:19.289Z] Cache hit for key: unread:5
+[2025-06-24T10:40:19.780Z] Cache miss for key: search:{"lat":"31.7035393","lng":"35.1132396"}. Fetching from DB...
+[2025-06-24T10:40:19.781Z] searchParkings: query={"lat":"31.7035393","lng":"35.1132396"}
+[2025-06-24T10:40:19.803Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T10:40:19.833Z] Cache hit for key: search:{"lat":"31.7035393","lng":"35.1132396"}
+[2025-06-24T10:40:35.705Z] Cache hit for key: top:popular:parkings
+[2025-06-24T10:40:35.708Z] Cache hit for key: unread:5
+[2025-06-24T10:40:35.714Z] Cache hit for key: top:popular:parkings
+[2025-06-24T10:40:35.716Z] Cache hit for key: unread:5
+[2025-06-24T10:40:36.221Z] Cache miss for key: search:{"lat":"31.7035476","lng":"35.1132372"}. Fetching from DB...
+[2025-06-24T10:40:36.222Z] searchParkings: query={"lat":"31.7035476","lng":"35.1132372"}
+[2025-06-24T10:40:36.234Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T10:40:36.259Z] Cache hit for key: search:{"lat":"31.7035476","lng":"35.1132372"}
+[2025-06-24T10:41:39.662Z] Cache hit for key: top:popular:parkings
+[2025-06-24T10:41:39.663Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T10:41:39.663Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T10:41:39.674Z] Cache hit for key: top:popular:parkings
+[2025-06-24T10:41:39.686Z] Cache hit for key: unread:5
+[2025-06-24T10:41:40.486Z] Cache miss for key: search:{"lat":"31.6997632","lng":"35.1141888"}. Fetching from DB...
+[2025-06-24T10:41:40.487Z] searchParkings: query={"lat":"31.6997632","lng":"35.1141888"}
+[2025-06-24T10:41:40.494Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T10:41:40.509Z] Cache hit for key: search:{"lat":"31.6997632","lng":"35.1141888"}
+[2025-06-24T10:57:22.330Z] Cache miss for key: top:popular:parkings. Fetching from DB...
+[2025-06-24T10:57:22.331Z] getTopPopularParkings: Fetching from DB
+[2025-06-24T10:57:22.337Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T10:57:22.338Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T10:57:22.383Z] Cache hit for key: top:popular:parkings
+[2025-06-24T10:57:22.386Z] Cache hit for key: unread:5
+[2025-06-24T10:57:22.619Z] Cache miss for key: search:{"lat":"31.7035519","lng":"35.1132361"}. Fetching from DB...
+[2025-06-24T10:57:22.620Z] searchParkings: query={"lat":"31.7035519","lng":"35.1132361"}
+[2025-06-24T10:57:22.626Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T10:57:22.651Z] Cache hit for key: search:{"lat":"31.7035519","lng":"35.1132361"}
+[2025-06-24T11:00:07.268Z] Cache hit for key: top:popular:parkings
+[2025-06-24T11:00:07.270Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T11:00:07.271Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T11:00:07.312Z] Cache hit for key: top:popular:parkings
+[2025-06-24T11:00:07.343Z] Cache hit for key: unread:5
+[2025-06-24T11:00:07.591Z] Cache miss for key: search:{"lat":"31.7035498","lng":"35.113243"}. Fetching from DB...
+[2025-06-24T11:00:07.592Z] searchParkings: query={"lat":"31.7035498","lng":"35.113243"}
+[2025-06-24T11:00:07.606Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T11:00:07.649Z] Cache hit for key: search:{"lat":"31.7035498","lng":"35.113243"}
+[2025-06-24T11:01:24.418Z] Cache hit for key: top:popular:parkings
+[2025-06-24T11:01:24.423Z] Cache hit for key: unread:5
+[2025-06-24T11:01:24.432Z] Cache hit for key: top:popular:parkings
+[2025-06-24T11:01:24.434Z] Cache hit for key: unread:5
+[2025-06-24T11:01:24.666Z] Cache miss for key: search:{"lat":"31.7035481","lng":"35.1132295"}. Fetching from DB...
+[2025-06-24T11:01:24.668Z] searchParkings: query={"lat":"31.7035481","lng":"35.1132295"}
+[2025-06-24T11:01:24.692Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T11:01:24.729Z] Cache hit for key: search:{"lat":"31.7035481","lng":"35.1132295"}
+[2025-06-24T11:03:53.764Z] Cache hit for key: top:popular:parkings
+[2025-06-24T11:03:53.769Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T11:03:53.770Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T11:03:53.784Z] Cache hit for key: top:popular:parkings
+[2025-06-24T11:03:53.806Z] Cache hit for key: unread:5
+[2025-06-24T11:03:54.044Z] Cache miss for key: search:{"lat":"31.7035512","lng":"35.1132272"}. Fetching from DB...
+[2025-06-24T11:03:54.046Z] searchParkings: query={"lat":"31.7035512","lng":"35.1132272"}
+[2025-06-24T11:03:54.059Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T11:03:54.094Z] Cache hit for key: search:{"lat":"31.7035512","lng":"35.1132272"}
+[2025-06-24T11:04:07.882Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=6
+[2025-06-24T11:04:07.888Z] getReportsByParkingId: Fetching reports for parkingId=6
+[2025-06-24T11:04:07.894Z] checkReportPermission: Checking permissions for userId=5, parkingId=6
+[2025-06-24T11:04:07.899Z] Cache miss for key: timeslots:parking:6. Fetching from DB...
+[2025-06-24T11:04:07.900Z] Cache miss for key: reports:parking:6. Fetching from DB...
+[2025-06-24T11:04:07.915Z] checkReportPermission: User is owner, cannot report
+[2025-06-24T11:04:07.922Z] checkReportPermission: Checking permissions for userId=5, parkingId=6
+[2025-06-24T11:04:07.928Z] checkReportPermission: User is owner, cannot report
+[2025-06-24T11:04:07.932Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=6
+[2025-06-24T11:04:07.934Z] getReportsByParkingId: Fetching reports for parkingId=6
+[2025-06-24T11:04:07.936Z] Cache hit for key: timeslots:parking:6
+[2025-06-24T11:04:07.938Z] Cache hit for key: reports:parking:6
+[2025-06-24T11:04:10.117Z] Cache hit for key: top:popular:parkings
+[2025-06-24T11:04:10.123Z] Cache hit for key: top:popular:parkings
+[2025-06-24T11:04:10.730Z] Cache miss for key: search:{"lat":"31.6997632","lng":"35.1141888"}. Fetching from DB...
+[2025-06-24T11:04:10.731Z] searchParkings: query={"lat":"31.6997632","lng":"35.1141888"}
+[2025-06-24T11:04:10.736Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T11:04:10.749Z] Cache hit for key: search:{"lat":"31.6997632","lng":"35.1141888"}
+[2025-06-24T11:04:27.485Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=6
+[2025-06-24T11:04:27.488Z] Cache hit for key: timeslots:parking:6
+[2025-06-24T11:04:27.495Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=6
+[2025-06-24T11:04:27.502Z] checkReportPermission: Checking permissions for userId=5, parkingId=6
+[2025-06-24T11:04:27.499Z] getReportsByParkingId: Fetching reports for parkingId=6
+[2025-06-24T11:04:27.507Z] Cache hit for key: timeslots:parking:6
+[2025-06-24T11:04:27.510Z] Cache hit for key: reports:parking:6
+[2025-06-24T11:04:27.514Z] getReportsByParkingId: Fetching reports for parkingId=6
+[2025-06-24T11:04:27.518Z] Cache hit for key: reports:parking:6
+[2025-06-24T11:04:27.522Z] checkReportPermission: User is owner, cannot report
+[2025-06-24T11:04:27.526Z] checkReportPermission: Checking permissions for userId=5, parkingId=6
+[2025-06-24T11:04:27.531Z] checkReportPermission: User is owner, cannot report
+[2025-06-24T11:06:02.432Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=6
+[2025-06-24T11:06:02.435Z] getReportsByParkingId: Fetching reports for parkingId=6
+[2025-06-24T11:06:02.440Z] checkReportPermission: Checking permissions for userId=5, parkingId=6
+[2025-06-24T11:06:02.443Z] Cache hit for key: timeslots:parking:6
+[2025-06-24T11:06:02.447Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T11:06:02.446Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T11:06:02.446Z] Cache hit for key: reports:parking:6
+[2025-06-24T11:06:02.456Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=6
+[2025-06-24T11:06:02.458Z] getReportsByParkingId: Fetching reports for parkingId=6
+[2025-06-24T11:06:02.465Z] Cache hit for key: timeslots:parking:6
+[2025-06-24T11:06:02.465Z] Cache hit for key: reports:parking:6
+[2025-06-24T11:06:02.471Z] checkReportPermission: User is owner, cannot report
+[2025-06-24T11:06:02.478Z] checkReportPermission: Checking permissions for userId=5, parkingId=6
+[2025-06-24T11:06:02.484Z] checkReportPermission: User is owner, cannot report
+[2025-06-24T11:06:02.489Z] Cache hit for key: unread:5
+[2025-06-24T11:06:11.327Z] Cache hit for key: top:popular:parkings
+[2025-06-24T11:06:11.332Z] Cache hit for key: top:popular:parkings
+[2025-06-24T11:06:11.604Z] Cache miss for key: search:{"lat":"31.7035534","lng":"35.1132328"}. Fetching from DB...
+[2025-06-24T11:06:11.605Z] searchParkings: query={"lat":"31.7035534","lng":"35.1132328"}
+[2025-06-24T11:06:11.610Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T11:06:11.624Z] Cache hit for key: search:{"lat":"31.7035534","lng":"35.1132328"}
+[2025-06-24T11:07:19.879Z] Cache hit for key: top:popular:parkings
+[2025-06-24T11:07:19.881Z] Cache hit for key: unread:5
+[2025-06-24T11:07:19.886Z] Cache hit for key: top:popular:parkings
+[2025-06-24T11:07:19.895Z] Cache hit for key: unread:5
+[2025-06-24T11:07:20.083Z] Cache miss for key: search:{"lat":"31.7035494","lng":"35.1132333"}. Fetching from DB...
+[2025-06-24T11:07:20.084Z] searchParkings: query={"lat":"31.7035494","lng":"35.1132333"}
+[2025-06-24T11:07:20.096Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T11:07:20.113Z] Cache hit for key: search:{"lat":"31.7035494","lng":"35.1132333"}
+[2025-06-24T11:07:44.666Z] Cache miss for key: top:popular:parkings. Fetching from DB...
+[2025-06-24T11:07:44.667Z] getTopPopularParkings: Fetching from DB
+[2025-06-24T11:07:44.676Z] Cache hit for key: unread:5
+[2025-06-24T11:07:44.683Z] Cache hit for key: unread:5
+[2025-06-24T11:07:44.698Z] Cache hit for key: top:popular:parkings
+[2025-06-24T11:07:44.930Z] Cache miss for key: search:{"lat":"31.7035498","lng":"35.1132387"}. Fetching from DB...
+[2025-06-24T11:07:44.931Z] searchParkings: query={"lat":"31.7035498","lng":"35.1132387"}
+[2025-06-24T11:07:44.936Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T11:07:44.955Z] Cache hit for key: search:{"lat":"31.7035498","lng":"35.1132387"}
+[2025-06-24T11:07:50.461Z] Cache hit for key: top:popular:parkings
+[2025-06-24T11:07:50.464Z] Cache hit for key: unread:5
+[2025-06-24T11:07:50.470Z] Cache hit for key: top:popular:parkings
+[2025-06-24T11:07:50.473Z] Cache hit for key: unread:5
+[2025-06-24T11:07:50.567Z] Cache hit for key: search:{"lat":"31.7035498","lng":"35.1132387"}
+[2025-06-24T11:07:50.575Z] Cache hit for key: search:{"lat":"31.7035498","lng":"35.1132387"}
+[2025-06-24T11:08:26.948Z] Cache hit for key: top:popular:parkings
+[2025-06-24T11:08:26.955Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T11:08:26.956Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T11:08:26.962Z] Cache hit for key: top:popular:parkings
+[2025-06-24T11:08:26.975Z] Cache hit for key: unread:5
+[2025-06-24T11:08:27.668Z] Cache miss for key: search:{"lat":"31.7035467","lng":"35.1132454"}. Fetching from DB...
+[2025-06-24T11:08:27.669Z] searchParkings: query={"lat":"31.7035467","lng":"35.1132454"}
+[2025-06-24T11:08:27.680Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T11:08:27.695Z] Cache hit for key: search:{"lat":"31.7035467","lng":"35.1132454"}
+[2025-06-24T11:10:02.786Z] Cache hit for key: top:popular:parkings
+[2025-06-24T11:10:02.787Z] Cache hit for key: unread:5
+[2025-06-24T11:10:02.798Z] Cache hit for key: top:popular:parkings
+[2025-06-24T11:10:02.799Z] Cache hit for key: unread:5
+[2025-06-24T11:10:03.308Z] Cache miss for key: search:{"lat":"31.7035454","lng":"35.1132465"}. Fetching from DB...
+[2025-06-24T11:10:03.312Z] searchParkings: query={"lat":"31.7035454","lng":"35.1132465"}
+[2025-06-24T11:10:03.329Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T11:10:03.354Z] Cache hit for key: search:{"lat":"31.7035454","lng":"35.1132465"}
+[2025-06-24T11:13:16.334Z] Cache hit for key: top:popular:parkings
+[2025-06-24T11:13:42.224Z] Cache miss for key: search:{"lat":"31.7035486","lng":"35.1132305"}. Fetching from DB...
+[2025-06-24T11:13:42.224Z] searchParkings: query={"lat":"31.7035486","lng":"35.1132305"}
+[2025-06-24T11:13:42.242Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T11:13:42.258Z] Cache hit for key: search:{"lat":"31.7035486","lng":"35.1132305"}
+[2025-06-24T11:13:46.354Z] Cache hit for key: top:popular:parkings
+[2025-06-24T11:13:46.359Z] Cache hit for key: top:popular:parkings
+[2025-06-24T11:13:46.380Z] Cache hit for key: search:{"lat":"31.7035486","lng":"35.1132305"}
+[2025-06-24T11:13:46.386Z] Cache hit for key: search:{"lat":"31.7035486","lng":"35.1132305"}
+[2025-06-24T11:14:05.112Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T11:14:05.112Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T11:14:05.133Z] Cache hit for key: unread:5
+[2025-06-24T11:14:05.846Z] Cache hit for key: unread:5
+[2025-06-24T11:14:05.864Z] Cache hit for key: unread:5
+[2025-06-24T11:14:28.658Z] Cache hit for key: unread:5
+[2025-06-24T11:14:28.662Z] Cache hit for key: unread:5
+[2025-06-24T11:15:12.317Z] Cache hit for key: unread:5
+[2025-06-24T11:15:12.323Z] Cache hit for key: unread:5
+[2025-06-24T11:15:17.307Z] Cache hit for key: unread:5
+[2025-06-24T11:15:17.313Z] Cache hit for key: unread:5
+[2025-06-24T11:15:52.890Z] Cache miss for key: conversations:5. Fetching from DB...
+[2025-06-24T11:15:52.891Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-24T11:15:52.928Z] Cache hit for key: conversations:5
+[2025-06-24T11:15:52.956Z] Cache miss for key: conversation:d7c04e8c-4b8f-4dbc-8c23-d180f2148cba. Fetching from DB...
+[2025-06-24T11:15:52.957Z] getMessagesByConversationId: Fetching messages for conversationId=d7c04e8c-4b8f-4dbc-8c23-d180f2148cba
+[2025-06-24T11:15:54.424Z] getMessagesByConversationId: Fetching messages for conversationId=0af333cb-0f26-4344-99e5-e940d5f896d2
+[2025-06-24T11:15:54.424Z] Cache miss for key: conversation:0af333cb-0f26-4344-99e5-e940d5f896d2. Fetching from DB...
+[2025-06-24T11:15:55.046Z] Cache hit for key: conversation:d7c04e8c-4b8f-4dbc-8c23-d180f2148cba
+[2025-06-24T11:15:58.489Z] getReservationsByValue: Fetching reservations with value={"renterId":"5","page":"1","limit":"10"}
+[2025-06-24T11:15:58.496Z] Cache miss for key: reservations:search:{"renterId":"5","page":"1","limit":"10"}. Fetching from DB...
+[2025-06-24T11:15:58.517Z] getReservationsByValue: Fetching reservations with value={"renterId":"5","page":"1","limit":"10"}
+[2025-06-24T11:15:58.519Z] Cache hit for key: reservations:search:{"renterId":"5","page":"1","limit":"10"}
+[2025-06-24T11:16:01.364Z] Cache hit for key: top:popular:parkings
+[2025-06-24T11:16:01.372Z] Cache hit for key: top:popular:parkings
+[2025-06-24T11:16:01.636Z] Cache miss for key: search:{"lat":"31.7035497","lng":"35.1132269"}. Fetching from DB...
+[2025-06-24T11:16:01.637Z] searchParkings: query={"lat":"31.7035497","lng":"35.1132269"}
+[2025-06-24T11:16:01.651Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T11:16:01.688Z] Cache hit for key: search:{"lat":"31.7035497","lng":"35.1132269"}
+[2025-06-24T11:16:20.741Z] Cache hit for key: top:popular:parkings
+[2025-06-24T11:16:20.746Z] Cache hit for key: top:popular:parkings
+[2025-06-24T11:16:20.932Z] Cache miss for key: search:{"lat":"31.7035469","lng":"35.113242"}. Fetching from DB...
+[2025-06-24T11:16:20.933Z] searchParkings: query={"lat":"31.7035469","lng":"35.113242"}
+[2025-06-24T11:16:20.948Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T11:16:20.969Z] Cache hit for key: search:{"lat":"31.7035469","lng":"35.113242"}
+[2025-06-24T11:16:23.111Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=6
+[2025-06-24T11:16:23.114Z] getReportsByParkingId: Fetching reports for parkingId=6
+[2025-06-24T11:16:23.119Z] checkReportPermission: Checking permissions for userId=5, parkingId=6
+[2025-06-24T11:16:23.124Z] Cache miss for key: timeslots:parking:6. Fetching from DB...
+[2025-06-24T11:16:23.130Z] Cache miss for key: reports:parking:6. Fetching from DB...
+[2025-06-24T11:16:23.137Z] checkReportPermission: User is owner, cannot report
+[2025-06-24T11:16:23.147Z] checkReportPermission: Checking permissions for userId=5, parkingId=6
+[2025-06-24T11:16:23.159Z] checkReportPermission: User is owner, cannot report
+[2025-06-24T11:16:23.164Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=6
+[2025-06-24T11:16:23.170Z] getReportsByParkingId: Fetching reports for parkingId=6
+[2025-06-24T11:16:23.171Z] Cache hit for key: timeslots:parking:6
+[2025-06-24T11:16:23.175Z] Cache hit for key: reports:parking:6
+[2025-06-24T11:16:40.200Z] Cache hit for key: top:popular:parkings
+[2025-06-24T11:16:40.206Z] Cache hit for key: top:popular:parkings
+[2025-06-24T11:16:40.391Z] Cache miss for key: search:{"lat":"31.7035458","lng":"35.1132437"}. Fetching from DB...
+[2025-06-24T11:16:40.392Z] searchParkings: query={"lat":"31.7035458","lng":"35.1132437"}
+[2025-06-24T11:16:40.407Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T11:16:40.433Z] Cache hit for key: search:{"lat":"31.7035458","lng":"35.1132437"}
+[2025-06-24T11:18:42.496Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T11:18:42.496Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T11:18:42.512Z] Cache hit for key: unread:5
+[2025-06-24T11:18:45.110Z] Cache hit for key: unread:5
+[2025-06-24T11:18:45.119Z] Cache hit for key: unread:5
+[2025-06-24T11:18:55.711Z] Cache hit for key: unread:5
+[2025-06-24T11:18:55.717Z] Cache hit for key: unread:5
+[2025-06-24T11:28:50.634Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T11:28:50.633Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T11:28:50.651Z] Cache hit for key: unread:5
+[2025-06-24T11:43:47.149Z] Cache miss for key: top:popular:parkings. Fetching from DB...
+[2025-06-24T11:43:47.150Z] getTopPopularParkings: Fetching from DB
+[2025-06-24T11:43:47.196Z] Cache hit for key: top:popular:parkings
+[2025-06-24T11:43:47.461Z] Cache miss for key: search:{"lat":"31.7035487","lng":"35.1132473"}. Fetching from DB...
+[2025-06-24T11:43:47.462Z] searchParkings: query={"lat":"31.7035487","lng":"35.1132473"}
+[2025-06-24T11:43:47.469Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T11:43:47.490Z] Cache hit for key: search:{"lat":"31.7035487","lng":"35.1132473"}
+[2025-06-24T11:53:25.039Z] Cache hit for key: top:popular:parkings
+[2025-06-24T11:53:25.042Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T11:53:25.042Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T11:53:25.052Z] Cache hit for key: top:popular:parkings
+[2025-06-24T11:53:25.073Z] Cache hit for key: unread:5
+[2025-06-24T11:53:25.392Z] Cache miss for key: search:{"lat":"31.7035493","lng":"35.1132305"}. Fetching from DB...
+[2025-06-24T11:53:25.393Z] searchParkings: query={"lat":"31.7035493","lng":"35.1132305"}
+[2025-06-24T11:53:25.403Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T11:53:25.423Z] Cache hit for key: search:{"lat":"31.7035493","lng":"35.1132305"}
+[2025-06-24T11:53:34.469Z] Cache hit for key: unread:5
+[2025-06-24T11:53:34.475Z] Cache hit for key: unread:5
+[2025-06-24T11:55:50.446Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T11:55:50.449Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T11:55:50.473Z] Cache hit for key: unread:5
+[2025-06-24T11:56:10.650Z] Cache miss for key: conversations:5. Fetching from DB...
+[2025-06-24T11:56:10.651Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-24T11:56:10.678Z] Cache hit for key: conversations:5
+[2025-06-24T11:56:10.695Z] Cache miss for key: conversation:d7c04e8c-4b8f-4dbc-8c23-d180f2148cba. Fetching from DB...
+[2025-06-24T11:56:10.696Z] getMessagesByConversationId: Fetching messages for conversationId=d7c04e8c-4b8f-4dbc-8c23-d180f2148cba
+[2025-06-24T11:56:13.479Z] Cache miss for key: top:popular:parkings. Fetching from DB...
+[2025-06-24T11:56:13.483Z] getTopPopularParkings: Fetching from DB
+[2025-06-24T11:56:13.509Z] Cache hit for key: top:popular:parkings
+[2025-06-24T11:56:13.814Z] Cache miss for key: search:{"lat":"31.703549","lng":"35.1132318"}. Fetching from DB...
+[2025-06-24T11:56:13.815Z] searchParkings: query={"lat":"31.703549","lng":"35.1132318"}
+[2025-06-24T11:56:13.824Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T11:56:13.849Z] Cache hit for key: search:{"lat":"31.703549","lng":"35.1132318"}
+[2025-06-24T11:57:43.991Z] Cache hit for key: top:popular:parkings
+[2025-06-24T11:57:43.998Z] Cache hit for key: top:popular:parkings
+[2025-06-24T11:57:44.184Z] Cache miss for key: search:{"lat":"31.7035441","lng":"35.1132443"}. Fetching from DB...
+[2025-06-24T11:57:44.185Z] searchParkings: query={"lat":"31.7035441","lng":"35.1132443"}
+[2025-06-24T11:57:44.200Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T11:57:44.223Z] Cache hit for key: search:{"lat":"31.7035441","lng":"35.1132443"}
+[2025-06-24T11:58:47.058Z] Cache hit for key: top:popular:parkings
+[2025-06-24T11:58:47.065Z] Cache hit for key: top:popular:parkings
+[2025-06-24T11:58:47.317Z] Cache miss for key: search:{"lat":"31.7035476","lng":"35.1132417"}. Fetching from DB...
+[2025-06-24T11:58:47.318Z] searchParkings: query={"lat":"31.7035476","lng":"35.1132417"}
+[2025-06-24T11:58:47.335Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T11:58:47.358Z] Cache hit for key: search:{"lat":"31.7035476","lng":"35.1132417"}
+[2025-06-24T11:58:49.009Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=17
+[2025-06-24T11:58:49.011Z] getReportsByParkingId: Fetching reports for parkingId=17
+[2025-06-24T11:58:49.014Z] Cache miss for key: timeslots:parking:17. Fetching from DB...
+[2025-06-24T11:58:49.016Z] Cache miss for key: reports:parking:17. Fetching from DB...
+[2025-06-24T11:58:49.031Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=17
+[2025-06-24T11:58:49.034Z] getReportsByParkingId: Fetching reports for parkingId=17
+[2025-06-24T11:58:49.035Z] Cache hit for key: timeslots:parking:17
+[2025-06-24T11:58:49.038Z] Cache hit for key: reports:parking:17
+[2025-06-24T12:04:05.916Z] Cache hit for key: top:popular:parkings
+[2025-06-24T12:04:05.920Z] Cache hit for key: top:popular:parkings
+[2025-06-24T12:04:06.744Z] Cache miss for key: search:{"lat":"31.7035456","lng":"35.1132383"}. Fetching from DB...
+[2025-06-24T12:04:06.745Z] searchParkings: query={"lat":"31.7035456","lng":"35.1132383"}
+[2025-06-24T12:04:06.757Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T12:04:06.775Z] Cache hit for key: search:{"lat":"31.7035456","lng":"35.1132383"}
+[2025-06-24T12:04:08.482Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=9
+[2025-06-24T12:04:08.485Z] getReportsByParkingId: Fetching reports for parkingId=9
+[2025-06-24T12:04:08.487Z] Cache miss for key: timeslots:parking:9. Fetching from DB...
+[2025-06-24T12:04:08.490Z] Cache miss for key: reports:parking:9. Fetching from DB...
+[2025-06-24T12:04:08.505Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=9
+[2025-06-24T12:04:08.509Z] Cache hit for key: timeslots:parking:9
+[2025-06-24T12:04:08.511Z] getReportsByParkingId: Fetching reports for parkingId=9
+[2025-06-24T12:04:08.514Z] Cache hit for key: reports:parking:9
+[2025-06-24T12:04:24.573Z] Cache hit for key: top:popular:parkings
+[2025-06-24T12:04:24.580Z] Cache hit for key: top:popular:parkings
+[2025-06-24T12:04:24.715Z] Cache miss for key: search:{"lat":"31.7035491","lng":"35.1132383"}. Fetching from DB...
+[2025-06-24T12:04:24.715Z] searchParkings: query={"lat":"31.7035491","lng":"35.1132383"}
+[2025-06-24T12:04:24.728Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T12:04:24.746Z] Cache hit for key: search:{"lat":"31.7035491","lng":"35.1132383"}
+[2025-06-24T12:04:26.248Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-24T12:04:26.251Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-24T12:04:26.253Z] Cache miss for key: timeslots:parking:5. Fetching from DB...
+[2025-06-24T12:04:26.256Z] Cache miss for key: reports:parking:5. Fetching from DB...
+[2025-06-24T12:04:26.272Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-24T12:04:26.274Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-24T12:04:26.276Z] Cache hit for key: timeslots:parking:5
+[2025-06-24T12:04:26.280Z] Cache hit for key: reports:parking:5
+[2025-06-24T12:33:35.543Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-24T12:33:35.546Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-24T12:33:35.549Z] Cache miss for key: timeslots:parking:5. Fetching from DB...
+[2025-06-24T12:33:35.557Z] Cache miss for key: reports:parking:5. Fetching from DB...
+[2025-06-24T12:33:35.587Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-24T12:33:35.593Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-24T12:33:35.596Z] Cache hit for key: timeslots:parking:5
+[2025-06-24T12:33:35.604Z] Cache hit for key: reports:parking:5
+[2025-06-24T12:37:35.025Z] checkReportPermission: Checking permissions for userId=2, parkingId=5
+[2025-06-24T12:37:35.047Z] Cache miss for key: unread:2. Fetching from DB...
+[2025-06-24T12:37:35.048Z] getUnReadMessages: Fetching unread messages for userId=2
+[2025-06-24T12:37:35.062Z] checkReportPermission: No reservation found, cannot report
+[2025-06-24T12:37:35.067Z] Cache miss for key: dashboard:admin:2. Fetching from DB...
+[2025-06-24T12:37:35.103Z] Cache hit for key: dashboard:admin:2
+[2025-06-24T12:38:45.129Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T12:38:45.132Z] Cache miss for key: users:params:{"role":"owner"}. Fetching from DB...
+[2025-06-24T12:38:45.155Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T12:38:45.157Z] Cache hit for key: users:params:{"role":"owner"}
+[2025-06-24T12:38:55.141Z] deleteUser: Deleting user with id: 6
+[2025-06-24T12:39:11.802Z] Cache miss for key: parkings:params:{"page":"1"}:page:1. Fetching from DB...
+[2025-06-24T12:39:11.803Z] getParkingsByParams: Fetching from DB filters={"page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-24T12:39:11.835Z] Cache hit for key: parkings:params:{"page":"1"}:page:1
+[2025-06-24T12:39:19.116Z] Cache miss for key: parkings:params:{"page":"2"}:page:1. Fetching from DB...
+[2025-06-24T12:39:19.117Z] getParkingsByParams: Fetching from DB filters={"page":"2"}, pagination={"limit":10,"offset":null}
+[2025-06-24T12:39:25.232Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T12:39:25.234Z] Cache hit for key: users:params:{"role":"owner"}
+[2025-06-24T12:39:25.248Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T12:39:25.252Z] Cache hit for key: users:params:{"role":"owner"}
+[2025-06-24T12:39:26.339Z] getUsersByParams: Fetching users with params: {"role":"renter"}
+[2025-06-24T12:39:26.342Z] Cache miss for key: users:params:{"role":"renter"}. Fetching from DB...
+[2025-06-24T12:39:35.087Z] Cache miss for key: conversations:2. Fetching from DB...
+[2025-06-24T12:39:35.088Z] getMessagesById: Fetching messages for senderId=2
+[2025-06-24T12:39:35.101Z] Cache hit for key: conversations:2
+[2025-06-24T12:39:35.114Z] Cache miss for key: conversation:13620a1c-12ce-4eb1-bf36-26755916c9d9. Fetching from DB...
+[2025-06-24T12:39:35.115Z] getMessagesByConversationId: Fetching messages for conversationId=13620a1c-12ce-4eb1-bf36-26755916c9d9
+[2025-06-24T12:39:36.438Z] Cache miss for key: conversation:b669ffc1-078d-4d0c-b0fb-573583a5f2fd. Fetching from DB...
+[2025-06-24T12:39:36.438Z] getMessagesByConversationId: Fetching messages for conversationId=b669ffc1-078d-4d0c-b0fb-573583a5f2fd
+[2025-06-24T12:39:36.837Z] Cache miss for key: conversation:d7c04e8c-4b8f-4dbc-8c23-d180f2148cba. Fetching from DB...
+[2025-06-24T12:39:36.838Z] getMessagesByConversationId: Fetching messages for conversationId=d7c04e8c-4b8f-4dbc-8c23-d180f2148cba
+[2025-06-24T12:39:36.851Z] setReadMessages: Updating messages 15 with field {"isRead":true}
+[2025-06-24T12:39:37.124Z] Cache miss for key: conversation:5700f12e-4fda-4b7e-bc68-957580e95628. Fetching from DB...
+[2025-06-24T12:39:37.124Z] getMessagesByConversationId: Fetching messages for conversationId=5700f12e-4fda-4b7e-bc68-957580e95628
+[2025-06-24T12:39:37.136Z] setReadMessages: Updating messages 1 with field {"isRead":true}
+[2025-06-24T12:39:38.356Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T12:39:38.359Z] Cache hit for key: users:params:{"role":"owner"}
+[2025-06-24T12:39:38.366Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T12:39:38.368Z] Cache hit for key: users:params:{"role":"owner"}
+[2025-06-24T12:41:20.265Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T12:41:20.267Z] Cache hit for key: users:params:{"role":"owner"}
+[2025-06-24T12:45:13.390Z] updateUser: Updating user id: 5 with data: {"fullName":"undefined","email":"david@example.com","phone":"0533334448","address":"Gilo, Jerusalem"}
+[2025-06-24T12:46:07.623Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T12:46:07.628Z] Cache miss for key: users:params:{"role":"owner"}. Fetching from DB...
+[2025-06-24T12:46:07.636Z] Cache miss for key: unread:2. Fetching from DB...
+[2025-06-24T12:46:07.637Z] getUnReadMessages: Fetching unread messages for userId=2
+[2025-06-24T12:46:07.668Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T12:46:07.673Z] Cache hit for key: users:params:{"role":"owner"}
+[2025-06-24T12:46:07.676Z] Cache hit for key: unread:2
+[2025-06-24T12:46:13.599Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T12:46:13.606Z] Cache hit for key: users:params:{"role":"owner"}
+[2025-06-24T12:46:13.610Z] Cache hit for key: unread:2
+[2025-06-24T12:46:13.615Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T12:46:13.621Z] Cache hit for key: users:params:{"role":"owner"}
+[2025-06-24T12:46:13.625Z] Cache hit for key: unread:2
+[2025-06-24T12:46:32.707Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T12:46:32.713Z] Cache hit for key: users:params:{"role":"owner"}
+[2025-06-24T12:46:32.715Z] Cache hit for key: unread:2
+[2025-06-24T12:46:32.719Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T12:46:32.724Z] Cache hit for key: users:params:{"role":"owner"}
+[2025-06-24T12:46:32.727Z] Cache hit for key: unread:2
+[2025-06-24T12:46:41.858Z] getUsersByParams: Fetching users with params: {"role":"renter"}
+[2025-06-24T12:46:41.860Z] Cache miss for key: users:params:{"role":"renter"}. Fetching from DB...
+[2025-06-24T12:46:47.319Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T12:46:47.322Z] Cache hit for key: users:params:{"role":"owner"}
+[2025-06-24T12:46:49.474Z] getUsersByParams: Fetching users with params: {"role":"renter"}
+[2025-06-24T12:46:49.477Z] Cache hit for key: users:params:{"role":"renter"}
+[2025-06-24T12:46:53.181Z] deleteUser: Deleting user with id: 3
+[2025-06-24T12:46:55.024Z] getUsersByParams: Fetching users with params: {"role":"renter"}
+[2025-06-24T12:46:55.031Z] Cache hit for key: users:params:{"role":"renter"}
+[2025-06-24T12:46:55.035Z] Cache hit for key: unread:2
+[2025-06-24T12:46:55.044Z] getUsersByParams: Fetching users with params: {"role":"renter"}
+[2025-06-24T12:46:55.050Z] Cache hit for key: users:params:{"role":"renter"}
+[2025-06-24T12:46:55.053Z] Cache hit for key: unread:2
+[2025-06-24T12:46:57.370Z] deleteUser: Deleting user with id: 3
+[2025-06-24T12:47:25.789Z] deleteUser: Deleting user with id: 3
+[2025-06-24T12:47:28.820Z] getUsersByParams: Fetching users with params: {"role":"renter"}
+[2025-06-24T12:47:28.824Z] Cache hit for key: users:params:{"role":"renter"}
+[2025-06-24T12:47:28.826Z] Cache hit for key: unread:2
+[2025-06-24T12:47:28.831Z] getUsersByParams: Fetching users with params: {"role":"renter"}
+[2025-06-24T12:47:28.836Z] Cache hit for key: users:params:{"role":"renter"}
+[2025-06-24T12:47:28.839Z] Cache hit for key: unread:2
+[2025-06-24T12:48:11.715Z] deleteUser: Deleting user with id: 3
+[2025-06-24T12:48:13.576Z] getUsersByParams: Fetching users with params: {"role":"renter"}
+[2025-06-24T12:48:13.583Z] Cache miss for key: unread:2. Fetching from DB...
+[2025-06-24T12:48:13.584Z] getUnReadMessages: Fetching unread messages for userId=2
+[2025-06-24T12:48:13.580Z] Cache hit for key: users:params:{"role":"renter"}
+[2025-06-24T12:48:13.590Z] getUsersByParams: Fetching users with params: {"role":"renter"}
+[2025-06-24T12:48:13.595Z] Cache hit for key: users:params:{"role":"renter"}
+[2025-06-24T12:48:13.603Z] Cache hit for key: unread:2
+[2025-06-24T12:48:33.328Z] updateUser: Updating user id: 3 with data: {"fullName":"undefined","email":"john@example.com","phone":"0507654324","address":"Beit Hakerem, Jerusalem"}
+[2025-06-24T12:48:33.893Z] updateUser: Updating user id: 3 with data: {"fullName":"undefined","email":"john@example.com","phone":"0507654324","address":"Beit Hakerem, Jerusalem"}
+[2025-06-24T12:48:37.467Z] getUsersByParams: Fetching users with params: {"role":"renter"}
+[2025-06-24T12:48:37.474Z] Cache hit for key: unread:2
+[2025-06-24T12:48:37.472Z] Cache hit for key: users:params:{"role":"renter"}
+[2025-06-24T12:48:37.480Z] getUsersByParams: Fetching users with params: {"role":"renter"}
+[2025-06-24T12:48:37.486Z] Cache hit for key: users:params:{"role":"renter"}
+[2025-06-24T12:48:37.489Z] Cache hit for key: unread:2
+[2025-06-24T12:48:45.386Z] updateUser: Updating user id: 3 with data: {"fullName":"undefined","email":"john@example.com","phone":"0507654327","address":"Beit Hakerem, Jerusalem"}
+[2025-06-24T12:48:52.034Z] updateUser: Updating user id: 3 with data: {"fullName":"undefined","email":"john@example.com","phone":"0507654327","address":"Beit Hakerem, Jerusalem"}
+[2025-06-24T12:51:04.063Z] deleteUser: Deleting user with id: 4
+[2025-06-24T12:51:37.325Z] deleteUser: Deleting user with id: 5
+[2025-06-24T12:52:21.469Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T12:52:21.471Z] Cache miss for key: users:params:{"role":"owner"}. Fetching from DB...
+[2025-06-24T12:52:22.975Z] getUsersByParams: Fetching users with params: {"role":"renter"}
+[2025-06-24T12:52:22.978Z] Cache miss for key: users:params:{"role":"renter"}. Fetching from DB...
+[2025-06-24T12:52:24.890Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T12:52:24.892Z] Cache hit for key: users:params:{"role":"owner"}
+[2025-06-24T12:52:26.145Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T12:52:26.150Z] Cache hit for key: users:params:{"role":"owner"}
+[2025-06-24T12:52:26.158Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T12:52:26.160Z] Cache miss for key: unread:2. Fetching from DB...
+[2025-06-24T12:52:26.161Z] getUnReadMessages: Fetching unread messages for userId=2
+[2025-06-24T12:52:26.166Z] Cache hit for key: users:params:{"role":"owner"}
+[2025-06-24T12:52:26.189Z] Cache hit for key: unread:2
+[2025-06-24T12:52:27.040Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T12:52:27.042Z] Cache hit for key: unread:2
+[2025-06-24T12:52:27.045Z] Cache hit for key: users:params:{"role":"owner"}
+[2025-06-24T12:52:27.054Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T12:52:27.056Z] Cache hit for key: unread:2
+[2025-06-24T12:52:27.059Z] Cache hit for key: users:params:{"role":"owner"}
+[2025-06-24T12:54:48.528Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T12:54:48.534Z] Cache hit for key: users:params:{"role":"owner"}
+[2025-06-24T12:54:48.537Z] Cache miss for key: unread:2. Fetching from DB...
+[2025-06-24T12:54:48.538Z] getUnReadMessages: Fetching unread messages for userId=2
+[2025-06-24T12:54:48.546Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T12:54:48.551Z] Cache hit for key: users:params:{"role":"owner"}
+[2025-06-24T12:54:48.564Z] Cache hit for key: unread:2
+[2025-06-24T12:54:49.465Z] getUsersByParams: Fetching users with params: {"role":"renter"}
+[2025-06-24T12:54:49.467Z] Cache hit for key: users:params:{"role":"renter"}
+[2025-06-24T12:54:49.914Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T12:54:49.916Z] Cache hit for key: users:params:{"role":"owner"}
+[2025-06-24T12:54:51.194Z] Cache miss for key: dashboard:admin:2. Fetching from DB...
+[2025-06-24T12:54:52.324Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T12:54:52.326Z] Cache hit for key: users:params:{"role":"owner"}
+[2025-06-24T12:54:52.338Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T12:54:52.343Z] Cache hit for key: users:params:{"role":"owner"}
+[2025-06-24T12:55:27.613Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T12:55:27.621Z] Cache hit for key: users:params:{"role":"owner"}
+[2025-06-24T12:55:27.626Z] Cache hit for key: unread:2
+[2025-06-24T12:55:27.633Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T12:55:27.640Z] Cache hit for key: users:params:{"role":"owner"}
+[2025-06-24T12:55:27.644Z] Cache hit for key: unread:2
+[2025-06-24T12:59:03.226Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T12:59:03.346Z] Cache miss for key: unread:2. Fetching from DB...
+[2025-06-24T12:59:03.347Z] getUnReadMessages: Fetching unread messages for userId=2
+[2025-06-24T12:59:03.351Z] Cache miss for key: users:params:{"role":"owner"}. Fetching from DB...
+[2025-06-24T12:59:03.387Z] Cache hit for key: unread:2
+[2025-06-24T12:59:09.190Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T12:59:09.195Z] Cache hit for key: users:params:{"role":"owner"}
+[2025-06-24T12:59:09.195Z] Cache hit for key: unread:2
+[2025-06-24T12:59:09.202Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T12:59:09.209Z] Cache hit for key: users:params:{"role":"owner"}
+[2025-06-24T12:59:09.212Z] Cache hit for key: unread:2
+[2025-06-24T12:59:40.244Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T12:59:40.248Z] Cache hit for key: users:params:{"role":"owner"}
+[2025-06-24T12:59:40.261Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T12:59:40.263Z] Cache hit for key: unread:2
+[2025-06-24T12:59:40.264Z] Cache hit for key: users:params:{"role":"owner"}
+[2025-06-24T12:59:40.270Z] Cache hit for key: unread:2
+[2025-06-24T12:59:41.240Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T12:59:41.246Z] Cache hit for key: users:params:{"role":"owner"}
+[2025-06-24T12:59:41.250Z] Cache hit for key: unread:2
+[2025-06-24T12:59:41.259Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T12:59:41.266Z] Cache hit for key: users:params:{"role":"owner"}
+[2025-06-24T12:59:41.270Z] Cache hit for key: unread:2
+[2025-06-24T12:59:47.613Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T12:59:47.619Z] Cache hit for key: users:params:{"role":"owner"}
+[2025-06-24T12:59:47.621Z] Cache hit for key: unread:2
+[2025-06-24T12:59:47.626Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T12:59:47.631Z] Cache hit for key: users:params:{"role":"owner"}
+[2025-06-24T12:59:47.634Z] Cache hit for key: unread:2
+[2025-06-24T12:59:49.099Z] getUsersByParams: Fetching users with params: {"role":"renter"}
+[2025-06-24T12:59:49.102Z] Cache miss for key: users:params:{"role":"renter"}. Fetching from DB...
+[2025-06-24T12:59:50.190Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T12:59:50.201Z] Cache hit for key: users:params:{"role":"owner"}
+[2025-06-24T13:00:13.829Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T13:00:13.833Z] Cache hit for key: users:params:{"role":"owner"}
+[2025-06-24T13:00:13.835Z] Cache hit for key: unread:2
+[2025-06-24T13:00:13.839Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T13:00:13.844Z] Cache hit for key: users:params:{"role":"owner"}
+[2025-06-24T13:00:13.846Z] Cache hit for key: unread:2
+[2025-06-24T13:00:16.951Z] getUsersByParams: Fetching users with params: {"role":"renter"}
+[2025-06-24T13:00:16.959Z] Cache hit for key: users:params:{"role":"renter"}
+[2025-06-24T13:00:21.934Z] deleteUser: Deleting user with id: 3
+[2025-06-24T13:00:36.298Z] deleteUser: Deleting user with id: 3
+[2025-06-24T13:00:37.947Z] deleteUser: Deleting user with id: 3
+[2025-06-24T13:00:37.971Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T13:00:37.964Z] getUsersByParams: Fetching users with params: {"role":"renter"}
+[2025-06-24T13:00:37.981Z] Cache hit for key: users:params:{"role":"renter"}
+[2025-06-24T13:00:37.982Z] Cache hit for key: unread:2
+[2025-06-24T13:00:37.982Z] Cache hit for key: users:params:{"role":"owner"}
+[2025-06-24T13:00:37.993Z] getUsersByParams: Fetching users with params: {"role":"renter"}
+[2025-06-24T13:00:38.000Z] Cache hit for key: users:params:{"role":"renter"}
+[2025-06-24T13:00:38.001Z] Cache hit for key: unread:2
+[2025-06-24T13:00:38.006Z] getUsersByParams: Fetching users with params: {"role":"renter"}
+[2025-06-24T13:00:38.007Z] Cache hit for key: users:params:{"role":"renter"}
+[2025-06-24T13:00:42.357Z] deleteUser: Deleting user with id: 3
+[2025-06-24T13:00:44.257Z] getUsersByParams: Fetching users with params: {"role":"renter"}
+[2025-06-24T13:00:44.262Z] Cache hit for key: users:params:{"role":"renter"}
+[2025-06-24T13:00:44.270Z] getUsersByParams: Fetching users with params: {"role":"renter"}
+[2025-06-24T13:00:44.266Z] Cache hit for key: unread:2
+[2025-06-24T13:00:44.275Z] Cache hit for key: users:params:{"role":"renter"}
+[2025-06-24T13:00:44.277Z] Cache hit for key: unread:2
+[2025-06-24T13:00:46.532Z] deleteUser: Deleting user with id: 3
+[2025-06-24T13:00:48.716Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T13:00:48.719Z] Cache hit for key: users:params:{"role":"owner"}
+[2025-06-24T13:00:53.094Z] getUsersByParams: Fetching users with params: {"role":"renter"}
+[2025-06-24T13:00:53.095Z] Cache hit for key: users:params:{"role":"renter"}
+[2025-06-24T13:03:15.337Z] deleteUser: Deleting user with id: 6
+[2025-06-24T13:04:59.033Z] getUsersByParams: Fetching users with params: {"role":"renter"}
+[2025-06-24T13:04:59.040Z] Cache miss for key: users:params:{"role":"renter"}. Fetching from DB...
+[2025-06-24T13:04:59.050Z] Cache miss for key: unread:2. Fetching from DB...
+[2025-06-24T13:04:59.051Z] getUnReadMessages: Fetching unread messages for userId=2
+[2025-06-24T13:04:59.080Z] getUsersByParams: Fetching users with params: {"role":"renter"}
+[2025-06-24T13:04:59.085Z] Cache hit for key: users:params:{"role":"renter"}
+[2025-06-24T13:04:59.088Z] Cache hit for key: unread:2
+[2025-06-24T13:05:01.167Z] deleteUser: Deleting user with id: 5
+[2025-06-24T13:05:10.364Z] updateUser: Updating user id: 4 with data: {"fullName":"undefined","email":"sarah@example.com","phone":"0521112238","address":"Katamon, Jerusalem"}
+[2025-06-24T13:16:12.244Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T13:16:12.249Z] Cache miss for key: users:params:{"role":"owner"}. Fetching from DB...
+[2025-06-24T13:16:15.542Z] getUsersByParams: Fetching users with params: {"role":"renter"}
+[2025-06-24T13:16:15.543Z] Cache miss for key: users:params:{"role":"renter"}. Fetching from DB...
+[2025-06-24T13:16:41.977Z] deleteUser: Deleting user with id: 3
+[2025-06-24T13:16:43.634Z] Cache miss for key: parkings:params:{"page":"1"}:page:1. Fetching from DB...
+[2025-06-24T13:16:43.635Z] getParkingsByParams: Fetching from DB filters={"page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-24T13:16:43.660Z] Cache hit for key: parkings:params:{"page":"1"}:page:1
+[2025-06-24T13:17:16.303Z] Cache miss for key: dashboard:admin:2. Fetching from DB...
+[2025-06-24T13:17:19.077Z] Cache miss for key: top:popular:parkings. Fetching from DB...
+[2025-06-24T13:17:19.078Z] getTopPopularParkings: Fetching from DB
+[2025-06-24T13:17:19.094Z] Cache hit for key: top:popular:parkings
+[2025-06-24T13:17:19.369Z] Cache miss for key: search:{"lat":"31.7035473","lng":"35.1132386"}. Fetching from DB...
+[2025-06-24T13:17:19.370Z] searchParkings: query={"lat":"31.7035473","lng":"35.1132386"}
+[2025-06-24T13:17:19.378Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T13:17:19.452Z] Cache hit for key: search:{"lat":"31.7035473","lng":"35.1132386"}
+[2025-06-24T13:17:25.942Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=8
+[2025-06-24T13:17:25.945Z] getReportsByParkingId: Fetching reports for parkingId=8
+[2025-06-24T13:17:25.947Z] Cache miss for key: timeslots:parking:8. Fetching from DB...
+[2025-06-24T13:17:25.948Z] Cache miss for key: reports:parking:8. Fetching from DB...
+[2025-06-24T13:17:25.966Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=8
+[2025-06-24T13:17:25.968Z] getReportsByParkingId: Fetching reports for parkingId=8
+[2025-06-24T13:17:25.970Z] Cache hit for key: timeslots:parking:8
+[2025-06-24T13:17:25.973Z] Cache hit for key: reports:parking:8
+[2025-06-24T13:19:43.976Z] Cache hit for key: top:popular:parkings
+[2025-06-24T13:19:43.982Z] Cache hit for key: top:popular:parkings
+[2025-06-24T13:19:44.230Z] Cache miss for key: search:{"lat":"31.7035509","lng":"35.1132426"}. Fetching from DB...
+[2025-06-24T13:19:44.231Z] searchParkings: query={"lat":"31.7035509","lng":"35.1132426"}
+[2025-06-24T13:19:44.240Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T13:19:44.253Z] Cache hit for key: search:{"lat":"31.7035509","lng":"35.1132426"}
+[2025-06-24T13:19:49.514Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=19
+[2025-06-24T13:19:49.517Z] getReportsByParkingId: Fetching reports for parkingId=19
+[2025-06-24T13:19:49.518Z] Cache miss for key: timeslots:parking:19. Fetching from DB...
+[2025-06-24T13:19:49.521Z] Cache miss for key: reports:parking:19. Fetching from DB...
+[2025-06-24T13:19:49.536Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=19
+[2025-06-24T13:19:49.539Z] getReportsByParkingId: Fetching reports for parkingId=19
+[2025-06-24T13:19:49.541Z] Cache hit for key: timeslots:parking:19
+[2025-06-24T13:19:49.544Z] Cache hit for key: reports:parking:19
+[2025-06-24T13:19:56.848Z] Cache hit for key: top:popular:parkings
+[2025-06-24T13:19:56.855Z] Cache hit for key: top:popular:parkings
+[2025-06-24T13:19:57.316Z] searchParkings: query={"lat":"31.7035412","lng":"35.1132464"}
+[2025-06-24T13:19:57.316Z] Cache miss for key: search:{"lat":"31.7035412","lng":"35.1132464"}. Fetching from DB...
+[2025-06-24T13:19:57.323Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T13:19:57.348Z] Cache hit for key: search:{"lat":"31.7035412","lng":"35.1132464"}
+[2025-06-24T13:19:58.701Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=14
+[2025-06-24T13:19:58.703Z] getReportsByParkingId: Fetching reports for parkingId=14
+[2025-06-24T13:19:58.712Z] Cache miss for key: timeslots:parking:14. Fetching from DB...
+[2025-06-24T13:19:58.717Z] Cache miss for key: reports:parking:14. Fetching from DB...
+[2025-06-24T13:19:58.726Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=14
+[2025-06-24T13:19:58.729Z] getReportsByParkingId: Fetching reports for parkingId=14
+[2025-06-24T13:19:58.730Z] Cache hit for key: timeslots:parking:14
+[2025-06-24T13:19:58.733Z] Cache hit for key: reports:parking:14
+[2025-06-24T13:20:00.026Z] Cache hit for key: top:popular:parkings
+[2025-06-24T13:20:00.032Z] Cache hit for key: top:popular:parkings
+[2025-06-24T13:20:00.058Z] Cache hit for key: search:{"lat":"31.7035412","lng":"35.1132464"}
+[2025-06-24T13:20:00.067Z] Cache hit for key: search:{"lat":"31.7035412","lng":"35.1132464"}
+[2025-06-24T13:20:02.212Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=13
+[2025-06-24T13:20:02.215Z] getReportsByParkingId: Fetching reports for parkingId=13
+[2025-06-24T13:20:02.217Z] Cache miss for key: timeslots:parking:13. Fetching from DB...
+[2025-06-24T13:20:02.220Z] Cache miss for key: reports:parking:13. Fetching from DB...
+[2025-06-24T13:20:02.229Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=13
+[2025-06-24T13:20:02.232Z] getReportsByParkingId: Fetching reports for parkingId=13
+[2025-06-24T13:20:02.233Z] Cache hit for key: timeslots:parking:13
+[2025-06-24T13:20:02.235Z] Cache hit for key: reports:parking:13
+[2025-06-24T13:20:03.834Z] Cache hit for key: top:popular:parkings
+[2025-06-24T13:20:03.840Z] Cache hit for key: top:popular:parkings
+[2025-06-24T13:20:03.869Z] Cache hit for key: search:{"lat":"31.7035412","lng":"35.1132464"}
+[2025-06-24T13:20:03.878Z] Cache hit for key: search:{"lat":"31.7035412","lng":"35.1132464"}
+[2025-06-24T13:20:57.672Z] Cache miss for key: search:{"minPrice":"0","maxPrice":"16","type":"temporary","lat":"31.7035412","lng":"35.1132464","startTime":"2025-06-24T13:20:57.676Z","hours":"2","radius":"10"}. Fetching from DB...
+[2025-06-24T13:20:57.673Z] searchParkings: query={"minPrice":"0","maxPrice":"16","type":"temporary","lat":"31.7035412","lng":"35.1132464","startTime":"2025-06-24T13:20:57.676Z","hours":"2","radius":"10"}
+[2025-06-24T13:20:57.683Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T13:21:07.363Z] searchParkings: query={"minPrice":"0","maxPrice":"16","type":"temporary","lat":"31.7035412","lng":"35.1132464","startTime":"2025-06-24T13:21:07.365Z","hours":"2","radius":"1000"}
+[2025-06-24T13:21:07.362Z] Cache miss for key: search:{"minPrice":"0","maxPrice":"16","type":"temporary","lat":"31.7035412","lng":"35.1132464","startTime":"2025-06-24T13:21:07.365Z","hours":"2","radius":"1000"}. Fetching from DB...
+[2025-06-24T13:21:07.368Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T13:21:20.732Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=19
+[2025-06-24T13:21:20.735Z] getReportsByParkingId: Fetching reports for parkingId=19
+[2025-06-24T13:21:20.737Z] Cache hit for key: timeslots:parking:19
+[2025-06-24T13:21:20.738Z] Cache hit for key: reports:parking:19
+[2025-06-24T13:21:20.744Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=19
+[2025-06-24T13:21:20.749Z] Cache hit for key: timeslots:parking:19
+[2025-06-24T13:21:20.747Z] getReportsByParkingId: Fetching reports for parkingId=19
+[2025-06-24T13:21:20.751Z] Cache hit for key: reports:parking:19
+[2025-06-24T13:33:39.625Z] Cache miss for key: top:popular:parkings. Fetching from DB...
+[2025-06-24T13:33:39.626Z] getTopPopularParkings: Fetching from DB
+[2025-06-24T13:33:39.668Z] Cache hit for key: top:popular:parkings
+[2025-06-24T13:33:39.994Z] Cache miss for key: search:{"lat":"31.7035457","lng":"35.1132462"}. Fetching from DB...
+[2025-06-24T13:33:39.995Z] searchParkings: query={"lat":"31.7035457","lng":"35.1132462"}
+[2025-06-24T13:33:40.010Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T13:33:40.047Z] Cache hit for key: search:{"lat":"31.7035457","lng":"35.1132462"}
+[2025-06-24T14:13:50.085Z] Cache miss for key: top:popular:parkings. Fetching from DB...
+[2025-06-24T14:13:50.087Z] getTopPopularParkings: Fetching from DB
+[2025-06-24T14:13:50.169Z] Cache hit for key: top:popular:parkings
+[2025-06-24T14:13:50.513Z] Cache miss for key: search:{"lat":"31.7035687","lng":"35.1132672"}. Fetching from DB...
+[2025-06-24T14:13:50.515Z] searchParkings: query={"lat":"31.7035687","lng":"35.1132672"}
+[2025-06-24T14:13:50.534Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T14:13:50.578Z] Cache hit for key: search:{"lat":"31.7035687","lng":"35.1132672"}
+[2025-06-24T14:15:41.118Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T14:15:41.119Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T14:15:46.503Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=19
+[2025-06-24T14:15:46.512Z] checkReportPermission: Checking permissions for userId=5, parkingId=19
+[2025-06-24T14:15:46.523Z] getReportsByParkingId: Fetching reports for parkingId=19
+[2025-06-24T14:15:46.531Z] checkReportPermission: User is owner, cannot report
+[2025-06-24T14:15:46.537Z] Cache miss for key: timeslots:parking:19. Fetching from DB...
+[2025-06-24T14:15:46.545Z] Cache miss for key: reports:parking:19. Fetching from DB...
+[2025-06-24T14:15:46.559Z] checkReportPermission: Checking permissions for userId=5, parkingId=19
+[2025-06-24T14:15:46.592Z] checkReportPermission: User is owner, cannot report
+[2025-06-24T14:15:46.620Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=19
+[2025-06-24T14:15:46.624Z] getReportsByParkingId: Fetching reports for parkingId=19
+[2025-06-24T14:15:46.628Z] Cache hit for key: timeslots:parking:19
+[2025-06-24T14:15:46.630Z] Cache hit for key: reports:parking:19
+[2025-06-24T14:15:53.735Z] Cache hit for key: top:popular:parkings
+[2025-06-24T14:15:53.746Z] Cache hit for key: top:popular:parkings
+[2025-06-24T14:15:54.597Z] Cache miss for key: search:{"lat":"31.7554688","lng":"34.9929472"}. Fetching from DB...
+[2025-06-24T14:15:54.598Z] searchParkings: query={"lat":"31.7554688","lng":"34.9929472"}
+[2025-06-24T14:15:54.611Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T14:15:54.643Z] Cache hit for key: search:{"lat":"31.7554688","lng":"34.9929472"}
+[2025-06-24T14:15:58.286Z] checkReportPermission: Checking permissions for userId=5, parkingId=5
+[2025-06-24T14:15:58.294Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-24T14:15:58.302Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-24T14:15:58.309Z] checkReportPermission: User is owner, cannot report
+[2025-06-24T14:15:58.314Z] Cache miss for key: reports:parking:5. Fetching from DB...
+[2025-06-24T14:15:58.316Z] Cache miss for key: timeslots:parking:5. Fetching from DB...
+[2025-06-24T14:15:58.338Z] checkReportPermission: Checking permissions for userId=5, parkingId=5
+[2025-06-24T14:15:58.367Z] checkReportPermission: User is owner, cannot report
+[2025-06-24T14:15:58.393Z] getReportsByParkingId: Fetching reports for parkingId=5
+[2025-06-24T14:15:58.400Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=5
+[2025-06-24T14:15:58.405Z] Cache hit for key: reports:parking:5
+[2025-06-24T14:15:58.410Z] Cache hit for key: timeslots:parking:5
+[2025-06-24T14:16:27.863Z] Cache hit for key: top:popular:parkings
+[2025-06-24T14:16:27.870Z] Cache hit for key: top:popular:parkings
+[2025-06-24T14:16:28.493Z] Cache miss for key: search:{"lat":"31.7035597","lng":"35.113248"}. Fetching from DB...
+[2025-06-24T14:16:28.494Z] searchParkings: query={"lat":"31.7035597","lng":"35.113248"}
+[2025-06-24T14:16:28.513Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T14:16:28.543Z] Cache hit for key: search:{"lat":"31.7035597","lng":"35.113248"}
+[2025-06-24T14:16:33.019Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=8
+[2025-06-24T14:16:33.028Z] checkReportPermission: Checking permissions for userId=5, parkingId=8
+[2025-06-24T14:16:33.035Z] getReportsByParkingId: Fetching reports for parkingId=8
+[2025-06-24T14:16:33.038Z] Cache miss for key: timeslots:parking:8. Fetching from DB...
+[2025-06-24T14:16:33.044Z] checkReportPermission: User is owner, cannot report
+[2025-06-24T14:16:33.050Z] Cache miss for key: reports:parking:8. Fetching from DB...
+[2025-06-24T14:16:33.064Z] checkReportPermission: Checking permissions for userId=5, parkingId=8
+[2025-06-24T14:16:33.076Z] checkReportPermission: User is owner, cannot report
+[2025-06-24T14:16:33.088Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=8
+[2025-06-24T14:16:33.092Z] getReportsByParkingId: Fetching reports for parkingId=8
+[2025-06-24T14:16:33.097Z] Cache hit for key: timeslots:parking:8
+[2025-06-24T14:16:33.097Z] Cache hit for key: reports:parking:8
+[2025-06-24T14:16:39.895Z] Cache hit for key: top:popular:parkings
+[2025-06-24T14:16:39.905Z] Cache hit for key: top:popular:parkings
+[2025-06-24T14:16:40.473Z] Cache miss for key: search:{"lat":"31.703569","lng":"35.1132532"}. Fetching from DB...
+[2025-06-24T14:16:40.474Z] searchParkings: query={"lat":"31.703569","lng":"35.1132532"}
+[2025-06-24T14:16:40.483Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T14:16:40.504Z] Cache hit for key: search:{"lat":"31.703569","lng":"35.1132532"}
+[2025-06-24T14:54:53.281Z] getReservationById: Fetching reservation with id=1
+[2025-06-24T14:54:53.290Z] Cache miss for key: reservation:1. Fetching from DB...
+[2025-06-24T14:54:53.306Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T14:54:53.307Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T14:54:53.371Z] getReservationById: Fetching reservation with id=1
+[2025-06-24T14:54:53.386Z] Cache hit for key: reservation:1
+[2025-06-24T14:54:53.389Z] Cache hit for key: unread:5
+[2025-06-24T14:55:37.660Z] getReservationById: Fetching reservation with id=1
+[2025-06-24T14:55:37.666Z] Cache hit for key: reservation:1
+[2025-06-24T14:55:37.670Z] Cache hit for key: unread:5
+[2025-06-24T14:55:37.677Z] getReservationById: Fetching reservation with id=1
+[2025-06-24T14:55:37.685Z] Cache hit for key: reservation:1
+[2025-06-24T14:55:37.689Z] Cache hit for key: unread:5
+[2025-06-24T14:57:52.397Z] getReservationById: Fetching reservation with id=1
+[2025-06-24T14:57:52.405Z] Cache hit for key: reservation:1
+[2025-06-24T14:57:52.410Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T14:57:52.411Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T14:57:52.426Z] getReservationById: Fetching reservation with id=1
+[2025-06-24T14:57:52.432Z] Cache hit for key: reservation:1
+[2025-06-24T14:57:52.440Z] Cache hit for key: unread:5
+[2025-06-24T14:58:31.672Z] getReservationById: Fetching reservation with id=1
+[2025-06-24T14:58:31.677Z] Cache hit for key: reservation:1
+[2025-06-24T14:58:31.684Z] Cache hit for key: unread:5
+[2025-06-24T14:58:31.688Z] getReservationById: Fetching reservation with id=1
+[2025-06-24T14:58:31.692Z] Cache hit for key: reservation:1
+[2025-06-24T14:58:31.694Z] Cache hit for key: unread:5
+[2025-06-24T14:58:34.655Z] Cache miss for key: top:popular:parkings. Fetching from DB...
+[2025-06-24T14:58:34.656Z] getTopPopularParkings: Fetching from DB
+[2025-06-24T14:58:34.671Z] Cache hit for key: top:popular:parkings
+[2025-06-24T14:58:35.787Z] Cache miss for key: search:{"lat":"31.8701568","lng":"34.9896704"}. Fetching from DB...
+[2025-06-24T14:58:35.787Z] searchParkings: query={"lat":"31.8701568","lng":"34.9896704"}
+[2025-06-24T14:58:35.793Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T14:58:35.817Z] Cache hit for key: search:{"lat":"31.8701568","lng":"34.9896704"}
+[2025-06-24T17:32:46.592Z] Cache miss for key: top:popular:parkings. Fetching from DB...
+[2025-06-24T17:32:46.594Z] getTopPopularParkings: Fetching from DB
+[2025-06-24T17:32:46.604Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T17:32:46.603Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T17:32:46.654Z] Cache hit for key: top:popular:parkings
+[2025-06-24T17:32:46.656Z] Cache hit for key: unread:5
+[2025-06-24T17:32:46.982Z] Cache miss for key: search:{"lat":"31.7035447","lng":"35.1132437"}. Fetching from DB...
+[2025-06-24T17:32:46.983Z] searchParkings: query={"lat":"31.7035447","lng":"35.1132437"}
+[2025-06-24T17:32:46.993Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T17:32:47.018Z] Cache hit for key: search:{"lat":"31.7035447","lng":"35.1132437"}
+[2025-06-24T18:07:30.155Z] Cache miss for key: top:popular:parkings. Fetching from DB...
+[2025-06-24T18:07:30.156Z] getTopPopularParkings: Fetching from DB
+[2025-06-24T18:07:30.166Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T18:07:30.165Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T18:07:30.228Z] Cache hit for key: unread:5
+[2025-06-24T18:07:30.238Z] Cache hit for key: top:popular:parkings
+[2025-06-24T18:07:30.718Z] Cache miss for key: search:{"lat":"31.7554688","lng":"34.9929472"}. Fetching from DB...
+[2025-06-24T18:07:30.718Z] searchParkings: query={"lat":"31.7554688","lng":"34.9929472"}
+[2025-06-24T18:07:30.725Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T18:07:30.744Z] Cache hit for key: search:{"lat":"31.7554688","lng":"34.9929472"}
+[2025-06-24T18:09:21.742Z] Cache hit for key: top:popular:parkings
+[2025-06-24T18:09:21.753Z] Cache hit for key: unread:5
+[2025-06-24T18:09:21.763Z] Cache hit for key: top:popular:parkings
+[2025-06-24T18:09:21.773Z] Cache hit for key: unread:5
+[2025-06-24T18:09:22.053Z] Cache hit for key: search:{"lat":"31.7554688","lng":"34.9929472"}
+[2025-06-24T18:09:22.061Z] Cache hit for key: search:{"lat":"31.7554688","lng":"34.9929472"}
+[2025-06-24T18:09:38.718Z] Cache hit for key: top:popular:parkings
+[2025-06-24T18:09:38.724Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T18:09:38.724Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T18:09:38.729Z] Cache hit for key: top:popular:parkings
+[2025-06-24T18:09:38.755Z] Cache hit for key: unread:5
+[2025-06-24T18:09:38.924Z] Cache hit for key: search:{"lat":"31.7554688","lng":"34.9929472"}
+[2025-06-24T18:09:38.932Z] Cache hit for key: search:{"lat":"31.7554688","lng":"34.9929472"}
+[2025-06-24T18:22:55.837Z] Cache miss for key: top:popular:parkings. Fetching from DB...
+[2025-06-24T18:22:55.839Z] getTopPopularParkings: Fetching from DB
+[2025-06-24T18:22:55.915Z] Cache hit for key: top:popular:parkings
+[2025-06-24T18:23:01.995Z] Cache miss for key: search:{"lat":"31.7035762","lng":"35.1132405"}. Fetching from DB...
+[2025-06-24T18:23:01.997Z] searchParkings: query={"lat":"31.7035762","lng":"35.1132405"}
+[2025-06-24T18:23:02.013Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T18:23:02.249Z] Cache hit for key: search:{"lat":"31.7035762","lng":"35.1132405"}
+[2025-06-24T18:31:32.257Z] Cache hit for key: top:popular:parkings
+[2025-06-24T18:31:32.280Z] Cache hit for key: top:popular:parkings
+[2025-06-24T18:31:32.693Z] Cache miss for key: search:{"lat":"31.7035445","lng":"35.1132438"}. Fetching from DB...
+[2025-06-24T18:31:32.695Z] searchParkings: query={"lat":"31.7035445","lng":"35.1132438"}
+[2025-06-24T18:31:32.758Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T18:31:32.840Z] Cache hit for key: search:{"lat":"31.7035445","lng":"35.1132438"}
+[2025-06-24T18:31:43.199Z] Cache hit for key: top:popular:parkings
+[2025-06-24T18:31:43.206Z] Cache hit for key: top:popular:parkings
+[2025-06-24T18:31:44.751Z] Cache hit for key: search:{"lat":"31.7035445","lng":"35.1132438"}
+[2025-06-24T18:31:44.772Z] Cache hit for key: search:{"lat":"31.7035445","lng":"35.1132438"}
+[2025-06-24T18:32:23.165Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T18:32:23.165Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T18:34:14.463Z] getReservationsByValue: Fetching reservations with value={"renterId":"5","page":"1","limit":"10"}
+[2025-06-24T18:34:14.466Z] Cache miss for key: reservations:search:{"renterId":"5","page":"1","limit":"10"}. Fetching from DB...
+[2025-06-24T18:34:14.522Z] getReservationsByValue: Fetching reservations with value={"renterId":"5","page":"1","limit":"10"}
+[2025-06-24T18:34:14.524Z] Cache hit for key: reservations:search:{"renterId":"5","page":"1","limit":"10"}
+[2025-06-24T18:34:31.933Z] Cache miss for key: conversations:5. Fetching from DB...
+[2025-06-24T18:34:31.934Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-24T18:34:31.970Z] Cache hit for key: conversations:5
+[2025-06-24T18:34:31.988Z] Cache miss for key: conversation:cb6db847-9dd6-4676-867a-c4dbf5c2d1a6. Fetching from DB...
+[2025-06-24T18:34:31.988Z] getMessagesByConversationId: Fetching messages for conversationId=cb6db847-9dd6-4676-867a-c4dbf5c2d1a6
+[2025-06-24T18:34:43.211Z] getTopPopularParkings: Fetching from DB
+[2025-06-24T18:34:43.205Z] Cache miss for key: top:popular:parkings. Fetching from DB...
+[2025-06-24T18:34:43.262Z] Cache hit for key: top:popular:parkings
+[2025-06-24T18:34:43.923Z] Cache miss for key: search:{"lat":"31.7035515","lng":"35.1132449"}. Fetching from DB...
+[2025-06-24T18:34:43.923Z] searchParkings: query={"lat":"31.7035515","lng":"35.1132449"}
+[2025-06-24T18:34:43.929Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T18:34:43.954Z] Cache hit for key: search:{"lat":"31.7035515","lng":"35.1132449"}
+[2025-06-24T18:41:16.550Z] getUnReadMessages: Fetching unread messages for userId=2
+[2025-06-24T18:41:16.550Z] Cache miss for key: unread:2. Fetching from DB...
+[2025-06-24T18:41:16.569Z] Cache miss for key: dashboard:admin:2. Fetching from DB...
+[2025-06-24T18:41:16.612Z] Cache hit for key: dashboard:admin:2
+[2025-06-24T18:45:02.579Z] Cache miss for key: top:popular:parkings. Fetching from DB...
+[2025-06-24T18:45:02.579Z] getTopPopularParkings: Fetching from DB
+[2025-06-24T18:45:02.609Z] Cache hit for key: top:popular:parkings
+[2025-06-24T18:45:03.206Z] searchParkings: query={"lat":"31.7035698","lng":"35.1133799"}
+[2025-06-24T18:45:03.205Z] Cache miss for key: search:{"lat":"31.7035698","lng":"35.1133799"}. Fetching from DB...
+[2025-06-24T18:45:03.213Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T18:45:03.227Z] Cache hit for key: search:{"lat":"31.7035698","lng":"35.1133799"}
+[2025-06-24T18:45:28.455Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T18:45:28.455Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T18:45:28.487Z] Cache miss for key: dashboard:owner:5. Fetching from DB...
+[2025-06-24T18:45:28.529Z] Cache hit for key: dashboard:owner:5
+[2025-06-24T18:46:07.038Z] Cache miss for key: parkings:params:{"ownerId":"5","page":"1"}:page:1. Fetching from DB...
+[2025-06-24T18:46:07.038Z] getParkingsByParams: Fetching from DB filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-24T18:46:07.064Z] Cache hit for key: parkings:params:{"ownerId":"5","page":"1"}:page:1
+[2025-06-24T18:46:14.657Z] Cache miss for key: parkings:params:{"ownerId":"5","page":"2"}:page:1. Fetching from DB...
+[2025-06-24T18:46:14.657Z] getParkingsByParams: Fetching from DB filters={"ownerId":"5","page":"2"}, pagination={"limit":10,"offset":null}
+[2025-06-24T18:46:18.633Z] getReservationsByValue: Fetching reservations with value={"ownerId":"5","page":"1","limit":"10"}
+[2025-06-24T18:46:18.635Z] Cache miss for key: reservations:search:{"ownerId":"5","page":"1","limit":"10"}. Fetching from DB...
+[2025-06-24T18:46:18.651Z] getReservationsByValue: Fetching reservations with value={"ownerId":"5","page":"1","limit":"10"}
+[2025-06-24T18:46:18.654Z] Cache hit for key: reservations:search:{"ownerId":"5","page":"1","limit":"10"}
+[2025-06-24T18:46:24.654Z] Cache miss for key: conversations:5. Fetching from DB...
+[2025-06-24T18:46:24.654Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-24T18:46:24.675Z] Cache hit for key: conversations:5
+[2025-06-24T18:46:24.686Z] Cache miss for key: conversation:cb6db847-9dd6-4676-867a-c4dbf5c2d1a6. Fetching from DB...
+[2025-06-24T18:46:24.687Z] getMessagesByConversationId: Fetching messages for conversationId=cb6db847-9dd6-4676-867a-c4dbf5c2d1a6
+[2025-06-24T18:46:30.511Z] Cache hit for key: top:popular:parkings
+[2025-06-24T18:46:30.523Z] Cache hit for key: top:popular:parkings
+[2025-06-24T18:46:30.935Z] searchParkings: query={"lat":"31.703573","lng":"35.1133763"}
+[2025-06-24T18:46:30.933Z] Cache miss for key: search:{"lat":"31.703573","lng":"35.1133763"}. Fetching from DB...
+[2025-06-24T18:46:30.944Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T18:46:30.963Z] Cache hit for key: search:{"lat":"31.703573","lng":"35.1133763"}
+[2025-06-24T18:46:37.586Z] Cache miss for key: unread:2. Fetching from DB...
+[2025-06-24T18:46:37.587Z] getUnReadMessages: Fetching unread messages for userId=2
+[2025-06-24T18:46:37.601Z] Cache miss for key: dashboard:admin:2. Fetching from DB...
+[2025-06-24T18:46:37.623Z] Cache hit for key: dashboard:admin:2
+[2025-06-24T18:46:40.895Z] Cache miss for key: users:params:{"role":"owner"}. Fetching from DB...
+[2025-06-24T18:46:40.894Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T18:46:40.913Z] getUsersByParams: Fetching users with params: {"role":"owner"}
+[2025-06-24T18:46:40.914Z] Cache hit for key: users:params:{"role":"owner"}
+[2025-06-24T18:46:48.467Z] getUsersByParams: Fetching users with params: {"role":"renter"}
+[2025-06-24T18:46:48.468Z] Cache miss for key: users:params:{"role":"renter"}. Fetching from DB...
+[2025-06-24T18:47:16.128Z] getUsersByParams: Fetching users with params: {"role":"renter"}
+[2025-06-24T18:47:16.133Z] Cache hit for key: users:params:{"role":"renter"}
+[2025-06-24T18:47:16.135Z] Cache hit for key: unread:2
+[2025-06-24T18:47:16.138Z] getUsersByParams: Fetching users with params: {"role":"renter"}
+[2025-06-24T18:47:16.142Z] Cache hit for key: users:params:{"role":"renter"}
+[2025-06-24T18:47:16.145Z] Cache hit for key: unread:2
+[2025-06-24T18:47:50.914Z] Cache hit for key: dashboard:admin:2
+[2025-06-24T18:47:55.671Z] Cache hit for key: top:popular:parkings
+[2025-06-24T18:47:55.678Z] Cache hit for key: top:popular:parkings
+[2025-06-24T18:47:55.892Z] Cache miss for key: search:{"lat":"31.7035709","lng":"35.1133873"}. Fetching from DB...
+[2025-06-24T18:47:55.893Z] searchParkings: query={"lat":"31.7035709","lng":"35.1133873"}
+[2025-06-24T18:47:55.905Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T18:47:55.919Z] Cache hit for key: search:{"lat":"31.7035709","lng":"35.1133873"}
+[2025-06-24T18:49:56.048Z] Cache hit for key: top:popular:parkings
+[2025-06-24T18:49:56.054Z] Cache hit for key: top:popular:parkings
+[2025-06-24T18:49:56.289Z] Cache hit for key: search:{"lat":"31.7035709","lng":"35.1133873"}
+[2025-06-24T18:49:56.314Z] Cache hit for key: search:{"lat":"31.7035709","lng":"35.1133873"}
+[2025-06-24T18:51:35.526Z] Cache hit for key: top:popular:parkings
+[2025-06-24T18:51:35.536Z] Cache hit for key: top:popular:parkings
+[2025-06-24T18:51:35.726Z] searchParkings: query={"lat":"31.7035692","lng":"35.1133796"}
+[2025-06-24T18:51:35.726Z] Cache miss for key: search:{"lat":"31.7035692","lng":"35.1133796"}. Fetching from DB...
+[2025-06-24T18:51:35.743Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T18:51:35.765Z] Cache hit for key: search:{"lat":"31.7035692","lng":"35.1133796"}
+[2025-06-24T18:51:40.364Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T18:51:40.364Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T18:51:59.134Z] Cache hit for key: unread:5
+[2025-06-24T18:51:59.139Z] Cache hit for key: unread:5
+[2025-06-24T18:52:09.068Z] Cache hit for key: unread:5
+[2025-06-24T18:52:09.080Z] Cache hit for key: unread:5
+[2025-06-24T18:53:55.525Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T18:53:55.526Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T18:53:55.539Z] Cache hit for key: unread:5
+[2025-06-24T18:54:12.170Z] Cache hit for key: unread:5
+[2025-06-24T18:54:12.173Z] Cache hit for key: unread:5
+[2025-06-24T18:54:51.745Z] Cache hit for key: unread:5
+[2025-06-24T18:54:51.750Z] Cache hit for key: unread:5
+[2025-06-24T18:57:36.932Z] Cache miss for key: conversations:5. Fetching from DB...
+[2025-06-24T18:57:36.932Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-24T18:57:36.964Z] Cache hit for key: conversations:5
+[2025-06-24T18:57:36.978Z] Cache miss for key: conversation:5e7dd882-a5a1-4265-bce1-ada791aefc05. Fetching from DB...
+[2025-06-24T18:57:36.979Z] getMessagesByConversationId: Fetching messages for conversationId=5e7dd882-a5a1-4265-bce1-ada791aefc05
+[2025-06-24T18:57:37.827Z] Cache miss for key: top:popular:parkings. Fetching from DB...
+[2025-06-24T18:57:37.828Z] getTopPopularParkings: Fetching from DB
+[2025-06-24T18:57:37.838Z] Cache hit for key: top:popular:parkings
+[2025-06-24T18:57:38.504Z] searchParkings: query={"lat":"31.7035656","lng":"35.1133058"}
+[2025-06-24T18:57:38.504Z] Cache miss for key: search:{"lat":"31.7035656","lng":"35.1133058"}. Fetching from DB...
+[2025-06-24T18:57:38.507Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T18:57:38.522Z] Cache hit for key: search:{"lat":"31.7035656","lng":"35.1133058"}
+[2025-06-24T18:58:01.399Z] getReservationsByValue: Fetching reservations with value={"renterId":"5","page":"1","limit":"10"}
+[2025-06-24T18:58:01.400Z] Cache miss for key: reservations:search:{"renterId":"5","page":"1","limit":"10"}. Fetching from DB...
+[2025-06-24T18:58:01.423Z] getReservationsByValue: Fetching reservations with value={"renterId":"5","page":"1","limit":"10"}
+[2025-06-24T18:58:01.425Z] Cache hit for key: reservations:search:{"renterId":"5","page":"1","limit":"10"}
+[2025-06-24T18:59:09.710Z] getReservationsByValue: Fetching reservations with value={"renterId":"5","page":"1","limit":"10"}
+[2025-06-24T18:59:09.715Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T18:59:09.713Z] Cache hit for key: reservations:search:{"renterId":"5","page":"1","limit":"10"}
+[2025-06-24T18:59:09.715Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T18:59:09.720Z] getReservationsByValue: Fetching reservations with value={"renterId":"5","page":"1","limit":"10"}
+[2025-06-24T18:59:09.723Z] Cache hit for key: reservations:search:{"renterId":"5","page":"1","limit":"10"}
+[2025-06-24T18:59:09.734Z] Cache hit for key: unread:5
+[2025-06-24T19:00:04.148Z] getReservationsByValue: Fetching reservations with value={"renterId":"5","page":"1","limit":"10"}
+[2025-06-24T19:00:04.155Z] Cache hit for key: reservations:search:{"renterId":"5","page":"1","limit":"10"}
+[2025-06-24T19:00:04.158Z] Cache hit for key: unread:5
+[2025-06-24T19:00:04.163Z] getReservationsByValue: Fetching reservations with value={"renterId":"5","page":"1","limit":"10"}
+[2025-06-24T19:00:04.170Z] Cache hit for key: reservations:search:{"renterId":"5","page":"1","limit":"10"}
+[2025-06-24T19:00:04.171Z] Cache hit for key: unread:5
+[2025-06-24T19:00:06.918Z] getReservationsByValue: Fetching reservations with value={"renterId":"5","page":"1","limit":"10"}
+[2025-06-24T19:00:06.924Z] Cache hit for key: reservations:search:{"renterId":"5","page":"1","limit":"10"}
+[2025-06-24T19:00:06.927Z] Cache hit for key: unread:5
+[2025-06-24T19:00:06.937Z] getReservationsByValue: Fetching reservations with value={"renterId":"5","page":"1","limit":"10"}
+[2025-06-24T19:00:06.944Z] Cache hit for key: reservations:search:{"renterId":"5","page":"1","limit":"10"}
+[2025-06-24T19:00:06.951Z] Cache hit for key: unread:5
+[2025-06-24T19:01:11.842Z] Cache hit for key: top:popular:parkings
+[2025-06-24T19:01:11.848Z] Cache hit for key: top:popular:parkings
+[2025-06-24T19:01:12.069Z] searchParkings: query={"lat":"31.7035657","lng":"35.1133783"}
+[2025-06-24T19:01:12.069Z] Cache miss for key: search:{"lat":"31.7035657","lng":"35.1133783"}. Fetching from DB...
+[2025-06-24T19:01:12.096Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T19:01:12.133Z] Cache hit for key: search:{"lat":"31.7035657","lng":"35.1133783"}
+[2025-06-24T19:01:45.989Z] Cache miss for key: search:{"searchText":"Pali Yaro, Saidsadiq Central Subdistrict, Saidsadiq District, Iraqi Kurdistan Region, עיראק"}. Fetching from DB...
+[2025-06-24T19:01:45.990Z] searchParkings: query={"searchText":"Pali Yaro, Saidsadiq Central Subdistrict, Saidsadiq District, Iraqi Kurdistan Region, עיראק"}
+[2025-06-24T19:01:46.617Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T19:01:58.630Z] Cache miss for key: search:{"searchText":"תל־אביב–יפו, נפת תל אביב, מחוז תל אביב, ישראל"}. Fetching from DB...
+[2025-06-24T19:01:58.630Z] searchParkings: query={"searchText":"תל־אביב–יפו, נפת תל אביב, מחוז תל אביב, ישראל"}
+[2025-06-24T19:01:58.837Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T19:02:43.572Z] checkReportPermission: Checking permissions for userId=5, parkingId=1
+[2025-06-24T19:02:43.568Z] getReportsByParkingId: Fetching reports for parkingId=1
+[2025-06-24T19:02:43.566Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=1
+[2025-06-24T19:02:43.577Z] Cache miss for key: timeslots:parking:1. Fetching from DB...
+[2025-06-24T19:02:43.582Z] Cache miss for key: reports:parking:1. Fetching from DB...
+[2025-06-24T19:02:43.605Z] checkReportPermission: User is owner, cannot report
+[2025-06-24T19:02:43.619Z] checkReportPermission: Checking permissions for userId=5, parkingId=1
+[2025-06-24T19:02:43.624Z] checkReportPermission: User is owner, cannot report
+[2025-06-24T19:02:43.628Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=1
+[2025-06-24T19:02:43.629Z] getReportsByParkingId: Fetching reports for parkingId=1
+[2025-06-24T19:02:43.630Z] Cache hit for key: timeslots:parking:1
+[2025-06-24T19:02:43.632Z] Cache hit for key: reports:parking:1
+[2025-06-24T19:03:49.680Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=1
+[2025-06-24T19:03:49.682Z] Cache hit for key: timeslots:parking:1
+[2025-06-24T19:03:49.688Z] getReportsByParkingId: Fetching reports for parkingId=1
+[2025-06-24T19:03:49.693Z] Cache hit for key: reports:parking:1
+[2025-06-24T19:03:49.692Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=1
+[2025-06-24T19:03:49.696Z] Cache hit for key: timeslots:parking:1
+[2025-06-24T19:03:49.700Z] checkReportPermission: Checking permissions for userId=5, parkingId=1
+[2025-06-24T19:03:49.706Z] getReportsByParkingId: Fetching reports for parkingId=1
+[2025-06-24T19:03:49.715Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T19:03:49.713Z] Cache hit for key: reports:parking:1
+[2025-06-24T19:03:49.714Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T19:03:49.732Z] checkReportPermission: User is owner, cannot report
+[2025-06-24T19:03:49.738Z] checkReportPermission: Checking permissions for userId=5, parkingId=1
+[2025-06-24T19:03:49.764Z] checkReportPermission: User is owner, cannot report
+[2025-06-24T19:03:49.772Z] Cache hit for key: unread:5
+[2025-06-24T19:04:18.306Z] Cache hit for key: top:popular:parkings
+[2025-06-24T19:04:18.316Z] Cache hit for key: top:popular:parkings
+[2025-06-24T19:04:18.476Z] Cache hit for key: search:{"lat":"31.7035657","lng":"35.1133783"}
+[2025-06-24T19:04:18.489Z] Cache hit for key: search:{"lat":"31.7035657","lng":"35.1133783"}
+[2025-06-24T19:04:52.378Z] Cache hit for key: top:popular:parkings
+[2025-06-24T19:04:52.386Z] Cache miss for key: unread:6. Fetching from DB...
+[2025-06-24T19:04:52.388Z] getUnReadMessages: Fetching unread messages for userId=6
+[2025-06-24T19:04:52.415Z] Cache hit for key: top:popular:parkings
+[2025-06-24T19:04:52.450Z] Cache hit for key: unread:6
+[2025-06-24T19:04:52.679Z] Cache miss for key: search:{"lat":"31.704103390093916","lng":"35.11315209748684"}. Fetching from DB...
+[2025-06-24T19:04:52.695Z] searchParkings: query={"lat":"31.704103390093916","lng":"35.11315209748684"}
+[2025-06-24T19:04:52.721Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T19:04:52.782Z] Cache hit for key: search:{"lat":"31.704103390093916","lng":"35.11315209748684"}
+[2025-06-24T19:05:00.084Z] Cache hit for key: top:popular:parkings
+[2025-06-24T19:05:00.090Z] Cache hit for key: top:popular:parkings
+[2025-06-24T19:05:00.225Z] Cache hit for key: search:{"lat":"31.704103390093916","lng":"35.11315209748684"}
+[2025-06-24T19:05:00.233Z] Cache hit for key: search:{"lat":"31.704103390093916","lng":"35.11315209748684"}
+[2025-06-24T19:05:04.476Z] Cache hit for key: top:popular:parkings
+[2025-06-24T19:05:04.480Z] Cache hit for key: top:popular:parkings
+[2025-06-24T19:05:04.673Z] Cache miss for key: search:{"lat":"31.7035698","lng":"35.113384"}. Fetching from DB...
+[2025-06-24T19:05:04.674Z] searchParkings: query={"lat":"31.7035698","lng":"35.113384"}
+[2025-06-24T19:05:04.698Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T19:05:04.725Z] Cache hit for key: search:{"lat":"31.7035698","lng":"35.113384"}
+[2025-06-24T19:05:47.235Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=13
+[2025-06-24T19:05:47.236Z] getReportsByParkingId: Fetching reports for parkingId=13
+[2025-06-24T19:05:47.238Z] Cache miss for key: timeslots:parking:13. Fetching from DB...
+[2025-06-24T19:05:47.239Z] Cache miss for key: reports:parking:13. Fetching from DB...
+[2025-06-24T19:05:47.262Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=13
+[2025-06-24T19:05:47.265Z] getReportsByParkingId: Fetching reports for parkingId=13
+[2025-06-24T19:05:47.266Z] Cache hit for key: timeslots:parking:13
+[2025-06-24T19:05:47.268Z] Cache hit for key: reports:parking:13
+[2025-06-24T19:05:49.274Z] Cache hit for key: top:popular:parkings
+[2025-06-24T19:05:49.278Z] Cache hit for key: top:popular:parkings
+[2025-06-24T19:05:49.455Z] searchParkings: query={"lat":"31.7035669","lng":"35.1133767"}
+[2025-06-24T19:05:49.455Z] Cache miss for key: search:{"lat":"31.7035669","lng":"35.1133767"}. Fetching from DB...
+[2025-06-24T19:05:49.463Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T19:05:49.495Z] Cache hit for key: search:{"lat":"31.7035669","lng":"35.1133767"}
+[2025-06-24T19:06:07.093Z] Cache miss for key: search:{"minPrice":"0","maxPrice":"13","type":"temporary","lat":"31.7035669","lng":"35.1133767","startTime":"2025-06-24T19:06:07.071Z","hours":"2","radius":"10000"}. Fetching from DB...
+[2025-06-24T19:06:07.094Z] searchParkings: query={"minPrice":"0","maxPrice":"13","type":"temporary","lat":"31.7035669","lng":"35.1133767","startTime":"2025-06-24T19:06:07.071Z","hours":"2","radius":"10000"}
+[2025-06-24T19:06:07.103Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T19:06:24.858Z] searchParkings: query={"minPrice":"0","maxPrice":"13","type":"temporary","lat":"31.7035669","lng":"35.1133767","startTime":"2025-06-24T19:06:24.852Z","hours":"2","radius":"10"}
+[2025-06-24T19:06:24.857Z] Cache miss for key: search:{"minPrice":"0","maxPrice":"13","type":"temporary","lat":"31.7035669","lng":"35.1133767","startTime":"2025-06-24T19:06:24.852Z","hours":"2","radius":"10"}. Fetching from DB...
+[2025-06-24T19:06:29.843Z] Cache miss for key: search:{"minPrice":"0","maxPrice":"13","type":"temporary","lat":"31.7035669","lng":"35.1133767","startTime":"2025-06-24T19:06:29.838Z","hours":"2","radius":"1000"}. Fetching from DB...
+[2025-06-24T19:06:29.843Z] searchParkings: query={"minPrice":"0","maxPrice":"13","type":"temporary","lat":"31.7035669","lng":"35.1133767","startTime":"2025-06-24T19:06:29.838Z","hours":"2","radius":"1000"}
+[2025-06-24T19:06:29.846Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T19:07:48.696Z] Cache miss for key: top:popular:parkings. Fetching from DB...
+[2025-06-24T19:07:48.698Z] getTopPopularParkings: Fetching from DB
+[2025-06-24T19:07:48.755Z] Cache hit for key: top:popular:parkings
+[2025-06-24T19:08:26.213Z] searchParkings: query={"lat":"31.7035579","lng":"35.1133303"}
+[2025-06-24T19:08:26.213Z] Cache miss for key: search:{"lat":"31.7035579","lng":"35.1133303"}. Fetching from DB...
+[2025-06-24T19:08:26.229Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T19:08:26.255Z] Cache hit for key: search:{"lat":"31.7035579","lng":"35.1133303"}
+[2025-06-24T19:09:11.610Z] createMessage: Creating message with data={"senderId":1,"receiverId":2,"content":"שם: dini\nאימייל: dini@dini\n\nhi","sentAt":"2025-06-24T19:09:11.575Z","conversationId":null}
+[2025-06-24T19:09:25.903Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T19:09:25.903Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T19:09:32.999Z] Cache miss for key: unread:6. Fetching from DB...
+[2025-06-24T19:09:33.000Z] getUnReadMessages: Fetching unread messages for userId=6
+[2025-06-24T19:09:33.020Z] Cache miss for key: dashboard:owner:6. Fetching from DB...
+[2025-06-24T19:09:33.052Z] Cache hit for key: dashboard:owner:6
+[2025-06-24T19:09:39.573Z] Cache hit for key: top:popular:parkings
+[2025-06-24T19:09:39.579Z] Cache hit for key: top:popular:parkings
+[2025-06-24T19:09:39.731Z] Cache hit for key: search:{"lat":"31.704103390093916","lng":"35.11315209748684"}
+[2025-06-24T19:09:39.739Z] Cache hit for key: search:{"lat":"31.704103390093916","lng":"35.11315209748684"}
+[2025-06-24T19:09:44.688Z] Cache hit for key: unread:5
+[2025-06-24T19:09:44.705Z] Cache miss for key: dashboard:owner:5. Fetching from DB...
+[2025-06-24T19:09:44.723Z] Cache hit for key: dashboard:owner:5
+[2025-06-24T19:09:52.994Z] Cache hit for key: top:popular:parkings
+[2025-06-24T19:09:52.998Z] Cache hit for key: top:popular:parkings
+[2025-06-24T19:09:53.173Z] Cache hit for key: search:{"lat":"31.7035579","lng":"35.1133303"}
+[2025-06-24T19:09:53.181Z] Cache hit for key: search:{"lat":"31.7035579","lng":"35.1133303"}
+[2025-06-24T19:10:14.531Z] Cache hit for key: unread:6
+[2025-06-24T19:10:14.544Z] Cache hit for key: dashboard:owner:6
+[2025-06-24T19:10:14.552Z] Cache hit for key: dashboard:owner:6
+[2025-06-24T19:10:17.660Z] Cache hit for key: top:popular:parkings
+[2025-06-24T19:10:17.664Z] Cache hit for key: top:popular:parkings
+[2025-06-24T19:10:17.787Z] Cache miss for key: search:{"lat":"31.7035657","lng":"35.1133783"}. Fetching from DB...
+[2025-06-24T19:10:17.789Z] searchParkings: query={"lat":"31.7035657","lng":"35.1133783"}
+[2025-06-24T19:10:17.797Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T19:10:17.820Z] Cache hit for key: search:{"lat":"31.7035657","lng":"35.1133783"}
+[2025-06-24T19:10:23.877Z] Cache hit for key: unread:6
+[2025-06-24T19:10:46.931Z] getParkingsByParams: Fetching from DB filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-24T19:10:46.930Z] Cache miss for key: parkings:params:{"ownerId":"5","page":"1"}:page:1. Fetching from DB...
+[2025-06-24T19:10:46.952Z] Cache hit for key: parkings:params:{"ownerId":"5","page":"1"}:page:1
+[2025-06-24T19:10:54.347Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=20
+[2025-06-24T19:10:54.348Z] getReportsByParkingId: Fetching reports for parkingId=20
+[2025-06-24T19:10:54.349Z] Cache miss for key: timeslots:parking:20. Fetching from DB...
+[2025-06-24T19:10:54.352Z] Cache miss for key: reports:parking:20. Fetching from DB...
+[2025-06-24T19:10:54.374Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=20
+[2025-06-24T19:10:54.376Z] getReportsByParkingId: Fetching reports for parkingId=20
+[2025-06-24T19:10:54.377Z] Cache hit for key: timeslots:parking:20
+[2025-06-24T19:10:54.380Z] Cache hit for key: reports:parking:20
+[2025-06-24T19:11:01.008Z] updateTimeSlot: Updating TimeSlot id=75 with data={"price":"13","startTime":"08:00:00","endTime":"14:00:00"}
+[2025-06-24T19:11:30.481Z] createTimeSlot: Creating TimeSlot with data=[{"type":"fixed","days":["רביעי"],"startTime":"23:00","endTime":"22:00","price":50,"parkingId":20}]
+[2025-06-24T19:11:39.399Z] getReservationsByValue: Fetching reservations with value={"ownerId":"5","page":"1","limit":"10"}
+[2025-06-24T19:11:39.400Z] Cache miss for key: reservations:search:{"ownerId":"5","page":"1","limit":"10"}. Fetching from DB...
+[2025-06-24T19:11:39.427Z] getReservationsByValue: Fetching reservations with value={"ownerId":"5","page":"1","limit":"10"}
+[2025-06-24T19:11:39.428Z] Cache hit for key: reservations:search:{"ownerId":"5","page":"1","limit":"10"}
+[2025-06-24T19:11:51.557Z] Cache hit for key: dashboard:owner:5
+[2025-06-24T19:11:55.845Z] getReservationsByValue: Fetching reservations with value={"ownerId":"5","page":"1","limit":"10"}
+[2025-06-24T19:11:55.847Z] Cache hit for key: reservations:search:{"ownerId":"5","page":"1","limit":"10"}
+[2025-06-24T19:11:55.852Z] getReservationsByValue: Fetching reservations with value={"ownerId":"5","page":"1","limit":"10"}
+[2025-06-24T19:11:55.853Z] Cache hit for key: reservations:search:{"ownerId":"5","page":"1","limit":"10"}
+[2025-06-24T19:11:57.961Z] Cache hit for key: dashboard:owner:5
+[2025-06-24T19:12:20.726Z] getReservationsByValue: Fetching reservations with value={"ownerId":"5","page":"1","limit":"10"}
+[2025-06-24T19:12:20.727Z] Cache hit for key: reservations:search:{"ownerId":"5","page":"1","limit":"10"}
+[2025-06-24T19:12:20.741Z] getReservationsByValue: Fetching reservations with value={"ownerId":"5","page":"1","limit":"10"}
+[2025-06-24T19:12:20.748Z] Cache hit for key: reservations:search:{"ownerId":"5","page":"1","limit":"10"}
+[2025-06-24T19:14:56.149Z] getReservationsByValue: Fetching reservations with value={"renterId":"6","page":"1","limit":"10"}
+[2025-06-24T19:15:16.154Z] getReservationsByValue: Fetching reservations with value={"renterId":"6","page":"1","limit":"10"}
+[2025-06-24T19:15:55.834Z] getReservationsByValue: Fetching reservations with value={"renterId":"6","page":"1","limit":"10"}
+[2025-06-24T19:16:01.361Z] updateUser: Updating user id: 6 with data: {"name":"Miriam Azulay","username":"miriama","id":"6","phone":"0545556999","email":"miriam@example.com","address":"Pisgat Ze'ev, Jerusalem","averageRating":"0","profileImage":"image6.png","createdAt":"2025-06-24T18:49:32.000Z","updatedAt":"2025-06-24T18:49:32.000Z","deletedAt":"null","role":"renter"}
+[2025-06-24T19:16:02.018Z] updateUser: Updating user id: 6 with data: {"name":"Miriam Azulay","username":"miriama","id":"6","phone":"0545556999","email":"miriam@example.com","address":"Pisgat Ze'ev, Jerusalem","averageRating":"0","profileImage":"image6.png","createdAt":"2025-06-24T18:49:32.000Z","updatedAt":"2025-06-24T18:49:32.000Z","deletedAt":"null","role":"renter"}
+[2025-06-24T19:16:02.138Z] updateUser: Updating user id: 6 with data: {"name":"Miriam Azulay","username":"miriama","id":"6","phone":"0545556999","email":"miriam@example.com","address":"Pisgat Ze'ev, Jerusalem","averageRating":"0","profileImage":"image6.png","createdAt":"2025-06-24T18:49:32.000Z","updatedAt":"2025-06-24T18:49:32.000Z","deletedAt":"null","role":"renter"}
+[2025-06-24T19:16:10.372Z] updateUser: Updating user id: 6 with data: {"name":"Miriam Azulay","username":"miriama","id":"6","phone":"0545556688","email":"miriam@example.com","address":"Pisgat Ze'ev, Jerusalem","averageRating":"0","profileImage":"image6.png","createdAt":"2025-06-24T18:49:32.000Z","updatedAt":"2025-06-24T18:49:32.000Z","deletedAt":"null","role":"renter"}
+[2025-06-24T19:17:36.707Z] getReservationsByValue: Fetching reservations with value={"renterId":"3","page":"1","limit":"10"}
+[2025-06-24T19:18:33.186Z] getReservationsByValue: Fetching reservations with value={"renterId":"3","page":"1","limit":"10"}
+[2025-06-24T19:31:49.518Z] Cache miss for key: top:popular:parkings. Fetching from DB...
+[2025-06-24T19:31:49.519Z] getTopPopularParkings: Fetching from DB
+[2025-06-24T19:31:49.572Z] Cache hit for key: top:popular:parkings
+[2025-06-24T19:31:50.076Z] Cache miss for key: search:{"lat":"31.7035695","lng":"35.1133822"}. Fetching from DB...
+[2025-06-24T19:31:50.078Z] searchParkings: query={"lat":"31.7035695","lng":"35.1133822"}
+[2025-06-24T19:31:50.099Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T19:31:50.154Z] Cache hit for key: search:{"lat":"31.7035695","lng":"35.1133822"}
+[2025-06-24T19:32:26.295Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T19:32:26.296Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T19:32:28.428Z] getReservationsByValue: Fetching reservations with value={"renterId":"5","page":"1","limit":"10"}
+[2025-06-24T19:32:40.454Z] Cache miss for key: reservations:search:{"renterId":"5","page":"1","limit":"10"}. Fetching from DB...
+[2025-06-24T19:32:40.477Z] getReservationsByValue: Fetching reservations with value={"renterId":"5","page":"1","limit":"10"}
+[2025-06-24T19:32:40.480Z] Cache hit for key: reservations:search:{"renterId":"5","page":"1","limit":"10"}
+[2025-06-24T19:34:54.060Z] getReservationById: Fetching reservation with id=1
+[2025-06-24T19:34:54.066Z] Cache miss for key: reservation:1. Fetching from DB...
+[2025-06-24T19:34:54.072Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T19:34:54.073Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T19:34:54.105Z] getReservationById: Fetching reservation with id=1
+[2025-06-24T19:34:54.111Z] Cache hit for key: reservation:1
+[2025-06-24T19:34:54.115Z] Cache hit for key: unread:5
+[2025-06-24T19:35:03.726Z] Cache hit for key: top:popular:parkings
+[2025-06-24T19:35:03.735Z] Cache hit for key: top:popular:parkings
+[2025-06-24T19:35:04.407Z] Cache miss for key: search:{"lat":"31.7035693","lng":"35.1133812"}. Fetching from DB...
+[2025-06-24T19:35:04.407Z] searchParkings: query={"lat":"31.7035693","lng":"35.1133812"}
+[2025-06-24T19:35:04.415Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T19:35:04.462Z] Cache hit for key: search:{"lat":"31.7035693","lng":"35.1133812"}
+[2025-06-24T19:35:25.374Z] deleteReservation: Deleting reservation id=6
+[2025-06-24T19:35:31.804Z] Cache hit for key: top:popular:parkings
+[2025-06-24T19:35:31.810Z] Cache hit for key: top:popular:parkings
+[2025-06-24T19:35:31.904Z] Cache hit for key: search:{"lat":"31.7035695","lng":"35.1133822"}
+[2025-06-24T19:35:31.919Z] Cache hit for key: search:{"lat":"31.7035695","lng":"35.1133822"}
+[2025-06-24T19:35:33.326Z] getReservationsByValue: Fetching reservations with value={"renterId":"5","page":"1","limit":"10"}
+[2025-06-24T19:35:33.330Z] Cache hit for key: reservations:search:{"renterId":"5","page":"1","limit":"10"}
+[2025-06-24T19:35:33.340Z] getReservationsByValue: Fetching reservations with value={"renterId":"5","page":"1","limit":"10"}
+[2025-06-24T19:35:33.343Z] Cache hit for key: reservations:search:{"renterId":"5","page":"1","limit":"10"}
+[2025-06-24T19:35:39.354Z] deleteReservation: Deleting reservation id=6
+[2025-06-24T19:35:39.366Z] deleteReservation: Reservation id=6 not found
+[2025-06-24T19:35:40.747Z] deleteReservation: Deleting reservation id=6
+[2025-06-24T19:35:40.755Z] deleteReservation: Reservation id=6 not found
+[2025-06-24T19:35:41.303Z] deleteReservation: Deleting reservation id=6
+[2025-06-24T19:35:41.310Z] deleteReservation: Reservation id=6 not found
+[2025-06-24T19:35:41.416Z] deleteReservation: Deleting reservation id=6
+[2025-06-24T19:35:41.423Z] deleteReservation: Reservation id=6 not found
+[2025-06-24T19:35:42.480Z] deleteReservation: Deleting reservation id=6
+[2025-06-24T19:35:42.484Z] deleteReservation: Reservation id=6 not found
+[2025-06-24T19:36:06.339Z] Cache miss for key: conversations:5. Fetching from DB...
+[2025-06-24T19:36:06.340Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-24T19:36:06.384Z] Cache hit for key: conversations:5
+[2025-06-24T19:36:06.408Z] Cache miss for key: conversation:5e7dd882-a5a1-4265-bce1-ada791aefc05. Fetching from DB...
+[2025-06-24T19:36:06.410Z] getMessagesByConversationId: Fetching messages for conversationId=5e7dd882-a5a1-4265-bce1-ada791aefc05
+[2025-06-24T19:41:27.564Z] Cache miss for key: conversations:5. Fetching from DB...
+[2025-06-24T19:41:27.566Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-24T19:41:27.571Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T19:41:27.574Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T19:41:27.652Z] Cache hit for key: conversations:5
+[2025-06-24T19:41:27.660Z] Cache hit for key: unread:5
+[2025-06-24T19:41:27.696Z] Cache miss for key: conversation:5e7dd882-a5a1-4265-bce1-ada791aefc05. Fetching from DB...
+[2025-06-24T19:41:27.697Z] getMessagesByConversationId: Fetching messages for conversationId=5e7dd882-a5a1-4265-bce1-ada791aefc05
+[2025-06-24T19:41:49.132Z] Cache hit for key: top:popular:parkings
+[2025-06-24T19:41:49.138Z] Cache miss for key: unread:3. Fetching from DB...
+[2025-06-24T19:41:49.145Z] getUnReadMessages: Fetching unread messages for userId=3
+[2025-06-24T19:41:49.176Z] Cache hit for key: top:popular:parkings
+[2025-06-24T19:41:49.207Z] Cache hit for key: unread:3
+[2025-06-24T19:41:49.486Z] Cache miss for key: search:{"lat":"31.704121655924776","lng":"35.11317262724879"}. Fetching from DB...
+[2025-06-24T19:41:49.488Z] searchParkings: query={"lat":"31.704121655924776","lng":"35.11317262724879"}
+[2025-06-24T19:41:49.540Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T19:41:49.624Z] Cache hit for key: search:{"lat":"31.704121655924776","lng":"35.11317262724879"}
+[2025-06-24T19:41:55.720Z] Cache miss for key: conversations:3. Fetching from DB...
+[2025-06-24T19:41:55.721Z] getMessagesById: Fetching messages for senderId=3
+[2025-06-24T19:41:55.746Z] Cache hit for key: conversations:3
+[2025-06-24T19:41:55.773Z] Cache miss for key: conversation:6ba6c8b7-1432-4a49-8a3d-16d1ee089839. Fetching from DB...
+[2025-06-24T19:41:55.773Z] getMessagesByConversationId: Fetching messages for conversationId=6ba6c8b7-1432-4a49-8a3d-16d1ee089839
+[2025-06-24T19:41:55.791Z] setReadMessages: Updating messages 9 with field {"isRead":true}
+[2025-06-24T19:42:00.767Z] getReservationsByValue: Fetching reservations with value={"renterId":"5","page":"1","limit":"10"}
+[2025-06-24T19:42:00.774Z] Cache miss for key: reservations:search:{"renterId":"5","page":"1","limit":"10"}. Fetching from DB...
+[2025-06-24T19:42:00.812Z] getReservationsByValue: Fetching reservations with value={"renterId":"5","page":"1","limit":"10"}
+[2025-06-24T19:42:00.815Z] Cache hit for key: reservations:search:{"renterId":"5","page":"1","limit":"10"}
+[2025-06-24T19:42:04.063Z] Cache hit for key: conversations:5
+[2025-06-24T19:42:04.076Z] Cache hit for key: conversations:5
+[2025-06-24T19:42:04.114Z] Cache hit for key: conversation:5e7dd882-a5a1-4265-bce1-ada791aefc05
+[2025-06-24T19:42:06.575Z] getReservationsByValue: Fetching reservations with value={"renterId":"3","page":"1","limit":"10"}
+[2025-06-24T19:42:06.577Z] Cache miss for key: reservations:search:{"renterId":"3","page":"1","limit":"10"}. Fetching from DB...
+[2025-06-24T19:42:06.597Z] getReservationsByValue: Fetching reservations with value={"renterId":"3","page":"1","limit":"10"}
+[2025-06-24T19:42:06.604Z] Cache hit for key: reservations:search:{"renterId":"3","page":"1","limit":"10"}
+[2025-06-24T19:42:09.341Z] Cache hit for key: conversations:3
+[2025-06-24T19:42:09.381Z] Cache hit for key: conversations:3
+[2025-06-24T19:42:09.402Z] Cache hit for key: conversation:6ba6c8b7-1432-4a49-8a3d-16d1ee089839
+[2025-06-24T19:42:09.418Z] setReadMessages: Updating messages 9 with field {"isRead":true}
+[2025-06-24T19:42:12.510Z] getReservationsByValue: Fetching reservations with value={"renterId":"5","page":"1","limit":"10"}
+[2025-06-24T19:42:12.514Z] Cache hit for key: reservations:search:{"renterId":"5","page":"1","limit":"10"}
+[2025-06-24T19:42:12.522Z] getReservationsByValue: Fetching reservations with value={"renterId":"5","page":"1","limit":"10"}
+[2025-06-24T19:42:12.525Z] Cache hit for key: reservations:search:{"renterId":"5","page":"1","limit":"10"}
+[2025-06-24T19:43:15.128Z] Cache hit for key: conversations:5
+[2025-06-24T19:43:15.145Z] Cache hit for key: conversations:5
+[2025-06-24T19:43:15.176Z] Cache hit for key: conversation:5e7dd882-a5a1-4265-bce1-ada791aefc05
+[2025-06-24T19:43:28.539Z] Cache hit for key: conversations:5
+[2025-06-24T19:43:28.560Z] Cache hit for key: conversations:5
+[2025-06-24T19:43:28.593Z] Cache hit for key: conversation:5e7dd882-a5a1-4265-bce1-ada791aefc05
+[2025-06-24T19:43:35.252Z] Cache hit for key: conversations:3
+[2025-06-24T19:43:35.266Z] Cache hit for key: conversations:3
+[2025-06-24T19:43:35.299Z] Cache hit for key: conversation:6ba6c8b7-1432-4a49-8a3d-16d1ee089839
+[2025-06-24T19:43:35.312Z] setReadMessages: Updating messages 9 with field {"isRead":true}
+[2025-06-24T19:43:36.486Z] Cache miss for key: conversation:c2b815e7-99df-4460-9899-21e1d5375d68. Fetching from DB...
+[2025-06-24T19:43:36.487Z] getMessagesByConversationId: Fetching messages for conversationId=c2b815e7-99df-4460-9899-21e1d5375d68
+[2025-06-24T19:43:36.502Z] setReadMessages: Updating messages 2 with field {"isRead":true}
+[2025-06-24T19:43:39.557Z] Cache hit for key: conversation:c2b815e7-99df-4460-9899-21e1d5375d68
+[2025-06-24T19:44:10.894Z] createMessage: Creating message with data={"conversationId":"c2b815e7-99df-4460-9899-21e1d5375d68","senderId":5,"receiverId":3,"content":"אינאכ","sentAt":"2025-06-24T19:44:10.885Z"}
+[2025-06-24T19:44:22.554Z] createMessage: Creating message with data={"conversationId":"c2b815e7-99df-4460-9899-21e1d5375d68","senderId":3,"receiverId":3,"content":"נכגנכ","sentAt":"2025-06-24T19:44:22.545Z"}
+[2025-06-24T19:44:55.916Z] Cache miss for key: conversations:3. Fetching from DB...
+[2025-06-24T19:44:55.917Z] getMessagesById: Fetching messages for senderId=3
+[2025-06-24T19:44:55.919Z] Cache miss for key: unread:3. Fetching from DB...
+[2025-06-24T19:44:55.920Z] getUnReadMessages: Fetching unread messages for userId=3
+[2025-06-24T19:44:55.977Z] Cache hit for key: unread:3
+[2025-06-24T19:44:55.978Z] Cache hit for key: conversations:3
+[2025-06-24T19:44:56.005Z] Cache hit for key: conversation:6ba6c8b7-1432-4a49-8a3d-16d1ee089839
+[2025-06-24T19:44:56.015Z] setReadMessages: Updating messages 9 with field {"isRead":true}
+[2025-06-24T19:44:59.147Z] Cache miss for key: conversation:c2b815e7-99df-4460-9899-21e1d5375d68. Fetching from DB...
+[2025-06-24T19:44:59.148Z] getMessagesByConversationId: Fetching messages for conversationId=c2b815e7-99df-4460-9899-21e1d5375d68
+[2025-06-24T19:44:59.164Z] setReadMessages: Updating messages 22,23 with field {"isRead":true}
+[2025-06-24T19:45:01.418Z] Cache miss for key: conversation:2c761b25-b83d-4a2b-9f78-16f799b4dc1a. Fetching from DB...
+[2025-06-24T19:45:01.418Z] getMessagesByConversationId: Fetching messages for conversationId=2c761b25-b83d-4a2b-9f78-16f799b4dc1a
+[2025-06-24T19:45:01.434Z] setReadMessages: Updating messages 4 with field {"isRead":true}
+[2025-06-24T19:45:01.806Z] Cache hit for key: conversation:c2b815e7-99df-4460-9899-21e1d5375d68
+[2025-06-24T19:45:01.815Z] setReadMessages: Updating messages 22,23 with field {"isRead":true}
+[2025-06-24T19:45:02.597Z] Cache miss for key: conversation:7a20147c-7846-4075-8e27-94ad52e5a67e. Fetching from DB...
+[2025-06-24T19:45:02.598Z] getMessagesByConversationId: Fetching messages for conversationId=7a20147c-7846-4075-8e27-94ad52e5a67e
+[2025-06-24T19:45:02.613Z] setReadMessages: Updating messages 1 with field {"isRead":true}
+[2025-06-24T19:45:03.035Z] Cache hit for key: conversation:c2b815e7-99df-4460-9899-21e1d5375d68
+[2025-06-24T19:45:03.044Z] setReadMessages: Updating messages 22,23 with field {"isRead":true}
+[2025-06-24T19:45:06.448Z] Cache miss for key: conversations:5. Fetching from DB...
+[2025-06-24T19:45:06.449Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-24T19:45:06.450Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T19:45:06.450Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T19:45:06.473Z] Cache hit for key: conversations:5
+[2025-06-24T19:45:06.475Z] Cache hit for key: unread:5
+[2025-06-24T19:45:06.488Z] Cache hit for key: conversation:5e7dd882-a5a1-4265-bce1-ada791aefc05
+[2025-06-24T19:45:07.294Z] Cache hit for key: conversation:c2b815e7-99df-4460-9899-21e1d5375d68
+[2025-06-24T19:45:59.675Z] Cache hit for key: conversation:2c761b25-b83d-4a2b-9f78-16f799b4dc1a
+[2025-06-24T19:45:59.691Z] setReadMessages: Updating messages 4 with field {"isRead":true}
+[2025-06-24T19:46:00.129Z] Cache hit for key: conversation:c2b815e7-99df-4460-9899-21e1d5375d68
+[2025-06-24T19:46:00.139Z] setReadMessages: Updating messages 22,23 with field {"isRead":true}
+[2025-06-24T19:46:01.009Z] Cache hit for key: conversation:7a20147c-7846-4075-8e27-94ad52e5a67e
+[2025-06-24T19:46:01.016Z] setReadMessages: Updating messages 1 with field {"isRead":true}
+[2025-06-24T19:46:01.380Z] Cache hit for key: conversation:c2b815e7-99df-4460-9899-21e1d5375d68
+[2025-06-24T19:46:01.392Z] setReadMessages: Updating messages 22,23 with field {"isRead":true}
+[2025-06-24T19:46:15.264Z] Cache hit for key: conversation:2c761b25-b83d-4a2b-9f78-16f799b4dc1a
+[2025-06-24T19:46:15.278Z] setReadMessages: Updating messages 4 with field {"isRead":true}
+[2025-06-24T19:46:15.541Z] Cache hit for key: conversation:c2b815e7-99df-4460-9899-21e1d5375d68
+[2025-06-24T19:46:15.552Z] setReadMessages: Updating messages 22,23 with field {"isRead":true}
+[2025-06-24T19:46:17.561Z] Cache miss for key: conversation:299d21e2-f349-45d2-8526-a956b024e502. Fetching from DB...
+[2025-06-24T19:46:17.562Z] getMessagesByConversationId: Fetching messages for conversationId=299d21e2-f349-45d2-8526-a956b024e502
+[2025-06-24T19:46:17.586Z] setReadMessages: Updating messages 6 with field {"isRead":true}
+[2025-06-24T19:46:17.863Z] Cache hit for key: conversation:c2b815e7-99df-4460-9899-21e1d5375d68
+[2025-06-24T19:46:59.855Z] Cache hit for key: conversations:3
+[2025-06-24T19:46:59.856Z] Cache miss for key: unread:3. Fetching from DB...
+[2025-06-24T19:46:59.857Z] getUnReadMessages: Fetching unread messages for userId=3
+[2025-06-24T19:46:59.881Z] Cache hit for key: conversations:3
+[2025-06-24T19:46:59.905Z] Cache miss for key: conversation:6ba6c8b7-1432-4a49-8a3d-16d1ee089839. Fetching from DB...
+[2025-06-24T19:46:59.906Z] getMessagesByConversationId: Fetching messages for conversationId=6ba6c8b7-1432-4a49-8a3d-16d1ee089839
+[2025-06-24T19:46:59.930Z] Cache hit for key: unread:3
+[2025-06-24T19:47:02.473Z] Cache hit for key: conversation:c2b815e7-99df-4460-9899-21e1d5375d68
+[2025-06-24T19:47:02.484Z] setReadMessages: Updating messages 22,23 with field {"isRead":true}
+[2025-06-24T19:50:27.272Z] Cache miss for key: conversations:3. Fetching from DB...
+[2025-06-24T19:50:27.273Z] getMessagesById: Fetching messages for senderId=3
+[2025-06-24T19:50:27.274Z] Cache miss for key: unread:3. Fetching from DB...
+[2025-06-24T19:50:27.275Z] getUnReadMessages: Fetching unread messages for userId=3
+[2025-06-24T19:50:27.316Z] Cache hit for key: conversations:3
+[2025-06-24T19:50:27.319Z] Cache hit for key: unread:3
+[2025-06-24T19:50:27.345Z] Cache hit for key: conversation:6ba6c8b7-1432-4a49-8a3d-16d1ee089839
+[2025-06-24T19:50:28.738Z] Cache miss for key: conversation:c2b815e7-99df-4460-9899-21e1d5375d68. Fetching from DB...
+[2025-06-24T19:50:28.739Z] getMessagesByConversationId: Fetching messages for conversationId=c2b815e7-99df-4460-9899-21e1d5375d68
+[2025-06-24T19:53:22.320Z] Cache hit for key: conversations:3
+[2025-06-24T19:53:22.354Z] Cache miss for key: unread:3. Fetching from DB...
+[2025-06-24T19:53:22.358Z] getUnReadMessages: Fetching unread messages for userId=3
+[2025-06-24T19:53:22.369Z] Cache hit for key: conversations:3
+[2025-06-24T19:53:22.458Z] Cache miss for key: conversation:3-3. Fetching from DB...
+[2025-06-24T19:53:22.459Z] getMessagesByConversationId: Fetching messages for conversationId=3-3
+[2025-06-24T19:53:22.461Z] Cache hit for key: unread:3
+[2025-06-24T19:53:24.701Z] Cache miss for key: conversation:3-5. Fetching from DB...
+[2025-06-24T19:53:24.702Z] getMessagesByConversationId: Fetching messages for conversationId=3-5
+[2025-06-24T19:53:25.498Z] Cache hit for key: conversation:3-3
+[2025-06-24T19:53:26.448Z] Cache hit for key: conversation:3-5
+[2025-06-24T19:53:26.839Z] Cache miss for key: conversation:3-6. Fetching from DB...
+[2025-06-24T19:53:26.840Z] getMessagesByConversationId: Fetching messages for conversationId=3-6
+[2025-06-24T19:53:27.507Z] Cache miss for key: conversation:2-3. Fetching from DB...
+[2025-06-24T19:53:27.508Z] getMessagesByConversationId: Fetching messages for conversationId=2-3
+[2025-06-24T19:53:27.967Z] Cache miss for key: conversation:1-3. Fetching from DB...
+[2025-06-24T19:53:27.968Z] getMessagesByConversationId: Fetching messages for conversationId=1-3
+[2025-06-24T19:53:28.670Z] Cache hit for key: conversation:2-3
+[2025-06-24T19:53:29.514Z] Cache hit for key: conversation:3-5
+[2025-06-24T19:53:29.837Z] Cache hit for key: conversation:3-3
+[2025-06-24T19:53:30.397Z] Cache hit for key: conversation:3-5
+[2025-06-24T19:53:59.056Z] Cache miss for key: conversations:5. Fetching from DB...
+[2025-06-24T19:53:59.057Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-24T19:53:59.058Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T19:53:59.058Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T19:53:59.109Z] Cache hit for key: conversations:5
+[2025-06-24T19:53:59.111Z] Cache hit for key: unread:5
+[2025-06-24T19:53:59.158Z] Cache miss for key: conversation:5e7dd882-a5a1-4265-bce1-ada791aefc05. Fetching from DB...
+[2025-06-24T19:53:59.160Z] getMessagesByConversationId: Fetching messages for conversationId=5e7dd882-a5a1-4265-bce1-ada791aefc05
+[2025-06-24T19:54:01.646Z] Cache hit for key: conversations:3
+[2025-06-24T19:54:01.654Z] Cache hit for key: unread:3
+[2025-06-24T19:54:01.695Z] Cache hit for key: conversations:3
+[2025-06-24T19:54:01.721Z] Cache hit for key: unread:3
+[2025-06-24T19:54:01.780Z] Cache miss for key: conversation:6ba6c8b7-1432-4a49-8a3d-16d1ee089839. Fetching from DB...
+[2025-06-24T19:54:01.797Z] getMessagesByConversationId: Fetching messages for conversationId=6ba6c8b7-1432-4a49-8a3d-16d1ee089839
+[2025-06-24T19:54:08.948Z] Cache hit for key: conversation:c2b815e7-99df-4460-9899-21e1d5375d68
+[2025-06-24T19:56:58.147Z] Cache miss for key: conversations:3. Fetching from DB...
+[2025-06-24T19:56:58.149Z] getMessagesById: Fetching messages for senderId=3
+[2025-06-24T19:56:58.162Z] getUnReadMessages: Fetching unread messages for userId=3
+[2025-06-24T19:56:58.159Z] Cache miss for key: unread:3. Fetching from DB...
+[2025-06-24T19:56:58.246Z] Cache hit for key: conversations:3
+[2025-06-24T19:56:58.249Z] Cache hit for key: unread:3
+[2025-06-24T19:56:58.289Z] Cache miss for key: conversation:2c761b25-b83d-4a2b-9f78-16f799b4dc1a. Fetching from DB...
+[2025-06-24T19:56:58.291Z] getMessagesByConversationId: Fetching messages for conversationId=2c761b25-b83d-4a2b-9f78-16f799b4dc1a
+[2025-06-24T19:56:58.333Z] setReadMessages: Updating messages 25 with field {"isRead":true}
+[2025-06-24T19:56:59.844Z] Cache miss for key: conversation:c2b815e7-99df-4460-9899-21e1d5375d68. Fetching from DB...
+[2025-06-24T19:56:59.845Z] getMessagesByConversationId: Fetching messages for conversationId=c2b815e7-99df-4460-9899-21e1d5375d68
+[2025-06-24T19:57:22.463Z] Cache hit for key: conversations:5
+[2025-06-24T19:57:22.469Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T19:57:22.470Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T19:57:22.498Z] Cache hit for key: conversations:5
+[2025-06-24T19:57:22.521Z] Cache hit for key: conversation:5e7dd882-a5a1-4265-bce1-ada791aefc05
+[2025-06-24T19:57:22.544Z] Cache hit for key: unread:5
+[2025-06-24T19:57:24.619Z] Cache hit for key: conversation:c2b815e7-99df-4460-9899-21e1d5375d68
+[2025-06-24T19:57:25.104Z] Cache miss for key: conversation:299d21e2-f349-45d2-8526-a956b024e502. Fetching from DB...
+[2025-06-24T19:57:25.104Z] getMessagesByConversationId: Fetching messages for conversationId=299d21e2-f349-45d2-8526-a956b024e502
+[2025-06-24T19:57:25.620Z] Cache hit for key: conversation:c2b815e7-99df-4460-9899-21e1d5375d68
+[2025-06-24T19:57:27.745Z] Cache hit for key: conversation:6ba6c8b7-1432-4a49-8a3d-16d1ee089839
+[2025-06-24T19:57:28.088Z] Cache miss for key: conversation:7a20147c-7846-4075-8e27-94ad52e5a67e. Fetching from DB...
+[2025-06-24T19:57:28.089Z] getMessagesByConversationId: Fetching messages for conversationId=7a20147c-7846-4075-8e27-94ad52e5a67e
+[2025-06-24T19:57:28.669Z] Cache hit for key: conversation:c2b815e7-99df-4460-9899-21e1d5375d68
+[2025-06-24T19:57:42.468Z] Cache hit for key: conversations:3
+[2025-06-24T19:57:42.497Z] Cache hit for key: conversations:3
+[2025-06-24T19:57:42.523Z] Cache hit for key: conversation:6ba6c8b7-1432-4a49-8a3d-16d1ee089839
+[2025-06-24T19:57:43.835Z] Cache hit for key: conversation:c2b815e7-99df-4460-9899-21e1d5375d68
+[2025-06-24T19:58:59.599Z] Cache miss for key: unread:3. Fetching from DB...
+[2025-06-24T19:58:59.609Z] getUnReadMessages: Fetching unread messages for userId=3
+[2025-06-24T19:58:59.619Z] Cache hit for key: conversations:3
+[2025-06-24T19:58:59.689Z] Cache hit for key: conversations:3
+[2025-06-24T19:58:59.725Z] Cache hit for key: conversation:6ba6c8b7-1432-4a49-8a3d-16d1ee089839
+[2025-06-24T19:58:59.748Z] Cache hit for key: unread:3
+[2025-06-24T19:59:02.087Z] Cache hit for key: conversation:2c761b25-b83d-4a2b-9f78-16f799b4dc1a
+[2025-06-24T19:59:02.107Z] setReadMessages: Updating messages 25 with field {"isRead":true}
+[2025-06-24T19:59:02.595Z] Cache hit for key: conversation:c2b815e7-99df-4460-9899-21e1d5375d68
+[2025-06-24T19:59:03.483Z] Cache hit for key: conversation:7a20147c-7846-4075-8e27-94ad52e5a67e
+[2025-06-24T19:59:03.927Z] Cache hit for key: conversation:c2b815e7-99df-4460-9899-21e1d5375d68
+[2025-06-24T19:59:13.167Z] createMessage: Creating message with data={"conversationId":"c2b815e7-99df-4460-9899-21e1d5375d68","senderId":3,"receiverId":3,"content":"עכע","sentAt":"2025-06-24T19:59:13.157Z"}
+[2025-06-24T20:00:35.954Z] Cache miss for key: conversations:5. Fetching from DB...
+[2025-06-24T20:00:35.955Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-24T20:00:35.961Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T20:00:35.962Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T20:00:36.041Z] Cache hit for key: conversations:5
+[2025-06-24T20:00:36.053Z] Cache hit for key: unread:5
+[2025-06-24T20:00:40.211Z] Cache miss for key: conversation:5e7dd882-a5a1-4265-bce1-ada791aefc05. Fetching from DB...
+[2025-06-24T20:00:40.212Z] getMessagesByConversationId: Fetching messages for conversationId=5e7dd882-a5a1-4265-bce1-ada791aefc05
+[2025-06-24T20:00:40.240Z] setReadMessages: Updating messages 27,28 with field {"isRead":true}
+[2025-06-24T20:00:40.860Z] Cache miss for key: conversation:c2b815e7-99df-4460-9899-21e1d5375d68. Fetching from DB...
+[2025-06-24T20:00:40.861Z] getMessagesByConversationId: Fetching messages for conversationId=c2b815e7-99df-4460-9899-21e1d5375d68
+[2025-06-24T20:00:41.901Z] Cache hit for key: conversation:299d21e2-f349-45d2-8526-a956b024e502
+[2025-06-24T20:00:42.983Z] Cache hit for key: conversation:c2b815e7-99df-4460-9899-21e1d5375d68
+[2025-06-24T20:00:43.532Z] Cache hit for key: conversation:5e7dd882-a5a1-4265-bce1-ada791aefc05
+[2025-06-24T20:00:43.544Z] setReadMessages: Updating messages 27,28 with field {"isRead":true}
+[2025-06-24T20:00:45.801Z] Cache hit for key: conversation:5e7dd882-a5a1-4265-bce1-ada791aefc05
+[2025-06-24T20:00:45.821Z] setReadMessages: Updating messages 27,28 with field {"isRead":true}
+[2025-06-24T20:08:30.711Z] Cache miss for key: conversations:5. Fetching from DB...
+[2025-06-24T20:08:30.712Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-24T20:08:30.728Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T20:08:30.730Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T20:08:30.793Z] Cache miss for key: conversations:5. Fetching from DB...
+[2025-06-24T20:08:30.794Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-24T20:08:30.818Z] Cache hit for key: unread:5
+[2025-06-24T20:08:41.457Z] Cache miss for key: conversations:5. Fetching from DB...
+[2025-06-24T20:08:41.458Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-24T20:08:44.760Z] Cache hit for key: unread:5
+[2025-06-24T20:08:44.800Z] Cache hit for key: unread:5
+[2025-06-24T20:09:23.498Z] Cache miss for key: conversations:5. Fetching from DB...
+[2025-06-24T20:09:23.499Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-24T20:09:56.985Z] Cache miss for key: conversations:5. Fetching from DB...
+[2025-06-24T20:09:56.986Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-24T20:09:59.044Z] Cache hit for key: unread:5
+[2025-06-24T20:09:59.072Z] Cache hit for key: unread:5
+[2025-06-24T20:10:38.794Z] Cache miss for key: conversations:5. Fetching from DB...
+[2025-06-24T20:10:38.795Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-24T20:12:09.497Z] Cache miss for key: conversations:5. Fetching from DB...
+[2025-06-24T20:12:09.498Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-24T20:12:13.573Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T20:12:13.574Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T20:12:35.065Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:12:35.067Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:12:35.066Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:12:35.070Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:12:35.073Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:12:35.075Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:12:35.085Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:12:35.083Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:12:35.078Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:12:35.081Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:12:35.089Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:12:35.092Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:12:35.090Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:12:35.093Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:12:35.087Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:12:35.141Z] Cache hit for key: unread:5
+[2025-06-24T20:12:35.142Z] Cache hit for key: conversations:5
+[2025-06-24T20:13:01.830Z] Cache hit for key: conversations:5
+[2025-06-24T20:13:01.834Z] Cache hit for key: unread:5
+[2025-06-24T20:13:01.859Z] Cache hit for key: conversations:5
+[2025-06-24T20:13:01.862Z] Cache hit for key: unread:5
+[2025-06-24T20:13:34.205Z] Cache hit for key: unread:5
+[2025-06-24T20:13:34.201Z] Cache hit for key: conversations:5
+[2025-06-24T20:13:34.223Z] Cache hit for key: conversations:5
+[2025-06-24T20:13:34.235Z] Cache hit for key: unread:5
+[2025-06-24T20:13:42.057Z] Cache hit for key: conversations:5
+[2025-06-24T20:13:42.061Z] Cache hit for key: unread:5
+[2025-06-24T20:13:42.085Z] Cache hit for key: conversations:5
+[2025-06-24T20:13:42.089Z] Cache hit for key: unread:5
+[2025-06-24T20:14:10.209Z] Cache hit for key: conversations:5
+[2025-06-24T20:14:10.219Z] Cache hit for key: unread:5
+[2025-06-24T20:14:10.244Z] Cache hit for key: conversations:5
+[2025-06-24T20:14:10.245Z] Cache hit for key: unread:5
+[2025-06-24T20:14:27.582Z] Cache miss for key: conversations:3. Fetching from DB...
+[2025-06-24T20:14:27.584Z] getMessagesById: Fetching messages for senderId=3
+[2025-06-24T20:14:38.052Z] getUnReadMessages: Fetching unread messages for userId=3
+[2025-06-24T20:14:38.051Z] Cache miss for key: unread:3. Fetching from DB...
+[2025-06-24T20:15:28.520Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:15:28.523Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:15:28.522Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:15:28.521Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:15:28.524Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:15:28.525Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:15:28.525Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:15:28.526Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:15:28.543Z] Cache hit for key: unread:3
+[2025-06-24T20:15:28.546Z] Cache hit for key: conversations:3
+[2025-06-24T20:16:39.059Z] Cache hit for key: conversations:5
+[2025-06-24T20:16:39.067Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T20:16:39.068Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T20:16:39.100Z] Cache hit for key: conversations:5
+[2025-06-24T20:16:39.131Z] Cache hit for key: unread:5
+[2025-06-24T20:16:59.959Z] Cache hit for key: conversations:3
+[2025-06-24T20:16:59.978Z] Cache hit for key: unread:3
+[2025-06-24T20:16:59.983Z] Cache hit for key: conversations:3
+[2025-06-24T20:17:00.001Z] Cache hit for key: unread:3
+[2025-06-24T20:17:05.414Z] Cache hit for key: conversations:5
+[2025-06-24T20:17:05.417Z] Cache hit for key: unread:5
+[2025-06-24T20:17:05.438Z] Cache hit for key: conversations:5
+[2025-06-24T20:17:05.443Z] Cache hit for key: unread:5
+[2025-06-24T20:17:09.596Z] Cache hit for key: conversations:5
+[2025-06-24T20:17:09.600Z] Cache hit for key: unread:5
+[2025-06-24T20:17:09.608Z] Cache hit for key: conversations:5
+[2025-06-24T20:17:09.608Z] Cache hit for key: unread:5
+[2025-06-24T20:17:13.682Z] Cache hit for key: conversations:5
+[2025-06-24T20:17:13.696Z] Cache hit for key: unread:5
+[2025-06-24T20:17:13.699Z] Cache hit for key: conversations:5
+[2025-06-24T20:17:13.707Z] Cache hit for key: unread:5
+[2025-06-24T20:17:59.425Z] Cache miss for key: conversations:5. Fetching from DB...
+[2025-06-24T20:17:59.431Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-24T20:20:24.720Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:20:24.722Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:20:24.724Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:20:24.723Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:20:24.727Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:20:24.726Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:20:24.732Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:20:24.734Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:20:24.729Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:20:24.731Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:20:24.735Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:20:24.737Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:20:24.738Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:21:05.735Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:21:05.736Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:21:05.738Z] Cache hit for key: unread:5
+[2025-06-24T20:21:05.782Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T20:21:05.784Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T20:21:05.806Z] Cache hit for key: conversations:5
+[2025-06-24T20:21:33.895Z] Cache hit for key: conversations:5
+[2025-06-24T20:21:33.897Z] Cache hit for key: unread:5
+[2025-06-24T20:21:33.927Z] Cache hit for key: conversations:5
+[2025-06-24T20:21:33.931Z] Cache hit for key: unread:5
+[2025-06-24T20:21:38.786Z] Cache hit for key: conversations:5
+[2025-06-24T20:21:38.787Z] Cache hit for key: unread:5
+[2025-06-24T20:21:38.804Z] Cache hit for key: conversations:5
+[2025-06-24T20:21:38.805Z] Cache hit for key: unread:5
+[2025-06-24T20:22:03.457Z] Cache hit for key: conversations:5
+[2025-06-24T20:22:03.459Z] Cache hit for key: unread:5
+[2025-06-24T20:22:03.502Z] Cache hit for key: conversations:5
+[2025-06-24T20:22:03.503Z] Cache hit for key: unread:5
+[2025-06-24T20:22:10.892Z] Cache hit for key: conversations:5
+[2025-06-24T20:22:10.906Z] Cache hit for key: unread:5
+[2025-06-24T20:22:10.938Z] Cache hit for key: conversations:5
+[2025-06-24T20:22:10.940Z] Cache hit for key: unread:5
+[2025-06-24T20:22:46.433Z] Cache hit for key: conversations:5
+[2025-06-24T20:22:46.445Z] Cache hit for key: unread:5
+[2025-06-24T20:22:46.469Z] Cache hit for key: conversations:5
+[2025-06-24T20:22:46.477Z] Cache hit for key: unread:5
+[2025-06-24T20:22:54.577Z] Cache hit for key: unread:5
+[2025-06-24T20:22:54.572Z] Cache hit for key: conversations:5
+[2025-06-24T20:22:54.597Z] Cache hit for key: conversations:5
+[2025-06-24T20:22:54.601Z] Cache hit for key: unread:5
+[2025-06-24T20:22:56.845Z] Cache miss for key: conversations:3. Fetching from DB...
+[2025-06-24T20:22:56.846Z] getMessagesById: Fetching messages for senderId=3
+[2025-06-24T20:23:00.431Z] getUnReadMessages: Fetching unread messages for userId=3
+[2025-06-24T20:23:00.430Z] Cache miss for key: unread:3. Fetching from DB...
+[2025-06-24T20:23:41.194Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:23:41.196Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:23:41.198Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:23:41.201Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:23:41.200Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:23:41.203Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:23:41.204Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:23:41.202Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:23:41.232Z] Cache hit for key: unread:3
+[2025-06-24T20:23:41.234Z] Cache hit for key: conversations:3
+[2025-06-24T20:23:49.844Z] Cache hit for key: conversations:5
+[2025-06-24T20:23:49.860Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T20:23:49.861Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T20:23:49.864Z] Cache hit for key: conversations:5
+[2025-06-24T20:23:49.891Z] Cache hit for key: unread:5
+[2025-06-24T20:24:16.634Z] Cache miss for key: top:popular:parkings. Fetching from DB...
+[2025-06-24T20:24:16.636Z] getTopPopularParkings: Fetching from DB
+[2025-06-24T20:24:16.699Z] Cache hit for key: top:popular:parkings
+[2025-06-24T20:24:17.622Z] searchParkings: query={"lat":"31.7035678","lng":"35.1133515"}
+[2025-06-24T20:24:17.621Z] Cache miss for key: search:{"lat":"31.7035678","lng":"35.1133515"}. Fetching from DB...
+[2025-06-24T20:24:17.634Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T20:24:17.675Z] Cache hit for key: search:{"lat":"31.7035678","lng":"35.1133515"}
+[2025-06-24T20:24:18.145Z] Cache hit for key: conversations:5
+[2025-06-24T20:24:18.168Z] Cache hit for key: conversations:5
+[2025-06-24T20:24:22.699Z] Cache hit for key: conversations:3
+[2025-06-24T20:24:22.718Z] Cache hit for key: conversations:3
+[2025-06-24T20:25:44.182Z] Cache hit for key: conversations:3
+[2025-06-24T20:25:44.188Z] Cache miss for key: unread:3. Fetching from DB...
+[2025-06-24T20:25:44.192Z] getUnReadMessages: Fetching unread messages for userId=3
+[2025-06-24T20:25:44.260Z] Cache hit for key: conversations:3
+[2025-06-24T20:25:44.312Z] Cache hit for key: unread:3
+[2025-06-24T20:25:46.553Z] Cache miss for key: conversation:2c761b25-b83d-4a2b-9f78-16f799b4dc1a. Fetching from DB...
+[2025-06-24T20:25:46.554Z] getMessagesByConversationId: Fetching messages for conversationId=2c761b25-b83d-4a2b-9f78-16f799b4dc1a
+[2025-06-24T20:26:08.897Z] Cache miss for key: conversations:5. Fetching from DB...
+[2025-06-24T20:26:14.161Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T20:26:08.898Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-24T20:26:14.162Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T20:26:14.195Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:26:14.194Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:26:14.196Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:26:14.198Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:26:14.199Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:26:14.201Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:26:14.202Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:26:14.197Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:26:14.200Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:26:14.204Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:26:14.205Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:26:14.206Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:26:14.206Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:26:14.207Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:26:14.203Z] ❌ שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:26:14.223Z] Cache hit for key: conversations:5
+[2025-06-24T20:26:14.229Z] Cache hit for key: unread:5
+[2025-06-24T20:26:16.036Z] Cache miss for key: conversation:5e7dd882-a5a1-4265-bce1-ada791aefc05. Fetching from DB...
+[2025-06-24T20:26:16.036Z] getMessagesByConversationId: Fetching messages for conversationId=5e7dd882-a5a1-4265-bce1-ada791aefc05
+[2025-06-24T20:27:10.527Z] Cache hit for key: conversations:5
+[2025-06-24T20:27:10.528Z] Cache hit for key: unread:5
+[2025-06-24T20:27:10.552Z] Cache hit for key: unread:5
+[2025-06-24T20:27:10.548Z] Cache hit for key: conversations:5
+[2025-06-24T20:27:11.755Z] Cache hit for key: conversation:5e7dd882-a5a1-4265-bce1-ada791aefc05
+[2025-06-24T20:28:37.202Z] Cache hit for key: conversations:5
+[2025-06-24T20:28:37.206Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T20:28:37.207Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T20:28:37.227Z] Cache hit for key: conversations:5
+[2025-06-24T20:28:37.489Z] Cache hit for key: unread:5
+[2025-06-24T20:28:51.156Z] Cache hit for key: conversations:5
+[2025-06-24T20:28:51.165Z] Cache hit for key: unread:5
+[2025-06-24T20:28:51.169Z] Cache hit for key: conversations:5
+[2025-06-24T20:28:51.177Z] Cache hit for key: unread:5
+[2025-06-24T20:28:52.946Z] Cache hit for key: conversation:5e7dd882-a5a1-4265-bce1-ada791aefc05
+[2025-06-24T20:28:58.082Z] Cache miss for key: conversations:3. Fetching from DB...
+[2025-06-24T20:28:58.083Z] getMessagesById: Fetching messages for senderId=3
+[2025-06-24T20:28:58.096Z] Cache miss for key: unread:3. Fetching from DB...
+[2025-06-24T20:28:58.096Z] getUnReadMessages: Fetching unread messages for userId=3
+[2025-06-24T20:28:58.160Z] שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:28:58.163Z] שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:28:58.168Z] שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:28:58.171Z] שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:28:58.165Z] שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:28:58.189Z] Cache hit for key: unread:3
+[2025-06-24T20:28:58.187Z] Cache hit for key: conversations:3
+[2025-06-24T20:29:20.680Z] Cache hit for key: conversations:3
+[2025-06-24T20:29:20.686Z] Cache hit for key: unread:3
+[2025-06-24T20:29:20.711Z] Cache hit for key: conversations:3
+[2025-06-24T20:29:20.718Z] Cache hit for key: unread:3
+[2025-06-24T20:29:25.604Z] Cache hit for key: conversations:5
+[2025-06-24T20:29:25.608Z] Cache hit for key: unread:5
+[2025-06-24T20:29:25.623Z] Cache hit for key: conversations:5
+[2025-06-24T20:29:25.626Z] Cache hit for key: unread:5
+[2025-06-24T20:29:35.861Z] Cache hit for key: conversations:5
+[2025-06-24T20:29:35.892Z] Cache hit for key: unread:5
+[2025-06-24T20:29:35.894Z] Cache hit for key: conversations:5
+[2025-06-24T20:29:35.907Z] Cache hit for key: unread:5
+[2025-06-24T20:29:46.911Z] Cache hit for key: unread:5
+[2025-06-24T20:29:46.910Z] Cache hit for key: conversations:5
+[2025-06-24T20:29:46.924Z] Cache hit for key: unread:5
+[2025-06-24T20:29:46.923Z] Cache hit for key: conversations:5
+[2025-06-24T20:30:15.475Z] Cache hit for key: conversations:5
+[2025-06-24T20:30:15.495Z] Cache hit for key: unread:5
+[2025-06-24T20:30:15.515Z] Cache hit for key: conversations:5
+[2025-06-24T20:30:15.516Z] Cache hit for key: unread:5
+[2025-06-24T20:30:28.093Z] Cache hit for key: conversations:5
+[2025-06-24T20:30:28.094Z] Cache hit for key: unread:5
+[2025-06-24T20:30:28.121Z] Cache hit for key: conversations:5
+[2025-06-24T20:30:28.123Z] Cache hit for key: unread:5
+[2025-06-24T20:31:07.676Z] Cache hit for key: conversations:5
+[2025-06-24T20:31:07.693Z] Cache hit for key: conversations:5
+[2025-06-24T20:31:24.026Z] Cache hit for key: conversations:3
+[2025-06-24T20:31:24.067Z] Cache hit for key: conversations:3
+[2025-06-24T20:31:26.944Z] getUsersByParams: Fetching users with params: {"username":"johnd"}
+[2025-06-24T20:31:26.947Z] Cache miss for key: users:params:{"username":"johnd"}. Fetching from DB...
+[2025-06-24T20:31:32.958Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T20:31:32.960Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T20:31:32.994Z] Cache hit for key: unread:5
+[2025-06-24T20:31:34.613Z] Cache miss for key: conversations:5. Fetching from DB...
+[2025-06-24T20:31:34.614Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-24T20:32:22.822Z] שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:32:22.820Z] שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:32:22.823Z] שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:32:22.825Z] שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:32:22.829Z] שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:32:22.831Z] שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:32:22.827Z] שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:32:22.858Z] Cache hit for key: conversations:5
+[2025-06-24T20:32:31.006Z] Cache miss for key: conversation:5e7dd882-a5a1-4265-bce1-ada791aefc05. Fetching from DB...
+[2025-06-24T20:32:31.008Z] getMessagesByConversationId: Fetching messages for conversationId=5e7dd882-a5a1-4265-bce1-ada791aefc05
+[2025-06-24T20:33:20.149Z] Cache hit for key: conversations:5
+[2025-06-24T20:33:20.171Z] Cache hit for key: conversations:3
+[2025-06-24T20:33:20.200Z] Cache hit for key: unread:5
+[2025-06-24T20:33:20.204Z] getUnReadMessages: Fetching unread messages for userId=3
+[2025-06-24T20:33:20.201Z] Cache miss for key: unread:3. Fetching from DB...
+[2025-06-24T20:33:20.233Z] Cache hit for key: conversations:5
+[2025-06-24T20:33:20.233Z] Cache hit for key: conversations:3
+[2025-06-24T20:33:20.243Z] Cache hit for key: unread:5
+[2025-06-24T20:33:20.268Z] Cache hit for key: unread:3
+[2025-06-24T20:33:23.118Z] Cache hit for key: conversations:3
+[2025-06-24T20:33:23.154Z] Cache hit for key: conversations:5
+[2025-06-24T20:33:23.155Z] Cache hit for key: unread:3
+[2025-06-24T20:33:23.156Z] Cache hit for key: unread:5
+[2025-06-24T20:33:23.158Z] Cache hit for key: conversations:3
+[2025-06-24T20:33:23.220Z] Cache hit for key: unread:3
+[2025-06-24T20:33:23.221Z] Cache hit for key: conversations:5
+[2025-06-24T20:33:23.222Z] Cache hit for key: unread:5
+[2025-06-24T20:33:24.129Z] Cache hit for key: conversations:3
+[2025-06-24T20:33:24.151Z] Cache hit for key: unread:3
+[2025-06-24T20:33:24.152Z] Cache hit for key: conversations:5
+[2025-06-24T20:33:24.187Z] Cache hit for key: conversations:3
+[2025-06-24T20:33:24.188Z] Cache hit for key: unread:5
+[2025-06-24T20:33:24.220Z] Cache hit for key: unread:3
+[2025-06-24T20:33:24.221Z] Cache hit for key: conversations:5
+[2025-06-24T20:33:24.232Z] Cache hit for key: unread:5
+[2025-06-24T20:33:30.138Z] Cache hit for key: conversations:3
+[2025-06-24T20:33:30.173Z] Cache hit for key: conversations:5
+[2025-06-24T20:33:30.174Z] Cache hit for key: unread:3
+[2025-06-24T20:33:30.176Z] Cache hit for key: conversations:3
+[2025-06-24T20:33:30.225Z] Cache hit for key: unread:5
+[2025-06-24T20:33:30.232Z] Cache hit for key: conversations:5
+[2025-06-24T20:33:30.233Z] Cache hit for key: unread:3
+[2025-06-24T20:33:30.242Z] Cache hit for key: unread:5
+[2025-06-24T20:33:33.120Z] Cache hit for key: conversations:5
+[2025-06-24T20:33:33.149Z] Cache hit for key: conversations:3
+[2025-06-24T20:33:33.150Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T20:33:33.151Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T20:33:33.166Z] Cache hit for key: unread:3
+[2025-06-24T20:33:33.166Z] Cache hit for key: conversations:5
+[2025-06-24T20:33:33.207Z] Cache hit for key: conversations:3
+[2025-06-24T20:33:33.208Z] Cache hit for key: unread:3
+[2025-06-24T20:33:33.226Z] Cache hit for key: unread:5
+[2025-06-24T20:33:36.128Z] Cache hit for key: conversations:5
+[2025-06-24T20:33:36.162Z] Cache hit for key: unread:5
+[2025-06-24T20:33:36.162Z] Cache hit for key: conversations:5
+[2025-06-24T20:33:36.161Z] Cache hit for key: conversations:3
+[2025-06-24T20:33:36.163Z] Cache hit for key: unread:3
+[2025-06-24T20:33:36.192Z] Cache hit for key: conversations:3
+[2025-06-24T20:33:36.195Z] Cache hit for key: unread:3
+[2025-06-24T20:33:36.194Z] Cache hit for key: unread:5
+[2025-06-24T20:33:38.131Z] Cache hit for key: conversations:5
+[2025-06-24T20:33:38.140Z] Cache hit for key: conversations:3
+[2025-06-24T20:33:38.164Z] Cache hit for key: unread:5
+[2025-06-24T20:33:38.171Z] Cache hit for key: conversations:5
+[2025-06-24T20:33:38.170Z] Cache hit for key: unread:3
+[2025-06-24T20:33:38.182Z] Cache hit for key: conversations:3
+[2025-06-24T20:33:38.186Z] Cache hit for key: unread:3
+[2025-06-24T20:33:38.185Z] Cache hit for key: unread:5
+[2025-06-24T20:33:47.399Z] Cache hit for key: conversations:5
+[2025-06-24T20:33:47.407Z] Cache hit for key: unread:5
+[2025-06-24T20:33:47.421Z] Cache hit for key: conversations:5
+[2025-06-24T20:33:47.428Z] Cache hit for key: unread:5
+[2025-06-24T20:34:14.136Z] getMessagesById: Fetching messages for senderId=3
+[2025-06-24T20:34:14.135Z] Cache miss for key: conversations:3. Fetching from DB...
+[2025-06-24T20:34:31.057Z] Cache hit for key: conversations:5
+[2025-06-24T20:34:31.079Z] Cache hit for key: conversations:5
+[2025-06-24T20:34:31.079Z] Cache hit for key: unread:3
+[2025-06-24T20:34:31.078Z] Cache hit for key: unread:5
+[2025-06-24T20:34:31.104Z] Cache hit for key: unread:3
+[2025-06-24T20:34:31.103Z] Cache hit for key: unread:5
+[2025-06-24T20:34:31.110Z] שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:34:31.111Z] שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:34:31.112Z] שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:34:31.113Z] שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:34:31.115Z] שגיאה בהשלמת partnerName: | {"code":"MODULE_NOT_FOUND","requireStack":["C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\services\\genericService.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\scripts\\purgeSoftDeletes.js","C:\\Users\\1\\Desktop\\אילה\\Final-Project\\server\\server.js"]}
+[2025-06-24T20:34:31.122Z] Cache hit for key: conversations:3
+[2025-06-24T20:34:56.810Z] Cache hit for key: conversations:5
+[2025-06-24T20:34:56.821Z] Cache hit for key: unread:5
+[2025-06-24T20:34:56.845Z] Cache hit for key: conversations:5
+[2025-06-24T20:34:56.855Z] Cache hit for key: unread:5
+[2025-06-24T20:35:14.136Z] Cache hit for key: conversations:3
+[2025-06-24T20:35:14.160Z] Cache hit for key: conversations:5
+[2025-06-24T20:35:14.160Z] Cache hit for key: unread:3
+[2025-06-24T20:35:14.171Z] Cache hit for key: conversations:3
+[2025-06-24T20:35:14.171Z] Cache hit for key: unread:5
+[2025-06-24T20:35:14.203Z] Cache hit for key: conversations:5
+[2025-06-24T20:35:14.204Z] Cache hit for key: unread:5
+[2025-06-24T20:35:14.204Z] Cache hit for key: unread:3
+[2025-06-24T20:35:19.544Z] Cache hit for key: conversations:5
+[2025-06-24T20:35:19.548Z] Cache hit for key: unread:5
+[2025-06-24T20:35:19.570Z] Cache hit for key: conversations:5
+[2025-06-24T20:35:19.577Z] Cache hit for key: unread:5
+[2025-06-24T20:35:23.193Z] Cache hit for key: conversations:5
+[2025-06-24T20:35:23.214Z] Cache hit for key: unread:5
+[2025-06-24T20:35:23.217Z] Cache hit for key: conversations:5
+[2025-06-24T20:35:23.223Z] Cache hit for key: unread:5
+[2025-06-24T20:35:33.283Z] Cache hit for key: conversations:5
+[2025-06-24T20:35:33.287Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T20:35:33.286Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T20:35:33.318Z] Cache hit for key: conversations:5
+[2025-06-24T20:35:33.362Z] Cache hit for key: unread:5
+[2025-06-24T20:35:37.970Z] Cache hit for key: conversations:3
+[2025-06-24T20:35:38.024Z] Cache miss for key: unread:3. Fetching from DB...
+[2025-06-24T20:35:38.033Z] Cache hit for key: conversations:3
+[2025-06-24T20:35:38.030Z] getUnReadMessages: Fetching unread messages for userId=3
+[2025-06-24T20:35:38.085Z] Cache hit for key: unread:3
+[2025-06-24T20:36:39.611Z] Cache hit for key: conversations:5
+[2025-06-24T20:36:39.611Z] Cache hit for key: unread:5
+[2025-06-24T20:36:39.641Z] Cache hit for key: conversations:5
+[2025-06-24T20:36:39.641Z] Cache hit for key: unread:5
+[2025-06-24T20:36:45.179Z] Cache hit for key: conversations:3
+[2025-06-24T20:36:45.189Z] Cache hit for key: unread:3
+[2025-06-24T20:36:45.220Z] Cache hit for key: conversations:3
+[2025-06-24T20:36:45.221Z] Cache hit for key: unread:3
+[2025-06-24T20:36:48.844Z] Cache hit for key: conversations:5
+[2025-06-24T20:36:48.847Z] Cache hit for key: unread:5
+[2025-06-24T20:36:48.858Z] Cache hit for key: conversations:5
+[2025-06-24T20:36:48.870Z] Cache hit for key: unread:5
+[2025-06-24T20:37:08.316Z] Cache hit for key: unread:5
+[2025-06-24T20:37:08.314Z] Cache hit for key: conversations:5
+[2025-06-24T20:37:08.331Z] Cache hit for key: conversations:5
+[2025-06-24T20:37:08.338Z] Cache hit for key: unread:5
+[2025-06-24T20:37:13.118Z] getReservationsByValue: Fetching reservations with value={"renterId":"5","page":"1","limit":"10"}
+[2025-06-24T20:37:13.120Z] Cache miss for key: reservations:search:{"renterId":"5","page":"1","limit":"10"}. Fetching from DB...
+[2025-06-24T20:37:13.170Z] getReservationsByValue: Fetching reservations with value={"renterId":"5","page":"1","limit":"10"}
+[2025-06-24T20:37:13.171Z] Cache hit for key: reservations:search:{"renterId":"5","page":"1","limit":"10"}
+[2025-06-24T20:37:14.582Z] Cache hit for key: conversations:5
+[2025-06-24T20:37:14.592Z] Cache hit for key: conversations:5
+[2025-06-24T20:37:59.516Z] Cache miss for key: conversations:5. Fetching from DB...
+[2025-06-24T20:37:59.517Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-24T20:37:59.531Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T20:37:59.531Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T20:37:59.582Z] Cache hit for key: conversations:5
+[2025-06-24T20:37:59.585Z] Cache hit for key: unread:5
+[2025-06-24T20:38:01.206Z] Cache miss for key: conversation:5e7dd882-a5a1-4265-bce1-ada791aefc05. Fetching from DB...
+[2025-06-24T20:38:01.207Z] getMessagesByConversationId: Fetching messages for conversationId=5e7dd882-a5a1-4265-bce1-ada791aefc05
+[2025-06-24T20:38:01.606Z] Cache miss for key: conversation:c2b815e7-99df-4460-9899-21e1d5375d68. Fetching from DB...
+[2025-06-24T20:38:01.607Z] getMessagesByConversationId: Fetching messages for conversationId=c2b815e7-99df-4460-9899-21e1d5375d68
+[2025-06-24T20:38:02.257Z] getMessagesByConversationId: Fetching messages for conversationId=299d21e2-f349-45d2-8526-a956b024e502
+[2025-06-24T20:38:02.257Z] Cache miss for key: conversation:299d21e2-f349-45d2-8526-a956b024e502. Fetching from DB...
+[2025-06-24T20:38:02.616Z] Cache hit for key: conversation:c2b815e7-99df-4460-9899-21e1d5375d68
+[2025-06-24T20:38:02.997Z] Cache hit for key: conversation:5e7dd882-a5a1-4265-bce1-ada791aefc05
+[2025-06-24T20:40:32.741Z] Cache hit for key: conversations:5
+[2025-06-24T20:40:32.742Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T20:40:32.743Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T20:40:32.754Z] Cache hit for key: conversations:5
+[2025-06-24T20:40:32.776Z] Cache hit for key: unread:5
+[2025-06-24T20:40:37.246Z] Cache hit for key: conversation:5e7dd882-a5a1-4265-bce1-ada791aefc05
+[2025-06-24T20:42:37.562Z] Cache hit for key: conversations:5
+[2025-06-24T20:42:37.563Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T20:42:37.563Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T20:42:37.574Z] Cache hit for key: conversations:5
+[2025-06-24T20:42:37.589Z] Cache hit for key: unread:5
+[2025-06-24T20:42:38.441Z] Cache hit for key: conversation:c2b815e7-99df-4460-9899-21e1d5375d68
+[2025-06-24T20:42:38.955Z] Cache hit for key: conversation:5e7dd882-a5a1-4265-bce1-ada791aefc05
+[2025-06-24T20:42:39.406Z] Cache hit for key: conversation:299d21e2-f349-45d2-8526-a956b024e502
+[2025-06-24T20:42:47.077Z] Cache miss for key: top:popular:parkings. Fetching from DB...
+[2025-06-24T20:42:47.078Z] getTopPopularParkings: Fetching from DB
+[2025-06-24T20:42:47.095Z] Cache hit for key: top:popular:parkings
+[2025-06-24T20:42:47.235Z] Cache miss for key: search:{"lat":"31.7035656","lng":"35.1133058"}. Fetching from DB...
+[2025-06-24T20:42:47.236Z] searchParkings: query={"lat":"31.7035656","lng":"35.1133058"}
+[2025-06-24T20:42:47.247Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T20:42:47.286Z] Cache hit for key: search:{"lat":"31.7035656","lng":"35.1133058"}
+[2025-06-24T20:42:50.301Z] Cache hit for key: top:popular:parkings
+[2025-06-24T20:42:50.313Z] Cache hit for key: top:popular:parkings
+[2025-06-24T20:42:50.395Z] Cache hit for key: search:{"lat":"31.7035656","lng":"35.1133058"}
+[2025-06-24T20:42:50.409Z] Cache hit for key: search:{"lat":"31.7035656","lng":"35.1133058"}
+[2025-06-24T20:42:55.580Z] Cache hit for key: unread:5
+[2025-06-24T20:42:55.601Z] Cache miss for key: dashboard:owner:5. Fetching from DB...
+[2025-06-24T20:42:55.629Z] Cache hit for key: dashboard:owner:5
+[2025-06-24T20:49:56.656Z] Cache miss for key: dashboard:owner:5. Fetching from DB...
+[2025-06-24T20:49:56.661Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T20:49:56.660Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T20:49:56.684Z] Cache hit for key: unread:5
+[2025-06-24T20:49:56.690Z] Cache hit for key: dashboard:owner:5
+[2025-06-24T20:50:41.284Z] Cache hit for key: dashboard:owner:5
+[2025-06-24T20:50:41.286Z] Cache hit for key: unread:5
+[2025-06-24T20:50:41.305Z] Cache hit for key: dashboard:owner:5
+[2025-06-24T20:50:41.307Z] Cache hit for key: unread:5
+[2025-06-24T20:50:51.420Z] Cache hit for key: dashboard:owner:5
+[2025-06-24T20:50:53.007Z] Cache hit for key: dashboard:owner:5
+[2025-06-24T20:50:53.026Z] Cache hit for key: unread:5
+[2025-06-24T20:50:53.030Z] Cache hit for key: dashboard:owner:5
+[2025-06-24T20:50:53.041Z] Cache hit for key: unread:5
+[2025-06-24T20:52:08.962Z] Cache hit for key: dashboard:owner:5
+[2025-06-24T20:52:08.965Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T20:52:08.965Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T20:52:08.988Z] Cache hit for key: dashboard:owner:5
+[2025-06-24T20:52:09.003Z] Cache hit for key: unread:5
+[2025-06-24T20:53:00.522Z] Cache hit for key: dashboard:owner:5
+[2025-06-24T20:53:00.522Z] Cache hit for key: unread:5
+[2025-06-24T20:53:00.538Z] Cache hit for key: dashboard:owner:5
+[2025-06-24T20:53:00.542Z] Cache hit for key: unread:5

@@ -1,5 +1,6 @@
 const bcrypt = require('bcrypt');
 const userService = require('../services/userService');
+const { redisClient, getOrSetCache } = require('../utils/utils');
 const { log } = require("../utils/logger.js");
 
 const userBL = {
@@ -31,6 +32,9 @@ const userBL = {
             await userService.createPassword(user.id, hash);
             log(`signup: Password hashed and saved for user id: ${user.id}`);
 
+            // מחיקת cache כללי אחרי הרשמה
+            await redisClient.del('users:all');
+
             return user;
         } catch (err) {
             if (user?.id) {
@@ -58,7 +62,7 @@ const userBL = {
         const userRoles = roles.map(r => r.role);
 
         if (role && userRoles.includes(role)) {
-            user.role = role; 
+            user.role = role;
             return user;
         }
 
@@ -67,60 +71,89 @@ const userBL = {
 
     async getUserById(id) {
         log(`getUserById: Fetching user with id: ${id}`);
-        const user = await userService.findUserById(id);
-        if (user) {
-            const roleRecord = await userService.getRoleByUserId(id);
-            user.role = roleRecord?.role || null;
-        }
-        return user;
+
+        const cacheKey = `user:${id}`;
+        return await getOrSetCache(cacheKey, 600, async () => {
+            const user = await userService.findUserById(id);
+            if (user) {
+                const roleRecord = await userService.getRoleByUserId(id);
+                user.role = roleRecord?.role || null;
+            }
+            return user;
+        });
     },
 
     async updateUser(id, data) {
         log(`updateUser: Updating user id: ${id} with data: ${JSON.stringify(data)}`);
+
         if (data.role) {
             await userService.updateRole(id, data.role);
             delete data.role;
         }
-        return await userService.updateUser(id, data);
+
+        const updatedUser = await userService.updateUser(id, data);
+
+        await redisClient.del(`user:${id}`);
+        await redisClient.del('users:all');
+
+        return updatedUser;
     },
 
     async deleteUser(id) {
         log(`deleteUser: Deleting user with id: ${id}`);
+
         const deleted = await userService.deleteUser(id);
         await userService.deletePassword(id);
         await userService.deleteRole(id);
+
+        await redisClient.del(`user:${id}`);
+        await redisClient.del('users:all');
+
         return deleted > 0;
     },
 
     async getAllUsers() {
         log(`getAllUsers: Fetching all users`);
-        return await userService.findAllUsers();
+
+        const cacheKey = 'users:all';
+        return await getOrSetCache(cacheKey, 300, async () => {
+            return await userService.findAllUsers();
+        });
     },
 
     async getUsersByParams(params) {
         log(`getUsersByParams: Fetching users with params: ${JSON.stringify(params)}`);
-        return await userService.findUsersByParams(params);
+
+        const cacheKey = `users:params:${JSON.stringify(params)}`;
+        return await getOrSetCache(cacheKey, 300, async () => {
+            return await userService.findUsersByParams(params);
+        });
     },
 
     async getOrdersPerMonth(ownerId) {
         log(`getOrdersPerMonth: Fetching orders per month for owner id: ${ownerId}`);
-        const orders = await userService.getOrdersByParams(ownerId);
-        const monthMap = {};
 
-        orders.forEach(order => {
-            const month = new Date(order.startDate).getMonth() + 1;
-            if (!monthMap[month]) {
-                monthMap[month] = 0;
-            }
-            monthMap[month]++;
+        const cacheKey = `orders:per:month:${ownerId}`;
+        return await getOrSetCache(cacheKey, 300, async () => {
+            const orders = await userService.getOrdersByParams(ownerId);
+            const monthMap = {};
+
+            orders.forEach(order => {
+                const month = new Date(order.startDate).getMonth() + 1;
+                if (!monthMap[month]) {
+                    monthMap[month] = 0;
+                }
+                monthMap[month]++;
+            });
+
+            const chartData = Object.keys(monthMap).map(month => ({
+                month,
+                orders: monthMap[month]
+            })).sort((a, b) => a.month - b.month);
+
+            log(`getOrdersPerMonth: Orders per month data: ${JSON.stringify(chartData)}`);
+            return chartData;
         });
-
-        const chartData = Object.keys(monthMap).map(month => ({
-            month,
-            orders: monthMap[month]
-        })).sort((a, b) => a.month - b.month);
-        log(`getOrdersPerMonth: Orders per month data: ${JSON.stringify(chartData)}`);
-        return chartData;
     }
 };
 

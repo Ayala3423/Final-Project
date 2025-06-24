@@ -97,7 +97,6 @@ const parkingController = {
 
             const { address, description, ownerId } = req.body;
 
-            // שם קובץ התמונה אם יש קובץ
             const imagePath = req.file ? `/uploads/parking/${req.file.filename}` : null;
 
             const parkingData = {
@@ -117,6 +116,16 @@ const parkingController = {
         } catch (error) {
             console.error('Error creating parking:', error);
             res.status(400).json({ error: error.message });
+        }
+    },
+
+    async getTopPopularParkings(req, res) {
+        try {
+            const result = await parkingBL.getTopPopularParkings();
+            res.json(result);
+        } catch (err) {
+            console.error(err);
+            res.status(500).json({ error: 'Server Error' });
         }
     }
 

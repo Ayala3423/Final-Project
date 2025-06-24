@@ -12,15 +12,15 @@ function OrdersChart({ chartData }) {
   if (data.length === 0) {
     return (
       <div className="chart-container">
-        <h3>הכנסות חודשיות</h3>
-        <div className="no-data">אין נתונים זמינים</div>
+        <h3>Monthly Income</h3>
+        <div className="no-data">There is no data</div>
       </div>
     );
   }
 
   return (
     <div className="chart-container">
-      <h3>הכנסות חודשיות</h3>
+        <h3>Monthly Income</h3>
       <div style={{ width: 600, height: 300, margin: '0 auto' }}>
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={data}>

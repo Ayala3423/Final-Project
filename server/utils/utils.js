@@ -1,5 +1,25 @@
 const axios = require('axios');
 const jwt = require('jsonwebtoken');
+const { redisClient } = require('./redisClient');
+const { log } = require("./logger.js");
+
+async function getOrSetCache(key, ttlSeconds, dbCallback) {
+  const cachedData = await redisClient.get(key);
+
+  if (cachedData) {
+    log(`Cache hit for key: ${key}`);
+    return JSON.parse(cachedData);
+  }
+
+  log(`Cache miss for key: ${key}. Fetching from DB...`);
+  const freshData = await dbCallback();
+
+  if (freshData) {
+    await redisClient.setEx(key, ttlSeconds, JSON.stringify(freshData));
+  }
+
+  return freshData;
+}
 
 async function getCoordinatesFromAddress(address) {
   try {
@@ -13,7 +33,7 @@ async function getCoordinatesFromAddress(address) {
         limit: 1
       },
       headers: {
-        'User-Agent': 'MyApp' 
+        'User-Agent': 'MyApp'
       }
     });
 
@@ -34,7 +54,7 @@ async function getCoordinatesFromAddress(address) {
 
 function haversineDistance(lat1, lon1, lat2, lon2) {
   const toRad = deg => (deg * Math.PI) / 180;
-  const R = 6371; 
+  const R = 6371;
 
   const dLat = toRad(lat2 - lat1);
   const dLon = toRad(lon2 - lon1);
@@ -47,7 +67,7 @@ function haversineDistance(lat1, lon1, lat2, lon2) {
 
   const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 
-  return R * c; 
+  return R * c;
 }
 
 function generateToken(payload) {
@@ -70,4 +90,4 @@ function generateRefreshToken(payload) {
   return jwt.sign(payload, process.env.REFRESH_TOKEN_SECRET, { expiresIn: '30d' });
 }
 
-module.exports = { getCoordinatesFromAddress, generateToken, generateRefreshToken, haversineDistance };
+module.exports = { getCoordinatesFromAddress, generateToken, generateRefreshToken, haversineDistance, redisClient, getOrSetCache };

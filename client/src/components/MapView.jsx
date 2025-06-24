@@ -3,19 +3,18 @@ import '../styles/MapView.css';
 
 const API_KEY = 'AIzaSyCcteuv39cQV0oEpPLjoXCJfN_D7f_yNTs';
 
-// פונקציה בטוחה להמרת ערך ל־number או null אם לא תקין
 const toNumber = (value) => {
     const num = parseFloat(value);
     return isNaN(num) ? null : num;
 };
 
 function MapView({ center, parkings, hoveredParkingId }) {
+    
     const mapRef = useRef(null);
     const mapInstance = useRef(null);
     const markersRef = useRef({});
-    const centerMarkerRef = useRef(null); // ניהול המארקר של המרכז
+    const centerMarkerRef = useRef(null);
 
-    // אתחול המפה רק פעם אחת
     useEffect(() => {
         const initializeMap = () => {
             if (!mapRef.current || mapInstance.current) return;
@@ -61,20 +60,18 @@ function MapView({ center, parkings, hoveredParkingId }) {
         };
     }, []);
 
-    // עדכון מרכז המפה + מארקר המרכז
     useEffect(() => {
         if (mapInstance.current && center) {
             const lat = toNumber(center.lat);
             const lng = toNumber(center.lng);
 
             if (lat === null || lng === null) {
-                console.warn("MapView: מרכז לא תקין, לא מעדכן מרכז");
+                console.warn("MapView: Center is incorrect");
                 return;
             }
 
             mapInstance.current.setCenter({ lat, lng });
 
-            // עדכון מארקר של המרכז
             if (centerMarkerRef.current) {
                 centerMarkerRef.current.setMap(null);
             }
@@ -84,17 +81,15 @@ function MapView({ center, parkings, hoveredParkingId }) {
                 map: mapInstance.current,
                 title: 'Center Location',
                 icon: {
-                    url: 'https://maps.google.com/mapfiles/ms/icons/green-dot.png',
+                    url: 'https://maps.google.com/mapfiles/ms/icons/red-dot.png',
                 },
             });
         }
     }, [center]);
 
-    // עדכון המארקרים של החניות
     useEffect(() => {
         if (!mapInstance.current) return;
 
-        // ניקוי מארקרים קודמים
         Object.values(markersRef.current).forEach(marker => marker.setMap(null));
         markersRef.current = {};
 
@@ -104,7 +99,7 @@ function MapView({ center, parkings, hoveredParkingId }) {
                 const lng = toNumber(spot.lng);
 
                 if (lat === null || lng === null) {
-                    console.warn("MapView: קואורדינטות חניה לא תקינות", spot);
+                    console.warn("MapView: Coordinates are incorrect", spot);
                     return;
                 }
 
@@ -134,7 +129,6 @@ function MapView({ center, parkings, hoveredParkingId }) {
         }
     }, [parkings]);
 
-    // שינוי צבע מארקר בהובר
     useEffect(() => {
         Object.values(markersRef.current).forEach(marker => {
             marker.setIcon({

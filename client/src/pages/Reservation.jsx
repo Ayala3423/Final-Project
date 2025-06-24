@@ -83,6 +83,24 @@ function Reservation() {
         setError('');
     };
 
+    function getDatesForWeekdaysInNextMonth(slot) {
+        const resultDates = [];
+        const today = new Date();
+        const endDate = new Date(today);
+        endDate.setMonth(endDate.getMonth() + 1);
+
+        const slotDate = new Date(slot.date);
+        const targetDay = slotDate.getDay();
+
+        for (let d = new Date(today); d <= endDate; d.setDate(d.getDate() + 1)) {
+            if (d.getDay() === targetDay) {
+                resultDates.push(new Date(d));
+            }
+        }
+
+        return resultDates;
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
@@ -133,17 +151,30 @@ function Reservation() {
             const duration = (new Date(customEnd) - new Date(customStart)) / (1000 * 60 * 60);
             return duration * parking.pricePerHour;
         }
-        let total = 0;
-        for (const slot of timeSlots) {
-            if (selectedSlots.includes(slot.id)) {
-                const [sh, sm] = slot.startTime.split(':');
-                const [eh, em] = slot.endTime.split(':');
-                let duration = (parseInt(eh) + parseInt(em) / 60) - (parseInt(sh) + parseInt(sm) / 60);
-                if (duration < 0) duration += 24;
-                total += duration * slot.price;
+        else if (reservationType === 'fixed') {
+            let total = 0;
+            for (const slot of timeSlots) {
+                if (selectedSlots.includes(slot.id)) {
+                    const datesInMonth = getDatesForWeekdaysInNextMonth(slot);
+                    const [sh, sm] = slot.startTime.split(':').map(Number);
+                    const [eh, em] = slot.endTime.split(':').map(Number);
+                    let duration = (eh + em / 60) - (sh + sm / 60);
+                    if (duration < 0) duration += 24;
+                    total += datesInMonth.length * duration * slot.price;
+                }
             }
+            return total;
         }
-        return total;
+        else {
+            if (selectedSlots.length === 0) return 0;
+            const slot = timeSlots.find(s => s.id === selectedSlots[0]);
+            if (!slot) return 0;
+            const [sh, sm] = slot.startTime.split(':').map(Number);
+            const [eh, em] = slot.endTime.split(':').map(Number);
+            let duration = (eh + em / 60) - (sh + sm / 60);
+            if (duration < 0) duration += 24;
+            return duration * slot.price;
+        }
     };
 
     const renderPayPalButton = () => {
@@ -156,10 +187,9 @@ function Reservation() {
                 },
                 onApprove: async (data, actions) => {
                     try {
-                        const details = await actions.order.capture(); // מאמת את התשלום
+                        const details = await actions.order.capture(); 
                         const orderID = data.orderID;
 
-                        // שולחת לשרת את כל הנתונים + orderID
                         await apiService.create('payments/confirm', {
                             orderID,
                             reservationData: {

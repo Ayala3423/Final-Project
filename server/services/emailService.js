@@ -1,11 +1,11 @@
 const nodemailer = require('nodemailer');
-require('dotenv').config(); 
+require('dotenv').config();
 
 const transporter = nodemailer.createTransport({
-  service: 'gmail', 
+  service: 'gmail',
   auth: {
-    user: process.env.EMAIL_USER, 
-    pass: process.env.EMAIL_PASS  
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS
   }
 });
 
@@ -23,4 +23,29 @@ const sendEmail = async ({ to, subject, text }) => {
   }
 };
 
-module.exports = { sendEmail };
+const sendRenewalEmail = async (reservation) => {
+  const renewalLink = `https://your-frontend-url.com/reservations/renew/${reservation.id}`;
+
+  const emailText = `
+    שלום,
+
+    ההזמנה שלך עומדת לפוג. האם ברצונך להמשיך ולחדש את ההזמנה לחודש הקרוב?
+
+    לחץ כאן כדי לחדש: ${renewalLink}
+
+    תודה,
+    צוות RentBro
+  `;
+
+  try {
+    await sendEmail({
+      to: reservation.renterEmail, // או איך ששומר את המייל של המשתמש
+      subject: 'חידוש הזמנת חניה',
+      text: emailText,
+    });
+  } catch (error) {
+    console.error('Failed to send renewal email:', error);
+  }
+};
+
+module.exports = { sendEmail, sendRenewalEmail };

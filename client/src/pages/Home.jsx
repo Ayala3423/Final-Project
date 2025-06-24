@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import AvailabilityParkings from './AvailabilityParkings';
 import Footer from '../components/Footer';
 import '../styles/RentBro.css';
@@ -7,6 +8,7 @@ import { FaChevronDown, FaCar, FaShieldAlt, FaClock, FaMobile, FaPhone, FaEnvelo
 
 function Home() {
 
+    const navigate = useNavigate()
     const [myLocation, setMyLocation] = useState();
     const [searchText, setSearchText] = useState('');
     const [contactName, setContactName] = useState('');
@@ -16,6 +18,7 @@ function Home() {
     const [triggerSearch, setTriggerSearch] = useState(false);
     const [contactError, setContactError] = useState('');
     const [suggestions, setSuggestions] = useState([]);
+    const [popularParkings, setPopularParkings] = useState([]);
 
     useEffect(() => {
         navigator.geolocation.getCurrentPosition(
@@ -27,6 +30,14 @@ function Home() {
                 setMyLocation({ lat: 32.0853, lng: 34.7818 });
             }
         );
+    }, []);
+
+    useEffect(() => {
+        apiService.getPopular('parkings', (data) => {
+            setPopularParkings(data);
+        }, (err) => {
+            console.error("Failed to load popular parkings", err);
+        });
     }, []);
 
     const wrapperRef = useRef(null);
@@ -113,18 +124,12 @@ function Home() {
 
     return (
         <div className="rentbro-container">
-            {/* Hero Section */}
             <div className="hero-image-section">
                 <div className="main-content">
                     <h1 className="main-title">Find Your Perfect Parking Spot</h1>
-                    {/* <p className="subtitle">The smart way to discover, book, and manage parking spaces across the city</p> */}
 
                     <div className="search-wrapper">
-                        {/* <span className="search-icon">
-                            <svg className="icon" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35m1.3-5.4a6.5 6.5 0 11-13 0 6.5 6.5 0 0113 0z" />
-                            </svg>
-                        </span> */}
+                     
                         <div ref={wrapperRef} style={{ position: 'relative' }}>
                             <input
                                 type="text"
@@ -152,22 +157,6 @@ function Home() {
 
                     </div>
 
-                    {/* Stats Bar */}
-                    {/* <div className="stats-bar">
-                        <div className="stat">
-                            <span className="stat-number">10K+</span>
-                            <span className="stat-label">Parking Spots</span>
-                        </div>
-                        <div className="stat">
-                            <span className="stat-number">50K+</span>
-                            <span className="stat-label">Happy Users</span>
-                        </div>
-                        <div className="stat">
-                            <span className="stat-number">24/7</span>
-                            <span className="stat-label">Support</span>
-                        </div>
-                    </div> */}
-
                     <div
                         className="scroll-down-arrow"
                         onClick={() => scrollToSection('about-section')}
@@ -177,7 +166,6 @@ function Home() {
                 </div>
             </div>
 
-            {/* About Section */}
             <section id="about-section" className="about-section">
                 <div className="container1">
                     <div className="section-header">
@@ -202,17 +190,18 @@ function Home() {
                         </div>
 
                         <div className="about-visual">
-                            <div className="video-placeholder">
-                                <div className="play-button">▶</div>
-                                <p>Watch How It Works</p>
-                                <small>See our system in action</small>
+                            <div className="video-wrapper">
+                                <video autoPlay muted loop playsInline style={{ width: '100%', height: '50vh', borderRadius: '16px', objectFit: 'cover' }}>
+                                    <source src="/parking-video.mp4" type="video/mp4" />
+                                    Your browser does not support the video tag.
+                                </video>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </section>
 
-            {/* Features Section */}
             <section className="features-section">
                 <div className="container1">
                     <div className="section-header">
@@ -245,18 +234,26 @@ function Home() {
                             <p>Safe and secure payment processing with multiple payment options available.</p>
                         </div>
 
-                        <div className="feature-card">
-                            <div className="feature-icon-wrapper">
-                                <FaMobile className="feature-icon" />
-                            </div>
-                            <h3>Mobile Optimized</h3>
-                            <p>Perfect mobile experience that works seamlessly on all your devices, anywhere.</p>
-                        </div>
                     </div>
                 </div>
             </section>
 
-            {/* Parking Results Section */}
+            <div className="popular-parkings">
+                <h2>Top 3 Popular Parkings</h2>
+                <div className="parking-cards">
+                    {popularParkings.map((item, index) => (
+                        <div key={index} className="parking-card" onClick={() => navigate(`/parking/${item.parking.id}`, { state: { parking: item.parking } }
+                        )}>
+                            <img src={`http://localhost:3000/uploads/parkings/${(item.parking.imageUrl).replace(/^\/+/, '')}`} alt={item.parking.address} style={{ width: '100%', borderRadius: '10px' }} />
+                            <h3>{item.parking.address}</h3>
+                            <p>{item.parking.description}</p>
+                            <p>Reservations: {item.count}</p>
+                            <p>Rating: {item.parking.averageRating}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
             <section id="parking-section" className="parking-section">
                 <div className="container">
                     <h2>Available Parking Spots</h2>
@@ -273,7 +270,6 @@ function Home() {
                 </div>
             </section>
 
-            {/* Contact Section */}
             <section className="contact-section">
                 <div className="container1">
                     <div className="section-header">

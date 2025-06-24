@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Routes, Route, Navigate, useLocation, useParams } from 'react-router-dom';
 import { AuthContext } from '../context/AuthContext.jsx';
 import MainLayout from '../components/MainLayout';
+import RenewReservation from '../pages/RenewReservation';
 
 import Home from '../pages/Home.jsx';
 import Login from '../pages/Login.jsx';
@@ -37,6 +38,7 @@ const PrivateRoute = ({ children, allowedRoles }) => {
 };
 
 function AppRouter() {
+
   const location = useLocation();
   const state = location.state;
   const { user, loading } = useContext(AuthContext);
@@ -91,7 +93,7 @@ function AppRouter() {
             <Route path="my-profile" element={<ProfileCard />} />
           </Route>
 
-
+          <Route path="/renew-reservation/:id" element={<RenewReservation />} />
 
           <Route
             path="/messages"

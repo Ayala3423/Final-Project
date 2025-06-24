@@ -8,6 +8,7 @@ const upload = createUploadMiddleware('parking');
 
 router.get('/search', parkingController.searchParkings);
 router.get('/', parkingController.getParkingsByParams);
+router.get('/top-popular', parkingController.getTopPopularParkings);
 
 router.use(verifyToken);
 

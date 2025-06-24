@@ -9,7 +9,7 @@ import TimeSlots from '../components/TimeSlots';
 import AddTimeSlot from './AddTimeSlot';
 
 function ParkingPage() {
-
+    
     const navigate = useNavigate();
     const location = useLocation();
     const parking = location.state?.parking;
@@ -35,6 +35,7 @@ function ParkingPage() {
     const [showAddTimeSlotForm, setShowAddTimeSlotForm] = useState(false);
 
     useEffect(() => {
+
         if (parking?.id) {
             apiService.getByValue('timeSlots', { parkingId: parking.id }, (response) => {
                 setTimeSlots(response);
@@ -150,8 +151,8 @@ function ParkingPage() {
         <div className="parking-page">
 
             <div className="parking-header">
-                <img
-                    src={parking.imageUrl || '/default-parking.jpg'}
+                <img id='parking-image-page'
+                    src={`http://localhost:3000/uploads/parkings/${parking.imageUrl.replace(/^\/+/, '')}` || '/default-parking.jpg'}
                     alt="תמונה של חניה"
                     className="parking-image"
                 />
@@ -230,7 +231,7 @@ function ParkingPage() {
                         </button>
                     ) : (
                         <div className="review-form">
-                            <h4>הוספת ביקורת</h4>
+                            <h4>Add a review</h4>
                             <div className="rating-stars">
                                 {Array.from({ length: 5 }, (_, i) => i + 1).map((star) => (
                                     <FaStar

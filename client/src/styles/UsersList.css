@@ -9,6 +9,32 @@
     text-align: center;
 }
 
+.edit-button, .delete-button {
+  margin: 0 5px;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-size: 1.2em;
+}
+
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 2em;
+  border-radius: 10px;
+  width: 400px;
+}
+
+
 .users-table {
     width: 100%;
     border-collapse: collapse;

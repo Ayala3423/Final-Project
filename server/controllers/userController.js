@@ -64,10 +64,8 @@ const userController = {
         try {
             const id = req.params.id;
 
-            // פרטי גוף הבקשה
             const data = { ...req.body };
 
-            // אם יש קובץ תמונה - נוסיף אותו לשדות לעדכון
             if (req.file) {
                 data.profileImage = `/uploads/profileImages/${req.file.filename}`;
 

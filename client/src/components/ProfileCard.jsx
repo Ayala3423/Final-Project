@@ -7,7 +7,7 @@ const ProfileCard = () => {
 
   const getFullImageUrl = (path) => {
     if (!path) return null;
-    return `http://localhost:3000/${path.replace(/^\/+/, '')}`;
+    return `http://localhost:3000/uploads/profileImages/${path.replace(/^\/+/, '')}`;
   };
 
   const { user, updateUser } = useContext(AuthContext);
@@ -63,12 +63,14 @@ const ProfileCard = () => {
     getFullImageUrl(editedProfile.profileImage) ||
     'https://via.placeholder.com/150';
 
+  console.log("profileImageSrc", profileImageSrc);
+
   return (
     <div className="profile-card">
       <img
         src={profileImageSrc}
-        alt="Profile"
-        className="profile-image"
+        alt={"image"}
+        style={{ width: '50px', height: '50px', borderRadius: '50%', objectFit: 'cover' }}
       />
       {isEditing && (
         <input
@@ -124,7 +126,7 @@ const ProfileField = ({ label, name, value, isEditing, onChange }) => (
       <div className="profile-value">{value}</div>
     )}
   </div>
-  
+
 );
 
 export default ProfileCard;

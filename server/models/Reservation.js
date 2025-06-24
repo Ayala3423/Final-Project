@@ -58,11 +58,15 @@ const Reservation = sequelize.define('Reservation', {
   reservationDate: {
     type: DataTypes.DATE,
     defaultValue: DataTypes.NOW
+  },
+  captureId: {
+    type: DataTypes.STRING,
+    allowNull: true
   }
 }, {
   tableName: 'Reservations',
-  paranoid: true, 
-    timestamps: true 
+  paranoid: true,
+  timestamps: true
 });
 
 module.exports = Reservation;

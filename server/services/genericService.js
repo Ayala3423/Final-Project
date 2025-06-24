@@ -3,6 +3,7 @@ const db = require('../models');
 const { User } = require('../models');
 const { Message } = require('../models');
 const { v4: uuidv4 } = require('uuid');
+const { Sequelize } = require('sequelize');
 
 const genericService = {
 
@@ -34,13 +35,10 @@ const genericService = {
         return await Model.findAll({
             where: params,
         });
-    }, 
+    },
 
     async getByParamsLimit(model, params) {
-        console.log('getByParamsLimit');
-
         const Model = require(`../models/${model}`);
-
         const { page = 1, limit = 10, ...filters } = params;
         const offset = (page - 1) * limit;
 
@@ -52,8 +50,6 @@ const genericService = {
     },
 
     async create(model, data) {
-        console.log(`Creating new ${model} with data:`, data);
-
         const Model = require(`../models/${model}`);
 
         if (Array.isArray(data)) {
@@ -142,7 +138,6 @@ const genericService = {
     },
 
     async getUserConversations(userId) {
-        // לוקחים את כל ההודעות שהמשתמש קשור אליהן (כשולח או כמקבל)
         const messages = await Message.findAll({
             where: {
                 [Op.or]: [
@@ -219,6 +214,22 @@ const genericService = {
         });
 
         console.log(`Notification sent to user ${receiverId}: ${content}`);
+    },
+
+    async getTopPopularParkings() {
+        return await db.Reservation.findAll({
+            attributes: [
+                'parkingId',
+                [Sequelize.fn('COUNT', Sequelize.col('parkingId')), 'reservationCount']
+            ],
+            group: ['parkingId'],
+            include: [
+                {
+                    model: db.Parking,
+                    attributes: ['id', 'address', 'description', 'imageUrl', 'averageRating']
+                }
+            ]
+        });
     }
 
 };

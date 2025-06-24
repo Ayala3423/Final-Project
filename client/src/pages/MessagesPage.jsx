@@ -5,7 +5,7 @@ import { apiService } from '../services/genericService';
 import { io } from 'socket.io-client';
 import { v4 as uuidv4 } from 'uuid';
 
-const socket = io('http://localhost:3000'); 
+const socket = io('http://localhost:3000');
 
 export default function MessagesPage() {
   const { user } = useContext(AuthContext);
@@ -38,6 +38,11 @@ export default function MessagesPage() {
 
   useEffect(() => {
     if (!socket.connected) socket.connect();
+
+    socket.on('connect', () => {
+      const userId = JSON.parse(localStorage.getItem('user')).id; // או מאיפה שאת שומרת את המשתמש
+      socket.emit('authenticate', { userId });
+    });
 
     socket.on('receiveMessage', (messageData) => {
       console.log('📥 Message received via socket:', messageData);
@@ -106,6 +111,7 @@ export default function MessagesPage() {
     apiService.get('messages', (data) => {
       const uniqueConversationsMap = {};
       data.forEach(msg => {
+
         const otherUserId = msg.senderId === user.id ? msg.receiverId : msg.senderId;
         if (!uniqueConversationsMap[otherUserId]) {
           uniqueConversationsMap[otherUserId] = msg;
@@ -192,7 +198,6 @@ export default function MessagesPage() {
   };
 
   const handleTyping = () => {
-    console.log('Im typing...');
 
     socket.emit('typing', { conversationId: selectedChatId, senderId: user.id, senderName: user.name });
   };
@@ -249,42 +254,44 @@ export default function MessagesPage() {
   return (
     <div className="chat-box">
       <div className="chat-sidebar">
-        <h3>שיחות</h3>
+        <h3>Messages</h3>
         <button
           onClick={() => setSoundEnabled(prev => !prev)}
           style={{ fontSize: '14px', padding: '4px 8px', cursor: 'pointer' }}
         >
-          {soundEnabled ? '🔊 השתק' : '🔇 הפעל'}
+          {soundEnabled ? '🔊 mute' : '🔇 play'}
         </button>
         <div className="new-chat">
           <input
             type="text"
-            placeholder="הכנס שם משתמש לפתיחת שיחה"
+            placeholder="Enter username to chat with"
             value={newChatUsername}
             onChange={e => setNewChatUsername(e.target.value)}
           />
-          <button onClick={openNewChat}>פתח שיחה חדשה</button>
+          <button onClick={openNewChat}>New chat</button>
           {chatError && <div className="error">{chatError}</div>}
         </div>
 
         <ul>
-          {conversations.map(conv => {
-            const chatPartnerId = conv.senderId === user.id ? conv.receiverId : conv.senderId;
-            const isActive = conv.conversationId === selectedChatId;
+          {conversations
+            .filter(conv => conv.senderId !== conv.receiverId)
+            .map(conv => {
+              const chatPartnerId = conv.senderId === user.id ? conv.receiverId : conv.senderId;
+              const isActive = conv.conversationId === selectedChatId;
 
-            return (
-              <li
-                key={conv.conversationId}
-                className={isActive ? 'active' : ''}
-                onClick={() => setSelectedChatId(conv.conversationId)}
-              >
-                שיחה עם: {chatPartnerId}
-                {unreadMessages[conv.conversationId] > 0 && (
-                  <span className="unread-count"> ({unreadMessages[conv.conversationId]})</span>
-                )}
-              </li>
-            );
-          })}
+              return (
+                <li
+                  key={conv.conversationId}
+                  className={isActive ? 'active' : ''}
+                  onClick={() => setSelectedChatId(conv.conversationId)}
+                >
+                  Chat with: {chatPartnerId}
+                  {unreadMessages[conv.conversationId] > 0 && (
+                    <span className="unread-count"> ({unreadMessages[conv.conversationId]})</span>
+                  )}
+                </li>
+              );
+            })}
         </ul>
 
       </div>

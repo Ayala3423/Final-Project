@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const userController = require('../controllers/userController');
 const { verifyToken } = require('../middleware/authMiddleware');
-//const { upload } = require('../middleware/upload'); // הוספת multer
 const { createUploadMiddleware } = require('../middleware/upload');
 
 const upload = createUploadMiddleware('profileImages');

@@ -77,6 +77,9 @@ function ReservationsList() {
         );
     };
 
+    console.log("reservations", reservations);
+    
+
     if (!user) return <p>Please log in to view reservations.</p>;
     if (error) return <p>{error}</p>;
 
@@ -87,7 +90,7 @@ function ReservationsList() {
             {cancelError && <p className="error-message">{cancelError}</p>}
             {cancelSuccess && <p className="success-message">{cancelSuccess}</p>}
 
-            {reservations.length === 0 && !loading && <p>No reservations found.</p>}
+            {reservations.length === 0 && !loading && <p id='noReservations'>No reservations found.</p>}
 
             <ul className="reservations-list">
                 {reservations.map((res, idx) => (
@@ -97,11 +100,11 @@ function ReservationsList() {
                         <div><strong>End Time:</strong> {new Date(res.endTime).toLocaleString()}</div>
                         <div><strong>Date:</strong> {new Date(res.reservationDate).toLocaleString()}</div>
                         {user.role === 'owner' && (
+                            <>
                             <div><strong>Renter:</strong> {res.Renter?.name || 'Unknown'}</div>
+                            <div><strong>Price:</strong> {res.totalPrice || 'Unknown'} ₪</div></>
                         )}
-                        {user.role === 'renter' && (
-                            <div><strong>Owner:</strong> {res.Owner?.name || 'Unknown'}</div>
-                        )}
+                       
                         {user.role === 'renter' && canCancel(res.startTime) && (
                             <button onClick={() => handleCancel(res.id)} className="cancel-button">
                                 Cancel Reservation

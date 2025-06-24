@@ -11,7 +11,9 @@ function ParkingList({ parkings, setParkings = () => { }, onHover = () => { } })
 
     const getFullImageUrl = (relativePath) => {
         if (!relativePath) return '/default-parking.jpg';
-        return `http://localhost:3000/${relativePath.replace(/^\/+/, '')}`;
+        console.log("relativePath", relativePath);
+        
+        return `http://localhost:3000/uploads/parkings/${relativePath.replace(/^\/+/, '')}`;
     };
 
     const handleClick = (parking) => {

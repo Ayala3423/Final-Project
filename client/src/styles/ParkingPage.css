@@ -6,11 +6,14 @@
     padding-bottom: 100px;
 }
 
+#parking-image-page{
+    width: 100%;
+}
+
 .gm-ui-hover-effect {
     display: none !important;
 }
 
-/* Header Image + Title */
 .parking-header {
     display: flex;
     flex-direction: column;
@@ -127,8 +130,8 @@
     color: white;
     border: none;
     border-radius: 50%;
-    width: 60px;
-    height: 60px;
+        /* width: 60px; */
+    height: 80px;
     font-size: 24px;
     cursor: pointer;
     z-index: 20;

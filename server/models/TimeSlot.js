@@ -22,15 +22,15 @@ const TimeSlot = sequelize.define('TimeSlot', {
   },
   date: {
     type: DataTypes.DATEONLY,
-    allowNull: true  // לשימוש בזמני
+    allowNull: true  
   },
   dayOfWeek: {
     type: DataTypes.ENUM('sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'),
-    allowNull: true  // לקבועים שחוזרים ביום מסוים
+    allowNull: true 
   },
   recurrence: {
     type: DataTypes.ENUM('none', 'daily', 'weekly', 'monthly'),
-    allowNull: true  // רק אם type = 'קבוע'
+    allowNull: true 
   },
   startTime: {
     type: DataTypes.TIME,

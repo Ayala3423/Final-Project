@@ -4,11 +4,10 @@ import { HiMenuAlt3 } from 'react-icons/hi';
 import { AuthContext } from '../context/AuthContext';
 
 function AdminMenu({ unreadCount }) {
-    
+
     const [menuOpen, setMenuOpen] = useState(false);
     const navigate = useNavigate();
     const { logout } = useContext(AuthContext);
-
     const toggleMenu = () => setMenuOpen(!menuOpen);
 
     const handleClick = (path) => {
@@ -18,9 +17,7 @@ function AdminMenu({ unreadCount }) {
 
     return (
         <nav className="sidebar">
-            <button className="menu-toggle" onClick={toggleMenu}>
-                <HiMenuAlt3 size={24} />
-            </button>
+            <button onClick={toggleMenu}>☰ menu</button>
 
             {menuOpen && (
                 <div className="dropdown-menu">
