@@ -30,11 +30,11 @@ function MainLayout() {
   if (user) {
     switch (user.role) {
       case 'renter':
-        return <RenterMenu unreadCount={unreadCount} />;
+        return <RenterMenu unreadCount={unreadCount} setUnreadCount={setUnreadCount}/>;
       case 'owner':
-        return <OwnerMenu unreadCount={unreadCount} />;
+        return <OwnerMenu unreadCount={unreadCount} setUnreadCount={setUnreadCount}/>;
       case 'admin':
-        return <AdminMenu unreadCount={unreadCount} />;
+        return <AdminMenu unreadCount={unreadCount} setUnreadCount={setUnreadCount}/>;
       default:
         return null;
     }

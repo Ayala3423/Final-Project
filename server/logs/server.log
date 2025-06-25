@@ -5610,3 +5610,21 @@
 [2025-06-25T07:18:23.722Z] getMessagesById: Fetching messages for senderId=5
 [2025-06-25T07:18:23.772Z] Cache miss for key: conversation:3c7217ce-e4fb-4f2c-8f74-f684f4023c11. Fetching from DB...
 [2025-06-25T07:18:23.773Z] getMessagesByConversationId: Fetching messages for conversationId=3c7217ce-e4fb-4f2c-8f74-f684f4023c11
+[2025-06-25T07:28:44.730Z] Cache miss for key: conversations:5. Fetching from DB...
+[2025-06-25T07:28:44.731Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-25T07:28:44.733Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-25T07:28:44.733Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-25T07:28:44.800Z] Cache hit for key: unread:5
+[2025-06-25T07:28:44.808Z] Cache hit for key: conversations:5
+[2025-06-25T07:28:44.836Z] Cache miss for key: conversation:3c7217ce-e4fb-4f2c-8f74-f684f4023c11. Fetching from DB...
+[2025-06-25T07:28:44.837Z] getMessagesByConversationId: Fetching messages for conversationId=3c7217ce-e4fb-4f2c-8f74-f684f4023c11
+[2025-06-25T07:29:48.727Z] Cache hit for key: conversations:5
+[2025-06-25T07:29:48.738Z] Cache hit for key: unread:5
+[2025-06-25T07:29:48.742Z] Cache hit for key: conversations:5
+[2025-06-25T07:29:48.754Z] Cache hit for key: unread:5
+[2025-06-25T07:29:48.782Z] Cache hit for key: conversation:3c7217ce-e4fb-4f2c-8f74-f684f4023c11
+[2025-06-25T07:29:58.017Z] Cache hit for key: conversations:5
+[2025-06-25T07:29:58.028Z] Cache hit for key: conversations:5
+[2025-06-25T07:29:58.045Z] Cache hit for key: conversation:3c7217ce-e4fb-4f2c-8f74-f684f4023c11
+[2025-06-25T07:30:01.690Z] Cache miss for key: dashboard:owner:5. Fetching from DB...
+[2025-06-25T07:30:01.741Z] Cache hit for key: dashboard:owner:5

@@ -40,7 +40,7 @@ export default function MessagesPage() {
     if (!socket.connected) socket.connect();
 
     socket.on('connect', () => {
-      const userId = JSON.parse(localStorage.getItem('user')).id; // או מאיפה שאת שומרת את המשתמש
+      const userId = JSON.parse(localStorage.getItem('user')).id; 
       socket.emit('authenticate', { userId });
     });
 
