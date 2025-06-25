@@ -45,23 +45,20 @@ function AddParking() {
             formData.append('ownerId', user.id);
             formData.append('isAllowSubReservations', parking.isAllowSubReservations);
             if (imageFile) {
-                formData.append('image', imageFile);
+                formData.append('imageUrl', imageFile);
             }
 
-            // שולחים קודם את החניה
             apiService.create('parkings', formData, (res) => {
                 console.log("Parking added successfully:", res);
                 const parkingId = res.id;
 
-                // שולחים את זמני הזמינות כולל מחירים
                 apiService.create('timeSlots', availability.map(slot => ({
                     ...slot,
                     parkingId,
-                    price: parseFloat(slot.price), // המרה למספר
+                    price: parseFloat(slot.price), 
                 })), (res) => {
                     console.log("success", res);
 
-                    // איפוס שדות:
                     setParking({
                         address: '',
                         description: '',
@@ -76,7 +73,6 @@ function AddParking() {
                     }]);
                     setImageFile(null);
 
-                    // ניווט לדף החניות שלי
                     navigate('/owner/my-parkings');
 
                 }, (error) => {
@@ -117,7 +113,7 @@ function AddParking() {
                         setParking({ ...parking, isAllowSubReservations: e.target.checked })
                     }
                 />
-                אפשר השכרות משנה (Sub-Reservations)
+                Allow sub reservations (Sub-Reservations)
             </label>
 
             {imageFile && (
@@ -128,7 +124,6 @@ function AddParking() {
                 />
             )}
 
-            {/* כאן אנחנו מקבלים ומעדכנים זמינות */}
             <AddTimeSlot availability={availability} setAvailability={setAvailability} />
 
             <br /><br />

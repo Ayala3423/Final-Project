@@ -28,8 +28,11 @@ const getMonthlyRevenue = async (ownerId, role) => {
     });
 
     const monthlyRevenue = {};
+    const currentMonth = new Date().toISOString().slice(0, 7); // YYYY-MM
+
     monthlyRevenueRaw.forEach(row => {
-        monthlyRevenue[row.month] = parseFloat(row.total);
+        const month = row.month || currentMonth;
+        monthlyRevenue[month] = parseFloat(row.total);
     });
 
     return monthlyRevenue;

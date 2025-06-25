@@ -20,7 +20,6 @@ const messageBL = {
         log(`createMessage: Creating message with data=${JSON.stringify(data)}`);
         const newMessage = await genericService.create('message', data);
 
-        // מחיקת Cache של השיחה הרלוונטית
         await redisClient.del(`conversation:${data.conversationId}`);
         await redisClient.del(`conversations:${data.senderId}`);
         await redisClient.del(`unread:${data.receiverId}`);
@@ -44,9 +43,26 @@ const messageBL = {
 
         const cacheKey = `conversations:${userId}`;
         return await getOrSetCache(cacheKey, 300, async () => {
-            log(`getMessagesById: Fetching messages for senderId=${userId}`);
-            
-            return await genericService.getUserConversations(userId);
+        log(`getMessagesById: Fetching messages for senderId=${userId}`);
+
+        const conversations = await genericService.getUserConversations(userId);
+
+        const enhancedConversations = await Promise.all(
+            conversations.map(async (conv) => {
+                const convData = conv.toJSON?.() || conv; 
+
+                const otherUserId = convData.senderId === userId ? convData.receiverId : convData.senderId;
+                const otherUser = await genericService.getById('User', otherUserId);
+
+                return {
+                    ...convData,
+                    otherUserId,
+                    otherUsername: otherUser?.username || 'Unknown',
+                };
+            })
+        );
+
+        return enhancedConversations;
         });
     },
 

@@ -24,9 +24,8 @@ const parkingBL = {
         log(`updateParking: Updating parking id=${id} with data=${JSON.stringify(data)}`);
         const updatedParking = await genericService.update('Parking', id, data);
 
-        // מחיקת ה-Cache
         await redisClient.del(`parking:${id}`);
-        await redisClient.del('parkings:all'); // מחיקת Cache כללי אם קיים
+        await redisClient.del('parkings:all');
 
         return updatedParking;
     },
@@ -69,7 +68,6 @@ const parkingBL = {
 
         const newParking = await genericService.create('Parking', data);
 
-        // מחיקת Cache כללי
         await redisClient.del('parkings:all');
 
         return newParking;
@@ -98,7 +96,7 @@ const parkingBL = {
             log(`searchParkings: query=${JSON.stringify(query)}`);
 
             let {
-                lat, lng, radius = 100, type = 'temporary',
+                lat, lng, radius = 100000, type = 'temporary',
                 minPrice = 0, maxPrice = 100000000000,
                 startTime = new Date(), hours = 2,
                 searchText

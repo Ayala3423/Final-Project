@@ -249,7 +249,12 @@ export default function MessagesPage() {
       setChatError('שגיאה בפתיחת שיחה');
       console.error(error);
     }
+
+    
   };
+
+  console.log("conversations", conversations);
+  
 
   return (
     <div className="chat-box">
@@ -285,7 +290,7 @@ export default function MessagesPage() {
                   className={isActive ? 'active' : ''}
                   onClick={() => setSelectedChatId(conv.conversationId)}
                 >
-                  Chat with: {chatPartnerId}
+                  Chat with: {conv.otherUsername}
                   {unreadMessages[conv.conversationId] > 0 && (
                     <span className="unread-count"> ({unreadMessages[conv.conversationId]})</span>
                   )}
@@ -323,7 +328,7 @@ export default function MessagesPage() {
               onChange={(e) => setNewMsg(e.target.value)}
               onKeyDown={(e) => {
                 if (e.key === 'Enter') {
-                  e.preventDefault(); // מונע ירידת שורה אם זה textarea בעתיד
+                  e.preventDefault(); 
                   handleSend();
                 } else {
                   handleTyping();
