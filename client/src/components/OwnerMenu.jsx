@@ -1,10 +1,11 @@
-import React, { useState, useContext } from 'react';
-import { useNavigate, Outlet } from 'react-router-dom';
+import React, { useState, useContext, useEffect } from 'react';
+import { useNavigate, Outlet, useLocation } from 'react-router-dom';
 import '../styles/Dashboard.css';
 import { AuthContext } from '../context/AuthContext';
 
-function OwnerMenu({ unreadCount }) {
+function OwnerMenu({ unreadCount, setUnreadCount }) {
     
+    const location = useLocation();
     const [menuOpen, setMenuOpen] = useState(false);
     const navigate = useNavigate();
     const { logout } = useContext(AuthContext);
@@ -14,6 +15,12 @@ function OwnerMenu({ unreadCount }) {
         setMenuOpen(false);
         navigate(path);
     };
+
+    useEffect(() => {
+        if (location.pathname.startsWith('/messages')) {
+            setUnreadCount(0); 
+        }
+    }, [location.pathname]);
 
     return (
         <>

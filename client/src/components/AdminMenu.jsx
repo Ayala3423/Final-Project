@@ -1,10 +1,11 @@
-import React, { useState, useContext } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React, { useState, useContext, useEffect } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { HiMenuAlt3 } from 'react-icons/hi';
 import { AuthContext } from '../context/AuthContext';
 
-function AdminMenu({ unreadCount }) {
+function AdminMenu({ unreadCount, setUnreadCount }) {
 
+    const location = useLocation();
     const [menuOpen, setMenuOpen] = useState(false);
     const navigate = useNavigate();
     const { logout } = useContext(AuthContext);
@@ -14,6 +15,12 @@ function AdminMenu({ unreadCount }) {
         setMenuOpen(false);
         navigate(path);
     };
+
+    useEffect(() => {
+        if (location.pathname.startsWith('/messages')) {
+            setUnreadCount(0);
+        }
+    }, [location.pathname]);
 
     return (
         <nav className="sidebar">

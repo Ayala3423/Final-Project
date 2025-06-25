@@ -21,13 +21,13 @@
 
 .search-form {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: 1fr; /* שונה כדי למנוע גלילה לרוחב */
   gap: 16px;
   width: 100%;
 }
 
 .price-slider-container {
-  grid-column: span 2;
+  grid-column: span 1;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -144,7 +144,7 @@ select {
 }
 
 .search-button {
-  grid-column: span 2;
+  grid-column: span 1;
   background-color: #2f3641;
   color: white;
   border: none;
@@ -157,6 +157,7 @@ select {
   justify-content: center;
   gap: 8px;
   transition: background-color 0.2s ease;
+  width: 100%;
 }
 
 .search-button:hover {

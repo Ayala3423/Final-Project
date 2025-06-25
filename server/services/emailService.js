@@ -39,7 +39,8 @@ const sendRenewalEmail = async (reservation) => {
 
   try {
     await sendEmail({
-      to: reservation.renterEmail, // או איך ששומר את המייל של המשתמש
+      to: reservation.renterEmail, 
+      
       subject: 'חידוש הזמנת חניה',
       text: emailText,
     });

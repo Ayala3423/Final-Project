@@ -1,10 +1,11 @@
-import React, { useState, useContext } from 'react';
-import { useNavigate, Outlet } from 'react-router-dom';
+import React, { useState, useContext, useEffect } from 'react';
+import { useNavigate, Outlet, useLocation } from 'react-router-dom';
 import '../styles/Dashboard.css';
 import { AuthContext } from '../context/AuthContext';
 
-function RenterMenu({ unreadCount }) {
-    
+function RenterMenu({ unreadCount, setUnreadCount }) {
+
+    const location = useLocation();
     const [menuOpen, setMenuOpen] = useState(false);
     const navigate = useNavigate();
     const { logout } = useContext(AuthContext);
@@ -15,8 +16,14 @@ function RenterMenu({ unreadCount }) {
         navigate(path);
     };
 
+    useEffect(() => {
+        if (location.pathname.startsWith('/messages')) {
+            setUnreadCount(0); 
+        }
+    }, [location.pathname]);
+
     return (
-             <nav className="sidebar">
+        <nav className="sidebar">
             <button onClick={toggleMenu}>☰ menu</button>
             {menuOpen && (
                 <div className="dropdown-menu">
@@ -33,7 +40,7 @@ function RenterMenu({ unreadCount }) {
                 </div>
             )}
         </nav>
-       
+
     );
 }
 

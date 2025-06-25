@@ -40,7 +40,7 @@ export default function MessagesPage() {
     if (!socket.connected) socket.connect();
 
     socket.on('connect', () => {
-      const userId = JSON.parse(localStorage.getItem('user')).id; // או מאיפה שאת שומרת את המשתמש
+      const userId = JSON.parse(localStorage.getItem('user')).id; 
       socket.emit('authenticate', { userId });
     });
 
@@ -245,7 +245,12 @@ export default function MessagesPage() {
       setChatError('שגיאה בפתיחת שיחה');
       console.error(error);
     }
+
+    
   };
+
+  console.log("conversations", conversations);
+  
 
   return (
     <div className="chat-box">
@@ -281,7 +286,7 @@ export default function MessagesPage() {
                   className={isActive ? 'active' : ''}
                   onClick={() => setSelectedChatId(conv.conversationId)}
                 >
-                  Chat with: {conv.partnerName || chatPartnerId}
+                  Chat with: {conv.otherUsername}
                   {unreadMessages[conv.conversationId] > 0 && (
                     <span className="unread-count"> ({unreadMessages[conv.conversationId]})</span>
                   )}
@@ -319,7 +324,7 @@ export default function MessagesPage() {
               onChange={(e) => setNewMsg(e.target.value)}
               onKeyDown={(e) => {
                 if (e.key === 'Enter') {
-                  e.preventDefault();
+                  e.preventDefault(); 
                   handleSend();
                 } else {
                   handleTyping();

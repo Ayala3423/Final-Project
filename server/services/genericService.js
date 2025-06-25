@@ -164,7 +164,8 @@ const genericService = {
         if (existingMessage) {
             return existingMessage.conversationId;
         } else {
-            return uuidv4(); // מחזיר conversationId חדש
+            return uuidv4(); 
+            
         }
     },
 

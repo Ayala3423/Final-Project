@@ -20,7 +20,6 @@ const messageBL = {
         log(`createMessage: Creating message with data=${JSON.stringify(data)}`);
         const newMessage = await genericService.create('message', data);
 
-        // מחיקת Cache של השיחה הרלוונטית
         await redisClient.del(`conversation:${data.conversationId}`);
         await redisClient.del(`conversations:${data.senderId}`);
         await redisClient.del(`unread:${data.receiverId}`);
@@ -42,32 +41,34 @@ const messageBL = {
         return [];
     }
 
-    const cacheKey = `conversations:${userId}`;
-    return await getOrSetCache(cacheKey, 300, async () => {
+  
+
+        const cacheKey = `conversations:${userId}`;
+        return await getOrSetCache(cacheKey, 300, async () => {
         log(`getMessagesById: Fetching messages for senderId=${userId}`);
-        
+
         const conversations = await genericService.getUserConversations(userId);
-        console.log(`getMessagesById: Fetched ${conversations.length} conversations for senderId=${userId}`);
-        console.log(`getMessagesById: Fetched conversations: ${JSON.stringify(conversations)}`);
 
-        for (const convo of conversations) {
-            const partnerId = convo.senderId === userId ? convo.receiverId : convo.senderId;
-            console.log(`getMessagesById: Fetching partner info for partnerId=${partnerId}`);
-            try {
-                const partner = await genericService.getUserById(partnerId);
-                convo.partnerName = partner?.name || 'Unknown';
-                console.log(`getMessagesById: Partner info for ID=${partnerId} is ${convo.partnerName}`);
-            } catch (err) {
-                console.error(`Failed to fetch partner info for ID=${partnerId}`, err);
-                convo.partnerName = 'Unknown';
-            }
-        }
+        const enhancedConversations = await Promise.all(
+            conversations.map(async (conv) => {
+                const convData = conv.toJSON?.() || conv; 
 
-        return conversations;
-    });
-}
+                const otherUserId = convData.senderId === userId ? convData.receiverId : convData.senderId;
+                const otherUser = await genericService.getById('User', otherUserId);
 
-,
+                return {
+                    ...convData,
+                    otherUserId,
+                    otherUsername: otherUser?.username || 'Unknown',
+                };
+            })
+        );
+
+        return enhancedConversations;
+        });
+    },
+
+
     async deleteMessage(id) {
         if (!id) {
             log('deleteMessage: No ID provided');

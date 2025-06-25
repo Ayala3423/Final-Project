@@ -8,11 +8,8 @@ const userController = {
         try {
             const userData = req.body;
 
-            // אם יש תמונה מצורפת
             if (req.file) {
-                // נשתמש בשם הקובץ בלבד עם נתיב יחסי – זה מה שייבנה בצד הקליינט
-                // userData.profileImage = `${req.file.filename}`;
-                userData.profileImage = `/uploads/profileImages/${req.file.filename}`;
+                userData.profileImage = `/${req.file.filename}`;
             }
 
             const user = await userBL.signup(userData);
@@ -67,9 +64,8 @@ const userController = {
             const data = { ...req.body };
 
             if (req.file) {
-                data.profileImage = `/uploads/profileImages/${req.file.filename}`;
+                data.profileImage = `/${req.file.filename}`;
 
-                // data.profileImage = req.file.filename; // או req.file.path לפי איך שאת שומרת
             }
 
             const updatedUser = await userBL.updateUser(id, data);
