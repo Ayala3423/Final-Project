@@ -5194,3 +5194,186 @@
 [2025-06-24T20:53:00.522Z] Cache hit for key: unread:5
 [2025-06-24T20:53:00.538Z] Cache hit for key: dashboard:owner:5
 [2025-06-24T20:53:00.542Z] Cache hit for key: unread:5
+[2025-06-24T21:43:01.210Z] Cache miss for key: top:popular:parkings. Fetching from DB...
+[2025-06-24T21:43:01.212Z] getTopPopularParkings: Fetching from DB
+[2025-06-24T21:43:01.360Z] Cache hit for key: top:popular:parkings
+[2025-06-24T21:43:01.668Z] Cache miss for key: search:{"lat":"31.951014","lng":"34.888075"}. Fetching from DB...
+[2025-06-24T21:43:01.677Z] searchParkings: query={"lat":"31.951014","lng":"34.888075"}
+[2025-06-24T21:43:01.779Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T21:43:01.947Z] Cache hit for key: search:{"lat":"31.951014","lng":"34.888075"}
+[2025-06-24T21:43:25.472Z] Cache miss for key: search:{"minPrice":"0","maxPrice":"100","type":"temporary","lat":"31.951014","lng":"34.888075","startTime":"2025-06-24T21:43:25.119Z","hours":"2","radius":"1000"}. Fetching from DB...
+[2025-06-24T21:43:25.473Z] searchParkings: query={"minPrice":"0","maxPrice":"100","type":"temporary","lat":"31.951014","lng":"34.888075","startTime":"2025-06-24T21:43:25.119Z","hours":"2","radius":"1000"}
+[2025-06-24T21:43:25.654Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T21:43:27.524Z] Cache miss for key: search:{"minPrice":"0","maxPrice":"100","type":"temporary","lat":"31.951014","lng":"34.888075","startTime":"2025-06-24T21:43:27.516Z","hours":"2","radius":"1000"}. Fetching from DB...
+[2025-06-24T21:43:27.524Z] searchParkings: query={"minPrice":"0","maxPrice":"100","type":"temporary","lat":"31.951014","lng":"34.888075","startTime":"2025-06-24T21:43:27.516Z","hours":"2","radius":"1000"}
+[2025-06-24T21:43:27.529Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T21:43:38.132Z] Cache miss for key: search:{"minPrice":"0","maxPrice":"100","type":"temporary","lat":"31.951014","lng":"34.888075","startTime":"2025-06-24T21:43:38.114Z","hours":"2","radius":"1000"}. Fetching from DB...
+[2025-06-24T21:43:38.132Z] searchParkings: query={"minPrice":"0","maxPrice":"100","type":"temporary","lat":"31.951014","lng":"34.888075","startTime":"2025-06-24T21:43:38.114Z","hours":"2","radius":"1000"}
+[2025-06-24T21:43:38.143Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T21:44:24.859Z] Cache hit for key: top:popular:parkings
+[2025-06-24T21:44:24.905Z] Cache hit for key: top:popular:parkings
+[2025-06-24T21:44:26.126Z] Cache hit for key: search:{"lat":"31.951014","lng":"34.888075"}
+[2025-06-24T21:44:26.270Z] Cache hit for key: search:{"lat":"31.951014","lng":"34.888075"}
+[2025-06-24T21:44:42.354Z] Cache miss for key: search:{"searchText":"Jerusalem, Jerusalem Subdistrict, Jerusalem District, Israel"}. Fetching from DB...
+[2025-06-24T21:44:42.354Z] searchParkings: query={"searchText":"Jerusalem, Jerusalem Subdistrict, Jerusalem District, Israel"}
+[2025-06-24T21:44:42.965Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T21:45:46.867Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T21:45:46.868Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T21:45:46.891Z] Cache miss for key: dashboard:owner:5. Fetching from DB...
+[2025-06-24T21:45:46.943Z] Cache hit for key: dashboard:owner:5
+[2025-06-24T21:45:55.249Z] Cache miss for key: parkings:params:{"ownerId":"5","page":"1"}:page:1. Fetching from DB...
+[2025-06-24T21:45:55.260Z] getParkingsByParams: Fetching from DB filters={"ownerId":"5","page":"1"}, pagination={"limit":10,"offset":null}
+[2025-06-24T21:45:55.286Z] Cache hit for key: parkings:params:{"ownerId":"5","page":"1"}:page:1
+[2025-06-24T21:46:12.756Z] Cache miss for key: conversations:5. Fetching from DB...
+[2025-06-24T21:46:12.757Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-24T21:46:12.805Z] Cache hit for key: conversations:5
+[2025-06-24T21:46:13.050Z] Cache miss for key: conversation:03a181e0-1dd6-4ed0-8bdc-85467fed4ff8. Fetching from DB...
+[2025-06-24T21:46:13.052Z] getMessagesByConversationId: Fetching messages for conversationId=03a181e0-1dd6-4ed0-8bdc-85467fed4ff8
+[2025-06-24T21:46:16.780Z] Cache miss for key: conversation:74dc14d7-c3c6-43a5-a497-f6616553a5af. Fetching from DB...
+[2025-06-24T21:46:16.781Z] getMessagesByConversationId: Fetching messages for conversationId=74dc14d7-c3c6-43a5-a497-f6616553a5af
+[2025-06-24T21:46:16.800Z] setReadMessages: Updating messages 2 with field {"isRead":true}
+[2025-06-24T21:46:18.050Z] Cache hit for key: conversation:03a181e0-1dd6-4ed0-8bdc-85467fed4ff8
+[2025-06-24T21:46:31.598Z] Cache hit for key: conversation:74dc14d7-c3c6-43a5-a497-f6616553a5af
+[2025-06-24T21:46:31.610Z] setReadMessages: Updating messages 2 with field {"isRead":true}
+[2025-06-24T21:46:32.871Z] Cache hit for key: conversation:03a181e0-1dd6-4ed0-8bdc-85467fed4ff8
+[2025-06-24T21:46:36.541Z] Cache hit for key: conversations:5
+[2025-06-24T21:46:36.600Z] Cache hit for key: unread:5
+[2025-06-24T21:46:36.588Z] Cache hit for key: conversations:5
+[2025-06-24T21:46:36.699Z] Cache hit for key: unread:5
+[2025-06-24T21:46:36.700Z] Cache hit for key: conversation:03a181e0-1dd6-4ed0-8bdc-85467fed4ff8
+[2025-06-24T21:47:33.215Z] Cache hit for key: conversation:74dc14d7-c3c6-43a5-a497-f6616553a5af
+[2025-06-24T21:47:33.227Z] setReadMessages: Updating messages 2 with field {"isRead":true}
+[2025-06-24T21:57:30.738Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T21:57:30.755Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T21:57:30.771Z] Cache miss for key: conversations:5. Fetching from DB...
+[2025-06-24T21:57:30.780Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-24T21:57:30.899Z] Cache hit for key: unread:5
+[2025-06-24T21:57:30.911Z] Cache hit for key: conversations:5
+[2025-06-24T22:09:48.580Z] Cache miss for key: conversations:5. Fetching from DB...
+[2025-06-24T22:09:48.583Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-24T22:09:48.642Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T22:09:48.643Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T22:09:48.912Z] getMessagesById: Fetched conversations: [{"id":2,"senderId":3,"receiverId":5,"content":"Tertius adulescens ambitus venio vinco turpis accusantium bestia ventosus.","sentAt":"2025-06-24T21:41:48.000Z","isRead":true,"conversationId":"74dc14d7-c3c6-43a5-a497-f6616553a5af","createdAt":"2025-06-24T21:41:48.000Z","updatedAt":"2025-06-24T21:47:33.000Z","deletedAt":null},{"id":5,"senderId":3,"receiverId":5,"content":"Aufero sub ademptio talus abundans corona abscido.","sentAt":"2025-06-24T21:41:48.000Z","isRead":false,"conversationId":"8e22dd6c-5173-4b4a-9a15-906b36724978","createdAt":"2025-06-24T21:41:48.000Z","updatedAt":"2025-06-24T21:41:48.000Z","deletedAt":null},{"id":12,"senderId":5,"receiverId":2,"content":"Placeat adamo cavus pauper et.","sentAt":"2025-06-24T21:41:48.000Z","isRead":false,"conversationId":"03a181e0-1dd6-4ed0-8bdc-85467fed4ff8","createdAt":"2025-06-24T21:41:48.000Z","updatedAt":"2025-06-24T21:41:48.000Z","deletedAt":null}]
+[2025-06-24T22:09:48.945Z] Cache hit for key: unread:5
+[2025-06-24T22:09:48.959Z] Cache hit for key: conversations:5
+[2025-06-24T22:09:49.027Z] Cache miss for key: conversation:03a181e0-1dd6-4ed0-8bdc-85467fed4ff8. Fetching from DB...
+[2025-06-24T22:09:49.028Z] getMessagesByConversationId: Fetching messages for conversationId=03a181e0-1dd6-4ed0-8bdc-85467fed4ff8
+[2025-06-24T22:10:19.372Z] Cache hit for key: conversations:5
+[2025-06-24T22:10:19.414Z] Cache hit for key: unread:5
+[2025-06-24T22:10:19.705Z] Cache hit for key: conversations:5
+[2025-06-24T22:10:19.710Z] Cache hit for key: unread:5
+[2025-06-24T22:10:19.998Z] Cache hit for key: conversation:03a181e0-1dd6-4ed0-8bdc-85467fed4ff8
+[2025-06-24T22:14:07.088Z] Cache miss for key: conversation:74dc14d7-c3c6-43a5-a497-f6616553a5af. Fetching from DB...
+[2025-06-24T22:14:07.089Z] getMessagesByConversationId: Fetching messages for conversationId=74dc14d7-c3c6-43a5-a497-f6616553a5af
+[2025-06-24T22:14:08.521Z] Cache hit for key: conversation:03a181e0-1dd6-4ed0-8bdc-85467fed4ff8
+[2025-06-24T22:14:10.276Z] Cache hit for key: conversation:74dc14d7-c3c6-43a5-a497-f6616553a5af
+[2025-06-24T22:15:07.974Z] Cache miss for key: conversations:5. Fetching from DB...
+[2025-06-24T22:15:07.976Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-24T22:15:07.980Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T22:15:07.981Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T22:15:08.205Z] getMessagesById: Fetched conversations: [{"id":2,"senderId":3,"receiverId":5,"content":"Tertius adulescens ambitus venio vinco turpis accusantium bestia ventosus.","sentAt":"2025-06-24T21:41:48.000Z","isRead":true,"conversationId":"74dc14d7-c3c6-43a5-a497-f6616553a5af","createdAt":"2025-06-24T21:41:48.000Z","updatedAt":"2025-06-24T21:47:33.000Z","deletedAt":null},{"id":5,"senderId":3,"receiverId":5,"content":"Aufero sub ademptio talus abundans corona abscido.","sentAt":"2025-06-24T21:41:48.000Z","isRead":false,"conversationId":"8e22dd6c-5173-4b4a-9a15-906b36724978","createdAt":"2025-06-24T21:41:48.000Z","updatedAt":"2025-06-24T21:41:48.000Z","deletedAt":null},{"id":12,"senderId":5,"receiverId":2,"content":"Placeat adamo cavus pauper et.","sentAt":"2025-06-24T21:41:48.000Z","isRead":false,"conversationId":"03a181e0-1dd6-4ed0-8bdc-85467fed4ff8","createdAt":"2025-06-24T21:41:48.000Z","updatedAt":"2025-06-24T21:41:48.000Z","deletedAt":null}]
+[2025-06-24T22:15:08.266Z] Cache hit for key: unread:5
+[2025-06-24T22:15:08.282Z] Cache hit for key: conversations:5
+[2025-06-24T22:19:06.549Z] Cache hit for key: conversations:5
+[2025-06-24T22:19:06.564Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T22:19:06.567Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T22:19:06.571Z] Cache hit for key: conversations:5
+[2025-06-24T22:19:06.595Z] Cache hit for key: unread:5
+[2025-06-24T22:31:33.140Z] Cache miss for key: conversations:5. Fetching from DB...
+[2025-06-24T22:31:33.142Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-24T22:31:33.169Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T22:31:33.169Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T22:31:33.206Z] getMessagesById: Fetched conversations: [{"id":2,"senderId":3,"receiverId":5,"content":"Tertius adulescens ambitus venio vinco turpis accusantium bestia ventosus.","sentAt":"2025-06-24T21:41:48.000Z","isRead":true,"conversationId":"74dc14d7-c3c6-43a5-a497-f6616553a5af","createdAt":"2025-06-24T21:41:48.000Z","updatedAt":"2025-06-24T21:47:33.000Z","deletedAt":null},{"id":5,"senderId":3,"receiverId":5,"content":"Aufero sub ademptio talus abundans corona abscido.","sentAt":"2025-06-24T21:41:48.000Z","isRead":false,"conversationId":"8e22dd6c-5173-4b4a-9a15-906b36724978","createdAt":"2025-06-24T21:41:48.000Z","updatedAt":"2025-06-24T21:41:48.000Z","deletedAt":null},{"id":12,"senderId":5,"receiverId":2,"content":"Placeat adamo cavus pauper et.","sentAt":"2025-06-24T21:41:48.000Z","isRead":false,"conversationId":"03a181e0-1dd6-4ed0-8bdc-85467fed4ff8","createdAt":"2025-06-24T21:41:48.000Z","updatedAt":"2025-06-24T21:41:48.000Z","deletedAt":null}]
+[2025-06-24T22:31:33.229Z] Cache miss for key: conversations:5. Fetching from DB...
+[2025-06-24T22:31:33.229Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-24T22:31:33.240Z] getMessagesById: Fetched conversations: [{"id":2,"senderId":3,"receiverId":5,"content":"Tertius adulescens ambitus venio vinco turpis accusantium bestia ventosus.","sentAt":"2025-06-24T21:41:48.000Z","isRead":true,"conversationId":"74dc14d7-c3c6-43a5-a497-f6616553a5af","createdAt":"2025-06-24T21:41:48.000Z","updatedAt":"2025-06-24T21:47:33.000Z","deletedAt":null},{"id":5,"senderId":3,"receiverId":5,"content":"Aufero sub ademptio talus abundans corona abscido.","sentAt":"2025-06-24T21:41:48.000Z","isRead":false,"conversationId":"8e22dd6c-5173-4b4a-9a15-906b36724978","createdAt":"2025-06-24T21:41:48.000Z","updatedAt":"2025-06-24T21:41:48.000Z","deletedAt":null},{"id":12,"senderId":5,"receiverId":2,"content":"Placeat adamo cavus pauper et.","sentAt":"2025-06-24T21:41:48.000Z","isRead":false,"conversationId":"03a181e0-1dd6-4ed0-8bdc-85467fed4ff8","createdAt":"2025-06-24T21:41:48.000Z","updatedAt":"2025-06-24T21:41:48.000Z","deletedAt":null}]
+[2025-06-24T22:31:33.242Z] Cache hit for key: unread:5
+[2025-06-24T22:31:59.089Z] Cache miss for key: conversations:5. Fetching from DB...
+[2025-06-24T22:31:59.089Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-24T22:31:59.095Z] Cache hit for key: unread:5
+[2025-06-24T22:31:59.103Z] Cache hit for key: unread:5
+[2025-06-24T22:31:59.118Z] getMessagesById: Fetched conversations: [{"id":2,"senderId":3,"receiverId":5,"content":"Tertius adulescens ambitus venio vinco turpis accusantium bestia ventosus.","sentAt":"2025-06-24T21:41:48.000Z","isRead":true,"conversationId":"74dc14d7-c3c6-43a5-a497-f6616553a5af","createdAt":"2025-06-24T21:41:48.000Z","updatedAt":"2025-06-24T21:47:33.000Z","deletedAt":null},{"id":5,"senderId":3,"receiverId":5,"content":"Aufero sub ademptio talus abundans corona abscido.","sentAt":"2025-06-24T21:41:48.000Z","isRead":false,"conversationId":"8e22dd6c-5173-4b4a-9a15-906b36724978","createdAt":"2025-06-24T21:41:48.000Z","updatedAt":"2025-06-24T21:41:48.000Z","deletedAt":null},{"id":12,"senderId":5,"receiverId":2,"content":"Placeat adamo cavus pauper et.","sentAt":"2025-06-24T21:41:48.000Z","isRead":false,"conversationId":"03a181e0-1dd6-4ed0-8bdc-85467fed4ff8","createdAt":"2025-06-24T21:41:48.000Z","updatedAt":"2025-06-24T21:41:48.000Z","deletedAt":null}]
+[2025-06-24T22:31:59.132Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-24T22:31:59.131Z] Cache miss for key: conversations:5. Fetching from DB...
+[2025-06-24T22:31:59.137Z] getMessagesById: Fetched conversations: [{"id":2,"senderId":3,"receiverId":5,"content":"Tertius adulescens ambitus venio vinco turpis accusantium bestia ventosus.","sentAt":"2025-06-24T21:41:48.000Z","isRead":true,"conversationId":"74dc14d7-c3c6-43a5-a497-f6616553a5af","createdAt":"2025-06-24T21:41:48.000Z","updatedAt":"2025-06-24T21:47:33.000Z","deletedAt":null},{"id":5,"senderId":3,"receiverId":5,"content":"Aufero sub ademptio talus abundans corona abscido.","sentAt":"2025-06-24T21:41:48.000Z","isRead":false,"conversationId":"8e22dd6c-5173-4b4a-9a15-906b36724978","createdAt":"2025-06-24T21:41:48.000Z","updatedAt":"2025-06-24T21:41:48.000Z","deletedAt":null},{"id":12,"senderId":5,"receiverId":2,"content":"Placeat adamo cavus pauper et.","sentAt":"2025-06-24T21:41:48.000Z","isRead":false,"conversationId":"03a181e0-1dd6-4ed0-8bdc-85467fed4ff8","createdAt":"2025-06-24T21:41:48.000Z","updatedAt":"2025-06-24T21:41:48.000Z","deletedAt":null}]
+[2025-06-24T22:34:14.455Z] Cache miss for key: conversations:5. Fetching from DB...
+[2025-06-24T22:34:14.457Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-24T22:34:14.490Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T22:34:14.491Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T22:34:14.550Z] Cache hit for key: conversations:5
+[2025-06-24T22:34:14.552Z] Cache hit for key: unread:5
+[2025-06-24T22:34:14.611Z] Cache miss for key: conversation:03a181e0-1dd6-4ed0-8bdc-85467fed4ff8. Fetching from DB...
+[2025-06-24T22:34:14.611Z] getMessagesByConversationId: Fetching messages for conversationId=03a181e0-1dd6-4ed0-8bdc-85467fed4ff8
+[2025-06-24T22:36:08.693Z] Cache miss for key: search:{"lat":"31.951014","lng":"34.888075"}. Fetching from DB...
+[2025-06-24T22:36:08.696Z] searchParkings: query={"lat":"31.951014","lng":"34.888075"}
+[2025-06-24T22:36:08.723Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-24T22:36:08.766Z] Cache hit for key: search:{"lat":"31.951014","lng":"34.888075"}
+[2025-06-24T22:39:38.186Z] Cache miss for key: conversations:5. Fetching from DB...
+[2025-06-24T22:39:38.187Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-24T22:39:38.359Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T22:39:38.361Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T22:39:38.431Z] Cache hit for key: conversations:5
+[2025-06-24T22:39:38.432Z] Cache hit for key: unread:5
+[2025-06-24T22:39:38.565Z] Cache miss for key: conversation:03a181e0-1dd6-4ed0-8bdc-85467fed4ff8. Fetching from DB...
+[2025-06-24T22:39:38.566Z] getMessagesByConversationId: Fetching messages for conversationId=03a181e0-1dd6-4ed0-8bdc-85467fed4ff8
+[2025-06-24T22:41:25.894Z] Cache hit for key: conversations:5
+[2025-06-24T22:41:25.921Z] Cache hit for key: unread:5
+[2025-06-24T22:41:25.924Z] Cache hit for key: conversations:5
+[2025-06-24T22:41:25.945Z] Cache hit for key: unread:5
+[2025-06-24T22:41:25.985Z] Cache hit for key: conversation:03a181e0-1dd6-4ed0-8bdc-85467fed4ff8
+[2025-06-24T22:42:13.446Z] Cache hit for key: conversations:5
+[2025-06-24T22:42:13.448Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T22:42:13.448Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T22:42:13.494Z] Cache hit for key: conversations:5
+[2025-06-24T22:42:13.510Z] Cache hit for key: unread:5
+[2025-06-24T22:42:13.524Z] Cache hit for key: conversation:03a181e0-1dd6-4ed0-8bdc-85467fed4ff8
+[2025-06-24T22:42:25.161Z] Cache miss for key: dashboard:owner:5. Fetching from DB...
+[2025-06-24T22:42:25.218Z] Cache hit for key: dashboard:owner:5
+[2025-06-24T22:42:27.795Z] Cache hit for key: conversations:5
+[2025-06-24T22:42:27.803Z] Cache hit for key: conversations:5
+[2025-06-24T22:42:27.877Z] Cache hit for key: conversation:03a181e0-1dd6-4ed0-8bdc-85467fed4ff8
+[2025-06-24T22:42:52.157Z] createMessage: Creating message with data={"conversationId":"03a181e0-1dd6-4ed0-8bdc-85467fed4ff8","senderId":5,"receiverId":2,"content":".","sentAt":"2025-06-24T22:42:52.145Z"}
+[2025-06-24T22:42:59.710Z] Cache miss for key: conversation:74dc14d7-c3c6-43a5-a497-f6616553a5af. Fetching from DB...
+[2025-06-24T22:42:59.711Z] getMessagesByConversationId: Fetching messages for conversationId=74dc14d7-c3c6-43a5-a497-f6616553a5af
+[2025-06-24T22:44:51.618Z] Cache miss for key: conversations:5. Fetching from DB...
+[2025-06-24T22:44:51.620Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-24T22:44:51.678Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-24T22:44:51.680Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-24T22:44:51.711Z] Cache hit for key: conversations:5
+[2025-06-24T22:44:51.717Z] Cache hit for key: unread:5
+[2025-06-24T22:44:51.886Z] Cache miss for key: conversation:03a181e0-1dd6-4ed0-8bdc-85467fed4ff8. Fetching from DB...
+[2025-06-24T22:44:51.887Z] getMessagesByConversationId: Fetching messages for conversationId=03a181e0-1dd6-4ed0-8bdc-85467fed4ff8
+[2025-06-25T07:19:15.964Z] Cache miss for key: conversations:5. Fetching from DB...
+[2025-06-25T07:19:15.966Z] getMessagesById: Fetching messages for senderId=5
+[2025-06-25T07:19:16.958Z] Cache miss for key: unread:5. Fetching from DB...
+[2025-06-25T07:19:16.959Z] getUnReadMessages: Fetching unread messages for userId=5
+[2025-06-25T07:19:17.716Z] Cache hit for key: conversations:5
+[2025-06-25T07:19:17.720Z] Cache hit for key: unread:5
+[2025-06-25T07:19:18.676Z] Cache miss for key: conversation:03a181e0-1dd6-4ed0-8bdc-85467fed4ff8. Fetching from DB...
+[2025-06-25T07:19:18.677Z] getMessagesByConversationId: Fetching messages for conversationId=03a181e0-1dd6-4ed0-8bdc-85467fed4ff8
+[2025-06-25T07:21:06.290Z] getReservationsByValue: Fetching reservations with value={"ownerId":"5","page":"1","limit":"10"}
+[2025-06-25T07:21:06.291Z] Cache miss for key: reservations:search:{"ownerId":"5","page":"1","limit":"10"}. Fetching from DB...
+[2025-06-25T07:21:06.466Z] getReservationsByValue: Fetching reservations with value={"ownerId":"5","page":"1","limit":"10"}
+[2025-06-25T07:21:06.467Z] Cache hit for key: reservations:search:{"ownerId":"5","page":"1","limit":"10"}
+[2025-06-25T07:21:19.609Z] Cache miss for key: top:popular:parkings. Fetching from DB...
+[2025-06-25T07:21:19.610Z] getTopPopularParkings: Fetching from DB
+[2025-06-25T07:21:19.657Z] Cache hit for key: top:popular:parkings
+[2025-06-25T07:21:19.813Z] Cache miss for key: search:{"lat":"31.951014","lng":"34.888075"}. Fetching from DB...
+[2025-06-25T07:21:19.817Z] searchParkings: query={"lat":"31.951014","lng":"34.888075"}
+[2025-06-25T07:21:19.863Z] searchParkings: final conditions={"parkingId":{},"isRented":false,"price":{},"type":{}}
+[2025-06-25T07:21:19.934Z] Cache hit for key: search:{"lat":"31.951014","lng":"34.888075"}
+[2025-06-25T07:21:51.153Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=3
+[2025-06-25T07:21:51.163Z] getReportsByParkingId: Fetching reports for parkingId=3
+[2025-06-25T07:21:51.170Z] checkReportPermission: Checking permissions for userId=5, parkingId=3
+[2025-06-25T07:21:51.184Z] Cache miss for key: timeslots:parking:3. Fetching from DB...
+[2025-06-25T07:21:51.193Z] Cache miss for key: reports:parking:3. Fetching from DB...
+[2025-06-25T07:21:51.224Z] checkReportPermission: User is owner, cannot report
+[2025-06-25T07:21:51.231Z] checkReportPermission: Checking permissions for userId=5, parkingId=3
+[2025-06-25T07:21:51.243Z] getTimeSlotsByParkingId: Fetching TimeSlots for parkingId=3
+[2025-06-25T07:21:51.244Z] getReportsByParkingId: Fetching reports for parkingId=3
+[2025-06-25T07:21:51.246Z] checkReportPermission: User is owner, cannot report
+[2025-06-25T07:21:51.247Z] Cache hit for key: timeslots:parking:3
+[2025-06-25T07:21:51.248Z] Cache hit for key: reports:parking:3
+[2025-06-25T07:21:53.790Z] Cache hit for key: conversations:5
+[2025-06-25T07:21:53.793Z] Cache hit for key: conversations:5
+[2025-06-25T07:21:53.830Z] Cache hit for key: conversation:03a181e0-1dd6-4ed0-8bdc-85467fed4ff8

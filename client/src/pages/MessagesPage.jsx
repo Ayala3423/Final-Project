@@ -210,13 +210,13 @@ export default function MessagesPage() {
     try {
       const userResult = await apiService.getByValue('users', { username: newChatUsername.trim() });
       if (!userResult || userResult.length === 0) {
-        setChatError('משתמש לא נמצא');
+        setChatError('😩user not found');
         return;
       }
       const foundUser = userResult[0];
 
       if (foundUser.id === user.id) {
-        setChatError('לא ניתן להתחיל שיחה עם עצמך');
+        setChatError('😩cannot chat with yourself');
         return;
       }
 
@@ -231,17 +231,13 @@ export default function MessagesPage() {
         return;
       }
 
-      // יצירת שיחה חדשה - תלוי איך מוגדרת השיחות ב-API שלך
-      // אם אין endpoint ליצירת שיחה, אפשר ליצור הודעת פתיחה ריקה למשל
-      const newConversationId = generateUniqueConversationId(); // תיצור פונקציה שמתאימה
+      const newConversationId = generateUniqueConversationId();
       const newConv = {
         conversationId: newConversationId,
         senderId: user.id,
         receiverId: foundUser.id,
-        // אפשר להוסיף שדות נוספים אם צריך
       };
 
-      // הוסף את השיחה לרשימה המקומית
       setConversations(prev => [newConv, ...prev]);
       setSelectedChatId(newConversationId);
       setNewChatUsername('');
@@ -285,7 +281,7 @@ export default function MessagesPage() {
                   className={isActive ? 'active' : ''}
                   onClick={() => setSelectedChatId(conv.conversationId)}
                 >
-                  Chat with: {chatPartnerId}
+                  Chat with: {conv.partnerName || chatPartnerId}
                   {unreadMessages[conv.conversationId] > 0 && (
                     <span className="unread-count"> ({unreadMessages[conv.conversationId]})</span>
                   )}
@@ -323,22 +319,22 @@ export default function MessagesPage() {
               onChange={(e) => setNewMsg(e.target.value)}
               onKeyDown={(e) => {
                 if (e.key === 'Enter') {
-                  e.preventDefault(); // מונע ירידת שורה אם זה textarea בעתיד
+                  e.preventDefault();
                   handleSend();
                 } else {
                   handleTyping();
                 }
               }}
-              placeholder="כתוב הודעה..."
+              placeholder="Type a message..."
             />
 
-            <button onClick={handleSend}>שלח</button>
+            <button onClick={handleSend}>send...</button>
           </div>
         )}
 
         {Object.values(typingUsers).length > 0 && (
           <div className="typing-indicator">
-            {Object.values(typingUsers).join(', ')} מקליד/ים...
+            {Object.values(typingUsers).join(', ')} type...
           </div>
         )}
 

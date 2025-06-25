@@ -36,20 +36,38 @@ const messageBL = {
         });
     },
 
-    async getConversationsById(userId) {
-        if (!userId) {
-            log('getMessagesById: No senderId provided');
-            return [];
+ async getConversationsById(userId) {
+    if (!userId) {
+        log('getMessagesById: No senderId provided');
+        return [];
+    }
+
+    const cacheKey = `conversations:${userId}`;
+    return await getOrSetCache(cacheKey, 300, async () => {
+        log(`getMessagesById: Fetching messages for senderId=${userId}`);
+        
+        const conversations = await genericService.getUserConversations(userId);
+        console.log(`getMessagesById: Fetched ${conversations.length} conversations for senderId=${userId}`);
+        console.log(`getMessagesById: Fetched conversations: ${JSON.stringify(conversations)}`);
+
+        for (const convo of conversations) {
+            const partnerId = convo.senderId === userId ? convo.receiverId : convo.senderId;
+            console.log(`getMessagesById: Fetching partner info for partnerId=${partnerId}`);
+            try {
+                const partner = await genericService.getUserById(partnerId);
+                convo.partnerName = partner?.name || 'Unknown';
+                console.log(`getMessagesById: Partner info for ID=${partnerId} is ${convo.partnerName}`);
+            } catch (err) {
+                console.error(`Failed to fetch partner info for ID=${partnerId}`, err);
+                convo.partnerName = 'Unknown';
+            }
         }
 
-        const cacheKey = `conversations:${userId}`;
-        return await getOrSetCache(cacheKey, 300, async () => {
-            log(`getMessagesById: Fetching messages for senderId=${userId}`);
-            
-            return await genericService.getUserConversations(userId);
-        });
-    },
+        return conversations;
+    });
+}
 
+,
     async deleteMessage(id) {
         if (!id) {
             log('deleteMessage: No ID provided');
